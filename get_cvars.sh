@@ -14,7 +14,7 @@ cp log/console/cssserver-console.log ../"${shortname}-cvarlist.txt"
 sed -niEe '/cvar list/,$ p' ../"${shortname}-cvarlist.txt"
 
 # remove all lines after "convars/concommands"
-sed -i '/convars\/concommands/,$!d' ../"${shortname}-cvarlist.txt"
+sed -i '/total convars\/concommands/,$!d' ../"${shortname}-cvarlist.txt"
 cd ../ || exit
 rm -rf steamcmd
 rm -rf linuxgsm
