@@ -24,5 +24,5 @@ dos2unix "${rootdir}/cvarlist.txt"
 # remove all lines before "cvar list"
 sed -i '1,/cvar list/d' "${rootdir}/cvarlist.txt"
 
-# remove all lines after "convars/concommands"
-sed -i '/convars\/concommands/,$!d' "${rootdir}/cvarlist.txt"
+# remove all lines after "total convars/concommands"
+sed -i '/total convars\/concommands/,$!d' "${rootdir}/cvarlist.txt"
