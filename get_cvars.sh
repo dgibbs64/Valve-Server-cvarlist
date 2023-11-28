@@ -16,4 +16,5 @@ sed -i '1,/cvar list/d' ../"${shortname}-cvarlist.txt"
 # remove all lines after "convars/concommands"
 sed -i '/convars\/concommands/,$!d' ../"${shortname}-cvarlist.txt"
 cd ../ || exit
+rm -rf steamcmd
 rm -rf linuxgsm
