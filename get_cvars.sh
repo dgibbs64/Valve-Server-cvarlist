@@ -11,7 +11,7 @@ cp log/console/cssserver-console.log ../"${shortname}-cvarlist.txt"
 ./cssserver stop
 
 # remove all lines before "cvar list"
-sed -niEe '/cvar list/,$ p' ../"${shortname}-cvarlist.txt"
+sed -ni -Ee '/cvar list/,$ p' ../"${shortname}-cvarlist.txt"
 
 # remove all lines after "convars/concommands"
 sed -i '/total convars\/concommands/,$!d' ../"${shortname}-cvarlist.txt"
