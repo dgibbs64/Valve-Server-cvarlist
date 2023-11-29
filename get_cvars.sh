@@ -1,5 +1,5 @@
 #!/bin/bash
-shortname="css"
+shortname="${1}"
 mkdir linuxgsm
 cd linuxgsm || exit
 wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh ${shortname}

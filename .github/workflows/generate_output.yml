@@ -44,7 +44,7 @@
             uses: CyberAndrii/setup-steamcmd@v1.1.5
 
           - name: Run get_cvars.sh
-            run: ./get_cvars.sh
+            run: ./get_cvars.sh ${{ matrix.shortname }}
 
           - name: Get current date
             id: date
