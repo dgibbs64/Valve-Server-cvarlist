@@ -9,6 +9,10 @@
       push:
         branches: ["main"]
 
+    concurrency:
+      group: generate_output-${{ github.ref_name }}
+      cancel-in-progress: true
+
     jobs:
       create-matrix:
         runs-on: ubuntu-latest
