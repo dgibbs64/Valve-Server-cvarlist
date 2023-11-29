@@ -9,7 +9,7 @@ while read -r line; do
 	echo -n "\"shortname\":" >> "shortnamearray.json"
 	echo -n "\"${shortname}\"" >> "shortnamearray.json"
 	echo -n "}," >> "shortnamearray.json"
-done < <(tail serverlist.csv)
+done < <(cat serverlist.csv)
 sed -i '$ s/.$//' "shortnamearray.json"
 echo -n "]" >> "shortnamearray.json"
 echo -n "}" >> "shortnamearray.json"
