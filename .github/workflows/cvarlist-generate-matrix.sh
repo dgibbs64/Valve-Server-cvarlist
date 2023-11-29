@@ -1,7 +1,7 @@
 #!/bin/bash
 echo -n "{" > "shortnamearray.json"
 echo -n "\"include\":[" >> "shortnamearray.json"
-
+ls -al
 while read -r line; do
 	shortname=$(echo "$line" | awk -F, '{ print $1 }')
 	export shortname
