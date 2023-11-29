@@ -1,5 +1,3 @@
-Using default binary: ./srcds_linux
-Server will auto-restart if there is a crash.
 Using Breakpad minidump system. Version: 6630498 AppID: 232330
 Setting breakpad minidump AppID = 232330
 Using breakpad crash handler
@@ -24,10 +22,10 @@ ConVarRef dev_loadtime_map_start doesn't point to an existing ConVar
 Network: IP 0.0.0.0, mode MP, dedicated Yes, ports 27015 SV / 27005 CL
 Initializing Steam libraries for secure Internet server
 [S_API] SteamAPI_Init(): Loaded local 'steamclient.so' OK.
-CAppInfoCacheReadFromDiskThread took 2 milliseconds to initialize
+CAppInfoCacheReadFromDiskThread took 3 milliseconds to initialize
 CApplicationManagerPopulateThread took 0 milliseconds to initialize (will have waited on CAppInfoCacheReadFromDiskThread)
-RecordSteamInterfaceCreation (PID 7473): SteamGameServer013 / 
-RecordSteamInterfaceCreation (PID 7473): SteamUtils010 / 
+RecordSteamInterfaceCreation (PID 7438): SteamGameServer013 / 
+RecordSteamInterfaceCreation (PID 7438): SteamUtils010 / 
 Setting breakpad minidump AppID = 240
 dlopen failed trying to load:
 /home/runner/.steam/sdk32/steamclient.so
@@ -35,24 +33,24 @@ with error:
 /home/runner/.steam/sdk32/steamclient.so: cannot open shared object file: No such file or directory
 Looking up breakpad interfaces from steamclient
 Calling BreakpadMiniDumpSystemInit
-RecordSteamInterfaceCreation (PID 7473): SteamGameServer013 / 
-RecordSteamInterfaceCreation (PID 7473): SteamUtils010 / 
-RecordSteamInterfaceCreation (PID 7473): SteamNetworking006 / 
-RecordSteamInterfaceCreation (PID 7473): SteamGameServerStats001 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMHTTP_INTERFACE_VERSION003 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMINVENTORY_INTERFACE_V003 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMUGC_INTERFACE_VERSION014 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMAPPS_INTERFACE_VERSION008 / 
+RecordSteamInterfaceCreation (PID 7438): SteamGameServer013 / 
+RecordSteamInterfaceCreation (PID 7438): SteamUtils010 / 
+RecordSteamInterfaceCreation (PID 7438): SteamNetworking006 / 
+RecordSteamInterfaceCreation (PID 7438): SteamGameServerStats001 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMHTTP_INTERFACE_VERSION003 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMINVENTORY_INTERFACE_V003 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMUGC_INTERFACE_VERSION014 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMAPPS_INTERFACE_VERSION008 / 
 Setting breakpad minidump AppID = 232330
 No account token specified; logging into anonymous game server account.  (Use sv_setsteamaccount to login to a persistent account.)
-RecordSteamInterfaceCreation (PID 7473): SteamGameServer013 / 
-RecordSteamInterfaceCreation (PID 7473): SteamUtils010 / 
-RecordSteamInterfaceCreation (PID 7473): SteamNetworking006 / 
-RecordSteamInterfaceCreation (PID 7473): SteamGameServerStats001 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMHTTP_INTERFACE_VERSION003 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMINVENTORY_INTERFACE_V003 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMUGC_INTERFACE_VERSION014 / 
-RecordSteamInterfaceCreation (PID 7473): STEAMAPPS_INTERFACE_VERSION008 / 
+RecordSteamInterfaceCreation (PID 7438): SteamGameServer013 / 
+RecordSteamInterfaceCreation (PID 7438): SteamUtils010 / 
+RecordSteamInterfaceCreation (PID 7438): SteamNetworking006 / 
+RecordSteamInterfaceCreation (PID 7438): SteamGameServerStats001 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMHTTP_INTERFACE_VERSION003 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMINVENTORY_INTERFACE_V003 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMUGC_INTERFACE_VERSION014 / 
+RecordSteamInterfaceCreation (PID 7438): STEAMAPPS_INTERFACE_VERSION008 / 
 ConVarRef room_type doesn't point to an existing ConVar
 Executing dedicated server config file cssserver.cfg
 Using map cycle file 'cfg/mapcycle_default.txt'.  ('cfg/mapcycle.txt' was not found.)
@@ -60,17 +58,10 @@ Set motd from file 'cfg/motd_default.txt'.  ('cfg/motd.txt' was not found.)
 Set motd_text from file 'cfg/motd_text_default.txt'.  ('cfg/motd_text.txt' was not found.)
 SV_ActivateServer: setting tickrate to 66.7
 Server is hibernating
-Could not find steamerrorreporter binary. Any minidumps will be uploaded in-processsrc/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
-src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
-Uploading dump (in-process) [proxy '']
-/tmp/dumps/crash_20231128231758_15.dmp
-success = no
-error:  libcurl.so: cannot open shared object file: No such file or directory
 Connection to Steam servers successful.
-   Public IP is 13.73.34.213.
-Assigned anonymous gameserver Steam ID [A:1:242807818:24751].
-Connection to Steam servers lost.  (Result = 3)
-Connection to Steam servers lost.  (Result = 3)
+   Public IP is 4.155.128.255.
+Assigned anonymous gameserver Steam ID [A:1:3142887443:24751].
+VAC secure mode is activated.
 cvarlist
 cvar list
 --------------
