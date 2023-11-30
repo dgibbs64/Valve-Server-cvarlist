@@ -1,0 +1,1779 @@
+cvar list
+--------------
+_resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
+_restart                                 : cmd      :                  : Shutdown and restart the engine.
+achievement_debug                        : 0        : , "sv", "cheat", "rep" : Turn on achievement debug msgs.
+achievement_disable                      : 0        : , "sv", "cheat", "rep" : Turn off achievements.
+addip                                    : cmd      :                  : Add an IP address to the ban list.
+ai_debug_los                             : 0        : , "sv", "cheat"  : NPC Line-Of-Sight debug mode. If 1, solid entities that block NPC LOC will be highlighted with white bounding boxes. If 2, it'l
+ai_debug_shoot_positions                 : 0        : , "sv", "cheat", "rep" : 
+ai_talk_idle_enabled                     : 1        : , "sv", "cheat"  : Set to 0 to disable TLK_IDLEs on survivors
+air_density                              : cmd      :                  : Changes the density of air for drag computations.
+alias                                    : cmd      :                  : Alias a command.
+async_resume                             : cmd      :                  : 
+async_suspend                            : cmd      :                  : 
+banid                                    : cmd      :                  : Add a user ID to the ban list.
+banip                                    : cmd      :                  : Add an IP address to the ban list.
+bench_end                                : cmd      :                  : Ends gathering of info.
+bench_start                              : cmd      :                  : Starts gathering of info. Arguments: filename to write results into
+bench_upload                             : cmd      :                  : Uploads most recent benchmark stats to the Valve servers.
+bind                                     : cmd      :                  : Bind a key.
+BindToggle                               : cmd      :                  : Performs a bind <key> 'increment var <cvar> 0 1 1'
+blackbox_dump                            : cmd      :                  : Dump the contents of the blackbox
+blackbox_record                          : cmd      :                  : Record an entry into the blackbox
+boomer_exposed_time_tolerance            : 1        : , "sv", "cheat"  : How long an out-of-range Boomer will tolerate being visible before fleeing
+boomer_pz_claw_dmg                       : 4        : , "sv", "cheat", "rep" : Amount of damage done by a PZ boomer's regular melee attack
+boomer_vomit_delay                       : 1        : , "sv", "cheat"  : How long the Boomer waits before he vomits on his target on Normal difficulty
+bot_crouch                               : 0        : , "sv", "cheat"  : 
+bot_freeze                               : 0        : , "sv", "cheat"  : 
+bot_mimic                                : 0        : , "sv", "cheat", "rep" : 
+bot_mimic_yaw_offset                     : 180      : , "sv", "cheat"  : 
+buddha                                   : 0        : , "sv", "cheat", "nf" : Survivors take damage but won't die
+budget_toggle_group                      : cmd      :                  : Turn a budget group on/off
+bug_swap                                 : cmd      :                  : Automatically swaps the current weapon for the bug bait and back again.
+cache_print                              : cmd      :                  : cache_print [section] Print out contents of cache memory.
+cache_print_lru                          : cmd      :                  : cache_print_lru [section] Print out contents of cache memory.
+cache_print_summary                      : cmd      :                  : cache_print_summary [section] Print out a summary contents of cache memory.
+callvote                                 : cmd      :                  : Start a vote on an issue.
+cast_hull                                : cmd      :                  : Tests hull collision detection
+cast_ray                                 : cmd      :                  : Tests collision detection
+ch_createairboat                         : cmd      :                  : Spawn airboat in front of the player.
+ch_createjeep                            : cmd      :                  : Spawn jeep in front of the player.
+changelevel                              : cmd      :                  : Change server to the specified map
+changelevel2                             : cmd      :                  : Transition to the specified map in single player
+changelevel_inhibit                      : 0        : , "sv", "cheat"  : 
+changelevel_pause_interval               : 8        : , "sv", "cheat"  : 
+chet_debug_idle                          : 0        : , "a", "sv"      : If set one, many debug prints to help track down the TLK_IDLE issue. Set two for super verbose info
+cl_clock_correction                      : 1        : , "cheat"        : Enable/disable clock correction on the client.
+cl_clock_correction_adjustment_max_amount : 200      : , "cheat"        : Sets the maximum number of milliseconds per second it is allowed to correct the client clock. It will only correct this amount 
+cl_clock_correction_adjustment_max_offset : 90       : , "cheat"        : As the clock offset goes from cl_clock_correction_adjustment_min_offset to this value (in milliseconds), it moves towards apply
+cl_clock_correction_adjustment_min_offset : 10       : , "cheat"        : If the clock offset is less than this amount (in milliseconds), then no clock correction is applied.
+cl_clock_correction_force_server_tick    : 999      : , "cheat"        : Force clock correction to match the server tick + this offset (-999 disables it).
+cl_clock_showdebuginfo                   : 0        : , "cheat"        : Show debugging info about the clock drift. 
+cl_clockdrift_max_ms                     : 150      : , "cheat"        : Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.
+cl_clockdrift_max_ms_threadmode          : 0        : , "cheat"        : Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.
+cl_resend                                : 6        :                  : Delay in seconds before the client will resend the 'connect' attempt
+cl_skipslowpath                          : 0        : , "cheat"        : Set to 1 to skip any models that don't go through the model fast path
+claw_force                               : 240      : , "sv", "cheat", "rep" : Force with witch the claw shoves other zombies away
+claw_plays_hit_anims                     : 0        : , "sv", "cheat", "rep" : Play the new hit anims for debugging?
+claw_range                               : 52       : , "sv", "cheat", "rep" : Range of the Claw weapon
+claw_range_down                          : 70       : , "sv", "cheat", "rep" : Range of the Claw weapon when looking straight down, so it can reach your feet from your eyes.
+claw_swing_duration                      : 0        : , "sv", "cheat", "rep" : 
+claw_swing_interval                      : 1        : , "sv", "cheat", "rep" : 
+claw_swing_miss_interval                 : 0        : , "sv", "cheat", "rep" : 
+clear_attribute                          : cmd      :                  : Remove given attribute from all areas in the selected set.
+clear_debug_overlays                     : cmd      :                  : clears debug overlays
+clientport                               : 27005    :                  : Host game client port
+closecaption                             : 0        : , "a", "user"    : Enable close captioning.
+cmd                                      : cmd      :                  : Forward command to server.
+cmd1                                     : cmd      :                  : sets userinfo string for split screen player in slot 1
+cmd2                                     : cmd      :                  : sets userinfo string for split screen player in slot 2
+cmd3                                     : cmd      :                  : sets userinfo string for split screen player in slot 3
+cmd4                                     : cmd      :                  : sets userinfo string for split screen player in slot 4
+collision_test                           : cmd      :                  : Tests collision system
+commentary_cvarsnotchanging              : cmd      :                  : 
+commentary_finishnode                    : cmd      :                  : 
+crash                                    : cmd      :                  : Cause the engine to crash (Debug!!)
+create_flashlight                        : cmd      :                  : 
+CreatePredictionError                    : cmd      :                  : Create a prediction error
+cs_make_vip                              : cmd      :                  : Marks a player as the VIP
+cs_ShowStateTransitions                  : -2       : , "sv", "cheat"  : cs_ShowStateTransitions <ent index or -1 for all>. Show player state transitions.
+current_flow_distance                    : cmd      :                  : Reports the flow distance for the local player
+cvarlist                                 : cmd      :                  : Show the list of convars/concommands.
+dbghist_addline                          : cmd      :                  : Add a line to the debug history. Format: <category id> <line>
+dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Sc
+debug_visibility_monitor                 : 0        : , "sv", "cheat"  : 
+devshots_nextmap                         : cmd      :                  : Used by the devshots system to go to the next map in the devshots maplist.
+differences                              : cmd      :                  : Show all convars which are not at their default values.
+director_ai_tanks                        : 0        : , "sv", "cheat"  : 
+director_build_up_min_interval           : 15       : , "sv", "cheat"  : 
+director_convert_pills                   : 1        : , "sv", "cheat"  : 
+director_convert_pills_critical_health   : 50       : , "sv", "cheat"  : 
+director_debug                           : 0        : , "sv", "cheat"  : 
+director_debug_scavenge_items            : 0        : , "sv", "cheat"  : 
+director_debug_threat_placement          : 0        : , "sv", "cheat"  : 
+director_finale_infinite                 : 0        : , "sv", "cheat"  : Never bring in a rescue vehicle.
+director_finale_item_cluster_count       : 3        : , "sv", "cheat"  : How many clusters of items will be populated in the finale
+director_finale_max_loops                : 2        : , "sv", "cheat"  : Versus mode: Number of times to loop through the finale waves before rescue.
+director_finale_mob_max_interval         : 45       : , "sv", "cheat"  : 
+director_finale_mob_min_interval         : 5        : , "sv", "cheat"  : 
+director_finale_mob_relax_interval       : 20       : , "sv", "cheat"  : How long a 'relax' wave lasts during the finale
+director_finale_stage_delay              : 5        : , "sv", "cheat"  : 
+director_force_background                : 0        : , "sv", "cheat"  : Forces background map population logic for testing
+director_force_panic_event               : cmd      :                  : Forces a 'PanicEvent' to occur
+director_force_tank                      : 0        : , "sv", "cheat"  : 
+director_force_versus_start              : cmd      :                  : Force start the versus game, so PZs can spawn even if survivors are still in the safe room
+director_force_witch                     : 0        : , "sv", "cheat"  : 
+director_gas_can_density                 : 6        : , "sv", "cheat"  : Items per 100 yards square
+director_ingress_range                   : 3000     : , "sv", "cheat"  : 
+director_intensity_relax_allow_wanderers_threshold : 0        : , "sv", "cheat"  : All survivors must be below this intensity during RELAX for wandering zombies to be spawned
+director_intensity_relax_allow_wanderers_threshold_expert : 0        : , "sv", "cheat"  : All survivors must be below this intensity during RELAX for wandering zombies to be spawned
+director_intensity_relax_allow_wanderers_threshold_hard : 0        : , "sv", "cheat"  : All survivors must be below this intensity during RELAX for wandering zombies to be spawned
+director_intensity_relax_threshold       : 0        : , "sv", "cheat"  : All survivors must be below this intensity before a Peak is allowed to switch to Relax (in addition to the normal peak timer)
+director_intensity_threshold             : 0        : , "sv", "cheat", "rep" : 
+director_item_cluster_range              : 50       : , "sv", "cheat"  : Scavenge items of the same kind that are this close to each other are considered a single 'cluster' for population purposes
+director_molotov_density                 : 6        : , "sv", "cheat"  : Items per 100 yards square
+director_must_create_all_scavenge_items  : 0        : , "sv", "cheat"  : 
+director_no_bosses                       : 0        : , "sv", "cheat"  : Disable boss spawns
+director_no_death_check                  : 0        : , "sv", "cheat"  : Disable survivor team death ending scenario
+director_no_mobs                         : 0        : , "sv", "cheat"  : Disable mob rushes
+director_no_specials                     : 0        : , "sv", "cheat"  : Disable PZ spawns
+director_no_survivor_bots                : 0        : , "sv", "cheat"  : Disable filling out the survivor team with bots
+director_oxygen_tank_density             : 6        : , "sv", "cheat"  : Items per 100 yards square
+director_pain_pill_density               : 6        : , "sv", "cheat"  : Items per 100 yards square
+director_panic_forever                   : 0        : , "sv", "cheat"  : Panic events never end
+director_pipe_bomb_density               : 6        : , "sv", "cheat"  : Items per 100 yards square
+director_pistol_density                  : 4        : , "sv", "cheat"  : Items per 100 yards square
+director_print_player_counts             : cmd      :                  : Prints out counts of connected players and transitioning players (for debugging)
+director_propane_tank_density            : 6        : , "sv", "cheat"  : Items per 100 yards square
+director_ready_duration                  : 60       : , "sv", "cheat"  : If nonzero, survivor team has this amount of time to get ready before starting out
+director_ready_radius                    : 300      : , "sv", "cheat"  : The distance survivors can move from the starting weapons during the ready period
+director_relax_max_flow_travel           : 3000     : , "sv", "cheat"  : 
+director_relax_max_interval              : 45       : , "sv", "cheat"  : 
+director_relax_min_interval              : 30       : , "sv", "cheat"  : 
+director_report                          : cmd      :                  : Prints a snapshot of the director's state
+director_scavenge_item_override          : 0        : , "sv", "cheat"  : Override map-specified item densities with cvar values for tuning
+director_short_finale                    : 0        : , "sv", "cheat"  : Short finale for testing escape vehicles
+director_special_battlefield_respawn_interval : 10       : , "sv", "cheat"  : 
+director_special_finale_offer_length     : 10       : , "sv", "cheat"  : How long is given to a player to accept the offer of a special zombie during the finale.
+director_special_initial_spawn_delay_max : 60       : , "sv", "cheat"  : 
+director_special_initial_spawn_delay_max_extra : 180      : , "sv", "cheat"  : 
+director_special_initial_spawn_delay_min : 30       : , "sv", "cheat"  : 
+director_special_original_offer_length   : 30       : , "sv", "cheat"  : How long is given to the first player to accept the offer of a special zombie.
+director_special_respawn_interval        : 45       : , "sv", "cheat"  : 
+director_spectate_specials               : 0        : , "sv", "cheat"  : Allow spectating zombies
+director_start                           : cmd      :                  : Restores spawning of all wanderers, mobs, specials, and bosses
+director_stop                            : cmd      :                  : Shuts off all wanderers, mobs, specials, and bosses
+director_sustain_peak_max_time           : 5        : , "sv", "cheat"  : 
+director_sustain_peak_min_time           : 3        : , "sv", "cheat"  : 
+director_tank_bypass_max_flow_travel     : 1500     : , "sv", "cheat"  : 
+director_tank_checkpoint_interval        : 15       : , "sv", "cheat"  : Min time after leaving a checkpoint that a tank can spawn
+director_tank_force_offer                : 0        : , "sv", "cheat"  : Forces the director to offer a tank
+director_tank_lottery_entry_time         : 0        : , "sv", "cheat"  : Time it takes for entry into the tank lottery
+director_tank_lottery_selection_time     : 4        : , "sv", "cheat"  : Time it takes for selection in the tank lottery
+director_tank_max_interval               : 500      : , "sv", "cheat"  : 
+director_tank_min_interval               : 350      : , "sv", "cheat"  : 
+director_tank_offer_debug                : 0        : , "sv", "cheat"  : 
+director_threat_clear_radius             : 500      : , "sv", "cheat"  : Prevent wandering zombies within this radius of threats
+director_threat_max_separation           : 5000     : , "sv", "cheat"  : 
+director_threat_min_separation           : 5000     : , "sv", "cheat"  : 
+director_threat_radius                   : 1000     : , "sv", "cheat"  : 
+director_transition_timeout              : 60       : , "sv", "cheat"  : Duration (in seconds) to wait for survivors to transition across changelevels
+director_unfreeze_time                   : 20       : , "sv", "cheat"  : Duration (in seconds) to wait to unfreeze a team after the first player has connected
+director_weapon_density                  : 4        : , "sv", "cheat"  : Items per 100 yards square
+disable_dynamic_prop_loading             : 0        : , "sv", "cheat"  : If non-zero when a map loads, dynamic props won't be loaded
+disable_static_prop_loading              : 0        : , "cheat"        : If non-zero when a map loads, static props won't be loaded
+disconnect                               : cmd      :                  : Disconnect game from server.
+display_elapsedtime                      : cmd      :                  : Displays how much time has elapsed since the game started
+display_game_events                      : 0        : , "cheat"        : 
+dlc3_finale_escape_horde_delay           : 10       : , "sv", "cheat"  : 
+dlc3_finale_stage_delay                  : 0        : , "sv", "cheat"  : 
+drawcross                                : cmd      :                  : Draws a cross at the given location  Arguments: x y z
+drawline                                 : cmd      :                  : Draws line between two 3D Points.  Green if no collision  Red is collides with something  Arguments: x1 y1 z1 x2 y2 z2
+dti_flush                                : cmd      :                  : Write out the datatable instrumentation files (you must run with -dti for this to work).
+dump_avatar_info                         : cmd      :                  : Print out avatar info of each plaeyr
+dump_entity_sizes                        : cmd      :                  : Print sizeof(entclass)
+dump_globals                             : cmd      :                  : Dump all global entities/states
+dump_player_reports                      : cmd      :                  : Dump all player reports to the console for debugging.
+dump_pz_data                             : cmd      :                  : Dump PZ data
+dumpentityfactories                      : cmd      :                  : Lists all entity factory names.
+dumpeventqueue                           : cmd      :                  : Dump the contents of the Entity I/O event queue to the console.
+dumpgamestringtable                      : cmd      :                  : Dump the contents of the game string table to the console.
+dumpstringtables                         : cmd      :                  : Print string tables to console.
+echo                                     : cmd      :                  : Echo text to console.
+endround                                 : cmd      :                  : End the current round.
+ent_absbox                               : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Ar
+ent_attachments                          : cmd      :                  : Displays the attachment points on an entity.  Arguments:    {entity_name} / {class_name} / no argument picks what player is loo
+ent_autoaim                              : cmd      :                  : Displays the entity's autoaim radius.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+ent_bbox                                 : cmd      :                  : Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlay
+ent_cancelpendingentfires                : cmd      :                  : Cancels all ent_fire created outputs that are currently waiting for their delay to expire.
+ent_create                               : cmd      :                  : Creates an entity of the given type where the player is looking.
+ent_dump                                 : cmd      :                  : Usage:    ent_dump <entity name> 
+ent_fire                                 : cmd      :                  : Usage:    ent_fire <target> [action] [value] [delay] 
+ent_info                                 : cmd      :                  : Usage:    ent_info <class name> 
+ent_keyvalue                             : cmd      :                  : Applies the comma delimited key=value pairs to the entity with the given Hammer ID.  Format: ent_keyvalue <entity id> <key1>=<v
+ent_messages                             : cmd      :                  : Toggles input/output message display for the selected entity(ies).  The name of the entity will be displayed as well as any mes
+ent_messages_draw                        : 0        : , "sv", "cheat"  : Visualizes all entity input/output activity.
+ent_name                                 : cmd      :                  : 
+ent_orient                               : cmd      :                  : Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' opt
+ent_pause                                : cmd      :                  : Toggles pausing of input/output message processing for entities.  When turned on processing of all message will stop.  Any mess
+ent_pivot                                : cmd      :                  : Displays the pivot for the given entity(ies).  (y=up=green, z=forward=blue, x=left=red).   Arguments:    {entity_name} / {class
+ent_rbox                                 : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Ar
+ent_remove                               : cmd      :                  : Removes the given entity(s)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at 
+ent_remove_all                           : cmd      :                  : Removes all entities of the specified type  Arguments:    {entity_name} / {class_name} 
+ent_rotate                               : cmd      :                  : Rotates an entity by a specified # of degrees
+ent_setang                               : cmd      :                  : Set entity angles
+ent_setname                              : cmd      :                  : Sets the targetname of the given entity(s)  Arguments:    {new entity name} {entity_name} / {class_name} / no argument picks wh
+ent_setpos                               : cmd      :                  : Move entity to position
+ent_show_response_criteria               : cmd      :                  : Print, to the console, an entity's current criteria set used to select responses.  Arguments:    {entity_name} / {class_name} /
+ent_step                                 : cmd      :                  : When 'ent_pause' is set this will step through one waiting input / output message at a time.
+ent_teleport                             : cmd      :                  : Teleport the specified entity to where the player is looking.  Format: ent_teleport <entity name>
+ent_text                                 : cmd      :                  : Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)  Arguments:    {entity_
+ent_viewoffset                           : cmd      :                  : Displays the eye position for the given entity(ies) in red.  Arguments:    {entity_name} / {class_name} / no argument picks wha
+exec                                     : cmd      :                  : Execute script file.
+exit                                     : cmd      :                  : Exit the engine.
+explode                                  : cmd      :                  : Kills the player with explosive damage
+explodevector                            : cmd      :                  : Kills a player applying an explosive force. Usage: explodevector <player> <x value> <y value> <z value>
+fade_crosshair                           : cmd      :                  : Fades the prop being looked at
+fade_immediately                         : 0        : , "sv", "cheat"  : 
+fadein                                   : cmd      :                  : fadein {time r g b}: Fades the screen in from black or from the specified color over the given number of seconds.
+fadeout                                  : cmd      :                  : fadeout {time r g b}: Fades the screen to black or to the specified color over the given number of seconds.
+find                                     : cmd      :                  : Find concommands with the specified string in their name/help text.
+find_ent                                 : cmd      :                  : Find and list all entities with classnames or targetnames that contain the specified substring. Format: find_ent <substring> 
+find_ent_index                           : cmd      :                  : Display data for entity matching specified index. Format: find_ent_index <index> 
+findflags                                : cmd      :                  : Find concommands by flags.
+firetarget                               : cmd      :                  : 
+first_aid_heal_percent                   : 0        : , "sv", "cheat"  : Percent of injuries to heal
+first_aid_kit_max_heal                   : 100      : , "sv", "cheat", "rep" : 
+first_aid_kit_range                      : 100      : , "sv", "cheat", "rep" : 
+first_aid_kit_use_duration               : 5        : , "sv", "cheat", "rep" : 
+fish_dormant                             : 0        : , "sv", "cheat", "rep" : Turns off interactive fish behavior. Fish become immobile and unresponsive.
+fix_versus_convars                       : 0        : , "sv", "cheat"  : 
+flush                                    : cmd      :                  : Flush unlocked cache memory.
+flush_locked                             : cmd      :                  : Flush unlocked and locked cache memory.
+fog_enable_water_fog                     : 1        : , "cheat"        : 
+forcebind                                : cmd      :                  : Bind a command to an available key. (forcebind command opt:suggestedKey)
+foundry_engine_get_mouse_control         : cmd      :                  : Give the engine control of the mouse.
+foundry_engine_release_mouse_control     : cmd      :                  : Give the control of the mouse back to Hammer.
+foundry_select_entity                    : cmd      :                  : Select the entity under the crosshair or select entities with the specified name.
+foundry_sync_hammer_view                 : cmd      :                  : Move Hammer's 3D view to the same position as the engine's 3D view.
+foundry_update_entity                    : cmd      :                  : Updates the entity's position/angles when in edit mode
+fs_printopenfiles                        : cmd      :                  : Show all files currently opened by the engine.
+fs_warning_level                         : cmd      :                  : Set the filesystem warning level.
+fuel_barrel_damage_amount                : 25       : , "sv", "cheat"  : 
+fuel_barrel_damage_radius                : 400      : , "sv", "cheat"  : 
+fuel_barrel_debug                        : 0        : , "sv", "cheat"  : 
+fuel_barrel_flame_instances              : 8        : , "sv", "cheat"  : 
+fuel_barrel_health                       : 20       : , "sv", "cheat"  : 
+fuel_barrel_screen_shake_amplitude       : 20       : , "sv", "cheat"  : 
+fuel_barrel_screen_shake_duration        : 1        : , "sv", "cheat"  : 
+fuel_barrel_screen_shake_frequency       : 2        : , "sv", "cheat"  : 
+fuel_barrel_screen_shake_radius          : 1000     : , "sv", "cheat"  : 
+func_break_max_pieces                    : 15       : , "a", "sv", "rep" : 
+g_debug_angularsensor                    : 0        : , "sv", "cheat"  : 
+g_debug_constraint_sounds                : 0        : , "sv", "cheat"  : Enable debug printing about constraint sounds.
+g_debug_physcannon                       : 0        : , "sv", "cheat", "rep" : 
+g_debug_ragdoll_removal                  : 0        : , "sv", "cheat", "rep" : 
+g_debug_vehiclebase                      : 0        : , "sv", "cheat"  : 
+g_debug_vehicleexit                      : 0        : , "sv", "cheat"  : 
+g_debug_vehiclesound                     : 0        : , "sv", "cheat"  : 
+give                                     : cmd      :                  : Give item to player.  Arguments: <item_name>
+givecurrentammo                          : cmd      :                  : Give a supply of ammo for current weapon.. 
+global_set                               : cmd      :                  : global_set <globalname> <state>: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD).
+go_away_from_keyboard                    : cmd      :                  : Go away from the keyboard so a bot will take over.
+god                                      : 0        : , "sv", "cheat", "nf" : Survivors don't take damage
+groundlist                               : cmd      :                  : Display ground entity list <index>
+hammer_update_entity                     : cmd      :                  : Updates the entity's position/angles when in edit mode
+hammer_update_safe_entities              : cmd      :                  : Updates entities in the map that can safely be updated (don't have parents or are affected by constraints). Also excludes entit
+heartbeat                                : cmd      :                  : Force heartbeat of master servers
+help                                     : cmd      :                  : Find help about a convar/concommand.
+holdout_boomer_limit_increase            : 0        : , "sv", "cheat"  : After each special wave, increase max boomers by this amount.
+holdout_horde_stage_interval             : 60       : , "sv", "cheat"  : Seconds between horde attacks
+holdout_horde_stage_interval_decay       : 2        : , "sv", "cheat"  : After each horde attack, reduce the interval by this many seconds
+holdout_hunter_limit_increase            : 1        : , "sv", "cheat"  : After each special wave, increase max hunters by this amount.
+holdout_lull_time                        : 15       : , "sv", "cheat"  : Lull duration between holdout waves.
+holdout_lull_time_increment              : 15       : , "sv", "cheat"  : Increment for the lull time per wave.
+holdout_lull_time_max                    : 60       : , "sv", "cheat"  : Max lull duration.
+holdout_max_boomers                      : 2        : , "sv", "cheat"  : Max boomers alive at one time.
+holdout_max_hunters                      : 3        : , "sv", "cheat"  : Max hunters alive at one time.
+holdout_max_smokers                      : 4        : , "sv", "cheat"  : Max smokers alive at one time.
+holdout_max_specials                     : 9        : , "sv", "cheat"  : Max number of special zombies alive at one time.
+holdout_round_restart_delay              : 15       : , "sv", "cheat"  : After a loss, restart the round after this many seconds.
+holdout_smoker_limit_increase            : 1        : , "sv", "cheat"  : After each special wave, increase max smokers by this amount.
+holdout_special_spawn_interval           : 20       : , "sv", "cheat"  : Seconds between special spawn waves
+holdout_special_spawn_interval_decay     : 1        : , "sv", "cheat"  : After each special wave, reduce the spawn interval by this many seconds
+holdout_special_stage_interval           : 40       : , "sv", "cheat"  : After this many seconds, increase the limit for each special type
+holdout_tank_double_spawn_delay          : 10       : , "sv", "cheat"  : Delay between the two tanks during double spawns.
+holdout_tank_stage_interval              : 80       : , "sv", "cheat"  : Seconds between tank attacks
+holdout_tank_stage_interval_decay        : 20       : , "sv", "cheat"  : After some number of waves, reduce the interval by this many seconds
+host_flush_threshold                     : 12       :                  : Memory threshold below which the host should flush caches between server instances
+host_map                                 : 0        :                  : Current map name.
+host_runofftime                          : cmd      :                  : Run off some time without rendering/updating sounds 
+host_sleep                               : 0        : , "cheat"        : Force the host to sleep a certain number of milliseconds each frame.
+host_timescale                           : 1        : , "cheat", "rep" : Prescale the clock by this amount.
+hostfile                                 : 0        : , "sv"           : The HOST file to load.
+hostip                                   : 0        :                  : Host game server ip
+hostname                                 : 0        :                  : Hostname for server.
+hostport                                 : 27015    :                  : Host game server port
+hunter_committed_attack_range            : 75       : , "sv", "cheat"  : 
+hunter_leap_away_give_up_range           : 1000     : , "sv", "cheat"  : 
+hunter_pounce_air_speed                  : 700      : , "sv", "cheat"  : 
+hunter_pounce_loft_rate                  : 0        : , "sv", "cheat"  : Hunter adds this angle/distance when pouncing
+hunter_pounce_max_loft_angle             : 45       : , "sv", "cheat"  : Maximum loft angle for Hunter Pounce angle adjustment
+hunter_pounce_ready_range                : 500      : , "sv", "cheat"  : If victim is this close, crouch and get ready
+hunter_pz_claw_dmg                       : 6        : , "sv", "cheat", "rep" : Amount of damage done by a PZ hunter's regular melee attack
+hurtme                                   : cmd      :                  : Hurts the player.  Arguments: <health to lose>
+in_forceuser                             : 0        : , "cheat"        : Force user input to this split screen player.
+incrementvar                             : cmd      :                  : Increment specified convar value.
+inferno_child_spawn_interval_multiplier  : 1        : , "sv", "cheat"  : Amount spawn interval increases for each child
+inferno_child_spawn_max_depth            : 4        : , "sv", "cheat"  : 
+inferno_damage                           : 40       : , "sv", "cheat"  : Damage per second
+inferno_debug                            : 0        : , "sv", "cheat"  : 
+inferno_flame_lifetime                   : 15       : , "sv", "cheat"  : Average lifetime of each flame in seconds
+inferno_flame_spacing                    : 50       : , "sv", "cheat"  : Minimum distance between separate flame spawns
+inferno_friendly_fire_duration           : 6        : , "sv", "cheat"  : For this long, FF is credited back to the thrower.
+inferno_initial_spawn_interval           : 0        : , "sv", "cheat"  : Time between spawning flames for first fire
+inferno_max_child_spawn_interval         : 1        : , "sv", "cheat"  : Largest time interval for child flame spawning
+inferno_max_flames                       : 32       : , "sv", "cheat"  : Maximum number of flames that can be created
+inferno_max_range                        : 500      : , "sv", "cheat"  : Maximum distance flames can spread from their initial ignition point
+inferno_particles                        : 0        : , "sv", "cheat", "rep" : 
+inferno_per_flame_spawn_duration         : 5        : , "sv", "cheat"  : Duration each new flame will attempt to spawn new flames
+inferno_scorch_decals                    : 0        : , "sv", "cheat"  : 
+inferno_spawn_angle                      : 45       : , "sv", "cheat"  : Angular change from parent
+inferno_surface_offset                   : 20       : , "sv", "cheat"  : 
+inferno_velocity_decay_factor            : 0        : , "sv", "cheat"  : 
+inferno_velocity_factor                  : 0        : , "sv", "cheat"  : 
+inferno_velocity_normal_factor           : 0        : , "sv", "cheat"  : 
+intensity_averaged_following_decay       : 20       : , "sv", "cheat"  : Seconds for the 'time averaged intensity' to meet the baseline intensity
+intensity_decay_time                     : 30       : , "sv", "cheat"  : Seconds to decay full intensity to zero
+intensity_enemy_death_far_range          : 500      : , "sv", "cheat"  : 
+intensity_enemy_death_near_range         : 150      : , "sv", "cheat"  : 
+intensity_factor                         : 0        : , "sv", "cheat"  : How quickly intensity increases
+intensity_lock                           : -1       : , "sv", "cheat"  : Lock players' intensities at this value
+ip                                       : 0        :                  : Overrides IP for multihomed hosts
+kdtree_test                              : cmd      :                  : Tests spatial partition for entities queries.
+key_findbinding                          : cmd      :                  : Find key bound to specified command string.
+key_listboundkeys                        : cmd      :                  : List bound keys with bindings.
+kick                                     : cmd      :                  : Kick a player by name.
+kick_transitioning                       : cmd      :                  : Kick a transitioning player by userID
+kickid                                   : cmd      :                  : Kick a player by userid or uniqueid, with a message.
+kill                                     : cmd      :                  : Kills the player with generic damage
+killserver                               : cmd      :                  : Shutdown the server.
+killvector                               : cmd      :                  : Kills a player applying force. Usage: killvector <player> <x value> <y value> <z value>
+left_4_dead_radio                        : 0        : , "sv", "cheat"  : 
+listid                                   : cmd      :                  : Lists banned users.
+listip                                   : cmd      :                  : List IP addresses on the ban list.
+listissues                               : cmd      :                  : List all the issues that can be voted on.
+listmodels                               : cmd      :                  : List loaded models.
+listRecentNPCSpeech                      : cmd      :                  : Displays a list of the last 5 lines of speech from NPCs.
+log                                      : cmd      :                  : Enables logging to file, console, and udp < on | off >.
+logaddress_add                           : cmd      :                  : Set address and port for remote host <ip:port>.
+logaddress_del                           : cmd      :                  : Remove address and port for remote host <ip:port>.
+logaddress_delall                        : cmd      :                  : Remove all udp addresses being logged to
+logaddress_list                          : cmd      :                  : List all addresses currently being used by logaddress.
+map                                      : cmd      :                  : Start playing on specified map.
+map_background                           : cmd      :                  : Runs a map as the background to the main menu.
+map_commentary                           : cmd      :                  : Start playing, with commentary, on a specified map.
+map_showspawnpoints                      : cmd      :                  : Shows player spawn points (red=invalid)
+maps                                     : cmd      :                  : Displays list of maps.
+mark                                     : cmd      :                  : Set attribute of selected area.
+mat_bumpbasis                            : 0        : , "cheat"        : 
+mat_configcurrent                        : cmd      :                  : show the current video control panel config for the material system
+mat_debug                                : cmd      :                  : Activates debugging spew for a specific material.
+mat_debugalttab                          : 0        : , "cheat"        : 
+mat_depthbias_normal                     : 0        : , "cheat"        : 
+mat_drawflat                             : 0        : , "cheat"        : 
+mat_dynamiclightmaps                     : 0        : , "cheat"        : 
+mat_fastnobump                           : 0        : , "cheat"        : 
+mat_fillrate                             : 0        : , "cheat"        : 
+mat_forcedynamic                         : 0        : , "cheat"        : 
+mat_fullbright                           : 0        : , "cheat"        : 
+mat_hdr_enabled                          : cmd      :                  : Report if HDR is enabled for debugging
+mat_hdr_tonemapscale                     : 1        : , "sv", "cheat"  : The HDR tonemap scale. 1 = Use autoexposure, 0 = eyes fully closed, 16 = eyes wide open.
+mat_info                                 : cmd      :                  : Shows material system info
+mat_loadtextures                         : 1        : , "cheat"        : 
+mat_luxels                               : 0        : , "cheat"        : 
+mat_measurefillrate                      : 0        : , "cheat"        : 
+mat_monitorgamma_tv_enabled              : 0        : , "a"            : 
+mat_morphstats                           : 0        : , "cheat"        : 
+mat_norendering                          : 0        : , "cheat"        : 
+mat_normalmaps                           : 0        : , "cheat"        : 
+mat_normals                              : 0        : , "cheat"        : 
+mat_proxy                                : 0        : , "cheat"        : 
+mat_queue_priority                       : 1        :                  : 
+mat_reloadallmaterials                   : cmd      :                  : Reloads all materials
+mat_reloadmaterial                       : cmd      :                  : Reloads a single material
+mat_reloadtextures                       : cmd      :                  : Reloads all textures
+mat_reporthwmorphmemory                  : cmd      :                  : Reports the amount of size in bytes taken up by hardware morph textures.
+mat_reversedepth                         : 0        : , "cheat"        : 
+mat_savechanges                          : cmd      :                  : saves current video configuration to the registry
+mat_showlowresimage                      : 0        : , "cheat"        : 
+mat_showmaterials                        : cmd      :                  : Show materials.
+mat_showmaterialsverbose                 : cmd      :                  : Show materials (verbose version).
+mat_showtextures                         : cmd      :                  : Show used textures.
+mat_softwareskin                         : 0        : , "cheat"        : 
+mat_spewalloc                            : 0        : , "a"            : 
+mat_suppress                             : cmd      :                  : Supress a material from drawing
+mat_wireframe                            : 0        : , "cheat"        : 
+maxplayers                               : cmd      :                  : Change the maximum number of players allowed on this server.
+mem_compact                              : cmd      :                  : 
+mem_dump                                 : cmd      :                  : Dump memory stats to text file.
+mem_incremental_compact                  : cmd      :                  : 
+mem_incremental_compact_rate             : 0        : , "cheat"        : Rate at which to attempt internal heap compation
+mem_test                                 : cmd      :                  : 
+mem_vcollide                             : cmd      :                  : Dumps the memory used by vcollides
+memory                                   : cmd      :                  : Print memory stats.
+memory_diff                              : cmd      :                  : show memory stats relative to snapshot
+memory_list                              : cmd      :                  : dump memory list (linux only)
+memory_mark                              : cmd      :                  : snapshot current allocation status
+memory_status                            : cmd      :                  : show memory stats (linux only)
+mission_reload                           : cmd      :                  : Reload mission metadata
+mix_dynamic_cull_max_CI_emitters         : 0        : , "sv", "cheat"  : 
+mix_dynamic_debug_CI                     : 0        : , "sv", "cheat"  : 
+mix_dynamic_max_CI_emitters              : 30       : , "sv", "cheat"  : 
+mix_dynamic_num_attack_vox_CI            : 2        : , "sv", "cheat"  : 
+mm_datacenter_debugprint                 : cmd      :                  : Shows information retrieved from data center
+motd_enabled                             : 1        : , "sv"           : Toggles whether or not to show the MOTD to clients when they connect.
+motdfile                                 : 0        : , "sv"           : The MOTD file to load.
+mounted_gun_cooldown_time                : 20       : , "sv", "cheat", "rep" : Mounted gun cooldown time
+mounted_gun_damage                       : 50       : , "sv", "cheat"  : 
+mounted_gun_distance                     : 36       : , "sv", "cheat", "rep" : 
+mounted_gun_fire_think_interval          : 0        : , "sv", "cheat"  : 
+mounted_gun_mount_cooldown_time          : 0        : , "sv", "cheat"  : 
+mounted_gun_overheat_penalty_time        : 20       : , "sv", "cheat"  : 
+mounted_gun_overheat_time                : 20       : , "sv", "cheat", "rep" : Mounted gun overheat time
+mounted_gun_rate_of_fire                 : 8        : , "sv", "cheat"  : 
+mp_disable_autokick                      : cmd      :                  : Prevents a userid from being auto-kicked
+mp_forcerespawnplayers                   : cmd      :                  : Force all players to respawn.
+mp_forcewin                              : cmd      :                  : Forces team to win
+mp_gamemode                              : 0        : , "sv", "rep"    : Current game mode, acceptable values are coop, versus, survival; changed using map command, eg: map mapname versus
+mp_roundlimit                            : 3        : , "sv"           : Maximum number of rounds
+mp_scrambleteams                         : cmd      :                  : Scramble the teams and restart the game
+mp_switchteams                           : cmd      :                  : Switch teams and restart the game
+multiplayerendgame                       : cmd      :                  : Take all of the connected clients and take them to the end game state.
+multvar                                  : cmd      :                  : Multiply specified convar value.
+music_calm_min_interval                  : 45       : , "sv", "cheat"  : Minimum time between DisturbingAtmosphere performances
+music_dynamic_action_decay               : 10       : , "sv", "cheat"  : 
+music_dynamic_ambient_decay              : 7        : , "sv", "cheat"  : 
+music_dynamic_ambient_in_max             : 0        : , "sv", "cheat"  : 
+music_dynamic_ambient_in_min             : 0        : , "sv", "cheat"  : 
+music_dynamic_ambient_out_max            : 1        : , "sv", "cheat"  : 
+music_dynamic_ambient_out_min            : 0        : , "sv", "cheat"  : 
+music_dynamic_ambient_vol_min_alert      : 0        : , "sv", "cheat"  : 
+music_dynamic_asg_speed                  : 1        : , "sv", "cheat"  : 
+music_dynamic_attack_CI_close_decay      : 0        : , "sv", "cheat"  : 
+music_dynamic_attack_CI_close_distmax    : 600      : , "sv", "cheat"  : 
+music_dynamic_attack_CI_distmax          : 2400     : , "sv", "cheat"  : 
+music_dynamic_attack_CI_near_decay       : 0        : , "sv", "cheat"  : 
+music_dynamic_attack_CI_near_distmax     : 300      : , "sv", "cheat"  : 
+music_dynamic_attack_CI_num              : 30       : , "sv", "cheat"  : 
+music_dynamic_attack_CI_veryclose_decay  : 0        : , "sv", "cheat"  : 
+music_dynamic_attack_CI_veryclose_distmax : 94       : , "sv", "cheat"  : 
+music_dynamic_boomer_interval_beats      : 5        : , "sv", "cheat"  : 
+music_dynamic_calm_decay                 : 15       : , "sv", "cheat"  : 
+music_dynamic_CI_sight_decay             : 8        : , "sv", "cheat"  : 
+music_dynamic_damage_decay               : 10       : , "sv", "cheat"  : 
+music_dynamic_damage_duck_damage_max     : 1        : , "sv", "cheat"  : 
+music_dynamic_damage_duck_damage_min     : 0        : , "sv", "cheat"  : 
+music_dynamic_damage_duck_max            : 0        : , "sv", "cheat"  : 
+music_dynamic_damage_duck_min            : 0        : , "sv", "cheat"  : 
+music_dynamic_damage_increment           : 0        : , "sv", "cheat"  : 
+music_dynamic_debug                      : 0        : , "sv", "cheat"  : Draw parameter meters
+music_dynamic_dodamage_decay             : 4        : , "sv", "cheat"  : 
+music_dynamic_dodamage_increment         : 0        : , "sv", "cheat"  : 
+music_dynamic_gunfire_decay              : 1        : , "sv", "cheat"  : 
+music_dynamic_gunfire_increment          : 0        : , "sv", "cheat"  : 
+music_dynamic_gunfireslow_decay          : 3        : , "sv", "cheat"  : 
+music_dynamic_gunfireslow_increment      : 0        : , "sv", "cheat"  : 
+music_dynamic_hunter_interval_beats      : 5        : , "sv", "cheat"  : 
+music_dynamic_huntrifle_speed            : 3        : , "sv", "cheat"  : 
+music_dynamic_melee_speed                : 2        : , "sv", "cheat"  : 
+music_dynamic_mgun_speed                 : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_action_close_max       : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_action_close_min       : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_action_decay           : 15       : , "sv", "cheat"  : 
+music_dynamic_mob_action_increment       : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_action_max             : 1        : , "sv", "cheat"  : 
+music_dynamic_mob_action_min             : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_choir_BPM              : 90       : , "sv", "cheat"  : 
+music_dynamic_mob_choir_interval_beats   : 16       : , "sv", "cheat"  : 
+music_dynamic_mob_choir_interval_randmultmax : 3        : , "sv", "cheat"  : 
+music_dynamic_mob_damage_max             : 1        : , "sv", "cheat"  : 
+music_dynamic_mob_damage_min             : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_decay                  : 15       : , "sv", "cheat"  : 
+music_dynamic_mob_increment              : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_large                  : 49       : , "sv", "cheat"  : Spawning a large mob
+music_dynamic_mob_max                    : 1        : , "sv", "cheat"  : 
+music_dynamic_mob_med                    : 29       : , "sv", "cheat"  : Spawning a med mob
+music_dynamic_mob_min                    : 0        : , "sv", "cheat"  : 
+music_dynamic_mob_size                   : 25       : , "sv", "cheat"  : Spawning a mob this large can play music
+music_dynamic_mob_small                  : 20       : , "sv", "cheat"  : Spawning a small mob
+music_dynamic_mobstop_size               : 8        : , "sv", "cheat"  : When a mob gets to this size we think about stopping the music
+music_dynamic_on                         : 1        : , "sv", "cheat"  : 
+music_dynamic_pistol_speed               : 0        : , "sv", "cheat"  : 
+music_dynamic_psg_speed                  : 2        : , "sv", "cheat"  : 
+music_dynamic_PZ_BPM                     : 80       : , "sv", "cheat"  : 
+music_dynamic_PZ_interval_randmultmax    : 5        : , "sv", "cheat"  : 
+music_dynamic_rifle_speed                : 0        : , "sv", "cheat"  : 
+music_dynamic_scanmobstop_size           : 3        : , "sv", "cheat"  : When see less than this many of a mob, music stops
+music_dynamic_SI_close_distmax           : 1200     : , "sv", "cheat"  : 
+music_dynamic_SI_far_distmin             : 1800     : , "sv", "cheat"  : 
+music_dynamic_SI_inrange_distmax         : 2400     : , "sv", "cheat"  : 
+music_dynamic_smg_speed                  : 0        : , "sv", "cheat"  : 
+music_dynamic_smoker_interval_beats      : 5        : , "sv", "cheat"  : 
+music_dynamic_solosuccess_damagemin      : 0        : , "sv", "cheat"  : 
+music_dynamic_solosuccess_decay          : 4        : , "sv", "cheat"  : 
+music_dynamic_solosuccess_increment      : 1        : , "sv", "cheat"  : 
+music_dynamic_threat_decay               : 6        : , "sv", "cheat"  : 
+music_dynamic_update_interval            : 0        : , "sv", "cheat"  : interval between music status/action update
+music_dynamic_witch_alert_interval       : 37       : , "sv", "cheat"  : 
+music_dynamic_witch_near_max             : 1800     : , "sv", "cheat"  : 
+music_dynamic_witch_near_min             : 360      : , "sv", "cheat"  : 
+music_intensity_override                 : -1       : , "sv", "cheat", "rep" : Overrides the player's music intensity track for testing
+music_intensity_threshold                : 0        : , "sv", "cheat", "rep" : 
+music_large_area_reveal_repeat_threshold : 60       : , "sv", "cheat"  : The minimum time in seconds between performances of this music
+music_large_area_reveal_threshold        : 500000   : , "sv", "cheat"  : How much new area must be revealed to trigger the reveal music
+music_manager                            : 1        : , "sv", "cheat"  : Using the new music manager system.
+music_min_pending_threat_time            : 10       : , "sv", "cheat"  : Minimum time until the next mob or boss. Used when deciding to play MomentOfSilence
+music_min_safe_time                      : 3        : , "sv", "cheat"  : Minimum time that we haven't seen a threat or been injured. Used when deciding to play MomentOfSilence
+music_moment_of_silence_repeat_interval  : 600      : , "sv", "cheat"  : Minimum time between successive MomentOfSilence performances
+music_moment_of_silence_start_delay      : 60       : , "sv", "cheat"  : Minimum time before we can play a MomentOfSilence after leaving a Checkpoint
+name                                     : 0        : , "a", "user", "print", "server_can_execute", "ss" : Current user name
+name2                                    : 0        : , "a", "user", "print", "server_can_execute", "ss_added" : Current user name
+nav_add_to_selected_set                  : cmd      :                  : Add current area to the selected set.
+nav_add_to_selected_set_by_id            : cmd      :                  : Add specified area id to the selected set.
+nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk.
+nav_area_bgcolor                         : 0        : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
+nav_area_max_size                        : 50       : , "sv", "cheat"  : Max area size created in nav generation
+nav_avoid                                : cmd      :                  : Toggles the 'avoid this area when possible' flag used by the AI system.
+nav_begin_area                           : cmd      :                  : Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and 
+nav_begin_selecting                      : cmd      :                  : Start continuously adding to the selected set.
+nav_begin_shift_xy                       : cmd      :                  : Begin shifting the Selected Set.
+nav_build_ladder                         : cmd      :                  : Attempts to build a nav ladder on the climbable surface under the cursor.
+nav_check_file_consistency               : cmd      :                  : Scans the maps directory and reports any missing/out-of-date navigation files.
+nav_check_floor                          : cmd      :                  : Updates the blocked/unblocked status for every nav area.
+nav_check_stairs                         : cmd      :                  : Update the nav mesh STAIRS attribute
+nav_chop_selected                        : cmd      :                  : Chops all selected areas into their component 1x1 areas
+nav_clear_attribute                      : cmd      :                  : Remove given nav attribute from all areas in the selected set.
+nav_clear_selected_set                   : cmd      :                  : Clear the selected set.
+nav_clear_walkable_marks                 : cmd      :                  : Erase any previously placed walkable positions.
+nav_compress_id                          : cmd      :                  : Re-orders area and ladder ID's so they are continuous.
+nav_connect                              : cmd      :                  : To connect two Areas, mark the first Area, highlight the second Area, then invoke the connect command. Note that this creates a
+nav_coplanar_slope_limit                 : 0        : , "sv", "cheat"  : 
+nav_coplanar_slope_limit_displacement    : 0        : , "sv", "cheat"  : 
+nav_corner_adjust_adjacent               : 18       : , "sv", "cheat"  : radius used to raise/lower corners in nearby areas when raising/lowering corners.
+nav_corner_lower                         : cmd      :                  : Lower the selected corner of the currently marked Area.
+nav_corner_place_on_ground               : cmd      :                  : Places the selected corner of the currently marked Area on the ground.
+nav_corner_raise                         : cmd      :                  : Raise the selected corner of the currently marked Area.
+nav_corner_select                        : cmd      :                  : Select a corner of the currently marked Area. Use multiple times to access all four corners.
+nav_create_area_at_feet                  : 0        : , "sv", "cheat"  : Anchor nav_begin_area Z to editing player's feet
+nav_create_place_on_ground               : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when created by hand.
+nav_crouch                               : cmd      :                  : Toggles the 'must crouch in this area' flag used by the AI system.
+nav_debug_blocked                        : 0        : , "sv", "cheat"  : 
+nav_debug_finale_area                    : 0        : , "sv", "cheat"  : Show extents of finale area and selected finale center
+nav_delete                               : cmd      :                  : Deletes the currently highlighted Area.
+nav_delete_marked                        : cmd      :                  : Deletes the currently marked Area (if any).
+nav_disconnect                           : cmd      :                  : To disconnect two Areas, mark an Area, highlight a second Area, then invoke the disconnect command. This will remove all connec
+nav_displacement_test                    : 10000    : , "sv", "cheat"  : Checks for nodes embedded in displacements (useful for in-development maps)
+nav_dont_hide                            : cmd      :                  : Toggles the 'area is not suitable for hiding spots' flag used by the AI system.
+nav_draw_limit                           : 500      : , "sv", "cheat"  : The maximum number of areas to draw in edit mode
+nav_edit                                 : 0        : , "sv", "cheat"  : Set to one to interactively edit the Navigation Mesh. Set to zero to leave edit mode.
+nav_end_area                             : cmd      :                  : Defines the second corner of a new Area or Ladder and creates it.
+nav_end_selecting                        : cmd      :                  : Stop continuously adding to the selected set.
+nav_end_shift_xy                         : cmd      :                  : Finish shifting the Selected Set.
+nav_flood_select                         : cmd      :                  : Selects the current Area and all Areas connected to it, recursively. To clear a selection, use this command again.
+nav_fog_edit                             : 0        : , "sv", "cheat"  : 
+nav_fog_mark                             : cmd      :                  : Sets fog value for selected areas.
+nav_fog_pick                             : cmd      :                  : Sets fog value for selected areas.
+nav_fog_set                              : cmd      :                  : If used without arguments, all available Fog values will be listed. If a Fog argument is given, the current Fog is set.
+nav_gen_cliffs_approx                    : cmd      :                  : Mark cliff areas, post-processing approximation
+nav_generate                             : cmd      :                  : Generate a Navigation Mesh for the current map and save it to disk.
+nav_generate_fencetops                   : 1        : , "sv", "cheat"  : Autogenerate nav areas on fence and obstacle tops
+nav_generate_fixup_jump_areas            : 1        : , "sv", "cheat"  : Convert obsolete jump areas into 2-way connections
+nav_generate_incremental                 : cmd      :                  : Generate a Navigation Mesh for the current map and save it to disk.
+nav_generate_incremental_range           : 2000     : , "sv", "cheat"  : 
+nav_jump                                 : cmd      :                  : Toggles the 'traverse this area by jumping' flag used by the AI system.
+nav_ladder_flip                          : cmd      :                  : Flips the selected ladder's direction.
+nav_load                                 : cmd      :                  : Loads the Navigation Mesh for the current map.
+nav_make_sniper_spots                    : cmd      :                  : Chops the marked area into disconnected sub-areas suitable for sniper spots.
+nav_mark                                 : cmd      :                  : Marks the Area or Ladder under the cursor for manipulation by subsequent editing commands.
+nav_mark_attribute                       : cmd      :                  : Set nav attribute for all areas in the selected set.
+nav_mark_unnamed                         : cmd      :                  : Mark an Area with no Place name. Useful for finding stray areas missed when Place Painting.
+nav_mark_walkable                        : cmd      :                  : Mark the current location as a walkable position. These positions are used as seed locations when sampling the map to generate 
+nav_max_view_distance                    : 1500     : , "sv", "cheat"  : Maximum range for precomputed nav mesh visibility (0 = no limit)
+nav_max_vis_delta_list_length            : 64       : , "sv", "cheat"  : 
+nav_merge                                : cmd      :                  : To merge two Areas into one, mark the first Area, highlight the second by pointing your cursor at it, and invoke the merge comm
+nav_merge_mesh                           : cmd      :                  : Merges a saved selected set into the current mesh.
+nav_no_hostages                          : cmd      :                  : Toggles the 'hostages cannot use this area' flag used by the AI system.
+nav_no_jump                              : cmd      :                  : Toggles the 'dont jump in this area' flag used by the AI system.
+nav_obscure_range                        : 400      : , "sv", "cheat"  : 
+nav_place_floodfill                      : cmd      :                  : Sets the Place of the Area under the cursor to the curent Place, and 'flood-fills' the Place to all adjacent Areas. Flood-filli
+nav_place_list                           : cmd      :                  : Lists all place names used in the map.
+nav_place_pick                           : cmd      :                  : Sets the current Place to the Place of the Area under the cursor.
+nav_place_replace                        : cmd      :                  : Replaces all instances of the first place with the second place.
+nav_place_set                            : cmd      :                  : Sets the Place of all selected areas to the current Place.
+nav_potentially_visible_dot_tolerance    : 0        : , "sv", "cheat"  : 
+nav_precise                              : cmd      :                  : Toggles the 'dont avoid obstacles' flag used by the AI system.
+nav_print_visibility_info                : cmd      :                  : Dumps some visibility-related data to the console.
+nav_quicksave                            : 1        : , "sv", "cheat"  : Set to one to skip the time consuming phases of the analysis.  Useful for data collection and testing.
+nav_recall_selected_set                  : cmd      :                  : Re-selects the stored selected set.
+nav_recompute_flow                       : cmd      :                  : Recomputes flow distance
+nav_remove_from_selected_set             : cmd      :                  : Remove current area from the selected set.
+nav_remove_jump_areas                    : cmd      :                  : Removes legacy jump areas, replacing them with connections.
+nav_run                                  : cmd      :                  : Toggles the 'traverse this area by running' flag used by the AI system.
+nav_save                                 : cmd      :                  : Saves the current Navigation Mesh to disk.
+nav_save_selected                        : cmd      :                  : Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
+nav_select_blocked_areas                 : cmd      :                  : Adds all blocked areas to the selected set
+nav_select_completely_visible            : cmd      :                  : Selects all areas completely visible to the selected area.
+nav_select_damaging_areas                : cmd      :                  : Adds all damaging areas to the selected set
+nav_select_half_space                    : cmd      :                  : Selects any areas that intersect the given half-space.
+nav_select_invalid_areas                 : cmd      :                  : Adds all invalid areas to the Selected Set.
+nav_select_obstructed_areas              : cmd      :                  : Adds all obstructed areas to the selected set
+nav_select_overlapping                   : cmd      :                  : Selects nav areas that are overlapping others.
+nav_select_partially_visible             : cmd      :                  : Selects all areas at least partially visible to the selected area.
+nav_select_radius                        : cmd      :                  : Adds all areas in a radius to the selection set
+nav_select_stairs                        : cmd      :                  : Adds all stairway areas to the selected set
+nav_select_threat                        : cmd      :                  : Selects all threat areas
+nav_select_view_distance                 : cmd      :                  : Selects all areas within nav_max_view_distance.
+nav_select_visible_set_size              : cmd      :                  : Selects all areas with visible sets this size or greater.
+nav_selected_set_border_color            : 100      : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
+nav_selected_set_color                   : 255      : , "sv", "cheat"  : Color used to draw the selected set background while editing.
+nav_set_place_mode                       : cmd      :                  : Sets the editor into or out of Place mode. Place mode allows labelling of Area with Place names.
+nav_shift                                : cmd      :                  : Shifts the selected areas by the specified amount
+nav_show_approach_points                 : 0        : , "sv", "cheat"  : Show Approach Points in the Navigation Mesh.
+nav_show_area_info                       : 0        : , "sv", "cheat"  : Duration in seconds to show nav area ID and attributes while editing
+nav_show_compass                         : 0        : , "sv", "cheat"  : 
+nav_show_danger                          : 0        : , "sv", "cheat"  : Show current 'danger' levels.
+nav_show_ladder_bounds                   : cmd      :                  : Draws the bounding boxes of all func_ladders in the map.
+nav_show_light_intensity                 : 0        : , "sv", "cheat"  : 
+nav_show_node_grid                       : 0        : , "sv", "cheat"  : 
+nav_show_node_id                         : 0        : , "sv", "cheat"  : 
+nav_show_nodes                           : 0        : , "sv", "cheat"  : 
+nav_show_player_area                     : 0        : , "sv", "cheat"  : Draws the last known area for the given entindex
+nav_show_player_counts                   : 0        : , "sv", "cheat"  : Show current player counts in each area.
+nav_simplify_selected                    : cmd      :                  : Chops all selected areas into their component 1x1 areas and re-merges them together into larger areas
+nav_slope_limit                          : 0        : , "sv", "cheat"  : The ground unit normal's Z component must be greater than this for nav areas to be generated.
+nav_slope_tolerance                      : 0        : , "sv", "cheat"  : The ground unit normal's Z component must be this close to the nav area's Z component to be generated.
+nav_snap_to_grid                         : 0        : , "sv", "cheat"  : Snap to the nav generation grid when creating new nav areas
+nav_solid_props                          : 0        : , "sv", "cheat"  : Make props solid to nav generation/editing
+nav_splice                               : cmd      :                  : To splice, mark an area, highlight a second area, then invoke the splice command to create a new, connected area between them.
+nav_split                                : cmd      :                  : To split an Area into two, align the split line using your cursor and invoke the split command.
+nav_split_place_on_ground                : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when split.
+nav_stand                                : cmd      :                  : Toggles the 'stand while hiding' flag used by the AI system.
+nav_stop                                 : cmd      :                  : Toggles the 'must stop when entering this area' flag used by the AI system.
+nav_store_selected_set                   : cmd      :                  : Stores the current selected set for later retrieval.
+nav_strip                                : cmd      :                  : Strips all Hiding Spots, Approach Points, and Encounter Spots from the current Area.
+nav_subdivide                            : cmd      :                  : Subdivides all selected areas.
+nav_test_node                            : 0        : , "sv", "cheat"  : 
+nav_test_node_crouch                     : 0        : , "sv", "cheat"  : 
+nav_test_node_crouch_dir                 : 4        : , "sv", "cheat"  : 
+nav_test_stairs                          : cmd      :                  : Test the selected set for being on stairs
+nav_test_visibility                      : cmd      :                  : Tests visibility from the selected area to the one under the cursor.
+nav_toggle_in_selected_set               : cmd      :                  : Remove current area from the selected set.
+nav_toggle_place_mode                    : cmd      :                  : Toggle the editor into and out of Place mode. Place mode allows labelling of Area with Place names.
+nav_toggle_place_painting                : cmd      :                  : Toggles Place Painting mode. When Place Painting, pointing at an Area will 'paint' it with the current Place.
+nav_toggle_selected_set                  : cmd      :                  : Toggles all areas into/out of the selected set.
+nav_toggle_selecting                     : cmd      :                  : Start or stop continuously adding to the selected set.
+nav_transient                            : cmd      :                  : Toggles the 'area is transient and may become blocked' flag used by the AI system.
+nav_trouble_report                       : cmd      :                  : Selects areas that may be breaking the map checklist for inspection
+nav_trouble_report_corner_to_corner      : cmd      :                  : Selects areas that can break game mechanics
+nav_trouble_report_invalid               : cmd      :                  : Selects areas that can break game mechanics
+nav_trouble_report_suggestions           : cmd      :                  : Selects areas that do not have a population set, only if any area has a population
+nav_trouble_test_area                    : 0        : , "sv", "cheat"  : If nonzero, tests will be run against this areaID only
+nav_trouble_test_debug_duration          : 10       : , "sv", "cheat"  : 
+nav_trouble_walkable_backtrace           : 0        : , "sv", "cheat"  : 
+nav_unmark                               : cmd      :                  : Clears the marked Area or Ladder.
+nav_update_blocked                       : cmd      :                  : Updates the blocked/unblocked status for every nav area.
+nav_update_lighting                      : cmd      :                  : Recomputes lighting values
+nav_update_visibility_on_edit            : 0        : , "sv", "cheat"  : If nonzero editing the mesh will incrementally recompue visibility
+nav_use_place                            : cmd      :                  : If used without arguments, all available Places will be listed. If a Place argument is given, the current Place is set.
+nav_walk                                 : cmd      :                  : Toggles the 'traverse this area by walking' flag used by the AI system.
+nav_warp_to_mark                         : cmd      :                  : Warps the player to the marked area.
+nav_world_center                         : cmd      :                  : Centers the nav mesh in the world
+nb_acceleration                          : 500      : , "sv", "cheat"  : 
+nb_allow_avoiding                        : 1        : , "sv", "cheat"  : 
+nb_allow_climbing                        : 1        : , "sv", "cheat"  : 
+nb_allow_gap_jumping                     : 1        : , "sv", "cheat"  : 
+nb_blind                                 : 0        : , "sv", "cheat"  : Disable vision
+nb_chase_lead_time                       : 2        : , "sv", "cheat"  : 
+nb_debug                                 : cmd      :                  : Debug NextBots.  Categories are: BEHAVIOR, LOOK_AT, PATH, ANIMATION, LOCOMOTION, VISION, HEARING, EVENTS, ERRORS.
+nb_debug_climbing                        : 0        : , "sv", "cheat"  : 
+nb_debug_filter                          : cmd      :                  : Add items to the NextBot debug filter. Items can be entindexes or part of the indentifier of one or more bots.
+nb_debug_history                         : 1        : , "sv"           : If true, each bot keeps a history of debug output in memory
+nb_delete_all                            : cmd      :                  : Delete all non-player NextBot entities.
+nb_dump_debug_history                    : cmd      :                  : Dumps debug history for the bot under the cursor to the blackbox
+nb_force_look_at                         : cmd      :                  : Force selected bot to look at the local player's position
+nb_friction_forward                      : 0        : , "sv", "cheat"  : 
+nb_friction_sideways                     : 3        : , "sv", "cheat"  : 
+nb_goal_look_ahead_range                 : 50       : , "sv", "cheat"  : 
+nb_gravity                               : 1000     : , "sv", "cheat"  : 
+nb_head_aim_settle_duration              : 0        : , "sv", "cheat"  : 
+nb_head_aim_steady_max_rate              : 100      : , "sv", "cheat"  : 
+nb_ladder_align_range                    : 50       : , "sv", "cheat"  : 
+nb_lean_forward_accel                    : 100      : , "sv", "cheat"  : 
+nb_lean_max_angle                        : 30       : , "sv", "cheat"  : 
+nb_lean_rate                             : 3        : , "sv", "cheat"  : 
+nb_move_to_cursor                        : cmd      :                  : Tell all NextBots to move to the cursor position
+nb_path_draw_inc                         : 100      : , "sv", "cheat"  : 
+nb_path_segment_influence_radius         : 100      : , "sv", "cheat"  : 
+nb_player_crouch                         : 0        : , "sv", "cheat"  : Force bots to crouch
+nb_player_move                           : 1        : , "sv", "cheat"  : Prevents bots from moving
+nb_player_stop                           : 0        : , "sv", "cheat"  : Stop all NextBotPlayers from updating
+nb_player_walk                           : 0        : , "sv", "cheat"  : Force bots to walk
+nb_rush                                  : cmd      :                  : Causes all infected to rush the survivors.
+nb_saccade_speed                         : 1000     : , "sv", "cheat"  : 
+nb_saccade_time                          : 0        : , "sv", "cheat"  : 
+nb_select                                : cmd      :                  : Select the bot you are aiming at for further debug operations.
+nb_speed_look_ahead_range                : 150      : , "sv", "cheat"  : 
+nb_stop                                  : 0        : , "sv", "cheat", "rep" : Stop all NextBots
+nb_update_debug                          : 0        : , "sv", "cheat"  : 
+nb_update_framelimit                     : 15       : , "sv", "cheat"  : 
+nb_update_frequency                      : 0        : , "sv", "cheat"  : 
+nb_update_maxslide                       : 2        : , "sv", "cheat"  : 
+nb_vision_ignore_survivors               : 0        : , "sv", "cheat"  : 
+nb_vision_notice_hidden_range            : 50       : , "sv", "cheat"  : 
+nb_warp_selected_here                    : cmd      :                  : Teleport the selected bot to your cursor position
+nb_yaw_rate                              : 250      : , "sv", "cheat"  : 
+net_allow_multicast                      : 1        : , "a"            : 
+net_blockmsg                             : 0        : , "cheat"        : Discards incoming message: <0|1|name>
+net_channels                             : cmd      :                  : Shows net channel info
+net_droppackets                          : 0        : , "cheat"        : Drops next n packets on client
+net_dumpeventstats                       : cmd      :                  : Dumps out a report of game event network usage
+net_fakejitter                           : 0        : , "cheat"        : Jitter fakelag packet time
+net_fakelag                              : 0        : , "cheat"        : Lag all incoming network data (including loopback) by this many milliseconds.
+net_fakeloss                             : 0        : , "cheat"        : Simulate packet loss as a percentage (negative means drop 1/n packets)
+net_maxroutable                          : 1200     : , "a", "user"    : Requested max packet size before packets are 'split'.
+net_public_adr                           : 0        :                  : For servers behind NAT/DHCP meant to be exposed to the public internet, this is the public facing ip address string: ('x.x.x.x'
+net_showreliablesounds                   : 0        : , "cheat"        : 
+net_showsplits                           : 0        :                  : Show info about packet splits
+net_showudp                              : 0        :                  : Dump UDP packets summary to console
+net_showudp_remoteonly                   : 0        :                  : Dump non-loopback udp only
+net_splitpacket_maxrate                  : 15000    :                  : Max bytes per second when queueing splitpacket chunks
+net_splitrate                            : 1        :                  : Number of fragments for a splitpacket that can be sent per frame
+net_start                                : cmd      :                  : Inits multiplayer network sockets
+net_status                               : cmd      :                  : Shows current network status
+net_steamcnx_status                      : cmd      :                  : Print status of steam connection sockets.
+next                                     : 0        : , "cheat"        : Set to 1 to advance to next frame ( when singlestep == 1 )
+noclip                                   : cmd      :                  : Toggle. Player becomes non-solid and flies.  Optional argument of 0 or 1 to force enable/disable
+noclip_fixup                             : 1        : , "sv", "cheat"  : 
+notarget                                 : cmd      :                  : Toggle. Player becomes hidden to NPCs.
+npc_height_adjust                        : 1        : , "a", "sv"      : Enable test mode for ik height adjustment
+pain_pills_decay_rate                    : 0        : , "sv", "cheat", "rep" : 
+pain_pills_health_threshold              : 99       : , "sv", "cheat", "rep" : Pills can't be used unless total health is less than this amount
+pain_pills_health_value                  : 50       : , "sv", "cheat", "rep" : 
+particle_test_attach_attachment          : 0        : , "sv", "cheat"  : Attachment index for attachment mode
+particle_test_attach_mode                : 0        : , "sv", "cheat"  : Possible Values: 'start_at_attachment', 'follow_attachment', 'start_at_origin', 'follow_origin'
+particle_test_file                       : 0        : , "sv", "cheat"  : Name of the particle system to dynamically spawn
+particle_test_start                      : cmd      :                  : Dispatches the test particle system with the parameters specified in particle_test_file,  particle_test_attach_mode and particl
+particle_test_stop                       : cmd      :                  : Stops all particle systems on the selected entities.  Arguments:    {entity_name} / {class_name} / no argument picks what playe
+password                                 : 0        : , "a", "norecord" : Current server access password
+path                                     : cmd      :                  : Show the engine filesystem path.
+pause                                    : cmd      :                  : Toggle the server pause state.
+physics_budget                           : cmd      :                  : Times the cost of each active object
+physics_constraints                      : cmd      :                  : Highlights constraint system graph for an entity
+physics_debug_entity                     : cmd      :                  : Dumps debug info for an entity
+physics_highlight_active                 : cmd      :                  : Turns on the absbox for all active physics objects
+physics_report_active                    : cmd      :                  : Lists all active physics objects
+physics_select                           : cmd      :                  : Dumps debug info for an entity
+picker                                   : cmd      :                  : Toggles 'picker' mode.  When picker is on, the bounding box, pivot and debugging text is displayed for whatever entity the play
+ping                                     : cmd      :                  : Display ping to server.
+pingserver                               : cmd      :                  : Ping a server for info
+player_debug_print_damage                : 0        : , "sv", "cheat"  : When true, print amount and type of all damage received by player to console.
+plugin_load                              : cmd      :                  : plugin_load <filename> : loads a plugin
+plugin_pause                             : cmd      :                  : plugin_pause <index> : pauses a loaded plugin
+plugin_pause_all                         : cmd      :                  : pauses all loaded plugins
+plugin_print                             : cmd      :                  : Prints details about loaded plugins
+plugin_unload                            : cmd      :                  : plugin_unload <index> : unloads a plugin
+plugin_unpause                           : cmd      :                  : plugin_unpause <index> : unpauses a disabled plugin
+plugin_unpause_all                       : cmd      :                  : unpauses all disabled plugins
+prop_crosshair                           : cmd      :                  : Shows name for prop looking at
+prop_debug                               : cmd      :                  : Toggle prop debug mode. If on, props will show colorcoded bounding boxes. Red means ignore all damage. White means respond phys
+prop_dynamic_create                      : cmd      :                  : Creates a dynamic prop with a specific .mdl aimed away from where the player is looking.  Arguments: {.mdl name}
+prop_physics_create                      : cmd      :                  : Creates a physics prop with a specific .mdl aimed away from where the player is looking.  Arguments: {.mdl name}
+pz_damages                               : cmd      :                  : List player zombie damages
+quit                                     : cmd      :                  : Exit the engine.
+r_3dnow                                  : cmd      :                  : Enable/disable 3DNow code
+r_AirboatViewDampenDamp                  : 1        : , "sv", "cheat", "nf", "rep" : 
+r_AirboatViewDampenFreq                  : 7        : , "sv", "cheat", "nf", "rep" : 
+r_AirboatViewZHeight                     : 0        : , "sv", "cheat", "nf", "rep" : 
+r_ambientfraction                        : 0        : , "cheat"        : Fraction of direct lighting used to boost lighting when model requests
+r_colorstaticprops                       : 0        : , "cheat"        : 
+r_debugrandomstaticlighting              : 0        : , "cheat"        : Set to 1 to randomize static lighting for debugging.  Must restart for change to take affect.
+r_DispBuildable                          : 0        : , "cheat"        : 
+r_DispWalkable                           : 0        : , "cheat"        : 
+r_drawbrushmodels                        : 1        : , "cheat"        : Render brush models. 0=Off, 1=Normal, 2=Wireframe
+r_drawdecals                             : 1        : , "cheat"        : Render decals.
+r_DrawDisp                               : 1        : , "cheat"        : Toggles rendering of displacment maps
+r_drawentities                           : 1        : , "cheat"        : 
+r_drawfuncdetail                         : 1        : , "cheat"        : Render func_detail
+r_drawleaf                               : -1       : , "cheat"        : Draw the specified leaf.
+r_drawlightcache                         : 0        : , "cheat"        : 0: off 1: draw light cache entries 2: draw rays 
+r_DrawModelLightOrigin                   : 0        : , "cheat"        : 
+r_drawmodelstatsoverlay                  : 0        : , "cheat"        : 
+r_drawmodelstatsoverlaydistance          : 500      : , "cheat"        : 
+r_drawmodelstatsoverlaymax               : 1        : , "a"            : time in milliseconds beyond which a model overlay is fully red in r_drawmodelstatsoverlay 2
+r_drawmodelstatsoverlaymin               : 0        : , "a"            : time in milliseconds that a model must take to render before showing an overlay in r_drawmodelstatsoverlay 2
+r_drawstaticprops                        : 1        : , "cheat"        : 0=Off, 1=Normal, 2=Wireframe
+r_drawtranslucentworld                   : 1        : , "cheat"        : 
+r_drawworld                              : 1        : , "cheat"        : Render the world.
+r_dscale_basefov                         : 90       : , "cheat"        : 
+r_dscale_fardist                         : 2000     : , "cheat"        : 
+r_dscale_farscale                        : 4        : , "cheat"        : 
+r_dscale_neardist                        : 100      : , "cheat"        : 
+r_dscale_nearscale                       : 1        : , "cheat"        : 
+r_dynamic                                : 1        :                  : 
+r_eyemove                                : 1        : , "a"            : 
+r_eyeshift_x                             : 0        : , "a"            : 
+r_eyeshift_y                             : 0        : , "a"            : 
+r_eyeshift_z                             : 0        : , "a"            : 
+r_eyesize                                : 0        : , "a"            : 
+r_flashlightscissor                      : 1        : , "cheat"        : 
+r_flushlod                               : cmd      :                  : Flush and reload LODs.
+r_hwmorph                                : 0        : , "cheat"        : 
+r_itemblinkmax                           : 0        : , "cheat"        : 
+r_itemblinkrate                          : 4        : , "cheat"        : 
+r_JeepFOV                                : 90       : , "sv", "cheat", "rep" : 
+r_JeepViewDampenDamp                     : 1        : , "sv", "cheat", "nf", "rep" : 
+r_JeepViewDampenFreq                     : 7        : , "sv", "cheat", "nf", "rep" : 
+r_JeepViewZHeight                        : 10       : , "sv", "cheat", "nf", "rep" : 
+r_lightcachemodel                        : -1       : , "cheat"        : 
+r_lightinterp                            : 5        : , "cheat"        : Controls the speed of light interpolation, 0 turns off interpolation
+r_lightmap                               : -1       : , "cheat"        : 
+r_lightstyle                             : -1       : , "cheat"        : 
+r_lockpvs                                : 0        : , "cheat"        : Lock the PVS so you can fly around and inspect what is being drawn.
+r_modelwireframedecal                    : 0        : , "cheat"        : 
+r_nohw                                   : 0        : , "cheat"        : 
+r_nosw                                   : 0        : , "cheat"        : 
+r_novis                                  : 0        : , "cheat"        : Turn off the PVS.
+r_occlusionspew                          : 0        : , "cheat"        : Activate/deactivates spew about what the occlusion system is doing.
+r_partition_level                        : -1       : , "cheat"        : Displays a particular level of the spatial partition system. Use -1 to disable it.
+r_printdecalinfo                         : cmd      :                  : 
+r_proplightingpooling                    : -1       : , "cheat"        : 0 - off, 1 - static prop color meshes are allocated from a single shared vertex buffer (on hardware that supports stream offset
+r_randomflex                             : 0        : , "cheat"        : 
+r_shadow_deferred                        : 0        : , "cheat"        : Toggle deferred shadow rendering
+r_showenvcubemap                         : 0        : , "cheat"        : 
+r_skin                                   : 0        : , "cheat"        : 
+r_slowpathwireframe                      : 0        : , "cheat"        : 
+r_sse2                                   : cmd      :                  : Enable/disable SSE2 code
+r_vehicleBrakeRate                       : 1        : , "sv", "cheat"  : 
+r_VehicleViewDampen                      : 1        : , "sv", "cheat", "nf", "rep" : 
+r_visocclusion                           : 0        : , "cheat"        : Activate/deactivate wireframe rendering of what the occlusion system is doing.
+r_visualizetraces                        : 0        : , "sv", "cheat"  : 
+rcon_password                            : 0        : , "norecord"     : remote console password.
+recompute_speed                          : cmd      :                  : Recomputes clock speed (for debugging purposes).
+reload                                   : cmd      :                  : Reload the most recent saved game (add setpos to jump to current view position on reload).
+removeid                                 : cmd      :                  : Remove a user ID from the ban list.
+removeip                                 : cmd      :                  : Remove an IP address from the ban list.
+report                                   : cmd      :                  : 
+report_entities                          : cmd      :                  : Lists all entities
+report_simthinklist                      : cmd      :                  : Lists all simulating/thinking entities
+report_soundpatch                        : cmd      :                  : reports sound patch count
+report_touchlinks                        : cmd      :                  : Lists all touchlinks
+rescue_distance                          : 4500     : , "sv", "cheat"  : Living survivors must travel this far past a dead survivor's corpse to be able to rescue him
+rescue_finale_ignore_distance            : 4000     : , "sv", "cheat"  : If living survivors are this far past a rescuable survivor, he stops calling for help
+rescue_finale_spawn_range                : 4000     : , "sv", "cheat"  : info_survivor_rescue ents will be considered if they are this close to the leading survivor
+rescue_ignore_distance                   : 2000     : , "sv", "cheat"  : If living survivors are this far past a rescuable survivor, he stops calling for help
+rescue_interval                          : 2        : , "sv", "cheat"  : Dead survivors are checked to start calling for help this often
+rescue_min_dead_time                     : 60       : , "sv", "cheat"  : Duration in seconds a survivor must be dead before being rescuable
+rescue_range                             : 1000     : , "sv", "cheat"  : if a survivor gets this close to an active info_survivor_rescue, it will be triggered
+rescue_show                              : cmd      :                  : Shows debugging info for info_survivor_rescue ents
+rescue_spawn_flow                        : 400      : , "sv", "cheat"  : info_survivor_rescue ents will be considered if they are no more than this far ahead in flow distance from the leading survivor
+rescue_spawn_range                       : 2000     : , "sv", "cheat"  : info_survivor_rescue ents will be considered if they are this close to the leading survivor
+rescue_update_nav                        : cmd      :                  : Updates RESCUE_CLOSET nav flags
+rescue_vs                                : 0        : , "sv", "cheat", "rep" : Rescue closets in vs mode
+rescue_yell_delay                        : 1        : , "sv", "cheat"  : Delay before yelling when activating
+rescue_yell_interval                     : 6        : , "sv", "cheat"  : Interval at which an info_survivor_rescue yells for help
+reset_gameconvars                        : cmd      :                  : Reset a bunch of game convars to default values
+respawn_entities                         : cmd      :                  : Respawn all the entities in the map.
+restart                                  : cmd      :                  : Restart the game on the same level (add setpos to jump to current view position on restart).
+rr_followup_maxdist                      : 1800     : , "sv", "cheat"  : 'then ANY' or 'then ALL' response followups will be dispatched only to characters within this distance.
+rr_reloadresponsesystems                 : cmd      :                  : Reload all response system scripts.
+rr_remarkable_world_entities_replay_limit : 1        : , "sv", "cheat"  : TLK_REMARKs will be dispatched no more than this many times for any given info_remarkable
+rr_thenany_score_slop                    : 0        : , "a", "sv", "cheat" : When computing respondents for a 'THEN ANY' rule, all rule-matching scores within this much of the best score will be considere
+say                                      : cmd      :                  : Display player message
+say_team                                 : cmd      :                  : Display player message to team
+sb_add                                   : cmd      :                  : Add a Survivor Bot.
+sb_all_bot_team                          : 0        : , "sv", "cheat"  : Allow a team of nothing but bots
+sb_always_hurry_vs                       : 1        : , "sv", "cheat"  : If nonzero, never walk, always run in VS mode
+sb_battlestation_give_up_range_from_human : 1500     : , "sv", "cheat"  : 
+sb_battlestation_human_hold_time         : 4        : , "sv", "cheat"  : How long the nearest human must hold their place before SurvivorBots will re-evaluate their Battlestations
+sb_close_checkpoint_door_interval        : 2        : , "sv", "cheat"  : 
+sb_close_threat_range                    : 200      : , "sv", "cheat"  : 
+sb_combat_saccade_speed                  : 1000     : , "sv", "cheat"  : 
+sb_crouch                                : 0        : , "sv", "cheat"  : Forces survivor bots to crouch
+sb_debug_apoproach_wait_time             : 5        : , "sv", "cheat"  : How long a SurvivorBot waits once it reaches its debug move-to spot
+sb_debug_buddy                           : 0        : , "sv", "cheat"  : 
+sb_debug_locomotion                      : 0        : , "sv", "cheat"  : 
+sb_debug_retreat                         : 0        : , "sv", "cheat"  : 
+sb_debug_team_avoidance                  : 0        : , "sv", "cheat"  : 
+sb_dont_bash                             : 0        : , "sv", "cheat"  : Force SurvivorBots to not bash
+sb_dont_shoot                            : 0        : , "sv", "cheat"  : Force SurvivorBots to not fire their weapons
+sb_enforce_proximity_lookat_timeout      : 10       : , "sv", "cheat"  : 
+sb_enforce_proximity_range               : 1500     : , "sv", "cheat"  : 
+sb_far_hearing_range                     : 1500     : , "sv", "cheat"  : 
+sb_flashlight                            : 0        : , "sv", "cheat"  : Forces survivor bots to use flashlights (-1 to force off)
+sb_follow_stress_factor                  : 0        : , "sv", "cheat"  : 
+sb_force_max_intensity                   : cmd      :                  : Force intensity of selected SurvivorBot to maximum level.
+sb_friend_immobilized_reaction_time_expert : 0        : , "sv", "cheat"  : How quickly a SurvivorBot realizes a friend has been Pounced or Tongued
+sb_friend_immobilized_reaction_time_hard : 1        : , "sv", "cheat"  : How quickly a SurvivorBot realizes a friend has been Pounced or Tongued
+sb_friend_immobilized_reaction_time_normal : 2        : , "sv", "cheat"  : How quickly a SurvivorBot realizes a friend has been Pounced or Tongued
+sb_friend_immobilized_reaction_time_vs   : 0        : , "sv", "cheat"  : How quickly a SurvivorBot realizes a friend has been Pounced or Tongued
+sb_friendlyfire                          : 0        : , "sv", "cheat"  : 
+sb_give                                  : cmd      :                  : Give an item to each Survivor bot
+sb_give_random_weapon                    : cmd      :                  : Give a random weapon to each Survivor bot
+sb_hindrance_range                       : 150      : , "sv", "cheat"  : 
+sb_hold_position                         : 0        : , "sv", "cheat"  : Force SurvivorBots to stand still
+sb_locomotion_wait_threshold             : 10       : , "sv", "cheat"  : 
+sb_max_battlestation_range_from_human    : 750      : , "sv", "cheat"  : 
+sb_max_scavenge_separation               : 750      : , "sv", "cheat"  : SurvivorBots won't scavenge items farther away from the group than this
+sb_min_attention_notice_time             : 0        : , "sv", "cheat"  : If someone looks at me longer than this, I'll notice
+sb_min_orphan_time_to_cover              : 1        : , "sv", "cheat"  : 
+sb_move                                  : 1        : , "sv", "cheat"  : Stop all SurvivorBots from moving
+sb_move_to_cursor                        : cmd      :                  : Sends survivor bots to cursor target
+sb_narrow_corridor_width                 : 100      : , "sv", "cheat"  : 
+sb_near_hearing_range                    : 500      : , "sv", "cheat"  : 
+sb_neighbor_range                        : 300      : , "sv", "cheat"  : How close a friend needs to be to feel safe
+sb_normal_saccade_speed                  : 350      : , "sv", "cheat"  : 
+sb_open_fire                             : 0        : , "sv", "cheat"  : Forces survivor bots to fire continuously
+sb_path_lookahead_range                  : 300      : , "sv", "cheat"  : 
+sb_perf_crawl                            : 0        : , "sv", "cheat", "rep" : If true, survivor bot will be doing a perf-crawl walk through the map
+sb_perf_crawl_ang                        : 5        : , "sv", "cheat"  : Rotation angles at perf-crawl snapshots in the map
+sb_perf_crawl_dist                       : 128      : , "sv", "cheat"  : Distance between perf-crawl snapshots in the map
+sb_perf_crawl_time                       : 1        : , "sv", "cheat"  : How much time is spent at each perf-crawl spot/ang in the map
+sb_perf_dump                             : 0        : , "sv", "cheat", "rep" : If true, low perf places will be dumped
+sb_perf_dump_bots                        : 0        : , "sv", "cheat", "rep" : Which bots to use for dumping: namvet, girl, biker, manager
+sb_pushscale                             : 1        : , "sv", "cheat", "rep" : 
+sb_reachability_cache_lifetime           : 3        : , "sv", "cheat"  : 
+sb_replacement_interval                  : 0        : , "sv", "cheat"  : Force SurvivorBots to be replaced after this many seconds for stress testing
+sb_rescue_vehicle_loading_range          : 300      : , "sv", "cheat"  : How close to the arrival point of the rescue vehicle SurvivorBots try to get
+sb_separation_danger_max_range           : 600      : , "sv", "cheat"  : A Survivor teammate this far away needs to be gathered back into the group
+sb_separation_danger_min_range           : 500      : , "sv", "cheat"  : A Survivor teammate this far away is straying from the group
+sb_separation_range                      : 200      : , "sv", "cheat"  : Desired distance between Survivors
+sb_show_threat_areas                     : 0        : , "sv", "cheat"  : 
+sb_sidestep_for_horde                    : 0        : , "sv", "cheat"  : Allow sidestepping left/right to acquire common infected targets
+sb_stop                                  : 0        : , "sv", "cheat"  : Forces survivor bots to stand still
+sb_takecontrol                           : cmd      :                  : Take control of a bot.
+sb_threat_close_range                    : 150      : , "sv", "cheat"  : Very close range for threats
+sb_threat_exposure_stop                  : 200000   : , "sv", "cheat"  : 
+sb_threat_exposure_walk                  : 50000    : , "sv", "cheat"  : 
+sb_threat_far_range                      : 600      : , "sv", "cheat"  : Close enough to be a threat if near several other threats
+sb_threat_medium_range                   : 300      : , "sv", "cheat"  : Too close for comfort, even when neutral
+sb_threat_very_close_range               : 150      : , "sv", "cheat"  : 
+sb_threat_very_far_range                 : 1500     : , "sv", "cheat"  : Too far to be a threat, even for boss infected
+sb_unstick                               : 1        : , "sv", "cheat"  : 
+sb_use_button_range                      : 1000     : , "sv", "cheat"  : 
+sb_vomit_blind_time                      : 5        : , "sv", "cheat"  : How long Boomer vomit/explosion gore blinds us
+scene_flush                              : cmd      :                  : Flush all .vcds from the cache and reload from disk.
+scene_showlook                           : 0        : , "a", "sv"      : When playing back, show the directions of look events.
+scene_showmoveto                         : 0        : , "a", "sv"      : When moving, show the end location.
+scene_showunlock                         : 0        : , "a", "sv"      : Show when a vcd is playing but normal AI is running.
+select_cliff                             : cmd      :                  : Selects all NAV_MESH_CLIFF areas.
+select_invalid_finale_nospawn            : cmd      :                  : Selects all FINALE_NOSPAWN areas that aren't also FINALE.
+select_with_attribute                    : cmd      :                  : Selects areas with the given attribute.
+server_game_time                         : cmd      :                  : Gives the game time in seconds (server's curtime)
+setang                                   : cmd      :                  : Snap player eyes to specified pitch yaw <roll:optional> (must have sv_cheats).
+setang_exact                             : cmd      :                  : Snap player eyes and orientation to specified pitch yaw <roll:optional> (must have sv_cheats).
+setmaster                                : cmd      :                  : add/remove/enable/disable master servers
+setmodel                                 : cmd      :                  : Changes's player's model
+setpause                                 : cmd      :                  : Set the pause state of the server.
+setpos                                   : cmd      :                  : Move player to specified origin (must have sv_cheats).
+setpos_exact                             : cmd      :                  : Move player to an exact specified origin (must have sv_cheats).
+setpos_player                            : cmd      :                  : Move specified player to specified origin (must have sv_cheats).
+shake                                    : cmd      :                  : Shake the screen.
+shout_going_to_die_interval              : 20       : , "sv", "cheat"  : 
+shout_make_way_interval                  : 2        : , "sv", "cheat"  : 
+shout_max_warn_range                     : 2000     : , "sv", "cheat"  : 
+shout_min_special_warn_interval          : 5        : , "sv", "cheat"  : 
+shout_min_use_range                      : 200      : , "sv", "cheat"  : 
+shout_min_warn_interval                  : 10       : , "sv", "cheat"  : 
+shout_threat_range                       : 500      : , "sv", "cheat"  : 
+shout_view_motion_threshold              : 0        : , "sv", "cheat"  : 
+shout_view_target_threahold              : 0        : , "sv", "cheat"  : 
+show_addon_load_order                    : cmd      :                  : Displays the load order for custom addon files.
+showtriggers                             : 0        : , "sv", "cheat"  : Shows trigger brushes
+showtriggers_toggle                      : cmd      :                  : Toggle show triggers
+shriek_shake_amplitude                   : 10       : , "sv", "cheat"  : 
+shriek_shake_duration                    : 2        : , "sv", "cheat"  : 
+shriek_shake_frequency                   : 5        : , "sv", "cheat"  : 
+singlestep                               : 0        : , "cheat"        : Run engine in single step mode ( set next to 1 to advance a frame )
+sk_autoaim_mode                          : 1        : , "a", "sv", "rep" : 
+skill                                    : 1        : , "a"            : Game skill level (1-3).
+Smoker_escape_range                      : 750      : , "sv", "cheat"  : 
+smoker_pz_claw_dmg                       : 4        : , "sv", "cheat", "rep" : Amount of damage done by a PZ smoker's regular melee attack
+smoker_tongue_delay                      : 1        : , "sv", "cheat"  : 
+snd_foliage_db_loss                      : 4        : , "cheat"        : foliage dB loss per 1200 units
+snd_gain                                 : 1        : , "cheat"        : 
+snd_gain_max                             : 1        : , "cheat"        : 
+snd_gain_min                             : 0        : , "cheat"        : 
+snd_play_in_out                          : cmd      :                  : Plays one of two sounds from entity depending on players in/out location
+snd_refdb                                : 60       : , "cheat"        : Reference dB at snd_refdist
+snd_refdist                              : 36       : , "cheat"        : Reference distance for snd_refdb
+snd_restart                              : cmd      :                  : Restart sound system.
+soundscape_debug                         : 0        : , "sv", "cheat"  : When on, draws lines to all env_soundscape entities. Green lines show the active soundscape, red lines show soundscapes that ar
+soundscape_flush                         : cmd      :                  : Flushes the server & client side soundscapes
+spec_freeze_time                         : 4        : , "sv", "cheat", "rep" : Time spend frozen in observer freeze cam.
+spec_freeze_traveltime                   : 0        : , "sv", "cheat", "rep" : Time taken to zoom in to frame a target in observer freeze cam.
+spec_target                              : cmd      :                  : 
+spec_target_clear                        : cmd      :                  : 
+spike                                    : cmd      :                  : generates a fake spike
+ss_map                                   : cmd      :                  : Start playing on specified map with max allowed splitscreen players.
+star_memory                              : cmd      :                  : Dump memory stats
+stats                                    : cmd      :                  : Prints server performance variables
+status                                   : cmd      :                  : Display map and connection status.
+stringtabledictionary                    : cmd      :                  : Create dictionary for current strings.
+stuffcmds                                : cmd      :                  : Parses and stuffs command line + commands to command buffer.
+suitvolume                               : 0        : , "a", "sv"      : 
+surfaceprop                              : cmd      :                  : Reports the surface properties at the cursor
+survivor_accuracy_upgrade_factor         : 0        : , "sv", "cheat", "rep" : 
+survivor_burn_factor_easy                : 0        : , "sv", "cheat"  : Flame damage multiplier
+survivor_burn_factor_expert              : 1        : , "sv", "cheat"  : Flame damage multiplier
+survivor_burn_factor_hard                : 0        : , "sv", "cheat"  : Flame damage multiplier
+survivor_burn_factor_normal              : 0        : , "sv", "cheat"  : Flame damage multiplier
+survivor_calm_damage_delay               : 5        : , "sv", "cheat"  : survivors are not calm for this many seconds after taking damage
+survivor_calm_deploy_delay               : 2        : , "sv", "cheat"  : survivors are not calm for this many seconds after switching weapons
+survivor_calm_intensity                  : 0        : , "sv", "cheat"  : survivors are not calm if their intensity level is above this point
+survivor_calm_no_flashlight              : 1        : , "sv", "cheat"  : survivors are not calm if they have their flashlight on, to keep the weapon pointing along the flashlight beam
+survivor_calm_recent_enemy_delay         : 5        : , "sv", "cheat"  : survivors are not calm for this many seconds after seeing an enemy
+survivor_calm_weapon_delay               : 5        : , "sv", "cheat"  : survivors are not calm for this many seconds after firing
+survivor_commando_factor                 : 2        : , "sv", "cheat"  : 
+survivor_crawl_speed                     : 15       : , "sv", "cheat", "rep" : 
+survivor_crouch_speed                    : 75       : , "sv", "cheat", "rep" : 
+survivor_damage_speed_factor             : 0        : , "sv", "cheat"  : How much a Survivor is slowed when hit by an Infected
+survivor_debug_active_area_set           : 0        : , "sv", "cheat"  : 
+survivor_debug_in_combat                 : 0        : , "sv", "cheat"  : 
+survivor_debug_visibility                : 0        : , "sv", "cheat"  : 
+survivor_drag_speed_multiplier           : 0        : , "sv", "cheat", "rep" : Multiplier to speed when we are dragging somebody.
+survivor_drag_type                       : 0        : , "sv", "cheat"  : 0: no dragging, 1: short tug, 2: continuous drag
+survivor_extra_damage_ammo_factor        : 1        : , "sv", "cheat"  : 
+survivor_ff_avoidance                    : 0        : , "sv", "cheat"  : 
+survivor_ff_avoidance_pitch              : 20       : , "sv", "cheat"  : 
+survivor_ff_avoidance_yaw                : 10       : , "sv", "cheat"  : 
+survivor_ff_tolerance                    : 26       : , "sv", "cheat"  : 
+survivor_fog_vocalize_percent            : 0        : , "sv", "cheat"  : The percent of the fog end distance that stops vocalizations.
+survivor_friendly_fire_factor_easy       : 0        : , "sv", "cheat"  : 
+survivor_friendly_fire_factor_expert     : 1        : , "sv", "cheat"  : 
+survivor_friendly_fire_factor_hard       : 0        : , "sv", "cheat"  : 
+survivor_friendly_fire_factor_normal     : 0        : , "sv", "cheat"  : 
+survivor_fumes_run_speed                 : 85       : , "sv", "cheat", "rep" : 
+survivor_fumes_walk_speed                : 85       : , "sv", "cheat", "rep" : 
+survivor_groupie_range                   : 350      : , "sv", "cheat"  : 
+survivor_groupie_regenerate_rate         : 0        : , "sv", "cheat"  : 
+survivor_hanging_eye_height              : 85       : , "sv", "cheat", "rep" : 
+survivor_hanging_from_tongue_eye_height  : 40       : , "sv", "cheat", "rep" : 
+survivor_helping_hand_inhibit_duration   : 1        : , "sv", "cheat", "rep" : 
+survivor_hitsound_interval_timer         : 0        : , "sv", "cheat"  : 
+survivor_incapacitated_accuracy_penalty  : 0        : , "sv", "cheat", "rep" : Penalty given for shooting while incapacitated.
+survivor_incapacitated_cycle_time        : 0        : , "sv", "cheat", "rep" : New cycle time (RoF) used when incapacitated, overriding weapon.
+survivor_incapacitated_dizzy_severity    : 2        : , "sv", "cheat", "rep" : From negative to positive this, how much bump we add to a incap'd player's mouse.
+survivor_incapacitated_dizzy_timer       : 2        : , "sv", "cheat", "rep" : How often our incap'd dizzy-drift changes directions.
+survivor_incapacitated_eye_height        : 24       : , "sv", "cheat", "rep" : 
+survivor_incapacitated_max_yaw           : 180      : , "sv", "cheat", "rep" : 
+survivor_incapacitated_reload_multiplier : 1        : , "sv", "cheat", "rep" : Multiplier to reload time when incapacitated.
+survivor_incapacitated_roll              : 20       : , "sv", "cheat", "rep" : 
+survivor_intensity_decay_threat_range    : 750      : , "sv", "cheat"  : 
+survivor_intensity_recent_enemy_duration : 5        : , "sv", "cheat"  : 
+survivor_it_duration                     : 20       : , "sv", "cheat", "rep" : 
+survivor_knockdown_roll                  : -20      : , "sv", "cheat"  : 
+survivor_ledge_scales_health             : 1        : , "sv", "cheat"  : 
+survivor_limp_health                     : 40       : , "sv", "cheat", "rep" : 
+survivor_limp_run_speed                  : 150      : , "sv", "cheat", "rep" : 
+survivor_limp_walk_speed                 : 85       : , "sv", "cheat", "rep" : 
+survivor_max_incapacitated_count         : 2        : , "sv", "cheat"  : How many times you can be incapacitated instead of killed between health kits.
+survivor_max_lunge_stagger_distance      : 30       : , "sv", "cheat"  : Max distance a stationary, crouched survivor can stagger after being lunged.
+survivor_max_lunge_stagger_speed         : 220      : , "sv", "cheat"  : Hunters lunging this fast stagger survivors with full power.
+survivor_max_tongue_stagger_distance     : 200      : , "sv", "cheat"  : 
+survivor_max_tongue_stagger_duration     : 1        : , "sv", "cheat"  : 
+survivor_max_tug_distance                : 300      : , "sv", "cheat"  : 
+survivor_max_tug_duration                : 1        : , "sv", "cheat"  : 
+survivor_min_lunge_stagger_speed         : 50       : , "sv", "cheat"  : Hunters must be lunging this fast to stagger a survivor.
+survivor_no_pounce_or_hang               : 0        : , "sv", "cheat"  : 
+survivor_pounce_victim_eye_height        : 12       : , "sv", "cheat", "rep" : 
+survivor_push                            : 0        : , "sv", "cheat"  : 
+survivor_revive_duration                 : 5        : , "sv", "cheat"  : 
+survivor_revive_health                   : 30       : , "sv", "cheat"  : How much temp health you get revived with.
+survivor_revive_successive_penalty       : 0        : , "sv", "cheat"  : How much less temp health you get each revive.
+survivor_shove_teammates                 : 0        : , "sv", "cheat"  : 
+survivor_speed                           : 210      : , "sv", "cheat"  : 
+survivor_speed_boost_factor              : 1        : , "sv", "cheat", "rep" : Speed boost from upgrade
+survivor_sprint_multiplier               : 1        : , "sv", "cheat", "rep" : 
+survivor_still_penalty                   : 3        : , "sv", "cheat", "rep" : Amount gun accuracy is affected when the view is not still
+survivor_stun_immunity_duration          : 0        : , "sv", "cheat"  : 
+survivor_team_hit_pitch_max              : 10       : , "sv", "cheat"  : 
+survivor_team_hit_pitch_min              : -10      : , "sv", "cheat"  : 
+survivor_team_hit_yaw_max                : 10       : , "sv", "cheat"  : 
+survivor_team_hit_yaw_min                : -10      : , "sv", "cheat"  : 
+survivor_unstoppable_speed               : 150      : , "sv", "cheat", "rep" : 
+survivor_upgrade_accuracy                : 0        : , "sv", "cheat", "rep" : 
+survivor_upgrade_quickdraw               : 0        : , "sv", "cheat", "rep" : 
+survivor_vision_range                    : 1500     : , "sv", "cheat"  : 
+survivor_vision_range_obscured           : 750      : , "sv", "cheat"  : 
+survivor_walk_speed                      : 85       : , "sv", "cheat", "rep" : 
+sv_allow_lobby_connect_only              : 1        :                  : If set, players may only join this server from matchmaking lobby, may not connect directly.
+sv_allow_wait_command                    : 1        : , "rep"          : Allow or disallow the wait command on clients connected to this server.
+sv_alltalk                               : 1        : , "sv", "nf"     : Players can hear all other players' voice communication, no team restrictions
+sv_alternateticks                        : 0        : , "sp"           : If set, server only simulates entities on even numbered ticks. 
+sv_banid_enabled                         : 1        :                  : Whether server supports banid command
+sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
+sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
+sv_consistency                           : 1        : , "rep"          : Whether the server enforces file consistency for critical files
+sv_contact                               : 0        : , "nf"           : Contact email for server sysop
+sv_crash                                 : cmd      :                  : Causes a server crash for testing
+sv_cycle_latch_timer                     : 0        : , "sv", "cheat"  : How often to transmit our cycle to the client for corrections.
+sv_disable_querycache                    : 0        : , "sv", "cheat"  : debug - disable trace query cache
+sv_doors_push_players                    : 0        : , "sv", "cheat"  : If true, a door will push players out of the way as it opens and closes.
+sv_downloadurl                           : 0        : , "rep"          : Location from which clients can download missing files
+sv_dumpstringtables                      : 0        : , "cheat"        : 
+sv_footstepinterval                      : 0        : , "sv", "cheat", "rep" : 
+sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
+sv_gametypes                             : 0        : , "sv"           : Allowable game types, usually set on server launch command line.
+sv_infinite_ammo                         : 0        : , "sv", "cheat", "rep" : Player's active weapon will never run out of ammo
+sv_lagcompensationforcerestore           : 1        : , "sv", "cheat"  : Don't test validity of a lag comp restore, just do it.
+sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
+sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
+sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
+sv_logecho                               : 1        : , "a"            : Echo log information to the console.
+sv_logfile                               : 1        : , "a"            : Log server information in the log file.
+sv_logflush                              : 0        : , "a"            : Flush the log file to disk on each write (slow).
+sv_logsdir                               : 0        : , "a"            : Folder in the game directory where server logs will be stored.
+sv_master_legacy_mode                    : 0        :                  : Use (outside-of-Steam) code to communicate with master servers.
+sv_maxcmdrate                            : 40       : , "rep"          : (If sv_mincmdrate is > 0), this sets the maximum value for cl_cmdrate.
+sv_maxrate                               : 0        : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
+sv_memlimit                              : 0        : , "cheat"        : If set, whenever a game ends, if the total memory used by the server is greater than this # of megabytes, the server will exit.
+sv_mincmdrate                            : 0        : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
+sv_minrate                               : 5000     : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
+sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" : 
+sv_noclipduringpause                     : 0        : , "sv", "cheat", "rep" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
+sv_noclipspeed                           : 5        : , "a", "sv", "nf", "rep" : 
+sv_password                              : 0        : , "nf", "prot", "norecord" : Server password for entry into multiplayer games
+sv_pausable                              : 0        :                  : Is the server pausable.
+sv_precacheinfo                          : cmd      :                  : Show precache info.
+sv_prop_door_max_close_attempts          : 8        : , "sv", "cheat"  : Number of times blocked doors will try to close before becoming non-solid and forcing a close.
+sv_pure                                  : cmd      :                  : Show user data.
+sv_pure_kick_clients                     : 1        :                  : If set to 1, the server will kick clients with mismatching files. Otherwise, it will issue a warning to the client.
+sv_pure_trace                            : 0        :                  : If set to 1, the server will print a message whenever a client is verifying a CRC for a file.
+sv_pvsskipanimation                      : 1        : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
+sv_querycache_stats                      : cmd      :                  : Display status of the query cache (client only)
+sv_rcon_banpenalty                       : 0        :                  : Number of minutes to ban users who fail rcon authentication
+sv_rcon_log                              : 1        :                  : Enable/disable rcon logging.
+sv_rcon_maxfailures                      : 10       :                  : Max number of times a user can fail rcon authentication before being banned
+sv_rcon_minfailures                      : 5        :                  : Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned
+sv_rcon_minfailuretime                   : 30       :                  : Number of seconds to track failed rcon authentications
+sv_region                                : 255      :                  : The region of the world to report this server in.
+sv_reservation_timeout                   : 45       :                  : Time in seconds before lobby reservation expires.
+sv_search_key                            : 0        :                  : When searching for a dedicated server from lobby, restrict search to only dedicated servers having the same sv_search_key.
+sv_showfootsteps                         : 0        : , "sv", "cheat", "rep" : Shows client (red) and server (green) footsteps (1=client-only, 2=server-only, 3=both)
+sv_showhitboxes                          : -1       : , "sv", "cheat"  : Send server-side hitboxes for specified entity to client (NOTE:  this uses lots of bandwidth, use on listen server only).
+sv_showlagcompensation                   : 0        : , "sv", "cheat"  : Show lag compensated hitboxes whenever a player is lag compensated.
+sv_showposeparams                        : 1        : , "sv", "cheat"  : 
+sv_showtags                              : cmd      :                  : Describe current gametags.
+sv_shutdown                              : cmd      :                  : Sets the server to shutdown when all games have completed
+sv_skyname                               : 0        : , "a", "sv", "rep" : Current name of the skybox texture
+sv_soundscape_printdebuginfo             : cmd      :                  : print soundscapes
+sv_specaccelerate                        : 5        : , "a", "sv", "nf", "rep" : 
+sv_specnoclip                            : 1        : , "a", "sv", "nf", "rep" : 
+sv_specspeed                             : 3        : , "a", "sv", "nf", "rep" : 
+sv_spectatoridletime                     : 3        : , "sv", "cheat"  : 
+sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam comm
+sv_steamgroup_exclusive                  : 0        :                  : If set, only members of Steam group will be able to join the server when it's empty, public people will be able to join the ser
+sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
+sv_tankpropfade                          : 1        : , "sv", "cheat"  : 
+sv_turbophysics_shadow                   : 0        : , "sv", "cheat"  : players have physics shadows even when sv_turbophysics is 1
+sv_unlockedchapters                      : 1        : , "a", "sv"      : 
+sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
+sv_voiceenable                           : 1        : , "a", "nf"      : 
+sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
+tank_attack_range                        : 50       : , "sv", "cheat", "rep" : Distance from Survivor that tank triggers own swing.
+tank_auto_swing                          : 0        : , "sv", "cheat", "rep" : 
+tank_burn_duration_expert                : 40       : , "sv", "cheat"  : Number of seconds a burning Tank takes to die
+tank_burn_duration_hard                  : 35       : , "sv", "cheat"  : Number of seconds a burning Tank takes to die
+tank_burn_duration_normal                : 30       : , "sv", "cheat"  : Number of seconds a burning Tank takes to die
+tank_burn_duration_vs                    : 30       : , "sv", "cheat"  : Number of seconds a burning Tank takes to die
+tank_fist_radius                         : 15       : , "sv", "cheat", "rep" : 
+tank_ground_pound_duration               : 1        : , "sv", "cheat", "rep" : 
+tank_ground_pound_reveal_distance        : 500      : , "sv", "cheat"  : 
+tank_raffle_debug                        : 0        : , "sv", "cheat", "rep" : Fill the tank raffle with dummy values for debugging
+tank_stasis_time_suicide                 : 30       : , "sv", "cheat"  : 
+tank_stuck_failsafe                      : 1        : , "sv", "cheat"  : 
+tank_stuck_time_choose_new_target        : 2        : , "sv", "cheat"  : 
+tank_stuck_time_suicide                  : 10       : , "sv", "cheat"  : 
+tank_stuck_visibility_tolerance_choose_new_target : 5        : , "sv", "cheat"  : 
+tank_stuck_visibility_tolerance_suicide  : 15       : , "sv", "cheat"  : 
+tank_swing_arc                           : 180      : , "sv", "cheat", "rep" : 
+tank_swing_duration                      : 0        : , "sv", "cheat", "rep" : Duration of the actual swing
+tank_swing_fast_interval                 : 0        : , "sv", "cheat", "rep" : Interval between tank swings when he is clearing zombies out of his path
+tank_swing_interval                      : 1        : , "sv", "cheat", "rep" : Interval between tank swings
+tank_swing_miss_interval                 : 1        : , "sv", "cheat", "rep" : Interval between tank swings after a miss
+tank_swing_physics_prop_force            : 4        : , "sv", "cheat", "rep" : Multiplier for tank hitting a phys prop.
+tank_swing_range                         : 56       : , "sv", "cheat", "rep" : Range of the actual swing
+tank_swing_yaw                           : 80       : , "sv", "cheat", "rep" : 
+tank_throw_aim_error                     : 100      : , "sv", "cheat"  : Margin of error for Easy mode Tank rock throws
+tank_throw_allow_range                   : 250      : , "sv", "cheat"  : How far away our victim must be before we'll try to throw debris at them
+tank_throw_lead_time_factor              : 0        : , "sv", "cheat"  : How much to lead a moving target
+tank_throw_loft_rate                     : 0        : , "sv", "cheat"  : Beyond no-loft range, Tank adds this angle/distance when throwing
+tank_throw_max_loft_angle                : 30       : , "sv", "cheat"  : Maximum loft angle for Tank throw angle adjustment
+tank_throw_min_interval                  : 8        : , "sv", "cheat"  : Minimum interval between Tank rock throws
+tank_visibility_tolerance_suicide        : 60       : , "sv", "cheat"  : 
+tank_windup_time                         : 0        : , "sv", "cheat", "rep" : Time from intent to swing that swing actually happens.
+terror_ammo_multiplier                   : 2        : , "sv", "cheat"  : 
+Test_CreateEntity                        : cmd      :                  : 
+test_dispatcheffect                      : cmd      :                  : Test a clientside dispatch effect.  Usage: test_dispatcheffect <effect name> <distance away> <flags> <magnitude> <scale>  Defau
+Test_EHandle                             : cmd      :                  : 
+test_entity_blocker                      : cmd      :                  : Test command that drops an entity blocker out in front of the player.
+Test_InitRandomEntitySpawner             : cmd      :                  : 
+Test_Loop                                : cmd      :                  : Test_Loop <loop name> - loop back to the specified loop start point unconditionally.
+Test_LoopCount                           : cmd      :                  : Test_LoopCount <loop name> <count> - loop back to the specified loop start point the specified # of times.
+Test_LoopForNumSeconds                   : cmd      :                  : Test_LoopForNumSeconds <loop name> <time> - loop back to the specified start point for the specified # of seconds.
+test_outtro_stats                        : cmd      :                  : 
+test_point                               : cmd      :                  : 
+test_progression_loop                    : 0        : , "sv", "cheat"  : Allow a team of nothing but bots, advance through maps and loop back to start
+test_progression_loop_rotate_maps        : 1        : , "sv", "cheat"  : When looping, advance to the next map when reach end of campaign
+test_progression_loop_time               : 3        : , "sv", "cheat"  : When looping, stay in each map for at most the amount of time, in minutes, specified
+test_progression_restarts_before_rotate  : 4        : , "sv", "cheat"  : When looping and rotating, how many times to restart before moving to next campaign
+Test_ProxyToggle_EnableProxy             : cmd      :                  : 
+Test_ProxyToggle_SetValue                : cmd      :                  : 
+Test_RandomChance                        : cmd      :                  : Test_RandomChance <percent chance, 0-100> <token1> <token2...> - Roll the dice and maybe run the command following the percenta
+Test_RandomizeInPVS                      : cmd      :                  : 
+Test_RandomPlayerPosition                : cmd      :                  : 
+Test_RemoveAllRandomEntities             : cmd      :                  : 
+Test_RunFrame                            : cmd      :                  : 
+Test_SendKey                             : cmd      :                  : 
+Test_SpawnRandomEntities                 : cmd      :                  : 
+Test_StartLoop                           : cmd      :                  : Test_StartLoop <loop name> - Denote the start of a loop. Really just defines a named point you can jump to.
+Test_StartScript                         : cmd      :                  : Start a test script running..
+Test_Wait                                : cmd      :                  : 
+Test_WaitForCheckPoint                   : cmd      :                  : 
+think_limit                              : 0        : , "sv", "rep"    : Maximum think time in milliseconds, warning is printed if this is exceeded.
+thread_test_tslist                       : cmd      :                  : 
+thread_test_tsqueue                      : cmd      :                  : 
+threadpool_cycle_reserve                 : cmd      :                  : Cycles threadpool reservation by powers of 2
+threadpool_run_tests                     : cmd      :                  : 
+toggle                                   : cmd      :                  : Toggles a convar on or off, or cycles through a set of values.
+tongue_allow_voluntary_release           : 0        : , "sv", "cheat"  : Can a Smoker let go with his tongue by clicking or turning away?
+tongue_bend_point_deflection             : 5        : , "sv", "cheat"  : How far off the first obstacle the tongue bends.
+tongue_bend_point_needs_LOS              : 0        : , "sv", "cheat", "rep" : Does a bent tongue still need LOS from the bend point?
+tongue_break_from_damage_amount          : 50       : , "sv", "cheat"  : How much damage to the smoker makes him let go of his victim.
+tongue_choke_damage_amount               : 10       : , "sv", "cheat"  : How much damage the choke does.
+tongue_choke_damage_interval             : 1        : , "sv", "cheat"  : How often the choke does damage.
+tongue_cone_start_tolerance              : 0        : , "sv", "cheat"  : How wide the cone is for a tongue hit.
+tongue_debug                             : 0        : , "sv", "cheat"  : Print debug info for tongue
+tongue_drag_damage_amount                : 3        : , "sv", "cheat"  : How much damage the tongue drag does.
+tongue_dropping_to_ground_time           : 2        : , "sv", "cheat"  : A miss or a wall hit will wait this long before pulling back.
+tongue_fly_speed                         : 1000     : , "sv", "cheat"  : How fast a tongue flies through the air.
+tongue_force_break                       : 0        : , "sv", "cheat"  : Force an existing attached tongue to break, for debugging
+tongue_gravity_force                     : 4000     : , "sv", "cheat", "rep" : The speed that gravity tries to pull us downwards while being tongued.
+tongue_health                            : 100      : , "sv", "cheat"  : Tongue health
+tongue_hit_delay                         : 20       : , "sv", "cheat", "rep" : How long a smoker must wait to shoot his tongue after a hit, from the time he lets go.
+tongue_kill_smoker_on_detach             : 1        : , "sv", "cheat"  : Do we kill the smoker when they take enough damage to detach the tongue?
+tongue_los_forgiveness_time              : 1        : , "sv", "cheat"  : A traveling tongue can lose LOS for this amount of time and still hit.
+tongue_miss_delay                        : 15       : , "sv", "cheat", "rep" : How long a smoker must wait to shoot his tongue after a miss.
+tongue_no_progress_break_interval        : 10       : , "sv", "cheat"  : How long of the victim making no progress until we break the tongue.
+tongue_no_progress_choke_early_ambush_delay : 0        : , "sv", "cheat"  : Use a smaller delay if the smoker started choking us from behind. So this plus TongueNoProgressChokeTime equals the earliest st
+tongue_no_progress_choke_early_delay     : 1        : , "sv", "cheat"  : We won't think about ground choking for this long after the hit. So this plus TongueNoProgressChokeTime equals the earliest sta
+tongue_no_progress_choke_time            : 0        : , "sv", "cheat"  : If our victim doesn't make tongue_no_progress_tolerance progress towards in this time, start to hurt him.
+tongue_no_progress_damage_interval       : 0        : , "sv", "cheat"  : How long of the victim making no progress until we start choking him.
+tongue_no_progress_tolerance             : 25       : , "sv", "cheat"  : If our victim doesn't make this much progress in tongue_no_progress_release_time, start to hurt him.
+tongue_player_dropping_to_ground_time    : 1        : , "sv", "cheat"  : How long after the tongue disconnects will a player need to wait.
+tongue_range                             : 750      : , "sv", "cheat"  : How far a smoker can shoot his tongue.
+tongue_release_fatigue_penalty           : 2500     : , "sv", "cheat"  : How much fatigue the victim gets when released, to slow him down.
+tongue_start_pull_delay                  : 0        : , "sv", "cheat", "rep" : How long from tongue contact to tongue pulling.
+tongue_unbend                            : 1        : , "sv", "cheat"  : Can the smoker tongue unbend?
+tongue_vertical_choke_dot                : 0        : , "sv", "cheat"  : DotProduct between tongue and vertical required to start choking.
+tongue_vertical_choke_height             : 40       : , "sv", "cheat"  : Need to have victim this high off ground to choke him.
+tongue_vertical_choke_time_off_ground    : 0        : , "sv", "cheat"  : Need to have victim off ground for this long to choke him.
+tongue_victim_acceleration               : 30       : , "sv", "cheat", "rep" : Acceleration while tongued.
+tongue_victim_accuracy_penalty           : 0        : , "sv", "cheat", "rep" : How much someone's accuracy suffers while being dragged by a tongue.
+tongue_victim_max_speed                  : 175      : , "sv", "cheat", "rep" : The fastest the tongue can get you going.
+tongue_vs_cone_start_tolerance           : 0        : , "sv", "cheat"  : How wide the cone is for a tongue hit in versus.
+tp_schedule_post_think                   : 1        : , "sv", "cheat"  : Schedule post-think operations to run at 10hz
+travel_distance                          : cmd      :                  : Build the shortest path from the previously marked area to the currently selected one and print the length of that path.
+tv_clients                               : cmd      :                  : Shows list of connected SourceTV clients.
+tv_enable                                : 0        :                  : Activates SourceTV on server.
+tv_msg                                   : cmd      :                  : Send a screen message to all clients.
+tv_port                                  : 27020    :                  : Host SourceTV port
+tv_record                                : cmd      :                  : Starts SourceTV demo recording.
+tv_relay                                 : cmd      :                  : Connect to SourceTV server and relay broadcast.
+tv_retry                                 : cmd      :                  : Reconnects the SourceTV relay proxy.
+tv_status                                : cmd      :                  : Show SourceTV server status.
+tv_stop                                  : cmd      :                  : Stops the SourceTV broadcast.
+tv_stoprecord                            : cmd      :                  : Stops SourceTV demo recording.
+unbind                                   : cmd      :                  : Unbind a key.
+unbindall                                : cmd      :                  : Unbind all keys.
+unload_all_addons                        : cmd      :                  : Reloads the search paths for game addons.
+unpause                                  : cmd      :                  : Unpause the game.
+update_addon_paths                       : cmd      :                  : Reloads the search paths for game addons.
+use                                      : cmd      :                  : Use a particular weapon  Arguments: <weapon_name>
+user                                     : cmd      :                  : Show user data.
+users                                    : cmd      :                  : Show user info for players on server.
+vehicle_flushscript                      : cmd      :                  : Flush and reload all vehicle scripts
+version                                  : cmd      :                  : Print version info string.
+versus_boss_buffer                       : 2200     : , "sv", "cheat"  : 
+versus_boss_debug                        : 0        : , "sv", "cheat"  : Enable debug output for versus tank/witch spawning logic
+versus_boss_flow_max                     : 0        : , "sv", "cheat"  : Max fraction of map flow for tank/witch spawn location
+versus_boss_flow_max_finale              : 0        : , "sv", "cheat"  : Max fraction of map flow for tank/witch spawn location within the finale map of a campaign
+versus_boss_flow_max_intro               : 0        : , "sv", "cheat"  : Max fraction of map flow for tank/witch spawn location within the first map of a campaign
+versus_boss_flow_min                     : 0        : , "sv", "cheat"  : Min fraction of map flow for tank/witch spawn location
+versus_boss_flow_min_finale              : 0        : , "sv", "cheat"  : Min fraction of map flow for tank/witch spawn location within the finale map of a campaign
+versus_boss_flow_min_intro               : 0        : , "sv", "cheat"  : Min fraction of map flow for tank/witch spawn location within the first map of a campaign
+versus_boss_flow_test                    : cmd      :                  : Force start the versus game, so PZs can spawn even if survivors are still in the safe room
+versus_boss_padding_max                  : 0        : , "sv", "cheat"  : How far apart the tank/witch have to be along the flow
+versus_boss_padding_min                  : 0        : , "sv", "cheat"  : How far apart the tank/witch have to be along the flow
+versus_boss_spawning                     : 1        : , "sv", "cheat"  : Enable alternative spawning logic for tanks and witches in versus mode
+versus_shove_hunter_fov                  : 90       : , "sv", "cheat", "rep" : Angle that survivor shove will hit hunters
+versus_shove_hunter_fov_pouncing         : 45       : , "sv", "cheat", "rep" : Angle that survivor shove will hit hunters while pouncing
+versus_tank_bonus_health                 : 1        : , "sv", "cheat"  : 
+versus_tank_chance                       : 0        : , "sv", "cheat"  : Chance of a tank spawning within a regular versus map
+versus_tank_chance_finale                : 0        : , "sv", "cheat"  : Chance of a tank spawning within the finale map of a campaign
+versus_tank_chance_intro                 : 0        : , "sv", "cheat"  : Chance of a tank spawning within the first map of a campaign
+versus_tank_flow_team_variation          : 0        : , "sv", "cheat"  : Window of flow distance that the tank can spawn in for the second team in versus
+versus_winning_team_goes_last            : 1        : , "sv", "cheat"  : In versus mode, the team that is losing plays as survivors first
+versus_witch_chance                      : 0        : , "sv", "cheat"  : Chance of a witch spawning within a regular versus map
+versus_witch_chance_finale               : 0        : , "sv", "cheat"  : Chance of a witch spawning within the finale map of a campaign
+versus_witch_chance_intro                : 0        : , "sv", "cheat"  : Chance of a witch spawning within the first map of a campaign
+versus_witch_flow_team_variation         : 0        : , "sv", "cheat"  : Window of flow distance that the witch can spawn in for the second team in versus
+view_offset_down                         : 16       : , "sv", "cheat", "rep" : 
+view_offset_forward                      : 8        : , "sv", "cheat", "rep" : 
+view_offset_up                           : -16      : , "sv", "cheat", "rep" : 
+vis_debug                                : 0        : , "sv", "cheat"  : 
+vis_force                                : 0        : , "sv", "cheat"  : 
+vismon_poll_frequency                    : 0        : , "sv", "cheat"  : 
+vismon_trace_limit                       : 12       : , "sv", "cheat"  : 
+voice_inputfromfile                      : 0        :                  : Get voice input from 'voice_input.wav' rather than from the microphone.
+voice_mute_reset                         : cmd      :                  : Reset all mute information for players who were muted in game lobby
+voice_recordtofile                       : 0        :                  : Record mic data and decompressed voice data into 'voice_micdata.wav' and 'voice_decompressed.wav'
+vox_reload                               : cmd      :                  : Reload sentences.txt file
+voxeltree_box                            : cmd      :                  : View entities in the voxel-tree inside box <Vector(min), Vector(max)>.
+voxeltree_playerview                     : cmd      :                  : View entities in the voxel-tree at the player position.
+voxeltree_sphere                         : cmd      :                  : View entities in the voxel-tree inside sphere <Vector(center), float(radius)>.
+voxeltree_view                           : cmd      :                  : View entities in the voxel-tree.
+vphys_sleep_timeout                      : cmd      :                  : set sleep timeout: large values mean stuff won't ever sleep
+vprof                                    : cmd      :                  : Toggle VProf profiler
+vprof_cachemiss                          : cmd      :                  : Toggle VProf cache miss checking
+vprof_cachemiss_off                      : cmd      :                  : Turn off VProf cache miss checking
+vprof_cachemiss_on                       : cmd      :                  : Turn on VProf cache miss checking
+vprof_dump_counters                      : cmd      :                  : Dump vprof counters to the console
+vprof_dump_groupnames                    : cmd      :                  : Write the names of all of the vprof groups to the console.
+vprof_generate_report                    : cmd      :                  : Generate a report to the console.
+vprof_generate_report_AI                 : cmd      :                  : Generate a report to the console.
+vprof_generate_report_AI_only            : cmd      :                  : Generate a report to the console.
+vprof_generate_report_budget             : cmd      :                  : Generate a report to the console based on budget group.
+vprof_generate_report_hierarchy          : cmd      :                  : Generate a report to the console.
+vprof_generate_report_hierarchy_per_frame_and_count_only : cmd      :                  : Generate a minimal hiearchical report to the console.
+vprof_generate_report_map_load           : cmd      :                  : Generate a report to the console.
+vprof_off                                : cmd      :                  : Turn off VProf profiler
+vprof_on                                 : cmd      :                  : Turn on VProf profiler
+vprof_playback_average                   : cmd      :                  : Average the next N frames.
+vprof_playback_start                     : cmd      :                  : Start playing back a recorded .vprof file.
+vprof_playback_step                      : cmd      :                  : While playing back a .vprof file, step to the next tick.
+vprof_playback_stepback                  : cmd      :                  : While playing back a .vprof file, step to the previous tick.
+vprof_playback_stop                      : cmd      :                  : Stop playing back a recorded .vprof file.
+vprof_record_start                       : cmd      :                  : Start recording vprof data for playback later.
+vprof_record_stop                        : cmd      :                  : Stop recording vprof data
+vprof_reset                              : cmd      :                  : Reset the stats in VProf profiler
+vprof_reset_peaks                        : cmd      :                  : Reset just the peak time in VProf profiler
+vprof_vtune_group                        : cmd      :                  : enable vtune for a particular vprof group ('disable' to disable)
+vs_max_team_switches                     : 1        : , "sv", "cheat"  : 
+vs_tank_damage                           : 24       : , "sv", "cheat"  : Amount of damage done by a vs tank's melee attack
+vs_threat_initial_distance_first_map_max : 12000    : , "sv", "cheat"  : Max distance of starting threat area in vs mode on the first map
+vs_threat_initial_distance_first_map_min : 8000     : , "sv", "cheat"  : Min distance of starting threat area in vs mode on the first map
+vs_threat_initial_distance_max           : 8000     : , "sv", "cheat"  : Max distance of starting threat area in vs mode
+vs_threat_initial_distance_min           : 3000     : , "sv", "cheat"  : Min distance of starting threat area in vs mode
+vs_threat_radius                         : 200      : , "sv", "cheat"  : Distance from the escape route for placing threats
+warp_all_survivors_here                  : cmd      :                  : Warp all survivors to the player's cursor
+warp_all_survivors_to_battlefield        : cmd      :                  : Warp all Survivors to the battlefield
+warp_all_survivors_to_checkpoint         : cmd      :                  : Warp all Survivors to the exit checkpoint
+warp_all_survivors_to_finale             : cmd      :                  : Warp all Survivors to the finale radio
+warp_far_survivor_here                   : cmd      :                  : Teleport the farthest away Survivor to your cursor position
+warp_to_start_area                       : cmd      :                  : Warp yourself to a survivor spawn area
+weapon_reparse_server                    : cmd      :                  : Reloads the weapon script files
+wipe_attributes                          : cmd      :                  : Clear all attributes of selected area.
+wipe_nav_attributes                      : cmd      :                  : Clear all nav attributes of selected area.
+writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
+writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
+xbox_autothrottle                        : 1        : , "a", "sv"      : 
+xbox_throttlebias                        : 100      : , "a", "sv"      : 
+xbox_throttlespoof                       : 200      : , "a", "sv"      : 
+z_acquire_far_range                      : 2500     : , "sv", "cheat"  : 
+z_acquire_far_time                       : 5        : , "sv", "cheat"  : 
+z_acquire_near_range                     : 200      : , "sv", "cheat"  : 
+z_acquire_near_time                      : 0        : , "sv", "cheat"  : 
+z_acquire_time_variance_factor           : 0        : , "sv", "cheat"  : 
+z_add                                    : cmd      :                  : Add an Infected - optional x y z arguments for world position to add them
+z_alert_dot                              : 0        : , "sv", "cheat"  : 
+z_alert_range                            : 1000     : , "sv", "cheat"  : 
+z_allow_ai_to_use_abilities              : 1        : , "sv", "cheat"  : If zero, Hunters wont pounce, Tanks wont throw rocks, etc
+z_attack_flow_range                      : 1500     : , "sv", "cheat"  : 
+z_attention_range_lying_modifier         : 0        : , "sv", "cheat"  : 
+z_attention_range_sitting_modifier       : 0        : , "sv", "cheat"  : 
+z_avoid_max_range                        : 100      : , "sv", "cheat"  : 
+z_avoid_min_range                        : 30       : , "sv", "cheat"  : 
+z_avoid_power                            : 10       : , "sv", "cheat"  : 
+z_avoidforce                             : 2500     : , "sv", "cheat", "rep" : 
+z_avoidteammates                         : 1        : , "sv", "cheat", "rep" : 
+z_award_debug                            : 0        : , "sv", "cheat", "rep" : Get debugging info on all award calcs to the console. (0|1|2|3 for none|yes-no thoughts|every thought|every spammy calc)
+z_background_limit                       : 20       : , "sv", "cheat"  : How many common infected are on the background map at once.
+z_backspeed                              : 450      : , "sv", "cheat", "rep" : 
+z_boomer_near_dist                       : 180      : , "sv", "cheat"  : 
+z_boss_crouch                            : 0        : , "sv", "cheat"  : Forces boss zombie bots to crouch
+z_boundary_clear_type                    : 1        : , "sv", "cheat"  : 0 = floodfill, 1 = new creep
+z_boundary_max_range                     : 5000     : , "sv", "cheat"  : 
+z_boundary_spread_speed                  : 200      : , "sv", "cheat"  : 
+z_brawl_chance                           : 2        : , "sv", "cheat"  : 
+z_breakable_damage                       : 4        : , "sv", "cheat"  : 
+z_burning_lifetime                       : 30       : , "sv", "cheat"  : Number of seconds a burning zombie takes to crisp
+z_carry_max_mass                         : 250      : , "sv", "cheat", "rep" : 
+z_chance                                 : 60       : , "sv", "cheat"  : 
+z_claw_hit_pitch_max                     : 20       : , "sv", "cheat"  : 
+z_claw_hit_pitch_min                     : -20      : , "sv", "cheat"  : 
+z_claw_hit_yaw_max                       : 20       : , "sv", "cheat"  : 
+z_claw_hit_yaw_min                       : -20      : , "sv", "cheat"  : 
+z_clear_area_range                       : 300      : , "sv", "cheat"  : 
+z_clear_max_time                         : 5        : , "sv", "cheat"  : 
+z_clear_min_time                         : 0        : , "sv", "cheat"  : 
+z_clear_min_time_range                   : 300      : , "sv", "cheat"  : 
+z_clear_range                            : 750      : , "sv", "cheat"  : 
+z_close_target_notice_distance           : 60       : , "sv", "cheat"  : How far an attacking zombie will look for a nearby target on their way to their chosen victim.
+z_common_limit                           : 30       : , "sv", "cheat"  : How many common infecteds we can have at once.
+z_cooldown_spawn_safety_range            : 1000     : , "sv", "cheat"  : 
+z_cough_cloud_expire                     : 14       : , "sv", "cheat"  : You don't cough after a smoke cloud has existed this long.
+z_cough_cloud_initial_cough_delay        : 0        : , "sv", "cheat"  : You don't cough until smoke cloud exists for this long.
+z_cough_cloud_radius                     : 175      : , "sv", "cheat"  : How far from center of smoke cloud makes you cough.
+z_cough_duration                         : 5        : , "sv", "cheat", "rep" : How long a cougher continuously coughs for.
+z_cough_fatigue                          : 3000     : , "sv", "cheat", "rep" : Stamina impact of coughing. High number will pin in place for a long time, lower will just slow.
+z_cough_interval                         : 20       : , "sv", "cheat", "rep" : How often a cougher can cough.
+z_credits_interval                       : 0        : , "sv", "cheat"  : 
+z_crouch_speed                           : 75       : , "sv", "cheat", "rep" : 
+z_cull_timeout                           : 5        : , "sv", "cheat"  : Grace period before player zombie is culled for being too far away
+z_deafen_radius_one                      : 100      : , "sv", "cheat"  : 
+z_deafen_radius_three                    : 200      : , "sv", "cheat"  : 
+z_deafen_radius_two                      : 150      : , "sv", "cheat"  : 
+z_debug                                  : 0        : , "sv", "cheat"  : 
+z_debug_activities                       : 0        : , "sv", "cheat"  : 
+z_debug_avoid                            : 0        : , "sv", "cheat"  : 
+z_debug_breakables                       : 0        : , "sv", "cheat"  : 
+z_debug_climb                            : 0        : , "sv", "cheat"  : 
+z_debug_cull                             : 0        : , "sv", "cheat"  : 
+z_debug_escape_scan                      : 0        : , "sv", "cheat"  : 
+z_debug_falling_damage                   : 0        : , "sv", "cheat"  : 
+z_debug_fog                              : 0        : , "sv", "cheat"  : 
+z_debug_infected_anim_report             : cmd      :                  : Prints the server's layer info for the specified infected
+z_debug_ledges                           : 0        : , "sv", "cheat"  : 
+z_debug_mob_spawn                        : 0        : , "sv", "cheat"  : 
+z_debug_neighbors                        : 0        : , "sv", "cheat"  : 
+z_debug_path_stress_test                 : cmd      :                  : Stress-tests Path::Compute() on an Infected. Optional argument is number of times to invoke Compute()
+z_debug_population                       : 0        : , "sv", "cheat"  : 
+z_debug_spawn_ahead                      : 0        : , "sv", "cheat"  : 
+z_debug_spawn_set                        : -1       : , "sv", "cheat"  : 0=Anywhere, 1=Behind, 2=IT, 3=Specials in front, 4=Specials anywhere, 5=Far Away, 6=Above
+z_debug_spawn_volumes                    : 0        : , "sv", "cheat"  : Draws any active func_spawn_volume entities
+z_debug_spawnable_areas                  : 0        : , "sv", "cheat"  : Draws areas mobs can spawn from in green (normal) or blue (marked as OBSCURED in the nav)
+z_debug_tank_spawn                       : 1        : , "sv", "cheat"  : When console spawning a tank automatically give it to a player.
+z_decals                                 : cmd      :                  : Splat decals on all infected
+z_density_region_length                  : 1500     : , "sv", "cheat"  : 
+z_destroy_on_attack                      : 0        : , "sv", "cheat"  : When an infected starts punching its victim, destroy it. Useful for demos.
+z_difficulty                             : 0        : , "sv", "rep"    : Difficulty of the current game (Easy, Normal, Hard, Impossible)
+z_director_special_spawn_delay           : 10       : , "sv", "cheat"  : 
+z_discard_min_range                      : 1000     : , "sv", "cheat"  : Don't relocate PZs closer than this regardless of flow distance
+z_discard_range                          : 2500     : , "sv", "cheat"  : Discard Zombies farther away than this
+z_do_tracers                             : 1        : , "sv", "cheat", "rep" : Do we want tracers at all?
+z_dont_clear                             : 0        : , "sv", "cheat"  : 
+z_door_reopen_interval                   : 0        : , "sv", "cheat"  : Closed doors can be re-opened after this amount of time
+z_door_retry_interval                    : 1        : , "sv", "cheat"  : Interval at which blocked doors will try to reopen
+z_exploding_health                       : 50       : , "sv", "cheat"  : Exploding Zombie max health
+z_exploding_limit                        : 1        : , "sv", "cheat"  : 
+z_exploding_shove_interval               : 10       : , "sv", "cheat"  : 
+z_exploding_shove_max                    : 5        : , "sv", "cheat"  : 
+z_exploding_shove_min                    : 4        : , "sv", "cheat"  : 
+z_exploding_speed                        : 175      : , "sv", "cheat", "rep" : 
+z_exploding_splat                        : 50       : , "sv", "cheat"  : Boomers splat instead of making a thud when taking this much falling damage
+z_exploding_splat_radius                 : 200      : , "sv", "cheat"  : Boomers splattering on the ground make survivors inside this radius it
+z_expressions                            : 1        : , "sv", "cheat"  : 
+z_falling_land_forward_speed             : 200      : , "sv", "cheat"  : Minimum falling speed to cause a stumbling forward landing animation to occur
+z_falling_land_hard_speed                : 200      : , "sv", "cheat"  : Minimum falling speed to cause a 'hard' landing animation to occur
+z_falling_land_speed                     : 200      : , "sv", "cheat"  : Minimum falling speed to cause a landing animation to occur
+z_finale_chance                          : 100      : , "sv", "cheat"  : 
+z_finale_spawn_safety_range              : 600      : , "sv", "cheat"  : 
+z_first_aid_cabinets                     : 0        : , "sv", "cheat"  : 
+z_force_attack_from_sound_range          : 750      : , "sv", "cheat"  : 
+z_forcezombiemodel                       : 0        : , "sv", "cheat"  : remove variability in infected models and instead use the specified model from z_zombieforcemodelname
+z_forcezombiemodelname                   : 0        : , "sv", "cheat"  : base name for the model from the models/infected directory to use for all infected if z_forcezombiemodel is set.
+z_forwardspeed                           : 450      : , "sv", "cheat", "rep" : 
+z_friendly_fire_forgiveness              : 1        : , "sv", "cheat"  : Ignore friendly fire that appears to be unintentional.
+z_frustration                            : 1        : , "sv", "cheat", "rep" : 
+z_frustration_lifetime                   : 20       : , "sv", "cheat"  : Frustration will accumulate for this many seconds before forcing an AI tank takeover
+z_frustration_los_delay                  : 2        : , "sv", "cheat"  : 
+z_frustration_spawn_delay                : 10       : , "sv", "cheat"  : 
+z_gas_health                             : 250      : , "sv", "cheat"  : Gas Zombie max health
+z_gas_limit                              : 1        : , "sv", "cheat"  : 
+z_gas_speed                              : 210      : , "sv", "cheat", "rep" : 
+z_ghost_checkpoint_spawn_interval        : 30       : , "sv", "cheat"  : Interval for spawning special zombies while survivors are in the checkpoint
+z_ghost_finale_spawn_interval            : 20       : , "sv", "cheat"  : Interval for spawning special zombies during the finale
+z_ghost_spawn_in_start                   : 0        : , "sv", "cheat"  : Allow ghosts to materialize while players are in the start area
+z_ghost_spawn_interval                   : 60       : , "sv", "cheat"  : Interval for spawning special zombies
+z_ghost_speed                            : 450      : , "sv", "cheat", "rep" : 
+z_ghost_travel_distance                  : 1000     : , "sv", "cheat"  : Ghosts this far away from survivors in travel distance can materialize regardless of linear distance from survivors
+z_gib_limb_distance                      : 400      : , "sv", "cheat"  : Rifles and sniper rifles can dismember at this range
+z_gib_limb_distance_buckshot             : 350      : , "sv", "cheat"  : Shotguns can dismember at this range
+z_gib_limb_distance_headshot             : 2000     : , "sv", "cheat"  : Rifles and sniper rifles can decapitate at this range
+z_gib_limb_distance_headshot_zoomed      : 4000     : , "sv", "cheat"  : Sniper rifles can decapitate at this range when zoomed
+z_gib_limb_distance_zoomed               : 800      : , "sv", "cheat"  : Sniper rifles can dismember at this range when zoomed
+z_gib_limbs                              : 25       : , "sv", "cheat"  : Limbs can be shot off infected when doing this much damage (0 disables)
+z_grab_force                             : 0        : , "sv", "cheat"  : For testing - always grab ledges regardless of estimated falling damage
+z_grab_ledges_solo                       : 0        : , "sv", "cheat"  : For testing - grab ledges even if you're the last survivor
+z_gun_damage                             : 10       : , "sv", "cheat", "rep" : 
+z_gun_debug_player_index                 : 0        : , "sv", "cheat", "rep" : 
+z_gun_force                              : 300      : , "sv", "cheat"  : 
+z_gun_horiz_punch                        : 0        : , "sv", "cheat", "rep" : Toggles horizontal punchangles for guns
+z_gun_kick                               : 0        : , "sv", "cheat", "rep" : Firing a gun can knock the player's view this amount of the current spread
+z_gun_physics_force                      : 25       : , "sv", "cheat"  : How hard we push things that aren't players or doors.
+z_gun_range                              : 75       : , "sv", "cheat", "rep" : 
+z_gun_stun_duration                      : 1        : , "sv", "cheat", "rep" : 
+z_gun_survivor_force                     : 200      : , "sv", "cheat"  : 
+z_gun_survivor_friend_push               : 1        : , "sv", "cheat", "rep" : Allow survivors to push survivors with a right click.
+z_gun_survivor_shove_dot                 : 0        : , "sv", "cheat"  : Max dot of a shove swing that can push a fellow survivor
+z_gun_swing_duration                     : 0        : , "sv", "cheat", "rep" : 
+z_gun_swing_interval                     : 0        : , "sv", "cheat", "rep" : 
+z_gun_vertical_punch                     : 1        : , "sv", "cheat", "rep" : Toggles vertical punchangles for guns
+z_health                                 : 50       : , "sv", "cheat"  : Zombie max health
+z_hear_gunfire_range                     : 200      : , "sv", "cheat"  : 
+z_hear_runner_far_range                  : 750      : , "sv", "cheat"  : 
+z_hear_runner_near_range                 : 500      : , "sv", "cheat"  : 
+z_hit_from_behind_cosine                 : 0        : , "sv", "cheat"  : 
+z_hit_from_behind_factor                 : 0        : , "sv", "cheat"  : Damage multiplier if zombie hits Survivor from behind
+z_hit_incap_factor_easy                  : 0        : , "sv", "cheat"  : Damage multiplier if zombie hits incapacitated Survivor
+z_hit_incap_factor_expert                : 1        : , "sv", "cheat"  : Damage multiplier if zombie hits incapacitated Survivor
+z_hit_incap_factor_hard                  : 1        : , "sv", "cheat"  : Damage multiplier if zombie hits incapacitated Survivor
+z_hit_incap_factor_normal                : 1        : , "sv", "cheat"  : Damage multiplier if zombie hits incapacitated Survivor
+z_hunter_claw_buildup_growl_percent      : 0        : , "sv", "cheat"  : When at least this charged up, Hunter starts growling constantly.
+z_hunter_claw_force                      : 240      : , "sv", "cheat", "rep" : Force with which the claw shoves other zombies away
+z_hunter_claw_max_buildup_time           : 3        : , "sv", "cheat"  : Attack button held longer than this gets no extra benefit.
+z_hunter_claw_plays_hit_anims            : 0        : , "sv", "cheat", "rep" : Play the new hit anims for debugging?
+z_hunter_claw_range                      : 52       : , "sv", "cheat", "rep" : Range of the Claw weapon
+z_hunter_claw_range_down                 : 70       : , "sv", "cheat", "rep" : Range of the Claw weapon when looking straight down, so it can reach your feet from your eyes.
+z_hunter_claw_start_buildup_time         : 0        : , "sv", "cheat"  : Attack button released in less than this time is just a click.
+z_hunter_claw_swing_duration             : 0        : , "sv", "cheat", "rep" : 
+z_hunter_claw_swing_interval             : 1        : , "sv", "cheat", "rep" : 
+z_hunter_claw_swing_miss_interval        : 0        : , "sv", "cheat", "rep" : 
+z_hunter_ground_normal                   : 0        : , "sv", "cheat", "rep" : 
+z_hunter_health                          : 250      : , "sv", "cheat"  : Zombie max health
+z_hunter_limit                           : 1        : , "sv", "cheat"  : 
+z_hunter_lunge_stagger_time              : 1        : , "sv", "cheat"  : 
+z_hunter_speed                           : 300      : , "sv", "cheat", "rep" : 
+z_increment_head                         : cmd      :                  : Switch to next head bodygroup
+z_increment_lower                        : cmd      :                  : Switch to next lower body bodygroup
+z_increment_skin                         : cmd      :                  : Switch to next skin
+z_increment_upper                        : cmd      :                  : Switch to next upper body bodygroup
+z_infected_flashlight                    : 1        : , "sv", "cheat"  : 
+z_infected_invuln                        : 0        : , "sv", "cheat"  : 
+z_infected_move                          : 1        : , "sv", "cheat"  : 
+z_last_area_update_tolerance             : 4        : , "sv", "cheat"  : Distance a character needs to travel in order to invalidate cached area
+z_last_man_run_interval                  : 3        : , "sv", "cheat"  : 
+z_lean_wall_align_speed                  : 300      : , "sv", "cheat"  : 
+z_look_at_local_player                   : 0        : , "sv", "cheat"  : For demo purposes
+z_lunge_interval                         : 0        : , "sv", "cheat", "rep" : 
+z_lunge_power                            : 600      : , "sv", "cheat", "rep" : 
+z_lunge_up                               : 200      : , "sv", "cheat", "rep" : 
+z_max_hunter_pounce_stagger_duration     : 0        : , "sv", "cheat"  : Max time a PZ staggers when bashed by a survivor that was pounced by said hunter.
+z_max_neighbor_range                     : 200      : , "sv", "cheat"  : Max range for neighbor collection for avoidance
+z_max_path_length                        : 5000     : , "sv", "cheat"  : 
+z_max_stagger_duration                   : 6        : , "sv", "cheat"  : Max time a PZ staggers when bashed by a survivor.
+z_mega_mob_size                          : 50       : , "sv", "cheat"  : 
+z_mega_mob_spawn_max_interval            : 900      : , "sv", "cheat"  : 
+z_mega_mob_spawn_min_interval            : 420      : , "sv", "cheat"  : 
+z_min_ladder_mount_dot                   : 0        : , "sv", "cheat", "rep" : Minimum 2D dot product from player's view to a ladder to be able to grab it
+z_minigun_cooldown_time                  : 3        : , "sv", "cheat"  : Minigun cooldown time
+z_minigun_damage_rate                    : 48000    : , "sv", "cheat"  : Minigun damage rate, in health/minute
+z_minigun_fire_think_interval            : 0        : , "sv", "cheat"  : 
+z_minigun_overheat_time                  : 20       : , "sv", "cheat"  : Minigun overheat time
+z_minigun_rate_of_fire                   : 1500     : , "sv", "cheat"  : Minigun rate of fire, in bullets/minute
+z_minion_aim_tolerance                   : 0        : , "sv", "cheat"  : 
+z_minion_limit                           : 3        : , "sv", "cheat"  : 
+z_mob_min_notify_count                   : 10       : , "sv", "cheat"  : Mobs at least this large trigger 'mob' events
+z_mob_music_size                         : 2        : , "sv", "cheat"  : Spotting a mob this large plays music
+z_mob_population_density                 : 0        : , "sv", "cheat"  : Density of mob spawns, per square inch (0.0064 = 4 per 1x1 nav area)
+z_mob_recharge_rate                      : 0        : , "sv", "cheat"  : 
+z_mob_sacrifice_timeout                  : 5        : , "sv", "cheat"  : 
+z_mob_spawn_finale_size                  : 20       : , "sv", "cheat"  : 
+z_mob_spawn_max_interval_easy            : 240      : , "sv", "cheat"  : 
+z_mob_spawn_max_interval_expert          : 180      : , "sv", "cheat"  : 
+z_mob_spawn_max_interval_hard            : 180      : , "sv", "cheat"  : 
+z_mob_spawn_max_interval_normal          : 180      : , "sv", "cheat"  : 
+z_mob_spawn_max_size                     : 30       : , "sv", "cheat"  : 
+z_mob_spawn_min_interval_easy            : 120      : , "sv", "cheat"  : 
+z_mob_spawn_min_interval_expert          : 90       : , "sv", "cheat"  : 
+z_mob_spawn_min_interval_hard            : 90       : , "sv", "cheat"  : 
+z_mob_spawn_min_interval_normal          : 90       : , "sv", "cheat"  : 
+z_mob_spawn_min_size                     : 10       : , "sv", "cheat"  : 
+z_must_wander                            : 0        : , "sv", "cheat"  : For testing.  0: default.  1: wandering zombies don't sit/lie down.  -1: wandering zombies always sit/lie down.
+z_mute_infected                          : 0        : , "sv", "cheat"  : If nonzero, common infected will not growl, yell, etc
+z_nav_debug                              : 0        : , "sv", "cheat"  : 
+z_no_cull                                : 0        : , "sv", "cheat"  : If nonzero, the Director will not cull common infected
+z_noise_level_display                    : 0        : , "sv", "cheat"  : Show noise levels on players?
+z_noise_level_fade_rate                  : 40       : , "sv", "cheat", "rep" : How much noise we lose each tick, after hold_time expires.
+z_noise_level_footstep                   : 50       : , "sv", "cheat"  : How much noise we make with a footstep.
+z_noise_level_footstep_in_water          : 75       : , "sv", "cheat"  : How much noise we make with a footstep while in water.
+z_noise_level_hold_time                  : 0        : , "sv", "cheat", "rep" : How long we hold a given noise level before it starts to fade.
+z_noise_level_max                        : 135      : , "sv", "cheat", "rep" : The highest the noise level can go.
+z_noise_level_vocalize                   : 75       : , "sv", "cheat"  : How much noise we make when we say things.
+z_non_head_damage_factor_easy            : 2        : , "sv", "cheat"  : Damage to zombie from non-headshots is multiplied by this factor
+z_non_head_damage_factor_expert          : 0        : , "sv", "cheat"  : Damage to zombie from non-headshots is multiplied by this factor
+z_non_head_damage_factor_hard            : 0        : , "sv", "cheat"  : Damage to zombie from non-headshots is multiplied by this factor
+z_non_head_damage_factor_normal          : 1        : , "sv", "cheat"  : Damage to zombie from non-headshots is multiplied by this factor
+z_notice_it_range                        : 1500     : , "sv", "cheat"  : 
+z_notice_near_range                      : 100      : , "sv", "cheat"  : 
+z_player_lunge_up                        : 150      : , "sv", "cheat", "rep" : 
+z_player_zombie_debug                    : 0        : , "sv", "cheat"  : 
+z_player_zombie_land_delay               : 0        : , "sv", "cheat"  : 
+z_player_zombie_min_dead_time            : 2        : , "sv", "cheat"  : The minimum time a PC zombie must be dead before being eligible to respawn
+z_pounce_allow_partial_hidden            : 1        : , "sv", "cheat"  : 
+z_pounce_crouch_delay                    : 1        : , "sv", "cheat", "rep" : 
+z_pounce_damage                          : 5        : , "sv", "cheat"  : 
+z_pounce_damage_delay                    : 1        : , "sv", "cheat"  : 
+z_pounce_damage_interrupt                : 50       : , "sv", "cheat"  : Taking this much damage interrupts a pounce attempt
+z_pounce_damage_interval                 : 0        : , "sv", "cheat"  : 
+z_pounce_delay                           : 0        : , "sv", "cheat"  : 
+z_pounce_door_damage                     : 500      : , "sv", "cheat"  : 
+z_pounce_silence_range                   : 500      : , "sv", "cheat"  : 
+z_pounce_stumble_force                   : 5        : , "sv", "cheat"  : Force of the stumble effect when a hunter pounces on someone
+z_prevent_burrowing                      : 1        : , "sv", "cheat"  : Use extra tracelines to prevent burrowing zombies
+z_puking_eye_height                      : 44       : , "sv", "cheat", "rep" : 
+z_push_force                             : 2000     : , "sv", "cheat"  : 
+z_push_mass_max                          : 200      : , "sv", "cheat"  : 
+z_pushaway_force                         : 100      : , "sv", "cheat"  : How hard the infected shove non-IT Survivors out of their way to reach the IT victim
+z_randombodygroups                       : 1        : , "sv", "cheat"  : Set to zero to disable random body groups on infected
+z_randomskins                            : 1        : , "sv", "cheat"  : Set to zero to disable random skins on infected
+z_reload_chatter_debug                   : 0        : , "sv", "cheat"  : Should we give devtext explanations of why we didn't say 'Reloading'?
+z_reload_chatter_intensity               : 0        : , "sv", "cheat"  : Intensity level at which players start saying 'Reloading'
+z_reload_chatter_nearby_friend_range     : 600      : , "sv", "cheat"  : A friend needs to be this close to say'Reloading'
+z_reload_chatter_recent_enemy            : 1        : , "sv", "cheat"  : An enemy needs to have been seen this recently to say 'Reloading'
+z_reload_chatter_shotgun_ammo_threshold  : 6        : , "sv", "cheat"  : Players don't say 'Reloading' when reloading a shotgun that has this many shells already
+z_reload_chatter_shotgun_interval        : 10       : , "sv", "cheat"  : 
+z_removeitems                            : cmd      :                  : Removes all items from survivors
+z_reset_population_counter               : cmd      :                  : For debugging
+z_respawn_distance                       : 100      : , "sv", "cheat"  : Infected can try a respawn within this far of their original spawn
+z_respawn_interval                       : 10       : , "sv", "cheat"  : Infected can try a respawn within this many seconds of spawning
+z_restrict_team_change                   : 0        : , "sv", "cheat"  : 
+z_round_start_replacement_time           : 30       : , "sv", "cheat"  : 
+z_run_exertion_interval                  : 1        : , "sv", "cheat"  : 
+z_safe_spawn_range                       : 250      : , "sv", "cheat"  : Minimum range for spawning special zombies
+z_scout_mob_spawn_range                  : 3000     : , "sv", "cheat"  : 
+z_shotgun_bonus_damage_multiplier        : 5        : , "sv", "cheat"  : The multiplier to damage from a shotgun pellet within z_shotgun_bonus_damage_range range.
+z_shotgun_bonus_damage_range             : 100      : , "sv", "cheat"  : A shotgun pellet hitting a common infected within this distance will get the z_shotgun_bonus_damage_multiplier bonus.
+z_shove_friend_speed                     : 130      : , "sv", "cheat"  : 
+z_show_bottlenecks                       : 0        : , "sv", "cheat"  : 
+z_show_clear                             : 0        : , "sv", "cheat"  : 
+z_show_completely_visible_to_survivor_team : 0        : , "sv", "cheat"  : 
+z_show_damaging                          : 0        : , "sv", "cheat"  : 
+z_show_escape_route                      : 0        : , "sv", "cheat"  : 
+z_show_flow_delta                        : 0        : , "sv", "cheat"  : 
+z_show_flow_distance                     : 0        : , "sv", "cheat"  : 
+z_show_infected                          : 0        : , "sv", "cheat"  : 
+z_show_last_area                         : 0        : , "sv", "cheat"  : Draws a line from each player to the center of their last known nav area
+z_show_mutually_visible_set              : 0        : , "sv", "cheat"  : 
+z_show_population_density                : 0        : , "sv", "cheat"  : 
+z_show_potentially_visible               : 0        : , "sv", "cheat"  : 
+z_show_potentially_visible_to_survivor_team : 0        : , "sv", "cheat"  : 
+z_show_swings                            : 0        : , "sv", "cheat", "rep" : 
+z_show_traffic                           : 0        : , "sv", "cheat"  : 
+z_sidespeed                              : 450      : , "sv", "cheat", "rep" : 
+z_skirmish_spawn_max_interval            : 90       : , "sv", "cheat"  : 
+z_skirmish_spawn_max_size                : 4        : , "sv", "cheat"  : 
+z_skirmish_spawn_min_interval            : 45       : , "sv", "cheat"  : 
+z_skirmish_spawn_min_size                : 1        : , "sv", "cheat"  : 
+z_spawn                                  : cmd      :                  : <tank|boomer|smoker|witch|hunter|mob|common> <auto> <ragdoll> <area>.  Spawns the specified zombie(s) under your cursor, or out
+z_spawn_flow_limit                       : 1500     : , "sv", "cheat"  : 
+z_spawn_height                           : 0        : , "sv", "cheat"  : Height above ground z_spawn places new infected
+z_spawn_mobs_behind_chance               : 75       : , "sv", "cheat"  : Percentage chance that a mob will spawn behind the Survivor team
+z_spawn_mobs_from_selected_set           : 0        : , "sv", "cheat"  : Spawn subsequent mobs from the currently selected set via the nav mesh editor
+z_spawn_range                            : 1500     : , "sv", "cheat"  : 
+z_spawn_safety_range                     : 550      : , "sv", "cheat"  : 
+z_spawn_speed                            : 450      : , "sv", "cheat", "rep" : 
+z_special_spawn_interval                 : 45       : , "sv", "cheat"  : Interval for spawning special zombies
+z_speed                                  : 250      : , "sv", "cheat", "rep" : 
+z_splat_survivor_pitch_max               : 25       : , "sv", "cheat"  : 
+z_splat_survivor_pitch_min               : 15       : , "sv", "cheat"  : 
+z_splat_survivor_shake_amplitude         : 50       : , "sv", "cheat"  : 
+z_splat_survivor_shake_duration          : 1        : , "sv", "cheat"  : 
+z_splat_survivor_shake_frequency         : 150      : , "sv", "cheat"  : 
+z_splat_survivor_shake_radius            : 10       : , "sv", "cheat"  : 
+z_splat_survivor_yaw_max                 : 10       : , "sv", "cheat"  : 
+z_splat_survivor_yaw_min                 : -10      : , "sv", "cheat"  : 
+z_stagger_immunity_time                  : 0        : , "sv", "cheat"  : How long after a hunter or smoker has been staggered until they can be staggered again.
+z_state_debug                            : 0        : , "sv", "cheat"  : Gives feedback on current zombie state.
+z_stomp_always                           : 0        : , "sv", "cheat"  : Force melee attacks on single infected to always be stomps.
+z_stumble_max_curve_accel                : 5        : , "sv", "cheat"  : Rate of turn increase per second
+z_stumble_max_curve_rate                 : 10       : , "sv", "cheat"  : Maximum degrees/sec turning while stumbling forward
+z_tank_attack_interval                   : 1        : , "sv", "cheat"  : 
+z_tank_autoshotgun_dmg_scale             : 0        : , "sv", "cheat"  : percent damage taken by the tank from the autoshotgun in versus
+z_tank_burning_lifetime                  : 75       : , "sv", "cheat"  : Number of seconds a burning tank takes to die in versus
+z_tank_damage_slow_max_range             : 400      : , "sv", "cheat"  : Range at which Tank is slowed by gunfire
+z_tank_damage_slow_min_range             : 200      : , "sv", "cheat"  : Range at which Tank is slowed by gunfire
+z_tank_grenade_damage                    : 750      : , "sv", "cheat"  : How much damage a Tank takes from a grenade.
+z_tank_grenade_roll                      : -10      : , "sv", "cheat", "rep" : 
+z_tank_grenade_slowdown                  : 0        : , "sv", "cheat"  : The speed setting put on a Tank when hit by a grenade.
+z_tank_has_special_blood                 : 0        : , "sv", "cheat"  : Does the Tank get his own blood effect instead of the normal infected one?
+z_tank_health                            : 4000     : , "sv", "cheat"  : Tank Zombie max health
+z_tank_incapacitated_decay_rate          : 1        : , "sv", "cheat"  : How much health a dying Tank loses each update.
+z_tank_incapacitated_health              : 5000     : , "sv", "cheat"  : Health Tank starts with in death throes.
+z_tank_max_stagger_distance              : 400      : , "sv", "cheat"  : Max distance a Tank staggers when hurt by a grenade.
+z_tank_max_stagger_duration              : 6        : , "sv", "cheat"  : Max time a Tank staggers when hit by a grenade.
+z_tank_max_stagger_fade_duration         : 6        : , "sv", "cheat"  : Fade in time when a Tank is staggered by a grenade.
+z_tank_rock_debug                        : 0        : , "sv", "cheat"  : Show debug for the rock thinking about detonating on people.
+z_tank_rock_radius                       : 100      : , "sv", "cheat"  : 
+z_tank_speed                             : 210      : , "sv", "cheat", "rep" : 
+z_tank_speed_vs                          : 210      : , "sv", "cheat", "rep" : 
+z_tank_stagger_fade_alpha                : 192      : , "sv", "cheat"  : How opaque the screen fade is when a Tank is hit by a grenade.
+z_tank_stagger_fade_duration             : 3        : , "sv", "cheat"  : How long the screen fade lasts when a Tank is hit by a grenade.
+z_tank_throw_fail_interval               : 0        : , "sv", "cheat", "rep" : How soon a tank can try again after failing to throw.
+z_tank_throw_force                       : 800      : , "sv", "cheat"  : 
+z_tank_throw_health                      : 50       : , "sv", "cheat"  : Health of the tank projectile (0 disables)
+z_tank_throw_interval                    : 5        : , "sv", "cheat", "rep" : How often a tank can throw.
+z_tank_walk_speed                        : 100      : , "sv", "cheat", "rep" : 
+z_tanks_block_molotovs                   : 1        : , "sv", "cheat"  : 
+z_terrify_duration                       : 2        : , "sv", "cheat"  : 
+z_throttle_hit_interval_easy             : 0        : , "sv", "cheat"  : Minimum time between damaging a Survivor from a mob
+z_throttle_hit_interval_expert           : 1        : , "sv", "cheat"  : Minimum time between damaging a Survivor from a mob
+z_throttle_hit_interval_hard             : 0        : , "sv", "cheat"  : Minimum time between damaging a Survivor from a mob
+z_throttle_hit_interval_normal           : 0        : , "sv", "cheat"  : Minimum time between damaging a Survivor from a mob
+z_throwforce                             : 2500     : , "sv", "cheat", "rep" : 
+z_tracer_spacing                         : 1        : , "sv", "cheat", "rep" : One in how many bullets is a tracer in automatic weapons.
+z_transitioning_players_remove           : 1        : , "sv", "cheat"  : 
+z_use_tolerance                          : 0        : , "sv", "cheat", "rep" : 
+z_vision_range                           : 500      : , "sv", "cheat"  : How far a Zombie can see.
+z_vision_range_alert                     : 1500     : , "sv", "cheat"  : How far a Zombie can see when alert.
+z_vision_range_obscured                  : 500      : , "sv", "cheat"  : How far a Zombie can see in OBSCURED areas.
+z_vision_range_obscured_alert            : 750      : , "sv", "cheat"  : How far a Zombie can see in OBSCURED areas when alert.
+z_vocalize_burn_max_interval             : 3        : , "sv", "cheat"  : The maximum time between vocalizing being burned
+z_vocalize_burn_min_interval             : 2        : , "sv", "cheat"  : The minimum time between vocalizing being burned
+z_vocalize_shot_interval                 : 0        : , "sv", "cheat"  : The minimum time between vocalizing being shot
+z_vomit                                  : 1        : , "sv", "cheat"  : 
+z_vomit_boxsize                          : 1        : , "sv", "cheat"  : Size of vomit damage entities.
+z_vomit_debug                            : 0        : , "sv", "cheat", "rep" : Visualize the vomit damage.
+z_vomit_drag                             : 0        : , "sv", "cheat"  : Air drag of vomit damage entities.
+z_vomit_duration                         : 1        : , "sv", "cheat", "rep" : How long a puker continuously pukes for.
+z_vomit_fade_duration                    : 5        : , "sv", "cheat", "rep" : How long the fade takes
+z_vomit_fade_start                       : 5        : , "sv", "cheat", "rep" : When the vomit starts to fade away
+z_vomit_fatigue                          : 3000     : , "sv", "cheat", "rep" : Stamina impact of puking. High number will pin in place for a long time, lower will just slow.
+z_vomit_float                            : -130     : , "sv", "cheat"  : Upward float velocity of vomit damage entities.
+z_vomit_hit_pitch_max                    : 15       : , "sv", "cheat"  : 
+z_vomit_hit_pitch_min                    : -15      : , "sv", "cheat"  : 
+z_vomit_hit_yaw_max                      : 10       : , "sv", "cheat"  : 
+z_vomit_hit_yaw_min                      : -10      : , "sv", "cheat"  : 
+z_vomit_interval                         : 30       : , "sv", "cheat", "rep" : How often a puker can puke.
+z_vomit_lifetime                         : 0        : , "sv", "cheat"  : Time to live of vomit damage entities.
+z_vomit_maxdamagedist                    : 350      : , "sv", "cheat"  : Maximum damage distance for vomit.
+z_vomit_range                            : 300      : , "sv", "cheat", "rep" : 
+z_vomit_slide_mult                       : 0        : , "sv", "cheat", "rep" : Multiplier for second texture slide rate
+z_vomit_slide_rate                       : 0        : , "sv", "cheat", "rep" : Percentage of screen height per second
+z_vomit_vecrand                          : 0        : , "sv", "cheat"  : Random vector added to initial velocity of vomit damage entities.
+z_vomit_velocity                         : 1700     : , "sv", "cheat"  : Initial velocity of vomit damage entities.
+z_vomit_velocityfadeend                  : 0        : , "sv", "cheat"  : Time at which attacker's velocity contribution finishes fading.
+z_vomit_velocityfadestart                : 0        : , "sv", "cheat"  : Time at which attacker's velocity contribution starts to fade.
+z_walk_speed                             : 85       : , "sv", "cheat", "rep" : 
+z_wandering_density                      : 0        : , "sv", "cheat"  : 
+z_witch_allow_change_victim              : 1        : , "sv", "cheat"  : 
+z_witch_anger_rate                       : 0        : , "sv", "cheat"  : 
+z_witch_attack_range                     : 60       : , "sv", "cheat"  : 
+z_witch_berserk_range                    : 200      : , "sv", "cheat"  : 
+z_witch_burn_time                        : 15       : , "sv", "cheat"  : 
+z_witch_damage                           : 100      : , "sv", "cheat"  : 
+z_witch_damage_per_kill_hit              : 30       : , "sv", "cheat"  : 
+z_witch_discard_range                    : 2000     : , "sv", "cheat"  : 
+z_witch_flashlight_range                 : 400      : , "sv", "cheat"  : 
+z_witch_health                           : 1000     : , "sv", "cheat"  : Witch max health
+z_witch_hostile_at_me_anger              : 2        : , "sv", "cheat"  : 
+z_witch_max_retreat_range                : 2000     : , "sv", "cheat"  : 
+z_witch_max_threat_time                  : 7        : , "sv", "cheat"  : 
+z_witch_min_retreat_range                : 750      : , "sv", "cheat"  : 
+z_witch_min_threat_time                  : 5        : , "sv", "cheat"  : 
+z_witch_personal_space                   : 100      : , "sv", "cheat"  : 
+z_witch_relax_rate                       : 0        : , "sv", "cheat"  : 
+z_witch_retreat_exit_hidden_duration     : 10       : , "sv", "cheat"  : 
+z_witch_retreat_exit_range               : 1000     : , "sv", "cheat"  : 
+z_witch_retreat_min_duration             : 10       : , "sv", "cheat"  : 
+z_witch_speed                            : 300      : , "sv", "cheat", "rep" : 
+z_witch_speed_inured                     : 200      : , "sv", "cheat", "rep" : 
+z_witch_threat_hostile_range             : 600      : , "sv", "cheat"  : 
+z_witch_threat_normal_range              : 300      : , "sv", "cheat"  : 
+z_zombie_knockoff_death                  : 0        : , "sv", "cheat", "rep" : Knocking off a pouncing zombie instantly kills them.
+z_zombie_lunge_push                      : 0        : , "sv", "cheat"  : Does the zombie lunge push players?
+--------------
+1775 total convars/concommands
