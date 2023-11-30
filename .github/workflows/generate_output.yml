@@ -39,7 +39,7 @@
 
         strategy:
           matrix: ${{ fromJSON(needs.create-matrix.outputs.matrix) }}
-          max-parallel: 1
+          # max-parallel: 1
 
         steps:
           - name: Checkout
