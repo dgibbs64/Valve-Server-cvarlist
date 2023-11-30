@@ -115,7 +115,7 @@
 
               # Arguments for the git pull command. By default, the action does not pull.
               # Default: ''
-              # pull: '--rebase --autostash ...'
+              pull: '--rebase --autostash'
 
               # Whether to push the commit and, if any, its tags to the repo. It can also be used to set the git push arguments (see the paragraph below for more info)
               # Default: true
