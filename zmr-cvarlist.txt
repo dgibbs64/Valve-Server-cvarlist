@@ -1400,7 +1400,7 @@ zm_sv_flashlightdrainrate                : 0        : , "sv", "nf"     : How fas
 zm_sv_flashlightrechargerate             : 2        : , "sv", "nf"     : How fast the flashlight battery recharges per second. (out of 100)
 zm_sv_gibdelete                          : 1        : , "sv", "nf"     : Does deleting zombies gib them?
 zm_sv_glow_item_enabled                  : 1        : , "a", "sv", "nf", "rep" : Is item (weapon/ammo) glow allowed?
-zm_sv_happyzombies                       : 3        : , "sv", "rep"    : Happy, happy zombies :)
+zm_sv_happyzombies                       : 1        : , "sv", "rep"    : Happy, happy zombies :)
 zm_sv_happyzombies_usedate               : 1        : , "sv", "nf"     : Special dates bring happy zombies :)
 zm_sv_hidden_cost_shambler               : 100      : , "sv", "nf", "rep" : 
 zm_sv_hidden_mincost                     : 10       : , "sv", "nf", "rep" : The minimum amount a hidden spawn will cost.
