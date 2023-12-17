@@ -104,7 +104,6 @@ ai_use_clipped_paths                     : 1        : , "sv"           :
 ai_use_efficiency                        : 1        : , "sv"           : 
 ai_use_frame_think_limits                : 1        : , "sv"           : 
 ai_use_think_optimizations               : 1        : , "sv"           : 
-ai_use_visibility_cache                  : 1        : , "sv"           : 
 ai_vehicle_avoidance                     : 1        : , "sv", "cheat"  : 
 ainet_generate_report                    : cmd      :                  : Generate a report to the console.
 ainet_generate_report_only               : cmd      :                  : Generate a report to the console.
@@ -267,6 +266,7 @@ developer                                : 0        :                  : Set dev
 devshots_nextmap                         : cmd      :                  : Used by the devshots system to go to the next map in the devshots maplist.
 differences                              : cmd      :                  : Show all convars which are not at their default values.
 disconnect                               : cmd      :                  : Disconnect game from server.
+dismember                                : cmd      :                  : Kills the player with dismemberment
 disp_dynamic                             : 0        :                  : 
 dispcoll_drawplane                       : 0        : , "sv"           : 
 displaysoundlist                         : 0        : , "sv"           : 
@@ -392,6 +392,7 @@ givecurrentammo                          : cmd      :                  : Give a 
 gl_amd_occlusion_workaround              : 1        :                  : 
 global_set                               : cmd      :                  : global_set <globalname> <state>: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD).
 god                                      : cmd      :                  : Toggle. Player becomes invulnerable.
+goodfortune                              : cmd      :                  : Good for them!
 groundlist                               : cmd      :                  : Display ground entity list <index>
 hammer_update_entity                     : cmd      :                  : Updates the entity's position/angles when in edit mode
 hammer_update_safe_entities              : cmd      :                  : Updates entities in the map that can safely be updated (don't have parents or are affected by constraints). Also excludes entities mentioned in any hammer_updateignorelist objects in this map.
@@ -561,7 +562,7 @@ mat_vsync                                : 0        :                  : Force s
 mat_wireframe                            : 0        : , "cheat"        : 
 matchmakingport                          : 27025    :                  : Host Matchmaking port
 maxplayers                               : cmd      :                  : Change the maximum number of players allowed on this server.
-maxplayers_extended                      : 0        : , "sv"           : Extends max player limit to 33. Please note that going over the recommended value (24) can cause significant performance issues.
+maxplayers_extended                      : 0        : , "sv"           : 1 Extends to 33, 2 extends to 65. Please note that going over the recommended value (24) can cause significant performance issues.
 mem_compact                              : cmd      :                  : 
 mem_dump                                 : cmd      :                  : Dump memory stats to text file.
 mem_dumpstats                            : 0        :                  : Dump current and max heap usage info to console at end of frame ( set to 2 for continuous output ) 
@@ -615,6 +616,9 @@ mp_assist_lifetime                       : 5        : , "sv", "nf", "rep" : How 
 mp_attackdirindicator                    : 1        : , "sv", "nf", "rep" : Allow the use of attack dir indicator.
 mp_autocrosshair                         : 1        : , "sv", "nf"     : 
 mp_autoteambalance                       : 1        : , "sv", "nf", "rep" : Forced team balancing
+mp_berserk_combogain                     : 0        : , "sv", "nf", "rep" : Time between combo gained when berserk.
+mp_blockbreak_invuln_time                : 0        : , "sv", "nf", "rep" : Time a player is invulnerable to the attacker who broke their block. 
+mp_burn_damage                           : 3        : , "sv", "nf", "rep" : Damage per burn tick
 mp_button_dist                           : 70       : , "sv", "nf", "rep" : 
 mp_chattime                              : 10       : , "sv", "rep"    : amount of time players can chat after the game is over
 mp_clan_ready_signal                     : 0        : , "sv"           : Text that team leader from each team must speak for the match to begin
@@ -631,9 +635,22 @@ mp_classlimit_huscarl                    : -1       : , "sv", "nf", "rep" :
 mp_classlimit_manatarms                  : -1       : , "sv", "nf", "rep" : 
 mp_classlimit_sharpshooter               : -1       : , "sv", "nf", "rep" : 
 mp_classlimit_skirmisher                 : -1       : , "sv", "nf", "rep" : 
+mp_combobonus                            : 1        : , "sv", "cheat", "nf", "rep" : Max Combo Multiplier
+mp_combobonus_finisher                   : 1        : , "sv", "cheat", "nf", "rep" : Max Combo Multiplier for Finishers
+mp_competitive_respawn                   : 0        : , "sv", "nf", "rep" : Used for competitive. Removes or limits respawns as if it were LTS.
 mp_decals                                : 200      : , "a"            : 
+mp_default_blockspeed                    : 0        : , "sv", "nf", "rep" : Speed multiplier for blockspeed
+mp_default_jumpspread                    : 5        : , "sv", "nf", "rep" : Added spread when jumping with ranged weapons
+mp_default_shieldspeed                   : 0        : , "sv", "nf", "rep" : Speed multiplier for shieldspeed
+mp_default_standmaxspeed                 : 90       : , "sv", "nf", "rep" : When standing with ranged weapons starts to decay spread
+mp_default_standspeed                    : 91       : , "sv", "nf", "rep" : When standing with ranged weapons starts to decay spread
+mp_default_standspread                   : 0        : , "sv", "nf", "rep" : Modifier for spread when standing with ranged weapons
+mp_default_zoomfov                       : 70       : , "sv", "nf", "rep" : Minimum FOV for zoom
+mp_default_zoomrate                      : 0        : , "sv", "nf", "rep" : Time for zoom
 mp_defaultteam                           : 0        : , "sv"           : 
 mp_disable_autokick                      : cmd      :                  : Prevents a userid from being auto-kicked
+mp_disable_dodge                         : 0        : , "sv", "nf", "rep" : 
+mp_disable_kick                          : 0        : , "sv", "nf", "rep" : Enable/Disable kick.
 mp_disable_respawn_times                 : 0        : , "sv", "nf", "rep" : Disable respawn times
 mp_disabledteam                          : 0        : , "sv", "nf", "rep" : Team that is disabled
 mp_disablepickups                        : 0        : , "sv", "nf", "rep" : Disables item pickups.
@@ -641,6 +658,11 @@ mp_disablespecial                        : 0        : , "sv", "nf", "rep" : Disa
 mp_dm_force                              : 0        : , "sv", "nf", "rep" : Forces deathmatch rules on all maps. Change takes effect on map reload.
 mp_dm_oldrules                           : 0        : , "sv", "nf", "rep" : Use old gamerules for (t)dm instead of the new round based rules.
 mp_dm_spawnsound                         : 0        : , "sv", "nf", "rep" : Plays a sound when player spawns.
+mp_dodge_delay                           : 3        : , "sv", "nf", "rep" : Delay between dodges.
+mp_dodge_drag                            : 0        : , "sv", "cheat", "nf", "rep" : 
+mp_dodge_duration                        : 1        : , "sv", "cheat", "nf", "rep" : 
+mp_dodge_forwardonly_cameraspeed         : 255      : , "sv", "cheat", "nf", "rep" : 
+mp_dodge_speed_boost_time                : 0        : , "sv", "cheat", "nf", "rep" : 
 mp_door_blocked_react_dist               : 350      : , "sv", "nf", "rep" : How far away should we consider a door to be in blocking range
 mp_door_dist                             : 100      : , "sv", "nf", "rep" : 
 mp_endgame                               : cmd      :                  : Usage: mp_endgame [winner team number]
@@ -668,6 +690,8 @@ mp_infinite_ammo                         : 0        : , "sv", "cheat", "nf", "re
 mp_initialwait_freeze                    : 0        : , "sv", "nf", "rep" : Should the players be frozen when the game is about to start
 mp_initialwait_freeze_duration           : 4        : , "sv", "nf", "rep" : How long in seconds the players are frozen on game start
 mp_initialwaittime                       : 30       : , "sv", "nf", "rep" : How long to wait for people who are still loading before starting the real round
+mp_keg_damage                            : 195      : , "sv", "nf", "rep" : 
+mp_keg_radius                            : 400      : , "sv", "nf", "rep" : 
 mp_kick_berserk_dmgmulti                 : 2        : , "sv", "cheat", "nf", "rep" : Kick damage gets multiplied by this value while berserking.
 mp_kick_delay                            : 2        : , "sv", "cheat", "nf", "rep" : Delay between kicks.
 mp_kick_dmg                              : 3        : , "sv", "cheat", "nf", "rep" : Kick damage.
@@ -688,11 +712,13 @@ mp_moveduringsuicide                     : 0        : , "sv", "nf", "rep" : Dete
 mp_nemesis                               : 1        : , "sv", "nf", "rep" : Enable dominations and revenges.
 mp_nemesis_assistscount                  : 1        : , "sv", "nf", "rep" : Should assists count as 'kills' for nemesis status?
 mp_nemesis_kills                         : 4        : , "sv", "nf", "rep" : How many kills are required for nemesis status.
+mp_nowaittime                            : 0        : , "sv", "rep"    : Bypass wait time
 mp_overtime_dm                           : 120      : , "sv", "nf", "rep" : If non-zero, overtime will be used if there's a draw, in seconds.
 mp_pausegame                             : cmd      :                  : Pauses the game on next round start
 mp_player_pushaway_max_force             : 200      : , "sv", "rep", "server_can_execute" : 
 mp_player_pushaway_min_force             : 20       : , "sv", "rep", "server_can_execute" : 
 mp_projectile_use_hitboxes               : 0        : , "sv", "nf", "rep" : Use hitboxes for projectile hit calculation.
+mp_randomcrits                           : 0        : , "sv", "nf"     : Enable random crits :)))
 mp_randomizer                            : 0        : , "sv", "nf", "rep" : Give random weapons to players on spawn.
 mp_randsuddendeath                       : 0        : , "sv", "nf", "rep" : Pecrent chance sudden death will occur right at the start of the round. (Time for round will still be as usual)
 mp_respawntime                           : 5        : , "sv", "nf", "rep" : Respawn time in seconds
@@ -733,6 +759,10 @@ mp_unpausegame                           : cmd      :                  : Resume 
 mp_waitingforplayers_cancel              : 0        : , "sv"           : Set to 1 to end the WaitingForPlayers period.
 mp_waitingforplayers_restart             : 0        : , "sv"           : Set to 1 to start or restart the WaitingForPlayers period.
 mp_waitingforplayers_time                : 0        : , "sv"           : WaitingForPlayers time length in seconds
+mp_walkspeed_berserk                     : 1        : , "sv", "cheat", "nf", "rep" : Berserker's movespeed bonus whilst berserking.
+mp_walkspeed_chest                       : 170      : , "sv", "cheat", "nf", "rep" : Chest static walkspeed.
+mp_walkspeed_hook_user                   : 120      : , "sv", "cheat", "nf", "rep" : Hook Puller static walkspeed.
+mp_walkspeed_hook_victim                 : 20       : , "sv", "cheat", "nf", "rep" : Hook Puller static walkspeed.
 mp_weaponstay                            : 0        : , "sv", "nf"     : 
 mp_winlimit                              : 0        : , "sv", "nf", "rep" : Win limit in number of rounds
 multvar                                  : cmd      :                  : Multiply specified convar value.
@@ -998,6 +1028,7 @@ picker                                   : cmd      :                  : Toggles
 ping                                     : cmd      :                  : Display ping to server.
 pipeline_static_props                    : 1        :                  : 
 player_debug_print_damage                : 0        : , "sv", "cheat"  : When true, print amount and type of all damage received by player to console.
+player_info                              : cmd      :                  : Show player information in the format <NETWORKID> <USERID> <PLAYERNAME>
 player_old_armor                         : 0        : , "sv"           : 
 playviewmodelanim                        : cmd      :                  : Play a view model animation.
 plugin_load                              : cmd      :                  : plugin_load <filename> : loads a plugin
@@ -1165,7 +1196,6 @@ ruleset_show_status                      : cmd      :                  : Is the 
 ruleset_validate                         : cmd      :                  : Validate current ruleset, and dump all modified cvars.
 say                                      : cmd      :                  : Display player message
 say_team                                 : cmd      :                  : Display player message to team
-scene_async_prefetch_spew                : 0        : , "sv"           : Display async .ani file loading info.
 scene_clamplookat                        : 1        : , "sv"           : Clamp head turns to a max of 20 degrees per think.
 scene_clientflex                         : 1        : , "sv", "rep"    : Do client side flex animation.
 scene_flatturn                           : 1        : , "sv"           : 
@@ -1190,6 +1220,9 @@ show_instant_triggers                    : 0        : , "sv", "cheat"  :
 showhitlocation                          : 0        : , "sv"           : 
 showtriggers                             : 0        : , "sv", "cheat"  : Shows trigger brushes
 showtriggers_toggle                      : cmd      :                  : Toggle show triggers
+silly_scaleplayer                        : 0        : , "sv", "cheat", "nf", "rep" : 
+silly_scaleragdoll                       : 0        : , "sv", "cheat", "nf", "rep" : 
+silly_scalewep                           : 1        : , "sv", "cheat", "nf", "rep" : 
 singlestep                               : 0        : , "cheat"        : Run engine in single step mode ( set next to 1 to advance a frame )
 sk_ally_regen_time                       : 0        : , "sv"           : Time taken for an ally to regenerate a point of health.
 sk_armor                                 : 40       : , "sv"           : 
@@ -1197,6 +1230,7 @@ sk_autoaim_mode                          : 1        : , "a", "sv", "rep" :
 sk_crow_health                           : 1        : , "sv"           : 
 sk_crow_melee_dmg                        : 0        : , "sv"           : 
 sk_healthkit                             : 40       : , "sv"           : 
+sk_maxcoins                              : 59593    : , "sv"           : 
 sk_npc_arm                               : 1        : , "sv"           : 
 sk_npc_chest                             : 1        : , "sv"           : 
 sk_npc_head                              : 2        : , "sv"           : 
@@ -1314,6 +1348,7 @@ sv_lowedict_action                       : 0        :                  : 0 - no 
 sv_lowedict_threshold                    : 8        :                  : When only this many edicts are free, take the action specified by sv_lowedict_action.
 sv_maphack                               : 1        : , "sv", "nf", "rep" : Enable MapHack system. Maphacks are text files for adding and modifying entities in the map.
 sv_maphack_allow_servercommand           : 0        : , "sv", "rep"    : Allow $console function to execute server commands.
+sv_maphack_debug                         : 0        : , "sv"           : Print MapHack behavior to the server console.
 sv_maphack_directory                     : 0        : , "sv", "rep"    : The game will search this directory for [mapname].txt files.
 sv_maphack_filename                      : 0        : , "sv", "nf", "rep" : If not empty, load this file as maphack.
 sv_massreport                            : 0        : , "sv"           : 
@@ -1396,7 +1431,6 @@ sv_stats                                 : 1        :                  : Collect
 sv_steamblockingcheck                    : 0        :                  : Check each new player for Steam blocking compatibility, 1 = message only, 2 >= drop if any member of owning clan blocks,3 >= drop if any player has blocked, 4 >= drop if player has blocked anyone on server
 sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam community.
 sv_stiletto_backstab_angle               : 0        : , "sv", "cheat", "rep" : 
-sv_stiletto_backstab_angle_special       : 0        : , "sv", "cheat", "rep" : 
 sv_strict_notarget                       : 0        : , "sv"           : If set, notarget will cause entities to never think they are in the pvs
 sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
 sv_test_scripted_sequences               : 0        : , "sv"           : Tests for scripted sequences that are embedded in the world. Run through your map with this set to check for NPCs falling through the world.
@@ -1573,4 +1607,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1572 total convars/concommands
+1606 total convars/concommands
