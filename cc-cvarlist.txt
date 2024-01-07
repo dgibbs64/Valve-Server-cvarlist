@@ -1362,6 +1362,7 @@ sv_autokick_cooldown                     : 15       : , "sv"           : Min: 10
 sv_autokick_strikes                      : 10       : , "sv"           : Min: 5, Max: 30 - Number of friendly fire strikes a player can accumulate within the cooldown period before being auto kicked
 sv_autoladderdismount                    : 1        : , "sv", "rep"    : Automatically dismount from ladders when you reach the end (don't have to +USE).
 sv_autosave                              : 1        : , "sv"           : Set to 1 to autosave game on level transition. Does not affect autosave triggers.
+sv_autoupdatetime                        : 0        : , "sv"           : 
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
 sv_benchmark_force_start                 : cmd      :                  : Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.
 sv_benchmark_numticks                    : 3300     : , "sv"           : If > 0, then it only runs the benchmark for this # of ticks.
@@ -1415,6 +1416,7 @@ sv_logsecret                             : 0        :                  : If set 
 sv_lowedict_action                       : 0        :                  : 0 - no action, 1 - warn to log file, 2 - attempt to restart the game, if applicable, 3 - restart the map, 4 - go to the next map in the map cycle, 5 - spew all edicts.
 sv_lowedict_threshold                    : 8        :                  : When only this many edicts are free, take the action specified by sv_lowedict_action.
 sv_map_retries                           : 3        : , "sv"           : 
+sv_map_retries_surv                      : 1        : , "sv"           : 
 sv_massreport                            : 0        : , "sv"           : 
 sv_master_share_game_socket              : 1        :                  : Use the game's socket to communicate to the master server. If this is 0, then it will create a socket on -steamport + 1 to communicate to the master server on.
 sv_max_connects_sec                      : 2        :                  : Maximum connections per second to respond to from a single IP address.
@@ -1674,4 +1676,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1673 total convars/concommands
+1675 total convars/concommands
