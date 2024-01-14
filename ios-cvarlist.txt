@@ -543,8 +543,8 @@ mp_timelimit_match                       : 20       : , "sv", "nf", "rep" : matc
 mp_timelimit_penalties_intermission      : 0        : , "sv", "nf", "rep" : time before penalties start
 mp_timelimit_tutorial                    : 0        : , "sv", "nf", "rep" : time before tutorial start
 mp_timelimit_warmup                      : 0        : , "sv", "nf", "rep" : time before match start
-mp_timeout_count                         : 3        : , "sv", "nf", "rep" : 
-mp_timeout_duration                      : 5        : , "sv", "nf", "rep" : 
+mp_timeout_count                         : 2        : , "sv", "nf", "rep" : 
+mp_timeout_duration                      : 3        : , "sv", "nf", "rep" : 
 mp_tvcam_border_bottom                   : 500      : , "sv", "nf", "rep" : 
 mp_tvcam_border_horizontal               : 700      : , "sv", "nf", "rep" : 
 mp_tvcam_border_top                      : 900      : , "sv", "nf", "rep" : 
@@ -1016,7 +1016,7 @@ sv_findsoundname                         : cmd      :                  : Find so
 sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
 sv_gravity                               : 900      : , "sv", "nf", "rep" : World gravity.
 sv_hide_server                           : 0        : , "sv"           : 
-sv_hud_theme                             : 1        : , "sv", "nf", "rep" : Set the HUD theme. 1 = IOSoccer, 2 = IOS Sudamerica, 3 = VFC, 4 = Canito Gaming, 5 = North America, 6 = CIS 
+sv_hud_theme                             : 1        : , "sv", "nf", "rep" : Set the HUD theme. 1 = IOSoccer, 2 = IOS Sudamerica, 3 = AIF, 4 = UFA, 5 = NextGen, 6 = Natural Talent, 7 = Caladrius 
 sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
 sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
 sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
