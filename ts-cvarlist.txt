@@ -1,0 +1,180 @@
+CVar List
+--------------
+_sv_override_scientist_mdl :        0
+ammocount       :        0, sv
+banfortk        :        0, sv
+bannedcfgfile   :        0
+botarmor        :        0, sv
+botlearn        :        0, sv
+bottalk         :        1, sv
+clientport      :    27005
+clockwindow     :    0.500
+console         :        0, a
+coop            :        0, sv
+customweapons   :        0, sv
+damagemult      :        0, sv
+deathmatch      :        1, sv
+decalfrequency  :       30, sv
+developer       :        0
+disconcfgfile   :        0
+displaysoundlist :        0
+edgefriction    :        2, sv
+fakelag         :        0
+fakeloss        :        0
+fps_max         :      100, a
+fps_override    :        0, a
+host_framerate  :        0
+host_killtime   :        0
+host_limitlocal :        0
+host_profile    :        0
+host_speeds     :        0
+HostMap         :        0
+hostname        :        0
+hostport        :    27015
+hpk_maxsize     :        4, a
+ip              :        0
+ip_clientport   :        0
+ip_hostport     :        0
+lastmanstanding :        0, sv
+logsdir         :        0
+lservercfgfile  :        0
+mapchangecfgfile :        0
+mapcyclefile    :        0
+max_queries_sec :        3, sv
+max_queries_sec_global :       30, sv
+max_queries_window :       60, sv
+motdfile        :        0
+mp_allowmonsters :        0, sv
+mp_autocrosshair :        1, sv
+mp_chattime     :       10, sv
+mp_consistency  :        1, sv
+mp_defaultteam  :        0
+mp_falldamage   :        0, sv
+mp_footsteps    :        1, sv
+mp_forcerespawn :        1, sv
+mp_fraglimit    :        0, sv
+mp_fragsleft    :        0, sv
+mp_friendlyfire :        0, sv
+mp_logecho      :        1
+mp_logfile      :        1, sv
+mp_teamlist     :        0, sv
+mp_teammodels   :        0, sv
+mp_teamoverride :        1
+mp_teamplay     :        0, sv
+mp_theone       :        0, sv
+mp_theonemode   :        0, sv
+mp_theothers    :        0, sv
+mp_timeleft     :     1186, sv
+mp_timelimit    :       20, sv
+mp_weaponstay   :        0, sv
+multicastport   :    27025
+net_address     :        0
+net_chokeloop   :        0
+net_drawslider  :        0
+net_graph       :        0, a
+net_graphpos    :        1, a
+net_graphwidth  :      150
+net_log         :        0
+net_scale       :        5, a
+net_showdrop    :        0
+net_showpackets :        0
+nopowerup       :        0, sv
+pausable        :        0, sv
+port            :    27015
+rcon_password   :        0
+realbullet      :        0, sv
+respawntime     :        3, sv
+roundtime       :      150, sv
+servercfgfile   :        0
+skill           :        1
+slowmatch       :        1, sv
+spectacularness :        1, sv
+suitvolume      :    0.250, a
+sv_accelerate   :       10, sv
+sv_aim          :        0, a
+sv_airaccelerate :       10, sv
+sv_allow_autoaim :        0, sv
+sv_allow_dlfile :        1
+sv_allow_shaders :        0, sv
+sv_allowdownload :        1
+sv_allowupload  :        1, sv
+sv_alltalk      :        0
+sv_bounce       :        1, sv
+sv_cheats       :        0, sv
+sv_clienttrace  :        1, sv
+sv_contact      :        0, sv
+sv_downloadurl  :        0
+sv_enableoldqueries :        0
+sv_failuretime  :    0.500
+sv_filetransfercompression :        1
+sv_filetransfermaxsize : 10485760
+sv_filterban    :        1
+sv_friction     :        4, sv
+sv_gravity      :      800, sv
+sv_instancedbaseline :        1
+sv_lan          :        0
+sv_lan_rate     :    20000
+sv_log_onefile  :        0
+sv_log_singleplayer :        0
+sv_logbans      :        1
+sv_logblocks    :        0, sv
+sv_logrelay     :        0
+sv_logsecret    :        0
+sv_maxrate      :        0, sv
+sv_maxspeed     :      320, sv
+sv_maxunlag     :    0.500
+sv_maxupdaterate :       30
+sv_maxvelocity  :     2000
+sv_minrate      :        0, sv
+sv_minupdaterate :       10
+sv_newunit      :        0
+sv_outofdatetime :     1800
+sv_password     :        0, sv
+sv_proxies      :        1, sv
+sv_rcon_banpenalty :        0
+sv_rcon_maxfailures :       10
+sv_rcon_minfailures :        5
+sv_rcon_minfailuretime :       30
+sv_rollangle    :        2
+sv_rollspeed    :      200
+sv_send_logos   :        1
+sv_send_resources :        1
+sv_skycolor_b   :       35
+sv_skycolor_g   :       35
+sv_skycolor_r   :       35
+sv_skyname      :        0
+sv_skyvec_x     :    0.208
+sv_skyvec_y     :   -0.978
+sv_skyvec_z     :        0
+sv_spectatormaxspeed :      500
+sv_stats        :        1
+sv_stepsize     :       18, sv
+sv_stopspeed    :      100, sv
+sv_timeout      :       60
+sv_unlag        :        1
+sv_unlagpush    :        0
+sv_unlagsamples :        1
+sv_uploadmax    :    0.500, sv
+sv_uploadmaxcount :       10, sv
+sv_use_steam_networking :        0
+sv_version      :  112.200
+sv_visiblemaxplayers :       -1
+sv_voiceenable  :        1, a, sv
+sv_wateraccelerate :       10, sv
+sv_wateramp     :        0
+sv_waterfriction :        1, sv
+sv_zmax         :     5000
+sys_ticrate     :      100
+ui_cmd_on_connect :        0
+usecash         :        0, sv
+violence_ablood :        1, a
+violence_agibs  :        1, a
+violence_hblood :        1, a
+violence_hgibs  :        1, a
+voice_inputfromfile :        0
+voice_recordtofile :        0
+voice_serverdebug :        0
+weaponstay      :       15, sv
+--------------
+175 Total CVars
+CvarList ? for syntax
