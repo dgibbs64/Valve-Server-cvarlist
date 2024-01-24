@@ -1,0 +1,413 @@
+CVar List
+--------------
+_sv_override_scientist_mdl :        0
+allow_spectators :        0, sv
+bannedcfgfile   :        0
+clientport      :    27005
+clockwindow     :    0.500
+console         :        0, a
+coop            :        0, sv
+deathmatch      :        1, sv
+decalfrequency  :       30, sv
+developer       :        0
+disconcfgfile   :        0
+displaysoundlist :        0
+edgefriction    :        2, sv
+fakelag         :        0
+fakeloss        :        0
+fps_max         :      100, a
+fps_override    :        0, a
+host_framerate  :        0
+host_killtime   :        0
+host_limitlocal :        0
+host_profile    :        0
+host_speeds     :        0
+HostMap         :        0
+hostname        :        0
+hostport        :    27015
+hpk_maxsize     :        4, a
+ip              :        0
+ip_clientport   :        0
+ip_hostport     :        0
+logsdir         :        0
+lservercfgfile  :        0
+mapchangecfgfile :        0
+mapcyclefile    :        0
+max_queries_sec :        3, sv
+max_queries_sec_global :       30, sv
+max_queries_window :       60, sv
+motdfile        :        0
+mp_allowmonsters :        0, sv
+mp_autocrosshair :        1, sv
+mp_chattime     :       10, sv
+mp_consistency  :        1, sv
+mp_defaultteam  :        0
+mp_falldamage   :        0, sv
+mp_flashlight   :        0, sv
+mp_footsteps    :        1, sv
+mp_forcerespawn :        1, sv
+mp_fraglimit    :        0, sv
+mp_fragsleft    :        0, sv
+mp_friendlyfire :        0, sv
+mp_logecho      :        1
+mp_logfile      :        1, sv
+mp_teamlist     :        0, sv
+mp_teamoverride :        1
+mp_teamplay     :        0, sv
+mp_timeleft     :     1186, sv
+mp_timelimit    :       20, sv
+mp_weaponstay   :        0, sv
+multicastport   :    27025
+net_address     :        0
+net_chokeloop   :        0
+net_drawslider  :        0
+net_graph       :        0, a
+net_graphpos    :        1, a
+net_graphwidth  :      150
+net_log         :        0
+net_scale       :        5, a
+net_showdrop    :        0
+net_showpackets :        0
+pausable        :        0, sv
+port            :    27015
+rcon_password   :        0
+servercfgfile   :        0
+sk_12mm_bullet1 :        8
+sk_12mm_bullet2 :       10
+sk_12mm_bullet3 :       10
+sk_9mm_bullet1  :        5
+sk_9mm_bullet2  :        5
+sk_9mm_bullet3  :        8
+sk_9mmAR_bullet1 :        3
+sk_9mmAR_bullet2 :        4
+sk_9mmAR_bullet3 :        5
+sk_agrunt_dmg_punch1 :       10
+sk_agrunt_dmg_punch2 :       20
+sk_agrunt_dmg_punch3 :       20
+sk_agrunt_health1 :       60
+sk_agrunt_health2 :       90
+sk_agrunt_health3 :      120
+sk_apache_health1 :      150
+sk_apache_health2 :      250
+sk_apache_health3 :      400
+sk_barney_health1 :       35
+sk_barney_health2 :       35
+sk_barney_health3 :       35
+sk_battery1     :       15
+sk_battery2     :       15
+sk_battery3     :       10
+sk_bigmomma_dmg_blast1 :      100
+sk_bigmomma_dmg_blast2 :      120
+sk_bigmomma_dmg_blast3 :      160
+sk_bigmomma_dmg_slash1 :       50
+sk_bigmomma_dmg_slash2 :       60
+sk_bigmomma_dmg_slash3 :       70
+sk_bigmomma_health_factor1 :        1
+sk_bigmomma_health_factor2 :    1.500
+sk_bigmomma_health_factor3 :        2
+sk_bigmomma_radius_blast1 :      250
+sk_bigmomma_radius_blast2 :      250
+sk_bigmomma_radius_blast3 :      275
+sk_bullsquid_dmg_bite1 :       15
+sk_bullsquid_dmg_bite2 :       25
+sk_bullsquid_dmg_bite3 :       25
+sk_bullsquid_dmg_spit1 :       10
+sk_bullsquid_dmg_spit2 :       10
+sk_bullsquid_dmg_spit3 :       15
+sk_bullsquid_dmg_whip1 :       25
+sk_bullsquid_dmg_whip2 :       35
+sk_bullsquid_dmg_whip3 :       35
+sk_bullsquid_health1 :       40
+sk_bullsquid_health2 :       40
+sk_bullsquid_health3 :      120
+sk_controller_dmgball1 :        3
+sk_controller_dmgball2 :        4
+sk_controller_dmgball3 :        5
+sk_controller_dmgzap1 :       15
+sk_controller_dmgzap2 :       25
+sk_controller_dmgzap3 :       35
+sk_controller_health1 :       60
+sk_controller_health2 :       60
+sk_controller_health3 :      100
+sk_controller_speedball1 :      650
+sk_controller_speedball2 :      800
+sk_controller_speedball3 :     1000
+sk_gargantua_dmg_fire1 :        3
+sk_gargantua_dmg_fire2 :        5
+sk_gargantua_dmg_fire3 :        5
+sk_gargantua_dmg_slash1 :       10
+sk_gargantua_dmg_slash2 :       30
+sk_gargantua_dmg_slash3 :       30
+sk_gargantua_dmg_stomp1 :       50
+sk_gargantua_dmg_stomp2 :      100
+sk_gargantua_dmg_stomp3 :      100
+sk_gargantua_health1 :      800
+sk_gargantua_health2 :      800
+sk_gargantua_health3 :     1000
+sk_hassassin_health1 :       30
+sk_hassassin_health2 :       50
+sk_hassassin_health3 :       50
+sk_headcrab_dmg_bite1 :        5
+sk_headcrab_dmg_bite2 :       10
+sk_headcrab_dmg_bite3 :       10
+sk_headcrab_health1 :       10
+sk_headcrab_health2 :       10
+sk_headcrab_health3 :       20
+sk_healthcharger1 :       50
+sk_healthcharger2 :       40
+sk_healthcharger3 :       25
+sk_healthkit1   :       15
+sk_healthkit2   :       15
+sk_healthkit3   :       10
+sk_hgrunt_gspeed1 :      400
+sk_hgrunt_gspeed2 :      600
+sk_hgrunt_gspeed3 :      800
+sk_hgrunt_health1 :       50
+sk_hgrunt_health2 :       50
+sk_hgrunt_health3 :       80
+sk_hgrunt_kick1 :        5
+sk_hgrunt_kick2 :       10
+sk_hgrunt_kick3 :       10
+sk_hgrunt_pellets1 :        3
+sk_hgrunt_pellets2 :        5
+sk_hgrunt_pellets3 :        6
+sk_hornet_dmg1  :        4
+sk_hornet_dmg2  :        5
+sk_hornet_dmg3  :        8
+sk_houndeye_dmg_blast1 :       10
+sk_houndeye_dmg_blast2 :       15
+sk_houndeye_dmg_blast3 :       15
+sk_houndeye_health1 :       20
+sk_houndeye_health2 :       20
+sk_houndeye_health3 :       30
+sk_ichthyosaur_health1 :      200
+sk_ichthyosaur_health2 :      200
+sk_ichthyosaur_health3 :      400
+sk_ichthyosaur_shake1 :       20
+sk_ichthyosaur_shake2 :       35
+sk_ichthyosaur_shake3 :       50
+sk_islave_dmg_claw1 :        8
+sk_islave_dmg_claw2 :       10
+sk_islave_dmg_claw3 :       10
+sk_islave_dmg_clawrake1 :       25
+sk_islave_dmg_clawrake2 :       25
+sk_islave_dmg_clawrake3 :       25
+sk_islave_dmg_zap1 :       10
+sk_islave_dmg_zap2 :       10
+sk_islave_dmg_zap3 :       15
+sk_islave_health1 :       30
+sk_islave_health2 :       30
+sk_islave_health3 :       60
+sk_leech_dmg_bite1 :        2
+sk_leech_dmg_bite2 :        2
+sk_leech_dmg_bite3 :        2
+sk_leech_health1 :        2
+sk_leech_health2 :        2
+sk_leech_health3 :        2
+sk_miniturret_health1 :       40
+sk_miniturret_health2 :       40
+sk_miniturret_health3 :       50
+sk_monster_arm1 :        1
+sk_monster_arm2 :        1
+sk_monster_arm3 :        1
+sk_monster_chest1 :        1
+sk_monster_chest2 :        1
+sk_monster_chest3 :        1
+sk_monster_head1 :        3
+sk_monster_head2 :        3
+sk_monster_head3 :        3
+sk_monster_leg1 :        1
+sk_monster_leg2 :        1
+sk_monster_leg3 :        1
+sk_monster_stomach1 :        1
+sk_monster_stomach2 :        1
+sk_monster_stomach3 :        1
+sk_nihilanth_health1 :      800
+sk_nihilanth_health2 :      800
+sk_nihilanth_health3 :     1000
+sk_nihilanth_zap1 :       30
+sk_nihilanth_zap2 :       30
+sk_nihilanth_zap3 :       50
+sk_player_arm1  :        1
+sk_player_arm2  :        1
+sk_player_arm3  :        1
+sk_player_chest1 :        1
+sk_player_chest2 :        1
+sk_player_chest3 :        1
+sk_player_head1 :        3
+sk_player_head2 :        3
+sk_player_head3 :        3
+sk_player_leg1  :        1
+sk_player_leg2  :        1
+sk_player_leg3  :        1
+sk_player_stomach1 :        1
+sk_player_stomach2 :        1
+sk_player_stomach3 :        1
+sk_plr_357_bullet1 :       40
+sk_plr_357_bullet2 :       40
+sk_plr_357_bullet3 :       40
+sk_plr_9mm_bullet1 :        8
+sk_plr_9mm_bullet2 :        8
+sk_plr_9mm_bullet3 :        8
+sk_plr_9mmAR_bullet1 :        5
+sk_plr_9mmAR_bullet2 :        5
+sk_plr_9mmAR_bullet3 :        5
+sk_plr_9mmAR_grenade1 :      100
+sk_plr_9mmAR_grenade2 :      100
+sk_plr_9mmAR_grenade3 :      100
+sk_plr_buckshot1 :        5
+sk_plr_buckshot2 :        5
+sk_plr_buckshot3 :        5
+sk_plr_crowbar1 :       10
+sk_plr_crowbar2 :       10
+sk_plr_crowbar3 :       10
+sk_plr_egon_narrow1 :        6
+sk_plr_egon_narrow2 :        6
+sk_plr_egon_narrow3 :        6
+sk_plr_egon_wide1 :       14
+sk_plr_egon_wide2 :       14
+sk_plr_egon_wide3 :       14
+sk_plr_gauss1   :       20
+sk_plr_gauss2   :       20
+sk_plr_gauss3   :       20
+sk_plr_hand_grenade1 :      100
+sk_plr_hand_grenade2 :      100
+sk_plr_hand_grenade3 :      100
+sk_plr_rpg1     :      100
+sk_plr_rpg2     :      100
+sk_plr_rpg3     :      100
+sk_plr_satchel1 :      150
+sk_plr_satchel2 :      150
+sk_plr_satchel3 :      150
+sk_plr_tripmine1 :      150
+sk_plr_tripmine2 :      150
+sk_plr_tripmine3 :      150
+sk_plr_xbow_bolt_client1 :       10
+sk_plr_xbow_bolt_client2 :       10
+sk_plr_xbow_bolt_client3 :       10
+sk_plr_xbow_bolt_monster1 :       50
+sk_plr_xbow_bolt_monster2 :       50
+sk_plr_xbow_bolt_monster3 :       50
+sk_scientist_heal1 :       25
+sk_scientist_heal2 :       25
+sk_scientist_heal3 :       25
+sk_scientist_health1 :       20
+sk_scientist_health2 :       20
+sk_scientist_health3 :       20
+sk_sentry_health1 :       40
+sk_sentry_health2 :       40
+sk_sentry_health3 :       50
+sk_snark_dmg_bite1 :       10
+sk_snark_dmg_bite2 :       10
+sk_snark_dmg_bite3 :       10
+sk_snark_dmg_pop1 :        5
+sk_snark_dmg_pop2 :        5
+sk_snark_dmg_pop3 :        5
+sk_snark_health1 :        2
+sk_snark_health2 :        2
+sk_snark_health3 :        2
+sk_suitcharger1 :       75
+sk_suitcharger2 :       50
+sk_suitcharger3 :       35
+sk_turret_health1 :       50
+sk_turret_health2 :       50
+sk_turret_health3 :       60
+sk_zombie_dmg_both_slash1 :       25
+sk_zombie_dmg_both_slash2 :       40
+sk_zombie_dmg_both_slash3 :       40
+sk_zombie_dmg_one_slash1 :       10
+sk_zombie_dmg_one_slash2 :       20
+sk_zombie_dmg_one_slash3 :       20
+sk_zombie_health1 :       50
+sk_zombie_health2 :       50
+sk_zombie_health3 :      100
+skill           :        1
+suitvolume      :    0.250, a
+sv_accelerate   :       10, sv
+sv_aim          :        0, a
+sv_airaccelerate :       10, sv
+sv_allow_autoaim :        0, sv
+sv_allow_dlfile :        1
+sv_allow_shaders :        0, sv
+sv_allowdownload :        1
+sv_allowupload  :        1, sv
+sv_alltalk      :        0, sv
+sv_bounce       :        1, sv
+sv_busters      :        0
+sv_cheats       :        0, sv
+sv_clienttrace  :        1, sv
+sv_contact      :        0, sv
+sv_downloadurl  :        0
+sv_enableoldqueries :        0
+sv_failuretime  :    0.500
+sv_filetransfercompression :        1
+sv_filetransfermaxsize : 10485760
+sv_filterban    :        1
+sv_friction     :        4, sv
+sv_gravity      :      800, sv
+sv_instancedbaseline :        1
+sv_lan          :        0
+sv_lan_rate     :    20000
+sv_log_onefile  :        0
+sv_log_singleplayer :        0
+sv_logbans      :        1
+sv_logblocks    :        0, sv
+sv_logrelay     :        0
+sv_logsecret    :        0
+sv_maxrate      :        0, sv
+sv_maxspeed     :      320, sv
+sv_maxunlag     :    0.500
+sv_maxupdaterate :       30
+sv_maxvelocity  :     2000
+sv_minrate      :        0, sv
+sv_minupdaterate :       10
+sv_newunit      :        0
+sv_outofdatetime :     1800
+sv_password     :        0, sv
+sv_proxies      :        1, sv
+sv_pushable_fixed_tick_fudge :       15
+sv_rcon_banpenalty :        0
+sv_rcon_maxfailures :       10
+sv_rcon_minfailures :        5
+sv_rcon_minfailuretime :       30
+sv_rollangle    :        2
+sv_rollspeed    :      200
+sv_send_logos   :        1
+sv_send_resources :        1
+sv_skycolor_b   :      183
+sv_skycolor_g   :      205
+sv_skycolor_r   :      210
+sv_skyname      :        0
+sv_skyvec_x     :   -0.265
+sv_skyvec_y     :    0.424
+sv_skyvec_z     :   -0.866
+sv_spectatormaxspeed :      500
+sv_stats        :        1
+sv_stepsize     :       18, sv
+sv_stopspeed    :      100, sv
+sv_timeout      :       60
+sv_unlag        :        1
+sv_unlagpush    :        0
+sv_unlagsamples :        1
+sv_uploadmax    :    0.500, sv
+sv_uploadmaxcount :       10, sv
+sv_use_steam_networking :        0
+sv_version      :  112.200
+sv_visiblemaxplayers :       -1
+sv_voiceenable  :        1, a, sv
+sv_wateraccelerate :       10, sv
+sv_wateramp     :        0
+sv_waterfriction :        1, sv
+sv_zmax         :     4096
+sys_ticrate     :      100
+ui_cmd_on_connect :        0
+violence_ablood :        1, a
+violence_agibs  :        1, a
+violence_hblood :        1, a
+violence_hgibs  :        1, a
+voice_inputfromfile :        0
+voice_recordtofile :        0
+voice_serverdebug :        0
+--------------
+408 Total CVars
+CvarList ? for syntax
