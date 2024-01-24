@@ -617,6 +617,7 @@ mp_attackdirindicator                    : 1        : , "sv", "nf", "rep" : Allo
 mp_autocrosshair                         : 1        : , "sv", "nf"     : 
 mp_autoteambalance                       : 1        : , "sv", "nf", "rep" : Forced team balancing
 mp_berserk_combogain                     : 0        : , "sv", "nf", "rep" : Time between combo gained when berserk.
+mp_berserk_pushmult                      : 0        : , "sv", "cheat", "nf", "rep" : Pushmult for Berserker
 mp_blockbreak_invuln_time                : 0        : , "sv", "nf", "rep" : Time a player is invulnerable to the attacker who broke their block. 
 mp_burn_damage                           : 3        : , "sv", "nf", "rep" : Damage per burn tick
 mp_button_dist                           : 70       : , "sv", "nf", "rep" : 
@@ -718,7 +719,6 @@ mp_pausegame                             : cmd      :                  : Pauses 
 mp_player_pushaway_max_force             : 200      : , "sv", "rep", "server_can_execute" : 
 mp_player_pushaway_min_force             : 20       : , "sv", "rep", "server_can_execute" : 
 mp_projectile_use_hitboxes               : 0        : , "sv", "nf", "rep" : Use hitboxes for projectile hit calculation.
-mp_randomcrits                           : 0        : , "sv", "nf"     : Enable random crits :)))
 mp_randomizer                            : 0        : , "sv", "nf", "rep" : Give random weapons to players on spawn.
 mp_randsuddendeath                       : 0        : , "sv", "nf", "rep" : Pecrent chance sudden death will occur right at the start of the round. (Time for round will still be as usual)
 mp_respawntime                           : 5        : , "sv", "nf", "rep" : Respawn time in seconds
@@ -1230,7 +1230,6 @@ sk_autoaim_mode                          : 1        : , "a", "sv", "rep" :
 sk_crow_health                           : 1        : , "sv"           : 
 sk_crow_melee_dmg                        : 0        : , "sv"           : 
 sk_healthkit                             : 40       : , "sv"           : 
-sk_maxcoins                              : 59593    : , "sv"           : 
 sk_npc_arm                               : 1        : , "sv"           : 
 sk_npc_chest                             : 1        : , "sv"           : 
 sk_npc_head                              : 2        : , "sv"           : 
@@ -1607,4 +1606,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1606 total convars/concommands
+1605 total convars/concommands
