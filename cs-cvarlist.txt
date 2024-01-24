@@ -1,0 +1,238 @@
+CVar List
+--------------
+_sv_override_scientist_mdl :        0
+_tutor_bomb_viewable_check_interval :    0.500, sv
+_tutor_debug_level :        0, sv
+_tutor_examine_time :    0.500, sv
+_tutor_hint_interval_time :       10, sv
+_tutor_look_angle :       10, sv
+_tutor_look_distance :      200, sv
+_tutor_message_character_display_time_coefficient :    0.070, sv
+_tutor_message_minimum_display_time :        1, sv
+_tutor_message_repeats :        5, sv
+_tutor_view_distance :     1000, sv
+allow_spectators :        1, sv
+bannedcfgfile   :        0
+clientport      :    27005
+clockwindow     :    0.500
+console         :        0, a
+coop            :        0, sv
+deathmatch      :        1, sv
+decalfrequency  :       30, sv
+developer       :        0
+disconcfgfile   :        0
+displaysoundlist :        0
+edgefriction    :        2, sv
+fakelag         :        0
+fakeloss        :        0
+fps_max         :      100, a
+fps_override    :        0, a
+host_framerate  :        0
+host_killtime   :        0
+host_limitlocal :        0
+host_profile    :        0
+host_speeds     :        0
+hostage_debug   :        0, sv
+hostage_stop    :        0, sv
+HostMap         :        0
+hostname        :        0
+hostport        :    27015
+hpk_maxsize     :        4, a
+humans_join_team :        0, sv
+ip              :        0
+ip_clientport   :        0
+ip_hostport     :        0
+logsdir         :        0
+lservercfgfile  :        0
+mapchangecfgfile :        0
+mapcyclefile    :        0
+max_queries_sec :        3, sv
+max_queries_sec_global :       30, sv
+max_queries_window :       60, sv
+motdfile        :        0
+mp_allowmonsters :        0, sv
+mp_autokick     :        1, sv
+mp_autokick_timeout :       -1, sv
+mp_autoteambalance :        1, sv
+mp_buytime      :    1.500, sv
+mp_c4timer      :       45, sv
+mp_chattime     :       10, sv
+mp_consistency  :        1, sv
+mp_fadetoblack  :        0, sv
+mp_flashlight   :        0, sv
+mp_footsteps    :        1, sv
+mp_forcecamera  :        0, sv
+mp_forcechasecam :        0, sv
+mp_fragsleft    :        0, sv
+mp_freezetime   :        6, sv
+mp_friendlyfire :        0, sv
+mp_ghostfrequency :    0.100, sv
+mp_hostagepenalty :       13, sv
+mp_infinite_ammo :        0, sv
+mp_kickpercent  :    0.660, sv
+mp_limitteams   :        2, sv
+mp_logdetail    :        0, sv
+mp_logecho      :        1
+mp_logfile      :        1, sv
+mp_logmessages  :        1, sv
+mp_mapvoteratio :    0.660, sv
+mp_maxrounds    :        0, sv
+mp_mirrordamage :        0, sv
+mp_playerid     :        0, sv
+mp_roundtime    :        5, sv
+mp_scoreboard_showhealth :        3, sv
+mp_scoreboard_showmoney :        3, sv
+mp_startmoney   :      800, sv
+mp_timeleft     :        0, sv
+mp_timelimit    :       20, sv
+mp_tkpunish     :        0, sv
+mp_windifference :        1, sv
+mp_winlimit     :        0, sv
+multicastport   :    27025
+net_address     :        0
+net_chokeloop   :        0
+net_drawslider  :        0
+net_graph       :        0, a
+net_graphpos    :        1, a
+net_graphwidth  :      150
+net_log         :        0
+net_scale       :        5, a
+net_showdrop    :        0
+net_showpackets :        0
+pausable        :        0, sv
+port            :    27015
+rcon_password   :        0
+servercfgfile   :        0
+sk_12mm_bullet1 :        0
+sk_12mm_bullet2 :        0
+sk_12mm_bullet3 :        0
+sk_9mm_bullet1  :        0
+sk_9mm_bullet2  :        0
+sk_9mm_bullet3  :        0
+sk_9mmAR_bullet1 :        0
+sk_9mmAR_bullet2 :        0
+sk_9mmAR_bullet3 :        0
+sk_battery1     :        0
+sk_battery2     :        0
+sk_battery3     :        0
+sk_healthcharger1 :        0
+sk_healthcharger2 :        0
+sk_healthcharger3 :        0
+sk_healthkit1   :        0
+sk_healthkit2   :        0
+sk_healthkit3   :        0
+sk_plr_357_bullet1 :        0
+sk_plr_357_bullet2 :        0
+sk_plr_357_bullet3 :        0
+sk_plr_9mm_bullet1 :        0
+sk_plr_9mm_bullet2 :        0
+sk_plr_9mm_bullet3 :        0
+sk_plr_9mmAR_bullet1 :        0
+sk_plr_9mmAR_bullet2 :        0
+sk_plr_9mmAR_bullet3 :        0
+sk_plr_9mmAR_grenade1 :        0
+sk_plr_9mmAR_grenade2 :        0
+sk_plr_9mmAR_grenade3 :        0
+sk_plr_buckshot1 :        0
+sk_plr_buckshot2 :        0
+sk_plr_buckshot3 :        0
+sk_plr_rpg1     :        0
+sk_plr_rpg2     :        0
+sk_plr_rpg3     :        0
+sk_scientist_heal1 :        0
+sk_scientist_heal2 :        0
+sk_scientist_heal3 :        0
+sk_suitcharger1 :        0
+sk_suitcharger2 :        0
+sk_suitcharger3 :        0
+skill           :        1
+suitvolume      :    0.250, a
+sv_accelerate   :        5, sv
+sv_aim          :        0, a
+sv_airaccelerate :       10, sv
+sv_allow_autoaim :        0, sv
+sv_allow_dlfile :        1
+sv_allow_shaders :        0, sv
+sv_allowdownload :        1
+sv_allowupload  :        1, sv
+sv_alltalk      :        0, sv
+sv_bounce       :        1, sv
+sv_cheats       :        0, sv
+sv_clienttrace  :        1, sv
+sv_contact      :        0, sv
+sv_downloadurl  :        0
+sv_enableoldqueries :        0
+sv_failuretime  :    0.500
+sv_filetransfercompression :        1
+sv_filetransfermaxsize : 10485760
+sv_filterban    :        1
+sv_friction     :        4, sv
+sv_gravity      :      800, sv
+sv_instancedbaseline :        1
+sv_lan          :        0
+sv_lan_rate     :    20000
+sv_log_onefile  :        0
+sv_log_singleplayer :        0
+sv_logbans      :        1
+sv_logblocks    :        0, sv
+sv_logrelay     :        0
+sv_logsecret    :        0
+sv_maxrate      :        0, sv
+sv_maxspeed     :      320, sv
+sv_maxunlag     :    0.500
+sv_maxupdaterate :       30
+sv_maxvelocity  :     2000
+sv_minrate      :        0, sv
+sv_minupdaterate :       10
+sv_newunit      :        0
+sv_outofdatetime :     1800
+sv_password     :        0, sv
+sv_proxies      :        1, sv
+sv_pushable_fixed_tick_fudge :       15
+sv_rcon_banpenalty :        0
+sv_rcon_maxfailures :       10
+sv_rcon_minfailures :        5
+sv_rcon_minfailuretime :       30
+sv_restart      :        0, sv
+sv_restartround :        0, sv
+sv_rollangle    :        0
+sv_rollspeed    :        0
+sv_send_logos   :        1
+sv_send_resources :        1
+sv_skycolor_b   :      129
+sv_skycolor_g   :      197
+sv_skycolor_r   :      197
+sv_skyname      :        0
+sv_skyvec_x     :    0.366
+sv_skyvec_y     :    0.341
+sv_skyvec_z     :   -0.866
+sv_spectatormaxspeed :      500
+sv_stats        :        1
+sv_stepsize     :       18, sv
+sv_stopspeed    :       75, sv
+sv_timeout      :       60
+sv_unlag        :        1
+sv_unlagpush    :        0
+sv_unlagsamples :        1
+sv_uploadmax    :    0.500, sv
+sv_uploadmaxcount :       10, sv
+sv_use_steam_networking :        0
+sv_version      :  112.700
+sv_visiblemaxplayers :       -1
+sv_voiceenable  :        1, a, sv
+sv_wateraccelerate :       10, sv
+sv_wateramp     :        0
+sv_waterfriction :        1, sv
+sv_zmax         :     8192
+sys_ticrate     :      100
+ui_cmd_on_connect :        0
+violence_ablood :        1, a
+violence_agibs  :        1, a
+violence_hblood :        1, a
+violence_hgibs  :        1, a
+voice_inputfromfile :        0
+voice_recordtofile :        0
+voice_serverdebug :        0
+--------------
+233 Total CVars
+CvarList ? for syntax
