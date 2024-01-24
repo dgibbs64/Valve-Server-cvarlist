@@ -22,7 +22,7 @@ cp "log/console/${shortname}server-console.log" ../"${shortname}-cvarlist.txt"
 
 # remove all lines before "cvar list"
 echo "Removing all lines before \"cvar list\""
-sed -ni -Ee '/cvar list/,$ p' ../"${shortname}-cvarlist.txt"
+sed -ni -Ee '/cvar list/I,$ p' ../"${shortname}-cvarlist.txt"
 
 echo "Display cvarlist"
 cat ../"${shortname}-cvarlist.txt"
