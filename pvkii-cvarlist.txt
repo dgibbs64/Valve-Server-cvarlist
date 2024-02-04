@@ -647,7 +647,6 @@ mp_default_standmaxspeed                 : 90       : , "sv", "nf", "rep" : When
 mp_default_standspeed                    : 91       : , "sv", "nf", "rep" : When standing with ranged weapons starts to decay spread
 mp_default_standspread                   : 0        : , "sv", "nf", "rep" : Modifier for spread when standing with ranged weapons
 mp_default_zoomfov                       : 70       : , "sv", "nf", "rep" : Minimum FOV for zoom
-mp_default_zoomrate                      : 0        : , "sv", "nf", "rep" : Time for zoom
 mp_defaultteam                           : 0        : , "sv"           : 
 mp_disable_autokick                      : cmd      :                  : Prevents a userid from being auto-kicked
 mp_disable_dodge                         : 0        : , "sv", "nf", "rep" : 
@@ -1483,8 +1482,6 @@ Test_ProxyToggle_EnableProxy             : cmd      :                  :
 Test_ProxyToggle_SetValue                : cmd      :                  : 
 Test_RandomizeInPVS                      : cmd      :                  : 
 Test_RandomPlayerPosition                : cmd      :                  : 
-test_register_output_callback            : cmd      :                  : Usage: test_register_output_callback [entity targetname]
-test_remove_all_output_callbacks         : cmd      :                  : 
 Test_RemoveAllRandomEntities             : cmd      :                  : 
 Test_SpawnRandomEntities                 : cmd      :                  : 
 test_zerkme                              : cmd      :                  : lol
@@ -1597,7 +1594,7 @@ workshop_list                            : cmd      :                  : Print a
 workshop_remove                          : cmd      :                  : Remove a Workshop map from the list.
 workshop_remove_all                      : cmd      :                  : Remove all Workshop maps from the list.
 workshop_update                          : cmd      :                  : Update all Workshop maps.
-workshop_validate                        : cmd      :                  : Validate all Workshop maps, and redownload them if missing. Use -cleanup to remove them instead.
+workshop_validate                        : cmd      :                  : Validate all Workshop maps, and redownload them if missing. Use -cleanup to remove them instead. Use -restore to recover maps from cache.
 writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
 writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
 xbox_autothrottle                        : 1        : , "a", "sv"      : 
@@ -1606,4 +1603,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1605 total convars/concommands
+1602 total convars/concommands
