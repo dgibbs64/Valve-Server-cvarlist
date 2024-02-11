@@ -605,7 +605,7 @@ nav_mark                                 : cmd      :                  : Marks t
 nav_mark_attribute                       : cmd      :                  : Set nav attribute for all areas in the selected set.
 nav_mark_unnamed                         : cmd      :                  : Mark an Area with no Place name. Useful for finding stray areas missed when Place Painting.
 nav_mark_walkable                        : cmd      :                  : Mark the current location as a walkable position. These positions are used as seed locations when sampling the map to generate a Navigation Mesh.
-nav_max_view_distance                    : 6000     : , "sv", "cheat"  : Maximum range for precomputed nav mesh visibility (0 = default 1500 units)
+nav_max_view_distance                    : 1000     : , "sv", "cheat"  : Maximum range for precomputed nav mesh visibility (0 = default 1500 units)
 nav_max_vis_delta_list_length            : 64       : , "sv", "cheat"  : 
 nav_merge                                : cmd      :                  : To merge two Areas into one, mark the first Area, highlight the second by pointing your cursor at it, and invoke the merge command.
 nav_merge_mesh                           : cmd      :                  : Merges a saved selected set into the current mesh.
