@@ -301,6 +301,7 @@ emp_sv_engineer_brush_explosive_multiplier : 0        : , "sv", "nf"     : Non-g
 emp_sv_engineer_brush_seismic_multiplier : 0        : , "sv", "nf"     : Seismic damage to engineer brushes is multiplied by this value.
 emp_sv_forceautoassign                   : 0        : , "sv", "rep"    : Toggles whether the server allows players to choose their own faction
 emp_sv_forcespec                         : 0        : , "sv", "rep"    : Toggles whether players only allowed to join spectate
+emp_sv_forceteam                         : 0        : , "sv", "rep"    : When not 0, only allow players to join the team with this ID. Spectator and unassigned are not affected.
 emp_sv_inactivity_timeout                : 1800     : , "sv", "rep"    : Time in seconds after which map changes if no players join the game.
 emp_sv_invite_antispam                   : 1        : , "sv"           : 
 emp_sv_kick_commander_be                 : cmd      :                  : Kick the BE Commander
@@ -347,7 +348,7 @@ emp_sv_refinery_multiplier               : 1        : , "sv", "nf", "rep" :
 emp_sv_reinforcement_multiplier_be       : 1        : , "sv", "nf"     : 
 emp_sv_reinforcement_multiplier_nf       : 1        : , "sv", "nf"     : 
 emp_sv_research_complete                 : 0        : , "sv", "nf"     : 
-emp_sv_research_item                     : 0        : , "sv", "nf"     : Research an item by name.
+emp_sv_research_item                     : cmd      :                  : Research an item.  Arguments: {research_name} {nf|imp|no argument for both teams}
 emp_sv_research_multiplier               : 1        : , "sv", "nf"     : 
 emp_sv_resolve_players_under_tanks       : 1        : , "sv", "rep"    : 
 emp_sv_resolve_stuck_players             : 1        : , "sv", "rep"    : 
@@ -361,7 +362,7 @@ emp_sv_spawn_protection                  : 3        : , "sv", "nf"     : Duratio
 emp_sv_suddendeath_countdown             : 2        : , "sv"           : 
 emp_sv_tactics_commander_time            : 120      : , "sv", "rep"    : 
 emp_sv_turret_search_interval            : 0        : , "sv", "nf"     : 
-emp_sv_unresearch_item                   : 0        : , "sv", "nf"     : Unresearch an item by name.
+emp_sv_unresearch_item                   : cmd      :                  : Unresearch an item.  Arguments: {research_name} {nf|imp|no argument for both teams}
 emp_sv_v_weapon_disable                  : -1       : , "sv"           : Used to disable weapons(by index number in vehicle_weapons.txt) - optionally prefix with 'imp ' or 'nf '
 emp_sv_v_weapon_enable                   : -1       : , "sv"           : Used to enable weapons(by index number in vehicle_weapons.txt) - optionally prefix with 'imp ' or 'nf '
 emp_sv_vehicle_allow_horns               : 1        : , "sv"           : 
@@ -687,9 +688,6 @@ motdfile                                 : 0        : , "sv"           : The MOT
 motdfile_text                            : 0        : , "sv"           : The text-only MOTD file to use for clients that have disabled HTML MOTDs.
 mp_allowNPCs                             : 1        : , "sv", "nf"     : 
 mp_autocrosshair                         : 1        : , "sv", "nf"     : 
-mp_autoteambalance                       : 1        : , "sv"           : 
-mp_autoteambalance_skilldifference       : 10       : , "sv"           : The allowed skill difference between teams where players can choose both teams.
-mp_autoteambalance_smart                 : 1        : , "sv"           : 
 mp_chattime                              : 20       : , "sv", "rep"    : amount of time players can chat after the game is over
 mp_clan_ready_signal                     : 0        : , "sv"           : Text that team leader from each team must speak for the match to begin
 mp_clan_readyrestart                     : 0        : , "sv"           : If non-zero, game will restart once someone from each team gives the ready signal
@@ -710,6 +708,7 @@ mp_show_voice_icons                      : 1        : , "sv", "rep"    : Show ov
 mp_teamlist                              : 0        : , "sv", "nf"     : 
 mp_teamoverride                          : 1        : , "sv"           : 
 mp_teamplay                              : 0        : , "sv", "nf"     : 
+mp_teams_unbalance_limit                 : 1        : , "sv", "rep"    : Teams are unbalanced when one team has this many more players than the other team. (0 disables check)
 mp_timelimit                             : 90       : , "sv", "nf", "rep" : game time per map in minutes
 mp_waitingforplayers_cancel              : 0        : , "sv"           : Set to 1 to end the WaitingForPlayers period.
 mp_waitingforplayers_restart             : 0        : , "sv"           : Set to 1 to start or restart the WaitingForPlayers period.
@@ -1472,4 +1471,4 @@ xbox_throttlebias                        : 100      : , "a", "sv", "rep" :
 xbox_throttlespoof                       : 200      : , "a", "sv", "rep" : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1471 total convars/concommands
+1470 total convars/concommands
