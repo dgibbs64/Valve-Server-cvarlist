@@ -840,6 +840,7 @@ net_fakeloss                             : 0        : , "cheat"        : Simulat
 net_maxroutable                          : 1200     : , "a", "user"    : Requested max packet size before packets are 'split'.
 net_public_adr                           : 0        :                  : For servers behind NAT/DHCP meant to be exposed to the public internet, this is the public facing ip address string: ('x.x.x.x'
 net_showreliablesounds                   : 0        : , "cheat"        : 
+net_showsplit_errors                     : 1        :                  : Show info about invalid packet split
 net_showsplits                           : 0        :                  : Show info about packet splits
 net_showudp                              : 0        :                  : Dump UDP packets summary to console
 net_showudp_remoteonly                   : 0        :                  : Dump non-loopback udp only
@@ -1305,7 +1306,7 @@ sv_pure_kick_clients                     : 1        :                  : If set 
 sv_pure_trace                            : 0        :                  : If set to 1, the server will print a message whenever a client is verifying a CRC for a file.
 sv_pvsskipanimation                      : 1        : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
 sv_querycache_stats                      : cmd      :                  : Display status of the query cache (client only)
-sv_quota_stringcmdspersecond             : 40       :                  : How many string commands per second clients are allowed to submit, 0 to disallow all string commands
+sv_quota_stringcmdspersecond             : 1024     :                  : How many string commands per second clients are allowed to submit, 0 to disallow all string commands
 sv_rcon_banpenalty                       : 0        :                  : Number of minutes to ban users who fail rcon authentication
 sv_rcon_log                              : 1        :                  : Enable/disable rcon logging.
 sv_rcon_maxfailures                      : 10       :                  : Max number of times a user can fail rcon authentication before being banned
@@ -2067,4 +2068,4 @@ z_wound_all                              : cmd      :                  : Cause a
 z_zombie_knockoff_death                  : 0        : , "sv", "cheat", "rep" : Knocking off a pouncing zombie instantly kills them.
 z_zombie_lunge_push                      : 0        : , "sv", "cheat"  : Does the zombie lunge push players?
 --------------
-2066 total convars/concommands
+2067 total convars/concommands
