@@ -213,10 +213,6 @@ collision_shake_time                     : 0        : , "sv"           :
 collision_test                           : cmd      :                  : Tests collision system
 combine_guard_spawn_health               : 1        : , "sv"           : 
 combine_spawn_health                     : 1        : , "sv"           : 
-commentary                               : 0        : , "a", "sv"      : Desired commentary mode state.
-commentary_available                     : 0        : , "sv"           : Automatically set by the game when a commentary file is available for the current map.
-commentary_cvarsnotchanging              : cmd      :                  : 
-commentary_finishnode                    : cmd      :                  : 
 con_timestamp                            : 0        :                  : Prefix console.log entries with timestamps
 coop                                     : 0        : , "nf"           : Cooperative play.
 create_flashlight                        : cmd      :                  : 
@@ -327,7 +323,7 @@ flush                                    : cmd      :                  : Flush u
 flush_locked                             : cmd      :                  : Flush unlocked and locked cache memory.
 fog_enable_water_fog                     : 1        : , "cheat"        : 
 fov                                      : cmd      :                  : Change players FOV
-fps_max                                  : 300      :                  : Frame rate limiter.
+fps_max                                  : 150      : , "a"            : Frame rate limiter.
 free_pass_peek_debug                     : 0        : , "sv"           : 
 fs_monitor_read_from_pack                : 0        :                  : 0:Off, 1:Any, 2:Sync only
 fs_printopenfiles                        : cmd      :                  : Show all files currently opened by the engine.
@@ -410,11 +406,13 @@ gmod_language                            : 0        : , "a"            :
 gmod_maxammo                             : 9999     : , "sv", "rep"    : If set to above 0, overrides max ammo carried per player of all ammo types. Otherwise ammo type's max ammo is used.
 gmod_mcore_test                          : 0        :                  : if you find this, don't go around enabling it and then complaining about issues
 gmod_physiterations                      : 4        : , "sv", "rep", "demo", "lua_server" : 
+gmod_sneak_attack                        : 1        : , "sv"           : If set to zero, disables Half-Life 2's Sneak Attack feature, where headshotting NPCs who have not seen the player would result 
 gmod_spawnnpc                            : cmd      :                  : 
 gmod_suit                                : 0        : , "sv", "rep"    : Set to non zero to enable Half-Life 2 aux suit power stuff.
 gmod_tool                                : cmd      :                  : 
 gmod_undo                                : cmd      :                  : 
 gmod_undonum                             : cmd      :                  : 
+gmod_unload_test                         : 0        :                  : Unload materials and models on disconnect. Unstable. Use at your own risk.
 god                                      : cmd      :                  : Toggle. Player becomes invulnerable.
 groundlist                               : cmd      :                  : Display ground entity list <index>
 hammer_update_entity                     : cmd      :                  : Updates the entity's position/angles when in edit mode
@@ -532,12 +530,12 @@ lua_findhooks                            : cmd      :                  : Find ho
 lua_log_sv                               : 0        : , "sv"           : 
 lua_networkvar_bytespertick              : 256      : , "sv"           : 
 lua_openscript                           : cmd      :                  : Open a Lua script
+lua_refresh_file                         : cmd      :                  : Manually refresh a Lua script, as if it was auto refreshed by editing it.
 lua_reloadents                           : cmd      :                  : Reload all scripted entities
 lua_run                                  : cmd      :                  : Run a Lua command
 lua_run_cl                               : cmd      :                  : Run a Lua command
 map                                      : cmd      :                  : Start playing on specified map.
 map_background                           : cmd      :                  : Runs a map as the background to the main menu.
-map_commentary                           : cmd      :                  : Start playing, with commentary, on a specified map.
 map_noareas                              : 0        :                  : Disable area to area connection testing.
 mapcyclefile                             : 0        : , "sv"           : Name of the .txt file used to cycle the maps on multiplayer servers 
 maps                                     : cmd      :                  : Displays list of maps.
@@ -635,7 +633,6 @@ maxplayers                               : cmd      :                  : Change 
 mem_compact                              : cmd      :                  : 
 mem_dump                                 : cmd      :                  : Dump memory stats to text file.
 mem_dumpstats                            : 0        :                  : Dump current and max heap usage info to console at end of frame ( set to 2 for continuous output ) 
-mem_eat                                  : cmd      :                  : 
 mem_force_flush                          : 0        : , "cheat"        : Force cache flush of unlocked resources on every alloc
 mem_max_heapsize                         : 256      :                  : Maximum amount of memory to dedicate to engine hunk and datacache (in mb)
 mem_max_heapsize_dedicated               : 64       :                  : Maximum amount of memory to dedicate to engine hunk and datacache, for dedicated server (in mb)
@@ -786,7 +783,7 @@ nav_place_replace                        : cmd      :                  : Replace
 nav_place_set                            : cmd      :                  : Sets the Place of all selected areas to the current Place.
 nav_potentially_visible_dot_tolerance    : 0        : , "sv", "cheat"  : 
 nav_precise                              : cmd      :                  : Toggles the 'dont avoid obstacles' flag used by the AI system.
-nav_quicksave                            : 1        : , "sv", "cheat"  : Set to one to skip the time consuming phases of the analysis.  Useful for data collection and testing.
+nav_quicksave                            : 1        : , "sv", "cheat"  : Set to one to skip the time consuming phases of the analysis. Set to 2 to skip time consuming visibility calculations. Useful f
 nav_raise_drag_volume_max                : cmd      :                  : Raise the top of the drag select volume.
 nav_raise_drag_volume_min                : cmd      :                  : Raise the bottom of the drag select volume.
 nav_recall_selected_set                  : cmd      :                  : Re-selects the stored selected set.
@@ -941,8 +938,11 @@ npc_citizen_auto_player_squad            : 1        : , "a", "sv"      :
 npc_citizen_auto_player_squad_allow_use  : 0        : , "sv"           : 
 npc_citizen_dont_precache_all            : 1        : , "sv"           : 
 npc_citizen_explosive_resist             : 0        : , "sv"           : 
+npc_citizen_heal_chuck_medkit            : 1        : , "a", "sv"      : Set to 1 to use new experimental healthkit-throwing medic.
 npc_citizen_insignia                     : 0        : , "sv"           : 
 npc_citizen_medic_emit_sound             : 1        : , "sv"           : 
+npc_citizen_medic_throw_speed            : 650      : , "sv"           : 
+npc_citizen_medic_throw_style            : 1        : , "a", "sv"      : Set to 0 for a lobbier trajectory
 npc_citizen_squad_marker                 : 0        : , "sv"           : 
 npc_combat                               : cmd      :                  : Displays text debugging information about the squad and enemy of the selected NPC  (See Overlay Text)  Arguments:    {npc_name}
 npc_conditions                           : cmd      :                  : Displays all the current AI conditions that an NPC has in the overlay text.  Arguments:    {npc_name} / {npc class_name} / no a
@@ -1173,7 +1173,6 @@ rcon_password                            : 0        : , "norecord"     : remote 
 reload                                   : cmd      :                  : Reload the most recent saved game (add setpos to jump to current view position on reload).
 removeid                                 : cmd      :                  : Remove a user ID from the ban list.
 removeip                                 : cmd      :                  : Remove an IP address from the ban list.
-replay_debug                             : 0        : , "norecord"     : 
 report_entities                          : cmd      :                  : Lists all entities
 report_simthinklist                      : cmd      :                  : Lists all simulating/thinking entities
 report_soundpatch                        : cmd      :                  : reports sound patch count
@@ -1292,6 +1291,7 @@ sk_citizen_heal_player                   : 25       : , "sv"           :
 sk_citizen_heal_player_delay             : 25       : , "sv"           : 
 sk_citizen_heal_player_min_forced        : 10       : , "sv"           : 
 sk_citizen_heal_player_min_pct           : 0        : , "sv"           : 
+sk_citizen_heal_toss_player_delay        : 26       : , "sv"           : how long between throwing healthkits
 sk_citizen_health                        : 40       : , "sv"           : 
 sk_citizen_player_stare_dist             : 72       : , "sv"           : 
 sk_citizen_player_stare_time             : 1        : , "sv"           : 
@@ -1690,7 +1690,7 @@ sv_logfile                               : 1        : , "a"            : Log ser
 sv_logfilecompress                       : 0        : , "a"            : Gzip compress logfile and rename to logfilename.log.gz on close.
 sv_logfilename_format                    : 0        : , "a"            : Log filename format. See strftime for formatting codes.
 sv_logflush                              : 0        : , "a"            : Flush the log file to disk on each write (slow).
-sv_logsdir                               : 0        : , "a"            : Folder in the game directory where server logs will be stored.
+sv_logsdir                               : 0        : , "a"            : Folder in the game directory where server logs will be stored. Must start with 'logs/'.
 sv_logsecret                             : 0        :                  : If set then include this secret when doing UDP logging (will use 0x53 as packet type, not usual 0x52)
 sv_lowedict_action                       : 0        :                  : 0 - no action, 1 - warn to log file, 2 - attempt to restart the game, if applicable, 3 - restart the map, 4 - go to the next ma
 sv_lowedict_threshold                    : 8        :                  : When only this many edicts are free, take the action specified by sv_lowedict_action.
@@ -1851,6 +1851,7 @@ toolmode_allow_trails                    : 1        : , "sv", "nf", "rep", "demo
 toolmode_allow_weld                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
 toolmode_allow_wheel                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
 toolmode_allow_winch                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
+trace                                    : cmd      :                  : 
 trace_report                             : 0        : , "sv"           : 
 ttt_allow_discomb_jump                   : 0        : , "a", "nf", "rep", "lua_server" : 
 ttt_credits_starting                     : 2        : , "a", "nf", "rep", "lua_server" : 
@@ -1992,4 +1993,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1991 total convars/concommands
+1992 total convars/concommands
