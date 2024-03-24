@@ -530,7 +530,7 @@ lua_findhooks                            : cmd      :                  : Find ho
 lua_log_sv                               : 0        : , "sv"           : 
 lua_networkvar_bytespertick              : 256      : , "sv"           : 
 lua_openscript                           : cmd      :                  : Open a Lua script
-lua_refresh_file                         : cmd      :                  : Manually refresh a Lua script, as if it was auto refreshed by editing it.
+lua_refresh_file                         : cmd      :                  : Manually refresh a serverside Lua script, as if it was auto refreshed by editing it.
 lua_reloadents                           : cmd      :                  : Reload all scripted entities
 lua_run                                  : cmd      :                  : Run a Lua command
 lua_run_cl                               : cmd      :                  : Run a Lua command
@@ -1797,7 +1797,6 @@ sys_minidumpexpandedspew                 : 1        :                  :
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
 systemlinkport                           : 27030    :                  : System Link port
 template_debug                           : 0        : , "sv"           : 
-Test_CreateEntity                        : cmd      :                  : 
 test_dispatcheffect                      : cmd      :                  : Test a clientside dispatch effect.  Usage: test_dispatcheffect <effect name> <distance away> <flags> <magnitude> <scale>  Defau
 Test_EHandle                             : cmd      :                  : 
 test_entity_blocker                      : cmd      :                  : Test command that drops an entity blocker out in front of the player.
@@ -1805,7 +1804,6 @@ test_massive_dmg                         : 30       : , "sv"           :
 test_massive_dmg_clip                    : 0        : , "sv"           : 
 Test_ProxyToggle_EnableProxy             : cmd      :                  : 
 Test_ProxyToggle_SetValue                : cmd      :                  : 
-Test_RandomPlayerPosition                : cmd      :                  : 
 testscript_debug                         : 0        :                  : Debug test scripts.
 tf_escort_score_rate                     : 1        : , "sv", "cheat"  : Score for escorting the train, in points per second
 think_limit                              : 0        : , "sv", "rep"    : Maximum think time in milliseconds, warning is printed if this is exceeded.
@@ -1993,4 +1991,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1992 total convars/concommands
+1990 total convars/concommands
