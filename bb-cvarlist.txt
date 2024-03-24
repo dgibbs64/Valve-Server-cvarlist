@@ -53,7 +53,7 @@ mp_friendlyfire :        0, sv
 mp_logecho      :        1
 mp_logfile      :        1, sv
 mp_recoilratio  :        1, sv
-mp_scoreleft    : -2052696, sv
+mp_scoreleft    : -7559192, sv
 mp_speedratio   :    0.800, sv
 mp_teamplay     :        0, sv
 mp_teamscorelimit :        0, sv
