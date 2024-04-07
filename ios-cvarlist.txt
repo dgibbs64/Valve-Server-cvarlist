@@ -1016,7 +1016,7 @@ sv_findsoundname                         : cmd      :                  : Find so
 sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
 sv_gravity                               : 900      : , "sv", "nf", "rep" : World gravity.
 sv_hide_server                           : 0        : , "sv"           : 
-sv_hud_theme                             : 1        : , "sv", "nf", "rep" : Set the HUD theme. 1 = IOSoccer, 2 = IOS Sudamerica, 3 = AIF, 4 = UFA, 5 = NextGen, 6 = Natural Talent, 7 = Caladrius 
+sv_hud_theme                             : 1        : , "sv", "nf", "rep" : Set the HUD theme. 1 = IOSoccer, 2 = IOS Sudamerica, 3 = AIF, 4 = UFA 
 sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
 sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
 sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
