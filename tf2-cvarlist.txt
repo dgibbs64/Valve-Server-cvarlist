@@ -304,7 +304,7 @@ flush                                    : cmd      :                  : Flush u
 flush_locked                             : cmd      :                  : Flush unlocked and locked cache memory.
 fog_enable_water_fog                     : 1        : , "cheat"        : 
 fov                                      : cmd      :                  : Change players FOV
-fps_max                                  : 300      :                  : Frame rate limiter, cannot be set while connected to a server.
+fps_max                                  : 400      :                  : Frame rate limiter, cannot be set while connected to a server.
 free_pass_peek_debug                     : 0        : , "sv"           : 
 fs_monitor_read_from_pack                : 0        :                  : 0:Off, 1:Any, 2:Sync only
 fs_printopenfiles                        : cmd      :                  : Show all files currently opened by the engine.
@@ -338,7 +338,6 @@ god                                      : cmd      :                  : Toggle.
 groundlist                               : cmd      :                  : Display ground entity list <index>
 hammer_update_entity                     : cmd      :                  : Updates the entity's position/angles when in edit mode
 hammer_update_safe_entities              : cmd      :                  : Updates entities in the map that can safely be updated (don't have parents or are affected by constraints). Also excludes entities mentioned in any hammer_updateignorelist objects in this map.
-heartbeat                                : cmd      :                  : Force heartbeat of master servers
 help                                     : cmd      :                  : Find help about a convar/concommand.
 hide_server                              : 0        : , "sv"           : Whether the server should be hidden from the master server
 hl2_episodic                             : 0        : , "sv", "rep"    : 
@@ -2021,4 +2020,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-2020 total convars/concommands
+2019 total convars/concommands
