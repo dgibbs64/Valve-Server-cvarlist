@@ -1259,7 +1259,7 @@ namelockid                               : cmd      :                  : Prevent
 nav_add_to_selected_set                  : cmd      :                  : Add current area to the selected set.
 nav_add_to_selected_set_by_id            : cmd      :                  : Add specified area id to the selected set.
 nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk.
-nav_area_bgcolor                         : -283171264.000 : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
+nav_area_bgcolor                         : -161536448.000 : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
 nav_area_max_size                        : 160      : , "sv", "cheat"  : Max area size created in nav generation
 nav_areas_danger_zone_cooldown_player_gunshot : 1        : , "sv", "cheat"  : Time between each bullet impact check
 nav_areas_danger_zone_increment_gunshot  : 0        : , "sv", "cheat"  : Enemy killed friendly from location increment
@@ -1370,8 +1370,8 @@ nav_select_orphans                       : cmd      :                  : Adds al
 nav_select_overlapping                   : cmd      :                  : Selects nav areas that are overlapping others.
 nav_select_radius                        : cmd      :                  : Adds all areas in a radius to the selection set
 nav_select_stairs                        : cmd      :                  : Adds all stairway areas to the selected set
-nav_selected_set_border_color            : 236930496.000 : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
-nav_selected_set_color                   : -1848123904.000 : , "sv", "cheat"  : Color used to draw the selected set background while editing.
+nav_selected_set_border_color            : 392119744.000 : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
+nav_selected_set_color                   : -2003313152.000 : , "sv", "cheat"  : Color used to draw the selected set background while editing.
 nav_set_place_mode                       : cmd      :                  : Sets the editor into or out of Place mode. Place mode allows labelling of Area with Place names.
 nav_shift                                : cmd      :                  : Shifts the selected areas by the specified amount
 nav_show_approach_points                 : 0        : , "sv", "cheat"  : Show Approach Points in the Navigation Mesh.
@@ -2021,7 +2021,7 @@ sv_hud_enemy_wave_display                : 1        : , "sv", "nf", "rep" :
 sv_hud_scoreboard_show_score             : 0        : , "sv", "nf", "rep" : Show score when alive and out of spawn?
 sv_hud_scoreboard_show_score_dead        : 1        : , "sv", "nf", "rep" : Show score info while dead?
 sv_hud_targetindicator                   : 1        : , "sv", "nf", "rep" : 
-sv_hud_targetindicator_friend_color      : 970859648.000 : , "sv", "nf", "rep" : Sets the color of the target indicator for players on your friends list.
+sv_hud_targetindicator_friend_color      : 547234944.000 : , "sv", "nf", "rep" : Sets the color of the target indicator for players on your friends list.
 sv_hud_targetindicator_friend_max_distance : -1       : , "sv", "nf", "rep" : Hide target indicators for teammates after this distance.
 sv_hud_targetindicator_friend_obstruct   : 0        : , "sv", "nf", "rep" : Hide obstructed target indicators for players on your friends list.
 sv_hud_targetindicator_party_color       : 0        : , "sv", "nf", "rep" : Sets the color of the target indicator for players in the same party.
