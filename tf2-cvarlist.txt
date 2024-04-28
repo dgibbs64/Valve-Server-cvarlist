@@ -412,7 +412,7 @@ mat_depthbias_normal                     : 0        : , "cheat"        :
 mat_depthbias_shadowmap                  : 0        : , "cheat"        : 
 mat_diffuse                              : 1        : , "cheat"        : 
 mat_drawflat                             : 0        : , "cheat"        : 
-mat_dxlevel                              : 92       :                  : 
+mat_dxlevel                              : 100      :                  : Current DirectX Level. Competitive play requires at least mat_dxlevel 90
 mat_enable_vrmode                        : cmd      :                  : Switches the material system to VR mode (after restart)
 mat_envmapsize                           : 128      :                  : 
 mat_envmaptgasize                        : 32       :                  : 
