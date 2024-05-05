@@ -725,6 +725,7 @@ net_fakeloss                             : 0        : , "cheat"        : Simulat
 net_maxroutable                          : 1200     : , "a", "user"    : Requested max packet size before packets are 'split'.
 net_public_adr                           : 0        :                  : For servers behind NAT/DHCP meant to be exposed to the public internet, this is the public facing ip address string: ('x.x.x.x'
 net_showreliablesounds                   : 0        : , "cheat"        : 
+net_showsplit_errors                     : 0        :                  : Show info about invalid packet split
 net_showsplits                           : 0        :                  : Show info about packet splits
 net_showudp                              : 0        :                  : Dump UDP packets summary to console
 net_showudp_remoteonly                   : 0        :                  : Dump non-loopback udp only
@@ -1776,4 +1777,4 @@ z_witch_threat_normal_range              : 300      : , "sv", "cheat"  :
 z_zombie_knockoff_death                  : 0        : , "sv", "cheat", "rep" : Knocking off a pouncing zombie instantly kills them.
 z_zombie_lunge_push                      : 0        : , "sv", "cheat"  : Does the zombie lunge push players?
 --------------
-1775 total convars/concommands
+1776 total convars/concommands
