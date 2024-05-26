@@ -173,9 +173,7 @@ cl_clockdrift_max_ms_threadmode          : 0        : , "cheat"        : Maximum
 cl_forwardspeed                          : 450      : , "sv", "cheat", "rep" : 
 cl_resend                                : 6        :                  : Delay in seconds before the client will resend the 'connect' attempt
 cl_show_connectionless_packet_warnings   : 0        :                  : Show console messages about ignored connectionless packets on the client.
-cl_show_speed                            : 0        : , "sv", "cheat", "rep" : spam console with local player speed
 cl_sidespeed                             : 450      : , "sv", "cheat", "rep" : 
-cl_spewscriptintro                       : 0        : , "sv"           : 
 cl_upspeed                               : 320      : , "sv", "cheat", "rep" : 
 cl_viewpunch_x                           : 1        : , "sv"           : Value of x-plane viewpunch for AE_WPN_VIEWPUNCH_VAR events.
 cl_viewpunch_y                           : 1        : , "sv"           : Value of y-plane viewpunch for AE_WPN_VIEWPUNCH_VAR events.
@@ -188,10 +186,6 @@ collision_shake_amp                      : 0        : , "sv"           :
 collision_shake_freq                     : 0        : , "sv"           : 
 collision_shake_time                     : 0        : , "sv"           : 
 collision_test                           : cmd      :                  : Tests collision system
-commentary                               : 0        : , "sv"           : Desired commentary mode state.
-commentary_available                     : 0        : , "sv"           : Automatically set by the game when a commentary file is available for the current map.
-commentary_cvarsnotchanging              : cmd      :                  : 
-commentary_finishnode                    : cmd      :                  : 
 compass_fadetime                         : 5        : , "sv", "cheat", "rep" : Time for compass to fade away after releasing hotkey.
 con_logfile                              : 0        :                  : Console output gets written to this file
 con_timestamp                            : 0        :                  : Prefix console.log entries with timestamps
@@ -201,10 +195,7 @@ CreatePredictionError                    : cmd      :                  : Create 
 creditsdone                              : cmd      :                  : 
 cvarlist                                 : cmd      :                  : Show the list of convars/concommands.
 datacachesize                            : 256      :                  : Size in MB.
-dbghist_addline                          : cmd      :                  : Add a line to the debug history. Format: <category id> <line>
-dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Scene Print      3: Alyx Blind      4: Log of damage done to player
 deathmatch                               : 1        : , "nf"           : Running a deathmatch server.
-debug_extract_preview                    : 0        : , "sv", "cheat"  : 
 debug_materialmodifycontrol              : 0        : , "sv"           : 
 debug_physimpact                         : 0        : , "sv"           : 
 debug_script_proxy_print_buffer          : 0        : , "sv", "cheat"  : 
@@ -330,14 +321,9 @@ g_debug_angularsensor                    : 0        : , "sv", "cheat"  :
 g_debug_basehelicopter                   : 0        : , "sv", "cheat"  : 
 g_debug_constraint_sounds                : 0        : , "sv", "cheat"  : Enable debug printing about constraint sounds.
 g_debug_doors                            : 0        : , "sv"           : 
-g_debug_npc_vehicle_roles                : 0        : , "sv"           : 
 g_debug_ragdoll_removal                  : 0        : , "sv", "cheat", "rep" : 
 g_debug_trackpather                      : 0        : , "sv", "cheat"  : 
 g_debug_transitions                      : 0        : , "sv"           : Set to 1 and restart the map to be warned if the map has no trigger_transition volumes. Set to 2 to see a dump of all entities & associated results during a transition.
-g_debug_vehiclebase                      : 0        : , "sv", "cheat"  : 
-g_debug_vehicledriver                    : 0        : , "sv", "cheat"  : 
-g_debug_vehicleexit                      : 0        : , "sv", "cheat"  : 
-g_debug_vehiclesound                     : 0        : , "sv", "cheat"  : 
 g_Language                               : 0        : , "sv", "rep"    : 
 g_ragdoll_important_maxcount             : 2        : , "sv", "rep"    : 
 g_ragdoll_maxcount                       : 8        : , "sv", "rep"    : 
@@ -351,6 +337,7 @@ hammer_update_safe_entities              : cmd      :                  : Updates
 heal_safe_zone                           : cmd      :                  : Test heal a safe zone
 heartbeat                                : cmd      :                  : Force heartbeat of master servers
 help                                     : cmd      :                  : Find help about a convar/concommand.
+hide_server                              : 0        : , "sv"           : Hides server from Steam.
 hl2_episodic                             : 0        : , "sv", "rep"    : 
 host_flush_threshold                     : 20       :                  : Memory threshold below which the host should flush caches between server instances
 host_framerate                           : 0        :                  : Set to lock per-frame time elapse.
@@ -594,6 +581,7 @@ nav_chop_selected                        : cmd      :                  : Chops a
 nav_clear_attribute                      : cmd      :                  : Remove given nav attribute from all areas in the selected set.
 nav_clear_selected_set                   : cmd      :                  : Clear the selected set.
 nav_clear_walkable_marks                 : cmd      :                  : Erase any previously placed walkable positions.
+nav_compress                             : cmd      :                  : Resaves and compresses current Navigation Mesh, identical to 'nav_save -compress'.
 nav_compress_id                          : cmd      :                  : Re-orders area and ladder ID's so they are continuous.
 nav_connect                              : cmd      :                  : To connect two Areas, mark the first Area, highlight the second Area, then invoke the connect command. Note that this creates a ONE-WAY connection from the first to the second Area. To make a two-way connection, also connect the second area to the first.
 nav_coplanar_slope_limit                 : 0        : , "sv", "cheat"  : 
@@ -626,7 +614,7 @@ nav_end_selecting                        : cmd      :                  : Stop co
 nav_end_shift_xy                         : cmd      :                  : Finish shifting the Selected Set.
 nav_flood_select                         : cmd      :                  : Selects the current Area and all Areas connected to it, recursively. To clear a selection, use this command again.
 nav_gen_cliffs_approx                    : cmd      :                  : Mark cliff areas, post-processing approximation
-nav_generate                             : cmd      :                  : Generate a Navigation Mesh for the current map and save it to disk.
+nav_generate                             : cmd      :                  : Generate a Navigation Mesh for the current map and save it to disk. Use -compress to shrink file size.
 nav_generate_fencetops                   : 1        : , "sv", "cheat"  : Autogenerate nav areas on fence and obstacle tops
 nav_generate_fixup_jump_areas            : 1        : , "sv", "cheat"  : Convert obsolete jump areas into 2-way connections
 nav_generate_incremental                 : cmd      :                  : Generate a Navigation Mesh for the current map and save it to disk.
@@ -663,7 +651,7 @@ nav_recall_selected_set                  : cmd      :                  : Re-sele
 nav_remove_from_selected_set             : cmd      :                  : Remove current area from the selected set.
 nav_remove_jump_areas                    : cmd      :                  : Removes legacy jump areas, replacing them with connections.
 nav_run                                  : cmd      :                  : Toggles the 'traverse this area by running' flag used by the AI system.
-nav_save                                 : cmd      :                  : Saves the current Navigation Mesh to disk.
+nav_save                                 : cmd      :                  : Saves the current Navigation Mesh to disk. Use -compress to shrink file size.
 nav_save_selected                        : cmd      :                  : Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
 nav_select_blocked_areas                 : cmd      :                  : Adds all blocked areas to the selected set
 nav_select_damaging_areas                : cmd      :                  : Adds all damaging areas to the selected set
@@ -937,7 +925,6 @@ r_hunkalloclightmaps                     : 1        :                  :
 r_hwmorph                                : 1        : , "cheat"        : 
 r_itemblinkmax                           : 0        : , "cheat"        : 
 r_itemblinkrate                          : 4        : , "cheat"        : 
-r_JeepFOV                                : 90       : , "sv", "cheat", "rep" : 
 r_JeepViewDampenDamp                     : 1        : , "sv", "cheat", "nf", "rep" : 
 r_JeepViewDampenFreq                     : 7        : , "sv", "cheat", "nf", "rep" : 
 r_JeepViewZHeight                        : 10       : , "sv", "cheat", "nf", "rep" : 
@@ -983,7 +970,6 @@ r_staticpropinfo                         : 0        :                  :
 r_studio_stats                           : 0        : , "cheat"        : 
 r_teeth                                  : 1        :                  : 
 r_unloadlightmaps                        : 0        : , "cheat"        : 
-r_vehicleBrakeRate                       : 1        : , "sv", "cheat"  : 
 r_VehicleViewDampen                      : 1        : , "sv", "cheat", "nf", "rep" : 
 r_visocclusion                           : 0        : , "cheat"        : Activate/deactivate wireframe rendering of what the occlusion system is doing.
 r_visualizetraces                        : 0        : , "sv", "cheat"  : 
@@ -1035,6 +1021,7 @@ script                                   : cmd      :                  : Run the
 script_allow_entity_creation_midgame     : 1        : , "sv"           : Allows VScript files to create entities mid-game, as opposed to only creating entities on startup.
 script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
 script_dump_all                          : cmd      :                  : Dump the state of the VM to the console
+script_dump_hooks                        : cmd      :                  : 
 script_execute                           : cmd      :                  : Run a vscript file
 script_help                              : cmd      :                  : Output help for script functions, optionally with a search string
 script_reload_code                       : cmd      :                  : Execute a vscript file, replacing existing functions with the functions in the run script
@@ -1126,6 +1113,7 @@ sv_allowupload                           : 1        :                  : Allow c
 sv_alltalk                               : 0        : , "sv", "nf", "rep" : Players can hear all other players, no team restrictions
 sv_alternateticks                        : 0        : , "sp"           : If set, server only simulates entities on even numbered ticks. 
 sv_armor_scale_dmg                       : 1        : , "sv", "cheat", "rep" : Amount damage is scaled for all weapons hitting chest armor
+sv_arrow_expire_time                     : 240      : , "sv", "cheat", "rep" : How long arrows remain in the world before fading out.
 sv_arrow_max_passthroughs                : 2        : , "sv", "cheat", "rep" : Maximum number of entities a single arrow can pass through.
 sv_arrow_passthrough_chance              : 0        : , "sv", "cheat", "rep" : Chance for an arrow to pass through an entity on headshot.
 sv_arrow_speed_max                       : 3000     : , "sv", "cheat", "rep" : Maximum speed of arrows (units/sec)
@@ -1155,6 +1143,7 @@ sv_bounce                                : 0        : , "sv", "cheat", "nf", "re
 sv_bow_cancel_time                       : 10       : , "sv", "cheat", "rep" : Time until a stretched bow is cancelled
 sv_bow_tense_period                      : 2        : , "sv", "cheat", "rep" : Time until a stretched bow becomes 'tense'
 sv_brainstem                             : 0        : , "sv", "cheat", "rep" : Enables/Disables zombie brainstem hitbox
+sv_bullet_bypass_player                  : 0        : , "sv", "cheat", "rep" : Should bullets bypass players? Has no effect when friendly fire is on, or if target is infected.
 sv_bullet_knockback_chance_max           : 0        : , "sv", "cheat", "rep" : Maximum chance for a bullet to knock a zombie back
 sv_bullet_knockback_chance_min           : 0        : , "sv", "cheat", "rep" : Minimum chance for a bullet to knock a zombie back
 sv_bullet_pen_count                      : 3        : , "sv", "cheat", "rep" : Maximum number of times a bullet can penetrate through a zombie
@@ -1244,8 +1233,8 @@ sv_kill_player_on_disconnect             : 1        : , "sv", "rep"    : Kill a 
 sv_killpenalty                           : 1        : , "sv", "rep"    : Players lose score if they kill their healthy team mates. Set to 0 for PVP scoring.
 sv_killpenalty_score                     : -15      : , "sv", "rep"    : Score for kill penalty.
 sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
-sv_level_transition                      : 0        : , "sv", "rep"    : Allow level transition.
-sv_level_transition_always_restore       : 1        : , "sv", "rep"    : Players keep their saved inventory and attributes when round restarts in a transitioned level.
+sv_level_transition                      : 1        : , "sv", "rep"    : Allow level transition.
+sv_level_transition_always_restore       : 0        : , "sv", "rep"    : Players keep their saved inventory and attributes when round restarts in a transitioned level.
 sv_level_transition_delay                : 5        : , "sv", "rep"    : Delay in seconds until level changes.
 sv_level_transition_player_ratio         : 1        : , "sv", "rep"    : Ratio of total players required for a level to change.
 sv_level_transition_time_limit           : 60       : , "sv", "rep"    : Time limit in seconds when first player reaches the level transition. -1 to disable.
@@ -1381,6 +1370,7 @@ sv_rcon_whitelist_address                : 0        :                  : When se
 sv_realism                               : 0        : , "sv", "rep"    : Enables/disables realism mode.  Headshots will be instant kills and all other areas of the body will take no damage.
 sv_realism_allow_respawn                 : 0        : , "sv", "rep"    : Allow respawns in realism mode.
 sv_region                                : 255      :                  : The region of the world to report this server in.
+sv_remove_unreasonable_physics           : 1        : , "sv", "rep"    : Removes VPhysics entities that fell out of the map.
 sv_resetscore                            : 0        : , "sv", "rep"    : Reset all player scores on round restart
 sv_respawn_allowed                       : 0        : , "sv", "rep"    : Whether or not to allow respawning after death
 sv_respawn_ammo_pct                      : 75       : , "sv", "rep"    : The percentage of the clip that comes with respawn starting guns.
@@ -1495,7 +1485,6 @@ sv_use_secondary_radius                  : 40       : , "sv", "cheat", "rep" : R
 sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vaccine_partial_blind_chance          : 0        : , "sv", "cheat", "rep" : Chance of vaccine causing partial blindness
 sv_vaccine_partial_blind_duration        : 60       : , "sv", "cheat", "rep" : Length (in seconds) of partial blindness effects
-sv_vehicle_autoaim_scale                 : 8        : , "sv"           : 
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
 sv_voice_cooldown                        : 3        : , "sv", "rep"    : Voice command cooldown (seconds).
 sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec steam - Use Steam voice API
@@ -1589,17 +1578,8 @@ telemetry_pause                          : 0        :                  : Pause T
 telemetry_resume                         : 0        :                  : Resume Telemetry
 telemetry_server                         : 0        :                  : Set Telemetry server
 template_debug                           : 0        : , "sv"           : 
-Test_CreateEntity                        : cmd      :                  : 
 test_dispatcheffect                      : cmd      :                  : Test a clientside dispatch effect.  Usage: test_dispatcheffect <effect name> <distance away> <flags> <magnitude> <scale>  Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0> 
-Test_EHandle                             : cmd      :                  : 
 test_entity_blocker                      : cmd      :                  : Test command that drops an entity blocker out in front of the player.
-Test_InitRandomEntitySpawner             : cmd      :                  : 
-Test_ProxyToggle_EnableProxy             : cmd      :                  : 
-Test_ProxyToggle_SetValue                : cmd      :                  : 
-Test_RandomizeInPVS                      : cmd      :                  : 
-Test_RandomPlayerPosition                : cmd      :                  : 
-Test_RemoveAllRandomEntities             : cmd      :                  : 
-Test_SpawnRandomEntities                 : cmd      :                  : 
 testscript_debug                         : 0        :                  : Debug test scripts.
 tf_escort_score_rate                     : 1        : , "sv", "cheat"  : Score for escorting the train, in points per second
 think_limit                              : 0        : , "sv", "rep"    : Maximum think time in milliseconds, warning is printed if this is exceeded.
@@ -1649,7 +1629,6 @@ use                                      : cmd      :                  : Use a p
 user                                     : cmd      :                  : Show user data.
 users                                    : cmd      :                  : Show user info for players on server.
 vcr_verbose                              : 0        :                  : Write extra information into .vcr file.
-vehicle_flushscript                      : cmd      :                  : Flush and reload all vehicle scripts
 version                                  : cmd      :                  : Print version info string.
 violence_ablood                          : 1        :                  : Draw alien blood
 violence_agibs                           : 1        :                  : Show alien gib entities
@@ -1713,12 +1692,8 @@ workshop_update                          : cmd      :                  : Update 
 workshop_validate                        : cmd      :                  : Validate all Workshop maps, and redownload them if missing. Use -cleanup to remove them instead. Use -restore to recover maps from cache.
 writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
 writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
-xbox_autothrottle                        : 1        : , "a", "sv"      : 
-xbox_steering_deadzone                   : 0        : , "sv"           : 
-xbox_throttlebias                        : 100      : , "a", "sv"      : 
-xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 zomb_squirt                              : cmd      :                  : Squirt all the things! Use -quiet to kill without head split
 zomb_squirt_all                          : cmd      :                  : Squirt ALL the things! Use -quiet to kill without head split.
 --------------
-1720 total convars/concommands
+1695 total convars/concommands
