@@ -301,8 +301,7 @@ emp_sv_engineer_brush_explosive_multiplier : 0        : , "sv", "nf"     : Non-g
 emp_sv_engineer_brush_seismic_multiplier : 0        : , "sv", "nf"     : Seismic damage to engineer brushes is multiplied by this value.
 emp_sv_forceautoassign                   : 0        : , "sv", "rep"    : Toggles whether the server allows players to choose their own faction
 emp_sv_forcespec                         : 0        : , "sv", "rep"    : Toggles whether players only allowed to join spectate
-emp_sv_forceteam                         : 0        : , "sv", "rep"    : When not 0, only allow players to join the team with this ID. Spectator and unassigned are not affected.
-emp_sv_inactivity_timeout                : 1800     : , "sv", "rep"    : Time in seconds after which map changes if no players join the game.
+emp_sv_inactivity_timeout                : 1800     : , "sv", "rep"    : Time in seconds after which map changes if no players join the game. A value of 0 disables this feature; otherwise, any value less than 120 is treated as 120.
 emp_sv_invite_antispam                   : 1        : , "sv"           : 
 emp_sv_kick_commander_be                 : cmd      :                  : Kick the BE Commander
 emp_sv_kick_commander_nf                 : cmd      :                  : Kick the NF Commander
@@ -982,6 +981,7 @@ plugin_print                             : cmd      :                  : Prints 
 plugin_unload                            : cmd      :                  : plugin_unload <index> : unloads a plugin
 plugin_unpause                           : cmd      :                  : plugin_unpause <index> : unpauses a disabled plugin
 plugin_unpause_all                       : cmd      :                  : unpauses all disabled plugins
+portal_debug                             : 0        : , "sv", "cheat"  : Turn on debugging for portal connections.
 prop_active_gib_limit                    : 999999   : , "sv"           : 
 prop_active_gib_max_fade_time            : 999999   : , "sv"           : 
 prop_crosshair                           : cmd      :                  : Shows name for prop looking at
