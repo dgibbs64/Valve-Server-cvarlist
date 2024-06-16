@@ -998,7 +998,7 @@ sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdr
 sv_client_max_interp_ratio               : 5        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_
 sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1 
 sv_client_predict                        : -1       : , "rep"          : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients se
-sv_clockcorrection_msecs                 : 20       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
+sv_clockcorrection_msecs                 : 10       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
 sv_consistency                           : 1        : , "rep"          : Whether the server enforces file consistency for critical files
 sv_contact                               : 0        : , "nf"           : Contact email for server sysop
 sv_custom_assets                         : 1        : , "sv"           : 
