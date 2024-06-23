@@ -132,17 +132,15 @@ bind_mac                                 : cmd      :                  : Bind th
 BindToggle                               : cmd      :                  : Performs a bind <key> 'increment var <cvar> 0 1 1'
 birds_debug                              : 0        : , "sv"           : 
 bloodspray                               : cmd      :                  : blood
-bot_add                                  : cmd      :                  : Add a bot.
-bot_changeclass                          : 0        : , "sv"           : Force all bots to change to the specified class.
+bot_add                                  : cmd      :                  : 
 bot_crouch                               : 0        : , "sv"           : Bot crouches
 bot_flipout                              : 0        : , "sv"           : When on, all bots fire their guns.
 bot_forceattack2                         : 0        : , "sv"           : When firing, use attack2.
 bot_forceattackon                        : 0        : , "sv"           : When firing, don't tap fire, hold it down.
 bot_forcefireweapon                      : 0        : , "sv"           : Force bots with the specified weapon to fire.
-bot_kick                                 : cmd      :                  : Kick a bot.
+bot_kick                                 : cmd      :                  : 
 bot_mimic                                : 0        : , "sv"           : Bot uses usercmd of player by index.
 bot_mimic_yaw_offset                     : 0        : , "sv"           : Offsets the bot yaw.
-bot_sendcmd                              : 0        : , "sv"           : Forces bots to send the specified command.
 bot_voicecommands                        : 0        : , "sv"           : Bots talk the good smack.
 breakable_disable_gib_limit              : 0        : , "sv"           : 
 breakable_multiplayer                    : 1        : , "sv"           : 
@@ -1125,6 +1123,7 @@ sv_barricade_cooldown                    : 0        : , "sv", "cheat", "rep" : T
 sv_barricade_health                      : 150      : , "sv", "cheat", "rep" : Health of barricade boards.
 sv_barricade_opacity                     : 0        : , "sv", "cheat", "rep" : Opacity of barricade points when visible
 sv_barricade_prop_model                  : 0        : , "sv", "cheat", "rep" : Model to use for barricade points
+sv_barricade_show_damage                 : 0        : , "sv", "rep"    : Visualize barricade health by darkening boards according to how much damage they've taken. The value represents how dark the model should be at 0 HP left. E.g. 0.75 means 75% dark at 0 hit point. Use 0.0 for vanilla behavior, 0.75 for QoL plugin default.
 sv_bash_cost_per_sec                     : 16       : , "sv", "cheat", "rep" : Cost of stamina per second of bash charge
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
 sv_benchmark_force_start                 : cmd      :                  : Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.
@@ -1143,7 +1142,7 @@ sv_bounce                                : 0        : , "sv", "cheat", "nf", "re
 sv_bow_cancel_time                       : 10       : , "sv", "cheat", "rep" : Time until a stretched bow is cancelled
 sv_bow_tense_period                      : 2        : , "sv", "cheat", "rep" : Time until a stretched bow becomes 'tense'
 sv_brainstem                             : 0        : , "sv", "cheat", "rep" : Enables/Disables zombie brainstem hitbox
-sv_bullet_bypass_player                  : 0        : , "sv", "cheat", "rep" : Should bullets bypass players? Has no effect when friendly fire is on, or if target is infected.
+sv_bullet_bypass_player                  : 0        : , "sv", "rep"    : Should bullets bypass players? Has no effect when friendly fire is on, or if target is infected.
 sv_bullet_knockback_chance_max           : 0        : , "sv", "cheat", "rep" : Maximum chance for a bullet to knock a zombie back
 sv_bullet_knockback_chance_min           : 0        : , "sv", "cheat", "rep" : Minimum chance for a bullet to knock a zombie back
 sv_bullet_pen_count                      : 3        : , "sv", "cheat", "rep" : Maximum number of times a bullet can penetrate through a zombie
@@ -1217,6 +1216,7 @@ sv_idle_autokick_time                    : 120      : , "sv", "rep"    : Time a 
 sv_ignore_win_loss_state                 : 0        : , "sv", "rep"    : Ignore win / loss state.
 sv_infect_chance_modifier                : 0        : , "sv", "cheat", "rep" : Modifier for infect chance formula
 sv_infect_survival_modifier              : 2        : , "sv", "rep"    : 
+sv_infection_bypass                      : 0        : , "sv", "rep"    : Damage amounts equal to or higher than this will prevent an infected player from reanimating. Use 0.0 for vanilla behavior (i.e. always reanimate), 100.0 for QoL plugin default.
 sv_infection_chance                      : 1        : , "sv", "cheat", "rep" : Chance for zombie to infect players per hit.
 sv_infectionlength                       : 120      : , "sv", "cheat", "rep" : Length of time it takes for infection to kill a target
 sv_item_dropforce                        : 90       : , "sv", "cheat", "rep" : Force of dropped objects
@@ -1302,7 +1302,7 @@ sv_movable_ammo                          : 1        : , "sv", "rep"    : Allow p
 sv_movable_ammo_pickup_delay             : 0        : , "sv", "rep"    : Seconds that must pass after player's inventory becomes full before attempting to lift ammo.
 sv_music_ap_change_delay_time            : 2        : , "sv", "cheat", "rep" : How long until pursuit / attack music state can change
 sv_music_change_delay_time               : 5        : , "sv", "cheat", "rep" : How long until music state can change
-sv_music_pursuit_zombie_count            : 15       : , "sv", "cheat", "rep" : Number of zombies that must be around the player to trigger the 'Pursuit' music state
+sv_music_pursuit_runner_zombie_count     : 1        : , "sv", "cheat", "rep" : Number of runner zombies that must be around the player to trigger the 'Pursuit' music state
 sv_music_tension_1_zombie_count          : 5        : , "sv", "cheat", "rep" : Number of zombies that must be around the player to trigger the 'Tension 1' music state
 sv_music_tension_2_zombie_count          : 10       : , "sv", "cheat", "rep" : Number of zombies that must be around the player to trigger the 'Tension 2' music state
 sv_mutators                              : 0        : , "sv", "rep"    : List of mutators, with ',' delimiter.
@@ -1461,8 +1461,7 @@ sv_supply_use_time                       : 3        : , "sv", "rep"    : Time a 
 sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
 sv_tension_think_period                  : 0        : , "sv", "cheat", "rep" : How often the tension manager thinks
 sv_tension_zombie_attack_range           : 300      : , "sv", "cheat", "rep" : Distance at which zombies are considered to be attacking the player
-sv_tension_zombie_range                  : 600      : , "sv", "cheat", "rep" : Distance at which zombies can be added to tension
-sv_tension_zombie_vis_range              : 1500     : , "sv", "cheat", "rep" : Distance at which zombies will be checked for visibility
+sv_tension_zombie_range                  : 1500     : , "sv", "cheat", "rep" : Distance at which zombies can be added to tension
 sv_test_scripted_sequences               : 0        : , "sv"           : Tests for scripted sequences that are embedded in the world. Run through your map with this set to check for NPCs falling through the world.
 sv_teststepsimulation                    : 1        : , "sv"           : 
 sv_thinktimecheck                        : 0        : , "sv"           : Check for thinktimes all on same timestamp.
@@ -1696,4 +1695,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 zomb_squirt                              : cmd      :                  : Squirt all the things! Use -quiet to kill without head split
 zomb_squirt_all                          : cmd      :                  : Squirt ALL the things! Use -quiet to kill without head split.
 --------------
-1695 total convars/concommands
+1694 total convars/concommands
