@@ -998,7 +998,6 @@ sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdr
 sv_client_max_interp_ratio               : 5        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_
 sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1 
 sv_client_predict                        : -1       : , "rep"          : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients se
-sv_clockcorrection_msecs                 : 0        : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
 sv_consistency                           : 1        : , "rep"          : Whether the server enforces file consistency for critical files
 sv_contact                               : 0        : , "nf"           : Contact email for server sysop
 sv_custom_assets                         : 1        : , "sv"           : 
@@ -1053,23 +1052,12 @@ sv_parallel_sendsnapshot                 : 1        :                  :
 sv_password                              : 0        : , "nf", "prot", "norecord" : Server password for entry into multiplayer games
 sv_pausable                              : 0        : , "nf"           : Is the server pausable.
 sv_physicsprops                          : 0        : , "sv", "nf", "rep" : Enable solid, physics enabled props 
-sv_playerperfhistorycount                : 20       : , "sv"           : Number of samples to maintain in player perf history
 sv_playerrotation                        : 0        : , "sv", "nf", "rep" : 
 sv_precacheinfo                          : cmd      :                  : Show precache info.
 sv_propcreation                          : 1        : , "sv", "nf", "rep" : Allow or disallow prop creation for all players 
 sv_pure                                  : cmd      :                  : Show user data.
 sv_pure_kick_clients                     : 1        :                  : If set to 1, the server will kick clients with mismatching files. Otherwise, it will issue a warning to the client.
 sv_pure_trace                            : 0        :                  : If set to 1, the server will print a message whenever a client is verifying a CRC for a file.
-sv_pushaway_clientside                   : 2        : , "a", "sv", "cheat", "rep" : Clientside physics push away (0=off, 1=only localplayer, 1=all players)
-sv_pushaway_dopush                       : 0        : , "a", "sv", "cheat", "rep" : 
-sv_pushaway_force                        : 25       : , "a", "sv", "cheat", "rep" : How hard physics objects are pushed away from the players on the server.
-sv_pushaway_getpushed                    : 0        : , "a", "sv", "cheat", "rep" : 
-sv_pushaway_max_force                    : 1000     : , "a", "sv", "cheat", "rep" : Maximum amount of force applied to physics objects by players.
-sv_pushaway_max_player_force             : 10000    : , "a", "sv", "cheat", "rep" : Maximum of how hard the player is pushed away from physics objects.
-sv_pushaway_min_player_speed             : 0        : , "a", "sv", "cheat", "rep" : If a player is moving slower than this, don't push away physics objects (enables ducking behind things).
-sv_pushaway_player_expand                : 3        : , "a", "sv", "cheat", "rep" : Radius
-sv_pushaway_player_force                 : 200000   : , "a", "sv", "cheat", "rep" : How hard the player is pushed away from physics objects (falls off with inverse square of distance).
-sv_pushaway_player_speed_force_modifier  : 1        : , "a", "sv", "cheat", "rep" : Radius
 sv_pvsskipanimation                      : 1        : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
 sv_ragoll_net_mode                       : 2        : , "sv"           : 0 = Disable ragdoll nets, 1 = Enable ragdoll nets during goals, 2 = Enable ragdoll nets at all times
 sv_randomteams                           : cmd      :                  : 
@@ -1260,4 +1248,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1259 total convars/concommands
+1247 total convars/concommands
