@@ -1230,15 +1230,4 @@ xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
 1228 total convars/concommands
-Could not find steamerrorreporter binary. Any minidumps will be uploaded in-processsrc/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
-src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
-Uploading dump (in-process) [proxy '']
-/tmp/dumps/assert_20240714015223_14.dmp
-success = no
-error:  libcurl.so: cannot open shared object file: No such file or directory
-Could not establish connection to Steam servers.  (Result = 3)
-Could not establish connection to Steam servers.  (Result = 3)
-Connection to Steam servers successful.
-   Public IP is 20.42.106.78.
-Assigned anonymous gameserver Steam ID [A:1:3776514056:29800].
-VAC secure mode is activated.
+Could not find steamerrorreporter binary. Any minidumps will be uploaded in-process
