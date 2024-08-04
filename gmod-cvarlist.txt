@@ -405,7 +405,7 @@ gmod_cleanup                             : cmd      :                  :
 gmod_language                            : 0        : , "a"            : 
 gmod_maxammo                             : 9999     : , "sv", "rep"    : If set to above 0, overrides max ammo carried per player of all ammo types. Otherwise ammo type's max ammo is used.
 gmod_mcore_test                          : 0        :                  : if you find this, don't go around enabling it and then complaining about issues
-gmod_physiterations                      : 4        : , "sv", "rep", "demo", "lua_server" : 
+gmod_physiterations                      : 4        : , "sv", "rep", "demo", "lua_server" : Improves physics accuracy at the expense of performance.
 gmod_sneak_attack                        : 1        : , "sv"           : If set to zero, disables Half-Life 2's Sneak Attack feature, where headshotting NPCs who have not seen the player would result 
 gmod_spawnnpc                            : cmd      :                  : 
 gmod_suit                                : 0        : , "sv", "rep"    : Set to non zero to enable Half-Life 2 aux suit power stuff.
@@ -438,7 +438,8 @@ host_speeds                              : 0        :                  : Show ge
 host_timer_report                        : cmd      :                  : Spew CPU timer jitter for the last 128 frames in microseconds (dedicated only)
 host_timer_spin_ms                       : 0        :                  : Use CPU busy-loop for improved timer precision (dedicated only)
 host_timescale                           : 1        : , "cheat", "rep" : Prescale the clock by this amount.
-host_workshop_collection                 : 0        : , "sv"           : 
+host_workshop_autoupdate                 : 1        : , "sv"           : If set to above 0, will auto update addons from host_workshop_collection on server start.
+host_workshop_collection                 : 0        : , "sv"           : Set to a Steam Workshop Collection ID, and the dedicated server will download Workshop items from given collection on start up.
 hostip                                   : 0        :                  : Host game server ip
 hostname                                 : 0        :                  : Hostname for server.
 hostport                                 : 27015    :                  : Host game server port
@@ -652,13 +653,9 @@ metropolice_chase_use_follow             : 0        : , "sv"           :
 metropolice_move_and_melee               : 1        : , "sv"           : 
 mission_list                             : cmd      :                  : List all available tactical missions
 mission_show                             : cmd      :                  : Show the given mission
-mod_forcedata                            : 1        :                  : Forces all model file data into cache on model load.
 mod_forcetouchdata                       : 1        :                  : Forces all model file data into cache on model load.
-mod_load_anims_async                     : 0        :                  : 
 mod_load_fakestall                       : 0        :                  : Forces all ANI file loading to stall for specified ms 
-mod_load_mesh_async                      : 0        :                  : 
 mod_load_showstall                       : 0        :                  : 1 - show hitches , 2 - show stalls
-mod_load_vcollide_async                  : 0        :                  : 
 mod_lock_mdls_on_load                    : 0        :                  : 
 mod_test_mesh_not_available              : 0        : , "cheat"        : 
 mod_test_not_available                   : 0        : , "cheat"        : 
@@ -1008,12 +1005,13 @@ phys_upimpactforcescale                  : 0        : , "sv"           :
 physcannon_ball_cone                     : 0        : , "sv", "rep"    : 
 physcannon_chargetime                    : 2        : , "sv", "rep"    : 
 physcannon_cone                          : 0        : , "sv", "rep"    : 
-physcannon_maxforce                      : 1500     : , "sv", "rep"    : 
-physcannon_maxmass                       : 250      : , "sv", "rep"    : 
+physcannon_instant                       : 1        : , "sv", "rep"    : If set to non 0, the Gravity Gun can be used instantly after switcing to it, bypassing the deploy animation.
+physcannon_maxforce                      : 1500     : , "sv", "rep"    : Maximum force for Gravity Guns punts.
+physcannon_maxmass                       : 250      : , "sv", "rep"    : Maximum mass the Gravity Gun can pick up.
 physcannon_mega_enabled                  : 0        : , "sv", "cheat", "rep" : 
-physcannon_minforce                      : 700      : , "sv", "rep"    : 
+physcannon_minforce                      : 700      : , "sv", "rep"    : Minimum force for Gravity Guns punts.
 physcannon_pullforce                     : 4000     : , "sv", "rep"    : 
-physcannon_tracelength                   : 250      : , "sv", "rep"    : 
+physcannon_tracelength                   : 250      : , "sv", "rep"    : How far the Gravity Gun can pick stuff from.
 physgun_DampingFactor                    : 0        : , "sv"           : 
 physgun_limited                          : 0        : , "a", "nf", "rep", "lua_server" : If enabled, the Physics Gun will not be able to pick up certain map entities
 physgun_maxAngular                       : 5000     : , "sv"           : 
@@ -1189,7 +1187,7 @@ say_team                                 : cmd      :                  : Display
 sbox_bonemanip_misc                      : 0        : , "a", "nf", "rep", "lua_server" : If enabled then manipulating the bones of other entities will be allowed
 sbox_bonemanip_npc                       : 1        : , "a", "nf", "rep", "lua_server" : If enabled then manipulating NPC bones will be allowed
 sbox_bonemanip_player                    : 0        : , "a", "nf", "rep", "lua_server" : If enabled then manipulating Player bones will be allowed
-sbox_godmode                             : 0        : , "a", "nf", "rep", "lua_server" : If enabled, all players will be invincible
+sbox_godmode                             : 0        : , "a", "nf", "lua_server" : If enabled, all players will be invincible
 sbox_maxballoons                         : 10       : , "a", "nf", "rep", "lua_server" : Maximum balloons a single player can create
 sbox_maxbuttons                          : 20       : , "a", "nf", "rep", "lua_server" : Maximum buttons a single player can create
 sbox_maxcameras                          : 10       : , "a", "nf", "rep", "lua_server" : Maximum cameras a single player can create
@@ -1207,9 +1205,9 @@ sbox_maxthrusters                        : 20       : , "a", "nf", "rep", "lua_s
 sbox_maxvehicles                         : 1        : , "a", "nf", "rep", "lua_server" : Maximum vehicles a single player can create
 sbox_maxwheels                           : 20       : , "a", "nf", "rep", "lua_server" : Maximum wheels a single player can create
 sbox_noclip                              : 0        : , "a", "nf", "rep", "lua_server" : If enabled, players will be able to use noclip
-sbox_persist                             : 0        : , "a", "nf", "rep", "lua_server" : If not empty, enables 'Make Persistent' option when you right click on props while holding C, allowing you to save them across 
-sbox_playershurtplayers                  : 0        : , "a", "nf", "rep", "lua_server" : If enabled, players will be able to hurt each other
-sbox_weapons                             : 0        : , "a", "nf", "rep", "lua_server" : If enabled, each player will receive default Half-Life 2 weapons on each spawn
+sbox_persist                             : 0        : , "a", "nf", "lua_server" : If not empty, enables 'Make Persistent' option when you right click on props while holding C, allowing you to save them across 
+sbox_playershurtplayers                  : 0        : , "a", "nf", "lua_server" : If enabled, players will be able to hurt each other
+sbox_weapons                             : 0        : , "a", "nf", "lua_server" : If enabled, each player will receive default Half-Life 2 weapons on each spawn
 scene_async_prefetch_spew                : 0        : , "sv"           : Display async .ani file loading info.
 scene_clamplookat                        : 1        : , "sv"           : Clamp head turns to a max of 20 degrees per think.
 scene_clientflex                         : 1        : , "sv", "rep"    : Do client side flex animation.
@@ -1240,8 +1238,8 @@ showtriggers_toggle                      : cmd      :                  : Toggle 
 simple_bot_add                           : cmd      :                  : Add a simple bot.
 singlestep                               : 0        : , "cheat"        : Run engine in single step mode ( set next to 1 to advance a frame )
 sk_advisor_health                        : 1000     : , "sv"           : 
-sk_agrunt_dmg_punch                      : 10       : , "sv"           : 
-sk_agrunt_health                         : 60       : , "sv"           : 
+sk_agrunt_dmg_punch                      : 20       : , "sv"           : 
+sk_agrunt_health                         : 90       : , "sv"           : 
 sk_airboat_drain_rate                    : 10       : , "sv"           : 
 sk_airboat_max_ammo                      : 100      : , "sv"           : 
 sk_airboat_recharge_rate                 : 15       : , "sv"           : 
@@ -1264,7 +1262,7 @@ sk_antlion_worker_spit_speed             : 600      : , "sv"           : Speed a
 sk_antlionguard_dmg_charge               : 20       : , "sv"           : 
 sk_antlionguard_dmg_shove                : 10       : , "sv"           : 
 sk_antlionguard_health                   : 500      : , "sv"           : 
-sk_apache_health                         : 150      : , "sv"           : 
+sk_apache_health                         : 250      : , "sv"           : 
 sk_apc_health                            : 750      : , "sv"           : 
 sk_apc_missile_damage                    : 50       : , "sv"           : 
 sk_auto_reload_time                      : 3        : , "sv", "rep"    : 
@@ -1274,14 +1272,14 @@ sk_autoaim_scale2                        : 1        : , "sv", "rep"    :
 sk_barnacle_health                       : 35       : , "sv"           : 
 sk_barney_health                         : 35       : , "sv"           : 
 sk_battery                               : 15       : , "sv"           : 
-sk_bigmomma_dmg_blast                    : 100      : , "sv"           : 
-sk_bigmomma_dmg_slash                    : 50       : , "sv"           : 
+sk_bigmomma_dmg_blast                    : 120      : , "sv"           : 
+sk_bigmomma_dmg_slash                    : 60       : , "sv"           : 
 sk_bigmomma_health_factor                : 1        : , "sv"           : 
 sk_bigmomma_radius_blast                 : 250      : , "sv"           : 
 sk_bullseye_health                       : 35       : , "sv"           : 
-sk_bullsquid_dmg_bite                    : 15       : , "sv"           : 
+sk_bullsquid_dmg_bite                    : 25       : , "sv"           : 
 sk_bullsquid_dmg_spit                    : 10       : , "sv"           : 
-sk_bullsquid_dmg_whip                    : 25       : , "sv"           : 
+sk_bullsquid_dmg_whip                    : 35       : , "sv"           : 
 sk_bullsquid_health                      : 40       : , "sv"           : 
 sk_citizen_giveammo_player_delay         : 10       : , "sv"           : 
 sk_citizen_heal_ally                     : 30       : , "sv"           : 
@@ -1304,10 +1302,10 @@ sk_combine_s_kick                        : 10       : , "sv"           :
 sk_combineball_guidefactor               : 1        : , "sv", "rep"    : 
 sk_combineball_seek_angle                : 15       : , "sv", "rep"    : 
 sk_combineball_seek_kill                 : 0        : , "sv", "rep"    : 
-sk_controller_dmgball                    : 3        : , "sv"           : 
-sk_controller_dmgzap                     : 15       : , "sv"           : 
+sk_controller_dmgball                    : 4        : , "sv"           : 
+sk_controller_dmgzap                     : 25       : , "sv"           : 
 sk_controller_health                     : 60       : , "sv"           : 
-sk_controller_speedball                  : 650      : , "sv"           : 
+sk_controller_speedball                  : 800      : , "sv"           : 
 sk_crow_health                           : 1        : , "sv"           : 
 sk_crow_melee_dmg                        : 0        : , "sv"           : 
 sk_crowbar_lead_time                     : 0        : , "sv"           : 
@@ -1327,9 +1325,9 @@ sk_env_headcrabcanister_shake_amplitude  : 50       : , "sv"           :
 sk_env_headcrabcanister_shake_radius     : 1024     : , "sv"           : 
 sk_env_headcrabcanister_shake_radius_vehicle : 2500     : , "sv"           : 
 sk_fraggrenade_radius                    : 250      : , "sv"           : 
-sk_gargantua_dmg_fire                    : 3        : , "sv"           : 
-sk_gargantua_dmg_slash                   : 10       : , "sv"           : 
-sk_gargantua_dmg_stomp                   : 50       : , "sv"           : 
+sk_gargantua_dmg_fire                    : 5        : , "sv"           : 
+sk_gargantua_dmg_slash                   : 30       : , "sv"           : 
+sk_gargantua_dmg_stomp                   : 100      : , "sv"           : 
 sk_gargantua_health                      : 800      : , "sv"           : 
 sk_grubnugget_enabled                    : 1        : , "sv"           : 
 sk_grubnugget_health_large               : 6        : , "sv"           : 
@@ -1339,8 +1337,8 @@ sk_gunship_burst_dist                    : 768      : , "sv"           :
 sk_gunship_burst_min                     : 800      : , "sv"           : 
 sk_gunship_burst_size                    : 15       : , "sv"           : 
 sk_gunship_health_increments             : 5        : , "sv"           : 
-sk_hassassin_health                      : 30       : , "sv"           : 
-sk_headcrab_dmg_bite                     : 5        : , "sv"           : 
+sk_hassassin_health                      : 50       : , "sv"           : 
+sk_headcrab_dmg_bite                     : 10       : , "sv"           : 
 sk_headcrab_fast_health                  : 10       : , "sv"           : 
 sk_headcrab_health                       : 10       : , "sv"           : 
 sk_headcrab_melee_dmg                    : 5        : , "sv"           : 
@@ -1361,16 +1359,16 @@ sk_helicopter_num_bombs1                 : 3        : , "sv"           :
 sk_helicopter_num_bombs2                 : 5        : , "sv"           : 
 sk_helicopter_num_bombs3                 : 5        : , "sv"           : 
 sk_helicopter_roundsperburst             : 5        : , "sv"           : How many shots to fire in a single burst
-sk_hgrunt_gspeed                         : 400      : , "sv"           : 
+sk_hgrunt_gspeed                         : 600      : , "sv"           : 
 sk_hgrunt_health                         : 50       : , "sv"           : 
-sk_hgrunt_kick                           : 5        : , "sv"           : 
-sk_hgrunt_pellets                        : 3        : , "sv"           : 
+sk_hgrunt_kick                           : 10       : , "sv"           : 
+sk_hgrunt_pellets                        : 5        : , "sv"           : 
 sk_hl1barnacle_health                    : 25       : , "sv"           : 
 sk_hl1barney_health                      : 35       : , "sv"           : 
 sk_hl1headcrab_health                    : 10       : , "sv"           : 
 sk_hl1ichthyosaur_health                 : 200      : , "sv"           : 
-sk_hl1zombie_dmg_both_slash              : 25       : , "sv"           : 
-sk_hl1zombie_dmg_one_slash               : 10       : , "sv"           : 
+sk_hl1zombie_dmg_both_slash              : 40       : , "sv"           : 
+sk_hl1zombie_dmg_one_slash               : 20       : , "sv"           : 
 sk_hl1zombie_health                      : 50       : , "sv"           : 
 sk_homer_grenade_radius                  : 100      : , "sv"           : 
 sk_houndeye_dmg_blast                    : 15       : , "sv"           : 
@@ -1389,8 +1387,8 @@ sk_hunter_health                         : 210      : , "sv"           :
 sk_hunter_vehicle_damage_scale           : 2        : , "sv"           : 
 sk_ichthyosaur_health                    : 200      : , "sv"           : 
 sk_ichthyosaur_melee_dmg                 : 8        : , "sv"           : 
-sk_ichthyosaur_shake                     : 20       : , "sv"           : 
-sk_islave_dmg_claw                       : 8        : , "sv"           : 
+sk_ichthyosaur_shake                     : 35       : , "sv"           : 
+sk_islave_dmg_claw                       : 10       : , "sv"           : 
 sk_islave_dmg_clawrake                   : 25       : , "sv"           : 
 sk_islave_dmg_zap                        : 10       : , "sv"           : 
 sk_islave_health                         : 30       : , "sv"           : 
@@ -1439,10 +1437,10 @@ sk_nihilanth_health                      : 800      : , "sv"           :
 sk_nihilanth_zap                         : 30       : , "sv"           : 
 sk_npc_arm                               : 1        : , "sv"           : 
 sk_npc_chest                             : 1        : , "sv"           : 
-sk_npc_dmg_12mm_bullet                   : 8        : , "sv", "rep"    : 
+sk_npc_dmg_12mm_bullet                   : 10       : , "sv", "rep"    : 
 sk_npc_dmg_357                           : 30       : , "sv", "rep"    : 
 sk_npc_dmg_9mm_bullet                    : 5        : , "sv", "rep"    : 
-sk_npc_dmg_9mmAR_bullet                  : 3        : , "sv", "rep"    : 
+sk_npc_dmg_9mmAR_bullet                  : 4        : , "sv", "rep"    : 
 sk_npc_dmg_airboat                       : 3        : , "sv", "rep"    : 
 sk_npc_dmg_alyxgun                       : 3        : , "sv", "rep"    : 
 sk_npc_dmg_ar2                           : 3        : , "sv", "rep"    : 
@@ -1457,7 +1455,7 @@ sk_npc_dmg_gunship                       : 40       : , "sv", "rep"    :
 sk_npc_dmg_gunship_to_plr                : 3        : , "sv", "rep"    : 
 sk_npc_dmg_helicopter                    : 6        : , "sv"           : Damage helicopter shots deal to everything but the player
 sk_npc_dmg_helicopter_to_plr             : 3        : , "sv"           : Damage helicopter shots deal to the player
-sk_npc_dmg_hornet                        : 4        : , "sv", "rep"    : 
+sk_npc_dmg_hornet                        : 5        : , "sv", "rep"    : 
 sk_npc_dmg_pistol                        : 3        : , "sv", "rep"    : 
 sk_npc_dmg_rpg_round                     : 50       : , "sv", "rep"    : 
 sk_npc_dmg_satchel                       : 0        : , "sv"           : 
@@ -1552,7 +1550,7 @@ sk_zombie_health                         : 50       : , "sv"           :
 sk_zombie_poison_dmg_spit                : 20       : , "sv"           : 
 sk_zombie_poison_health                  : 175      : , "sv"           : 
 sk_zombie_soldier_health                 : 100      : , "sv"           : 
-skill                                    : 1        : , "a"            : Game skill level (1-3).
+skill                                    : 2        : , "a"            : Game skill level (1-3).
 smoke_trail                              : 1        : , "sv"           : 
 smoothstairs                             : 1        : , "sv", "rep"    : Smooth player eye z coordinate when traversing stairs.
 snd_foliage_db_loss                      : 4        : , "cheat"        : 
@@ -1681,6 +1679,7 @@ sv_lagcompensationforcerestore           : 1        : , "sv", "cheat"  : Don't t
 sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
 sv_loadingurl                            : 0        : , "a"            : URL to show to clients while joining the server. Must start with http:// or https://
 sv_location                              : 0        :                  : The location of the server to be displayed in the server browser. Format is ISO 3166-1 alpha-2 country codes, all possible icon
+sv_log_client_errors                     : 1        : , "sv"           : Above 0 = log clientside errors to 'clientside_errors.txt'. 0 = Log to console only. Below 0 = do not even print those errors o
 sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
 sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
 sv_logblocks                             : 0        :                  : If true when log when a query is blocked (can cause very large log files)
@@ -1707,6 +1706,7 @@ sv_maxcmdrate                            : 66       : , "rep"          : (If sv_
 sv_maxrate                               : 0        : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
 sv_maxreplay                             : 0        :                  : Maximum replay time in seconds
 sv_maxroutable                           : 1260     :                  : Server upper bound on net_maxroutable that a client can use.
+sv_maxunlag                              : 1        : , "sv"           : Maximum lag compensation in seconds
 sv_maxupdaterate                         : 66       : , "rep"          : Maximum updates per second that the server will allow
 sv_maxusrcmdprocessticks                 : 24       : , "sv", "nf"     : Maximum number of client-issued usrcmd ticks that can be replayed in packet loss conditions, 0 to allow no restrictions
 sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv", "cheat"  : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server 
@@ -1725,6 +1725,7 @@ sv_no_ain_files                          : 0        :                  : Disable
 sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" : 
 sv_noclipduringpause                     : 0        : , "sv", "cheat", "rep" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
 sv_noclipspeed                           : 5        : , "a", "sv", "nf", "rep" : 
+sv_npc_full_pvs_checks                   : 1        : , "sv"           : If set, do full PVS checks for NPCs, so they do not flicker in multiplayer with more than 1 player. This could be expensive.
 sv_npc_talker_maxdist                    : 1024     : , "sv"           : NPCs over this distance from the player won't attempt to speak.
 sv_parallel_packentities                 : 1        :                  : 
 sv_parallel_sendsnapshot                 : 0        :                  : 
@@ -1763,6 +1764,7 @@ sv_showlagcompensation                   : 0        : , "sv", "cheat"  : Show la
 sv_showlagcompensation_duration          : 4        : , "sv", "cheat"  : Duration to show lag-compensated hitboxes
 sv_shutdown                              : cmd      :                  : Sets the server to shutdown next time it's empty
 sv_shutdown_timeout_minutes              : 360      : , "rep"          : If sv_shutdown is pending, wait at most N minutes for server to drain before forcing shutdown.
+sv_signon_dos_disconnect                 : 20       :                  : Number of extra signon state confirmations required to disconnect a misbehaving client. 0 = unlimited
 sv_skyname                               : 0        : , "a", "sv", "rep" : Current name of the skybox texture
 sv_soundemitter_trace                    : 0        : , "sv", "rep"    : Show all EmitSound calls including their symbolic name and the actual wave file they resolved to 
 sv_specaccelerate                        : 5        : , "a", "sv", "nf", "rep" : 
@@ -1775,6 +1777,7 @@ sv_steamgroup                            : 0        : , "nf"           : The ID 
 sv_sticktoground                         : 1        : , "sv", "rep"    : 
 sv_stickysprint                          : 0        : , "a", "sv"      : 
 sv_stopspeed                             : 10       : , "sv", "nf", "rep" : Minimum stopping speed when on ground.
+sv_stressbots                            : 0        : , "cheat"        : If set to 1, the server calculates data and fills packets to bots. Used for perf testing.
 sv_strict_notarget                       : 0        : , "sv"           : If set, notarget will cause entities to never think they are in the pvs
 sv_test_scripted_sequences               : 0        : , "sv"           : Tests for scripted sequences that are embedded in the world. Run through your map with this set to check for NPCs falling throu
 sv_teststepsimulation                    : 1        : , "sv"           : 
@@ -1812,43 +1815,43 @@ thumper_show_radius                      : 0        : , "sv", "cheat"  : If true
 toggle                                   : cmd      :                  : Toggles a convar on or off, or cycles through a set of values.
 toggle_duck                              : cmd      :                  : Toggles duck
 toggle_zoom                              : cmd      :                  : Toggles zoom display
-toolmode_allow_axis                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_balloon                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_ballsocket                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_button                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_camera                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_colour                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_creator                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_duplicator                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_dynamite                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_editentity                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_elastic                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_emitter                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_example                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_eyeposer                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_faceposer                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_finger                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_hoverball                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_hydraulic                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_inflator                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_lamp                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_leafblower                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_light                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_material                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_motor                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_muscle                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_nocollide                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_paint                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_physprop                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_pulley                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_remover                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_rope                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_slider                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_thruster                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_trails                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_weld                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_wheel                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
-toolmode_allow_winch                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : 
+toolmode_allow_axis                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'axis' tool.
+toolmode_allow_balloon                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'balloon' tool.
+toolmode_allow_ballsocket                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'ballsocket' tool.
+toolmode_allow_button                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'button' tool.
+toolmode_allow_camera                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'camera' tool.
+toolmode_allow_colour                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'colour' tool.
+toolmode_allow_creator                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'creator' tool.
+toolmode_allow_duplicator                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'duplicator' tool.
+toolmode_allow_dynamite                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'dynamite' tool.
+toolmode_allow_editentity                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'editentity' tool.
+toolmode_allow_elastic                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'elastic' tool.
+toolmode_allow_emitter                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'emitter' tool.
+toolmode_allow_example                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'example' tool.
+toolmode_allow_eyeposer                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'eyeposer' tool.
+toolmode_allow_faceposer                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'faceposer' tool.
+toolmode_allow_finger                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'finger' tool.
+toolmode_allow_hoverball                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'hoverball' tool.
+toolmode_allow_hydraulic                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'hydraulic' tool.
+toolmode_allow_inflator                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'inflator' tool.
+toolmode_allow_lamp                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'lamp' tool.
+toolmode_allow_leafblower                : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'leafblower' tool.
+toolmode_allow_light                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'light' tool.
+toolmode_allow_material                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'material' tool.
+toolmode_allow_motor                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'motor' tool.
+toolmode_allow_muscle                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'muscle' tool.
+toolmode_allow_nocollide                 : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'nocollide' tool.
+toolmode_allow_paint                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'paint' tool.
+toolmode_allow_physprop                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'physprop' tool.
+toolmode_allow_pulley                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'pulley' tool.
+toolmode_allow_remover                   : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'remover' tool.
+toolmode_allow_rope                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'rope' tool.
+toolmode_allow_slider                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'slider' tool.
+toolmode_allow_thruster                  : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'thruster' tool.
+toolmode_allow_trails                    : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'trails' tool.
+toolmode_allow_weld                      : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'weld' tool.
+toolmode_allow_wheel                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'wheel' tool.
+toolmode_allow_winch                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'winch' tool.
 trace                                    : cmd      :                  : 
 trace_report                             : 0        : , "sv"           : 
 ttt_allow_discomb_jump                   : 0        : , "a", "nf", "rep", "lua_server" : 
@@ -1991,4 +1994,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1990 total convars/concommands
+1993 total convars/concommands
