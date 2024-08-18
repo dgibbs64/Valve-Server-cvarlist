@@ -333,6 +333,8 @@ func_break_reduction_factor              : 0        : , "sv"           :
 func_breakdmg_bullet                     : 0        : , "sv"           : 
 func_breakdmg_club                       : 1        : , "sv"           : 
 func_breakdmg_explosive                  : 1        : , "sv"           : 
+func_transition_fade_time                : 0        : , "sv"           : 
+func_transition_time                     : 1        : , "sv"           : 
 g_debug_angularsensor                    : 0        : , "sv", "cheat"  : 
 g_debug_constraint_sounds                : 0        : , "sv", "cheat"  : Enable debug printing about constraint sounds.
 g_debug_doors                            : 0        : , "sv"           : 
@@ -1241,4 +1243,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 xc_uncrouch_on_jump                      : 1        : , "a", "sv"      : Uncrouch when jump occurs
 zombie_tree                              : cmd      :                  : Zombie Skill Tree
 --------------
-1240 total convars/concommands
+1242 total convars/concommands
