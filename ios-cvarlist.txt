@@ -984,6 +984,7 @@ sv_autostartmatch                        : 1        : , "sv", "nf", "rep" :
 sv_awaytime_match_autospec               : 60       : , "sv", "nf"     : 
 sv_awaytime_warmup                       : 15       : , "sv", "nf"     : 
 sv_awaytime_warmup_autospec              : 300      : , "sv", "nf"     : 
+sv_ball_goalcelebduration                : 8        : , "sv", "nf"     : 
 sv_ball_kickoff_chargeblock              : 1        : , "sv", "nf"     : 
 sv_ball_player_banduration               : 4        : , "sv", "nf"     : 
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.
@@ -1077,7 +1078,7 @@ sv_removeplayercardban                   : cmd      :                  :
 sv_replay_instant_enabled                : 1        : , "sv", "nf"     : 
 sv_replay_instant_first_enabled          : 1        : , "sv", "nf"     : 
 sv_replay_instant_second_enabled         : 0        : , "sv", "nf"     : 
-sv_replay_instant_third_enabled          : 1        : , "sv", "nf"     : 
+sv_replay_instant_third_enabled          : 0        : , "sv", "nf"     : 
 sv_restart                               : cmd      :                  : Usage: sv_restart <countdown in minutes> <is ceremony> <kick-off team> <bottom team>
 sv_resumematch                           : cmd      :                  : 
 sv_savematchdata                         : cmd      :                  : 
@@ -1248,4 +1249,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1247 total convars/concommands
+1248 total convars/concommands
