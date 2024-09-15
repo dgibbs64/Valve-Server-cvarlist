@@ -1088,7 +1088,7 @@ namelockid                               : cmd      :                  : Prevent
 nav_add_to_selected_set                  : cmd      :                  : Add current area to the selected set.
 nav_add_to_selected_set_by_id            : cmd      :                  : Add specified area id to the selected set.
 nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk.
-nav_area_bgcolor                         : -234254848.000 : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
+nav_area_bgcolor                         : -150368768.000 : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
 nav_area_max_size                        : 50       : , "sv", "cheat"  : Max area size created in nav generation
 nav_avoid                                : cmd      :                  : Toggles the 'avoid this area when possible' flag used by the AI system.
 nav_begin_area                           : cmd      :                  : Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and 
@@ -1185,8 +1185,8 @@ nav_select_orphans                       : cmd      :                  : Adds al
 nav_select_overlapping                   : cmd      :                  : Selects nav areas that are overlapping others.
 nav_select_radius                        : cmd      :                  : Adds all areas in a radius to the selection set
 nav_select_stairs                        : cmd      :                  : Adds all stairway areas to the selected set
-nav_selected_set_border_color            : 319417600.000 : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
-nav_selected_set_color                   : -1933478400.000 : , "sv", "cheat"  : Color used to draw the selected set background while editing.
+nav_selected_set_border_color            : 369749248.000 : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
+nav_selected_set_color                   : -1983810048.000 : , "sv", "cheat"  : Color used to draw the selected set background while editing.
 nav_set_place_mode                       : cmd      :                  : Sets the editor into or out of Place mode. Place mode allows labelling of Area with Place names.
 nav_shift                                : cmd      :                  : Shifts the selected areas by the specified amount
 nav_show_approach_points                 : 0        : , "sv", "cheat"  : Show Approach Points in the Navigation Mesh.
@@ -1750,7 +1750,7 @@ sv_allow_votes                           : 1        : , "sv", "rep"    : Allow v
 sv_allow_wait_command                    : 1        : , "rep"          : Allow or disallow the wait command on clients connected to this server.
 sv_allowdownload                         : 1        :                  : Allow clients to download files
 sv_allowupload                           : 1        :                  : Allow clients to upload customizations files
-sv_alltalk                               : 1        : , "sv", "nf", "rep" : Players can hear all other players, no team restrictions
+sv_alltalk                               : 0        : , "sv", "nf", "rep" : Players can hear all other players, no team restrictions
 sv_alltalk_dead                          : 0        : , "sv", "nf", "rep" : Dead players broadcast their voice to enemies?
 sv_alltalk_endgame                       : 1        : , "sv", "nf", "rep" : All talk enabled at the end of the game?
 sv_alltalk_intermission                  : 1        : , "sv", "nf", "rep" : All talk enabled between rounds?
@@ -1942,9 +1942,9 @@ sv_ragdoll_max_fps                       : 30       : , "sv"           : Clients
 sv_ragdoll_max_remove_per_frame          : 1        : , "sv"           : 
 sv_ragdoll_maxcount                      : 25       : , "sv"           : Server will only show this many ragdolls
 sv_ragdoll_min_fps                       : 10       : , "sv"           : Clients with framerates less than this will only show 1 ragdoll of each type
-sv_rcon_banpenalty                       : 10       :                  : Number of minutes to ban users who fail rcon authentication
+sv_rcon_banpenalty                       : 0        :                  : Number of minutes to ban users who fail rcon authentication
 sv_rcon_log                              : 1        :                  : Enable/disable rcon logging.
-sv_rcon_maxfailures                      : 5        :                  : Max number of times a user can fail rcon authentication before being banned
+sv_rcon_maxfailures                      : 10       :                  : Max number of times a user can fail rcon authentication before being banned
 sv_rcon_minfailures                      : 5        :                  : Number of times a user can fail rcon authentication in sv_rcon_minfailuretime before being banned
 sv_rcon_minfailuretime                   : 30       :                  : Number of seconds to track failed rcon authentications
 sv_rcon_whitelist_address                : 0        :                  : When set, rcon failed authentications will never ban this address, e.g. '127.0.0.1'
