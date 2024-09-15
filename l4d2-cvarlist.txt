@@ -1251,7 +1251,7 @@ survivor_vision_range                    : 1500     : , "sv", "cheat"  :
 survivor_vision_range_obscured           : 750      : , "sv", "cheat"  : 
 sv_allow_lobby_connect_only              : 1        :                  : If set, players may only join this server from matchmaking lobby, may not connect directly.
 sv_allow_wait_command                    : 1        : , "rep"          : Allow or disallow the wait command on clients connected to this server.
-sv_alltalk                               : 0        : , "sv", "nf"     : Players can hear all other players' voice communication, no team restrictions
+sv_alltalk                               : 1        : , "sv", "nf"     : Players can hear all other players' voice communication, no team restrictions
 sv_alternateticks                        : 0        : , "sp"           : If set, server only simulates entities on even numbered ticks. 
 sv_always_full_flush                     : 0        : , "cheat"        : 
 sv_banid_enabled                         : 1        :                  : Whether server supports banid command
