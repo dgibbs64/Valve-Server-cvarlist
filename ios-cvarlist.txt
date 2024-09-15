@@ -1036,13 +1036,13 @@ sv_matchminute                           : cmd      :                  : Set mat
 sv_max_queries_sec                       : 3        :                  : Maximum queries per second to respond to from a single IP address.
 sv_max_queries_sec_global                : 60       :                  : Maximum queries per second to respond to from anywhere.
 sv_max_queries_window                    : 30       :                  : Window over which to average queries per second averages.
-sv_maxcmdrate                            : 100      : , "rep"          : (If sv_mincmdrate is > 0), this sets the maximum value for cl_cmdrate.
-sv_maxrate                               : 1000000  : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
+sv_maxcmdrate                            : 40       : , "rep"          : (If sv_mincmdrate is > 0), this sets the maximum value for cl_cmdrate.
+sv_maxrate                               : 0        : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
 sv_maxreplay                             : 0        :                  : Maximum replay time in seconds
 sv_maxroutable                           : 1260     :                  : Server upper bound on net_maxroutable that a client can use.
-sv_maxupdaterate                         : 100      : , "rep"          : Maximum updates per second that the server will allow
-sv_mincmdrate                            : 10       : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
-sv_minrate                               : 5000     : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
+sv_maxupdaterate                         : 60       : , "rep"          : Maximum updates per second that the server will allow
+sv_mincmdrate                            : 0        : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
+sv_minrate                               : 3500     : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
 sv_minupdaterate                         : 10       : , "rep"          : Minimum updates per second that the server will allow
 sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" : 
 sv_noclipduringpause                     : 0        : , "sv", "cheat", "rep" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
@@ -1250,3 +1250,332 @@ xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
 1248 total convars/concommands
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
+ConVarRef room_type doesn't point to an existing ConVar
+exec: couldn't exec skill1.cfg
+Executing dedicated server config file
+Late precache of models/ball/ball.mdl
+/home/buildbot/buildslave/steam_rel_client_linux/build/src/clientdll/gameserver.cpp (682) : Assertion Failed: m_CMInterface.GetLogonState() == k_ELogonStateNotLoggedOn
+Dropped KeeperBotAway from server (Server shutting down)
+Dropped KeeperBotHome from server (Server shutting down)
