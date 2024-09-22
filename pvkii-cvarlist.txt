@@ -128,6 +128,7 @@ bind                                     : cmd      :                  : Bind a 
 bind_mac                                 : cmd      :                  : Bind this key but only on Mac, not win32
 BindToggle                               : cmd      :                  : Performs a bind <key> 'increment var <cvar> 0 1 1'
 birds_debug                              : 0        : , "sv"           : 
+blargadarg                               : 0        : , "sv", "rep"    : 
 bloodspray                               : cmd      :                  : blood
 bot_aim_drop_factor                      : 0        : , "sv", "cheat"  : 
 bot_aim_easy_multiplier                  : 1        : , "sv", "cheat"  : 
@@ -253,6 +254,7 @@ dbghist_dump                             : cmd      :                  : Dump th
 deathmatch                               : 1        : , "nf"           : Running a deathmatch server.
 debug_fur                                : 0        :                  : 
 debug_materialmodifycontrol              : 0        : , "sv"           : 
+debug_melee_traces                       : 0        : , "sv", "cheat", "nf" : If set to 1, lines will be drawn for melee swing traces
 debug_physimpact                         : 0        : , "sv"           : 
 debug_player_expressions                 : 0        : , "sv", "cheat"  : 
 debug_player_spatialspeech               : 0        : , "sv", "cheat"  : 
@@ -616,11 +618,14 @@ mp_assist_lifetime                       : 5        : , "sv", "nf", "rep" : How 
 mp_attackdirindicator                    : 1        : , "sv", "nf", "rep" : Allow the use of attack dir indicator.
 mp_autocrosshair                         : 1        : , "sv", "nf"     : 
 mp_autoteambalance                       : 1        : , "sv", "nf", "rep" : Forced team balancing
-mp_berserk_combogain                     : 0        : , "sv", "nf", "rep" : Time between combo gained when berserk.
+mp_berserk_combogain                     : 0        : , "sv", "cheat", "nf", "rep" : Time between combo gained when berserk.
+mp_berserk_combogain_delay               : 0        : , "sv", "cheat", "nf", "rep" : Time after combo-finish before combo builds again
 mp_berserk_pushmult                      : 0        : , "sv", "cheat", "nf", "rep" : Pushmult for Berserker
 mp_blockbreak_invuln_time                : 0        : , "sv", "nf", "rep" : Time a player is invulnerable to the attacker who broke their block. 
-mp_burn_damage                           : 3        : , "sv", "nf", "rep" : Damage per burn tick
+mp_burn_damage                           : 5        : , "sv", "nf", "rep" : Damage per burn tick
 mp_button_dist                           : 70       : , "sv", "nf", "rep" : 
+mp_chargebonus_default                   : 1        : , "sv", "cheat", "nf", "rep" : Maximum charge bonus
+mp_chargebonus_strong                    : 1        : , "sv", "cheat", "nf", "rep" : Maximum charge bonus for slow attacks
 mp_chattime                              : 10       : , "sv", "rep"    : amount of time players can chat after the game is over
 mp_clan_ready_signal                     : 0        : , "sv"           : Text that team leader from each team must speak for the match to begin
 mp_clan_readyrestart                     : 0        : , "sv"           : If non-zero, game will restart once someone from each team gives the ready signal
@@ -637,11 +642,15 @@ mp_classlimit_manatarms                  : -1       : , "sv", "nf", "rep" :
 mp_classlimit_sharpshooter               : -1       : , "sv", "nf", "rep" : 
 mp_classlimit_skirmisher                 : -1       : , "sv", "nf", "rep" : 
 mp_combobonus                            : 1        : , "sv", "cheat", "nf", "rep" : Max Combo Multiplier
+mp_combobonus_damage                     : 1        : , "sv", "cheat", "nf", "rep" : Max Combo Multiplier
 mp_combobonus_finisher                   : 1        : , "sv", "cheat", "nf", "rep" : Max Combo Multiplier for Finishers
+mp_competitive                           : 0        : , "sv", "rep"    : 
 mp_competitive_respawn                   : 0        : , "sv", "nf", "rep" : Used for competitive. Removes or limits respawns as if it were LTS.
 mp_decals                                : 200      : , "a"            : 
 mp_default_blockspeed                    : 0        : , "sv", "nf", "rep" : Speed multiplier for blockspeed
-mp_default_jumpspread                    : 5        : , "sv", "nf", "rep" : Added spread when jumping with ranged weapons
+mp_default_jumpspread                    : 0        : , "sv", "nf", "rep" : Added spread when jumping with ranged weapons
+mp_default_shieldbashtime                : 1        : , "sv", "nf", "rep" : Time to attack with a post-bash swing
+mp_default_shieldholstertime             : 0        : , "sv", "nf", "rep" : Time to holster shield
 mp_default_shieldspeed                   : 0        : , "sv", "nf", "rep" : Speed multiplier for shieldspeed
 mp_default_standmaxspeed                 : 90       : , "sv", "nf", "rep" : When standing with ranged weapons starts to decay spread
 mp_default_standspeed                    : 91       : , "sv", "nf", "rep" : When standing with ranged weapons starts to decay spread
@@ -658,7 +667,7 @@ mp_disablespecial                        : 0        : , "sv", "nf", "rep" : Disa
 mp_dm_force                              : 0        : , "sv", "nf", "rep" : Forces deathmatch rules on all maps. Change takes effect on map reload.
 mp_dm_oldrules                           : 0        : , "sv", "nf", "rep" : Use old gamerules for (t)dm instead of the new round based rules.
 mp_dm_spawnsound                         : 0        : , "sv", "nf", "rep" : Plays a sound when player spawns.
-mp_dodge_delay                           : 3        : , "sv", "nf", "rep" : Delay between dodges.
+mp_dodge_delay                           : 4        : , "sv", "nf", "rep" : Delay between dodges.
 mp_dodge_drag                            : 0        : , "sv", "cheat", "nf", "rep" : 
 mp_dodge_duration                        : 1        : , "sv", "cheat", "nf", "rep" : 
 mp_dodge_forwardonly_cameraspeed         : 255      : , "sv", "cheat", "nf", "rep" : 
@@ -676,7 +685,9 @@ mp_ff_autokick_banminutes                : 30       : , "sv", "nf", "rep" : Ban 
 mp_ff_autokick_limit                     : 5        : , "sv", "nf", "rep" : Auto-kick after this amount of TKs.
 mp_ff_damagescale                        : 0        : , "sv", "nf", "rep" : FF damage gets scaled by this value.
 mp_ff_message                            : 1        : , "sv", "nf", "rep" : Shows message to a player when their teammate hurts a friend.
+mp_ff_ok                                 : 0        : , "sv", "nf", "rep" : De-Penalize Friendlyfire.
 mp_filterdeadchat                        : 0        : , "sv", "nf", "rep" : Should dead player's chat be visible to player's alive
+mp_fixedspread                           : 1        : , "sv", "nf", "rep" : Enable Fixed Spread
 mp_flashlight                            : 0        : , "sv", "nf"     : 
 mp_footsteps                             : 1        : , "sv", "nf"     : 
 mp_forcecamera                           : 1        : , "sv", "rep"    : Restricts spectator modes for dead players
@@ -694,11 +705,14 @@ mp_keg_damage                            : 195      : , "sv", "nf", "rep" :
 mp_keg_radius                            : 400      : , "sv", "nf", "rep" : 
 mp_kick_berserk_dmgmulti                 : 2        : , "sv", "cheat", "nf", "rep" : Kick damage gets multiplied by this value while berserking.
 mp_kick_delay                            : 2        : , "sv", "cheat", "nf", "rep" : Delay between kicks.
+mp_kick_delay_juggernaut                 : 10       : , "sv", "cheat", "nf", "rep" : Delay between kicks.
 mp_kick_dmg                              : 3        : , "sv", "cheat", "nf", "rep" : Kick damage.
+mp_kick_dmg_juggernaut                   : 25       : , "sv", "cheat", "nf", "rep" : Kick damage.
 mp_kick_movementstop                     : 1        : , "sv", "nf", "rep" : Enable/Disable kick movement stop.
 mp_kick_physics_maxmass                  : 200      : , "sv", "cheat", "nf", "rep" : Max object mass that can be kicked.
 mp_kick_physics_push                     : 400      : , "sv", "cheat", "nf", "rep" : Kick physics push.
 mp_kick_player_push                      : 300      : , "sv", "cheat", "nf", "rep" : Kick player push.
+mp_kick_player_push_juggernaut           : 1000     : , "sv", "cheat", "nf", "rep" : Kick player push.
 mp_killdelay                             : 5        : , "sv"           : 
 mp_limitteams                            : 1        : , "sv", "nf", "rep" : Max. allowed diference between team player counts
 mp_lts_adjustroundtimer                  : 1        : , "sv", "nf", "rep" : Should the round timer be adjusted by player count?
@@ -708,15 +722,22 @@ mp_lts_override_sdtime                   : 0        : , "sv", "nf", "rep" : Alwa
 mp_lts_roundend_delay                    : 1        : , "sv", "nf", "rep" : When a team wins, how long should it take for round end screen to appear
 mp_mapcycle_empty_timeout_seconds        : 0        : , "sv", "rep"    : If nonzero, server will cycle to the next map if it has been empty on the current map for N seconds
 mp_matchbased                            : 0        : , "sv", "nf", "rep" : Should the time/round limited games be considered as matches
+mp_meleedamagemultiplier                 : 1        : , "sv", "cheat", "nf", "rep" : Melee damage multiplier
+mp_meleerangeboost                       : 0        : , "sv", "cheat", "nf", "rep" : Increases the range of all melee weapons by this amount (see also mp_meleerangescale)
+mp_meleerangescale                       : 1        : , "sv", "cheat", "nf", "rep" : Scales the range of all melee weapons by this amount (scale is applied first, then boost)
 mp_moveduringsuicide                     : 0        : , "sv", "nf", "rep" : Determines whether players can move during sucidie.
 mp_nemesis                               : 1        : , "sv", "nf", "rep" : Enable dominations and revenges.
 mp_nemesis_assistscount                  : 1        : , "sv", "nf", "rep" : Should assists count as 'kills' for nemesis status?
 mp_nemesis_kills                         : 4        : , "sv", "nf", "rep" : How many kills are required for nemesis status.
+mp_noknockback                           : 0        : , "a", "sv", "nf", "rep" : Disables Knockback
+mp_noparrystun                           : 0        : , "a", "sv", "nf", "rep" : Disables Parry Stun. 1 for no stuns, 2 for reduced stuns
 mp_nowaittime                            : 0        : , "sv", "rep"    : Bypass wait time
 mp_overtime_dm                           : 120      : , "sv", "nf", "rep" : If non-zero, overtime will be used if there's a draw, in seconds.
 mp_pausegame                             : cmd      :                  : Pauses the game on next round start
 mp_player_pushaway_max_force             : 200      : , "sv", "rep", "server_can_execute" : 
 mp_player_pushaway_min_force             : 20       : , "sv", "rep", "server_can_execute" : 
+mp_poison_damage                         : 4        : , "sv", "nf", "rep" : Damage per poison tick
+mp_projectile_use_combinedboxes          : 1        : , "sv", "nf", "rep" : Use vague Hitbox detection along with BBox
 mp_projectile_use_hitboxes               : 0        : , "sv", "nf", "rep" : Use hitboxes for projectile hit calculation.
 mp_randomizer                            : 0        : , "sv", "nf", "rep" : Give random weapons to players on spawn.
 mp_randsuddendeath                       : 0        : , "sv", "nf", "rep" : Pecrent chance sudden death will occur right at the start of the round. (Time for round will still be as usual)
@@ -734,6 +755,7 @@ mp_roundtime_dm                          : 0        : , "sv", "nf", "rep" : If n
 mp_roundtimer_lastteamstanding           : 45       : , "sv", "nf", "rep" : Round time for Last Team Standing gamemode
 mp_ruleset                               : 0        : , "sv", "nf", "rep" : Which ruleset should be used.
 mp_scaledamage                           : 1        : , "sv", "cheat", "nf", "rep" : 
+mp_shield_rangedmult                     : 0        : , "a", "sv", "nf", "rep" : Multiplier for ranged on shield
 mp_show_silver_medals                    : 1        : , "sv", "nf", "rep" : Should team silver medals be shown in the scoreboard?
 mp_show_voice_icons                      : 1        : , "sv", "rep"    : Show overhead player voice icons when players are speaking. 
 mp_shuffleplayers                        : cmd      :                  : Shuffles players in the server between the three teams equally
@@ -761,7 +783,7 @@ mp_waitingforplayers_time                : 0        : , "sv"           : Waiting
 mp_walkspeed_berserk                     : 1        : , "sv", "cheat", "nf", "rep" : Berserker's movespeed bonus whilst berserking.
 mp_walkspeed_chest                       : 170      : , "sv", "cheat", "nf", "rep" : Chest static walkspeed.
 mp_walkspeed_hook_user                   : 120      : , "sv", "cheat", "nf", "rep" : Hook Puller static walkspeed.
-mp_walkspeed_hook_victim                 : 20       : , "sv", "cheat", "nf", "rep" : Hook Puller static walkspeed.
+mp_walkspeed_hook_victim                 : 0        : , "sv", "cheat", "nf", "rep" : Hook Pullee static walkspeed.
 mp_weaponstay                            : 0        : , "sv", "nf"     : 
 mp_winlimit                              : 0        : , "sv", "nf", "rep" : Win limit in number of rounds
 multvar                                  : cmd      :                  : Multiply specified convar value.
@@ -1310,7 +1332,6 @@ sv_client_predict                        : -1       : , "rep"          : This ca
 sv_clockcorrection_msecs                 : 60       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
 sv_community_groupid                     : 2157     : , "a", "sv", "rep" : 
 sv_community_grouptag                    : 0        : , "a", "sv", "rep" : 
-sv_competitive                           : 0        : , "sv", "rep"    : 
 sv_compressstringtablebaselines_threshold : 2048     :                  : Minimum size (in bytes) for stringtablebaseline buffer to be compressed.
 sv_consistency                           : 1        : , "rep"          : Legacy variable with no effect!  This was deleted and then added as a temporary kludge to prevent players from being banned by servers running old versions of SMAC
 sv_contact                               : 0        : , "nf"           : Contact email for server sysop
@@ -1603,4 +1624,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1602 total convars/concommands
+1623 total convars/concommands
