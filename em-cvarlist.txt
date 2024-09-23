@@ -1214,7 +1214,7 @@ sv_client_predict                        : -1       : , "rep"          : This ca
 sv_clockcorrection_msecs                 : 60       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
 sv_compressstringtablebaselines_threshold : 2048     :                  : Minimum size (in bytes) for stringtablebaseline buffer to be compressed.
 sv_consistency                           : 1        : , "rep"          : Legacy variable with no effect!  This was deleted and then added as a temporary kludge to prevent players from being banned by servers running old versions of SMAC
-sv_contact                               : -2147483648 : , "nf"           : Contact email for server sysop
+sv_contact                               : 0        : , "nf"           : Contact email for server sysop
 sv_debug_player_use                      : 0        : , "sv", "rep"    : Visualizes +use logic. Green cross=trace success, Red cross=trace too far, Green box=radius success
 sv_debugmanualmode                       : 0        :                  : Make sure entities correctly report whether or not their network data has changed.
 sv_debugtempentities                     : 0        :                  : Show temp entity bandwidth usage.
@@ -1380,7 +1380,7 @@ tv_delaymapchange                        : 0        : , "sv"           : Delays 
 tv_delaymapchange_protect                : 1        : , "sv"           : Protect against doing a manual map change if HLTV is broadcasting and has not caught up with a major game event such as round_end
 tv_deltacache                            : 2        :                  : Enable delta entity bit stream cache
 tv_dispatchmode                          : 1        :                  : Dispatch clients to relay proxies: 0=never, 1=if appropriate, 2=always
-tv_enable                                : 1        : , "nf"           : Activates SourceTV on server.
+tv_enable                                : 0        : , "nf"           : Activates SourceTV on server.
 tv_maxclients                            : 128      :                  : Maximum client number on SourceTV server.
 tv_maxrate                               : 8000     :                  : Max SourceTV spectator bandwidth rate allowed, 0 == unlimited
 tv_msg                                   : cmd      :                  : Send a screen message to all clients.
