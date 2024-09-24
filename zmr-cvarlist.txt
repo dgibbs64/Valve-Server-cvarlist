@@ -1489,7 +1489,3 @@ zm_zombie_create                         : cmd      :                  : Creates
 zm_zombiemodelgroups_reload              : cmd      :                  : Reloads zombie model groups
 --------------
 1487 total convars/concommands
-Connection to Steam servers successful.
-   Public IP is 52.225.77.211.
-Assigned anonymous gameserver Steam ID [A:1:1874851857:30261].
-VAC secure mode is activated.
