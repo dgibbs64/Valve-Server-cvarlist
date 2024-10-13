@@ -1802,3 +1802,7 @@ zombie_moanfreq                          : 1        : , "sv"           :
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
 1800 total convars/concommands
+Connection to Steam servers successful.
+   Public IP is 20.55.14.151.
+Assigned anonymous gameserver Steam ID [A:1:2242718742:30666].
+VAC secure mode is activated.
