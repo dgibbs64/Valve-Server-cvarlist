@@ -1063,8 +1063,8 @@ script_attach_debugger_at_startup        : 0        : , "sv"           :
 script_break_in_native_debugger_on_error : 0        : , "sv"           : 
 script_clear_watches                     : cmd      :                  : Clear all watches from the game debug overlay
 script_connect_debugger_on_mapspawn      : 0        : , "sv"           : 
-script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
 script_debug                             : cmd      :                  : Toggle the in-game script debug features
+script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
 script_dump_all                          : cmd      :                  : Dump the state of the VM to the console
 script_execute                           : cmd      :                  : Run a vscript file
 script_find                              : cmd      :                  : Find a key in the VM 
@@ -1318,7 +1318,7 @@ sv_vote_issue_classlimits_max            : 4        : , "sv"           : Maximum
 sv_vote_issue_classlimits_max_mvm        : 2        : , "sv"           : Maximum number of players (per-team) that can be any one class.
 sv_vote_issue_extendlevel_allowed        : 1        : , "sv"           : Can players call votes to set the next level?
 sv_vote_issue_extendlevel_quorum         : 0        : , "sv"           : What is the ratio of voters needed to reach quorum?
-sv_vote_issue_kick_allowed               : 0        : , "sv"           : Can players call votes to kick players from the server?
+sv_vote_issue_kick_allowed               : 0        : , "sv", "rep"    : Can players call votes to kick players from the server?
 sv_vote_issue_kick_allowed_mvm           : 1        : , "sv"           : Can players call votes to kick players from the server in MvM?
 sv_vote_issue_kick_min_connect_time_mvm  : 300      : , "sv"           : How long a player must be connected before they can be kicked (in seconds).
 sv_vote_issue_kick_namelock_duration     : 120      : , "sv"           : How long to prevent kick targets from changing their name (in seconds).
@@ -2021,4 +2021,3 @@ xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
 2019 total convars/concommands
-Received 7001491 bytes item schema version A6389EBC direct data; update is queued.
