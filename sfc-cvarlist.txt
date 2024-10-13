@@ -1739,5 +1739,6 @@ zombie_stepfreq                          : 4        : , "sv"           :
 src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
 src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
 Connection to Steam servers successful.
-   Public IP is 52.234.33.254.
-Assigned anonymous gameserver Steam ID [A:1:3196421128:30469].
+   Public IP is 40.76.119.104.
+Assigned anonymous gameserver Steam ID [A:1:4029618202:30666].
+VAC secure mode is activated.
