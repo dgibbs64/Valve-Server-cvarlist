@@ -1146,3 +1146,7 @@ xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
 1144 total convars/concommands
+src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
+src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
+src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
+src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
