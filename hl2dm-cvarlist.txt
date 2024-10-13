@@ -1497,3 +1497,5 @@ zombie_moanfreq                          : 1        : , "sv"           :
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
 1495 total convars/concommands
+src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
+src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
