@@ -984,7 +984,6 @@ sv_autostartmatch                        : 1        : , "sv", "nf", "rep" :
 sv_awaytime_match_autospec               : 60       : , "sv", "nf"     : 
 sv_awaytime_warmup                       : 15       : , "sv", "nf"     : 
 sv_awaytime_warmup_autospec              : 300      : , "sv", "nf"     : 
-sv_ball_goalcelebduration                : 8        : , "sv", "nf"     : 
 sv_ball_kickoff_chargeblock              : 1        : , "sv", "nf"     : 
 sv_ball_player_banduration               : 4        : , "sv", "nf"     : 
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.
@@ -1016,7 +1015,7 @@ sv_findsoundname                         : cmd      :                  : Find so
 sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
 sv_gravity                               : 900      : , "sv", "nf", "rep" : World gravity.
 sv_hide_server                           : 0        : , "sv"           : 
-sv_hud_theme                             : 1        : , "sv", "nf", "rep" : Set the HUD theme. 1 = IOSoccer, 2 = IOS Sudamerica, 3 = AIF, 4 = UFA 
+sv_hud_theme                             : 1        : , "sv", "nf", "rep" : Set the HUD theme. 1 = IOSoccer, 2 = IOS Sudamerica, 3 = EFC 
 sv_lan                                   : 0        :                  : Server is a lan server ( no heartbeat, no authentication, no non-class C addresses )
 sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
 sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
@@ -1249,7 +1248,7 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1248 total convars/concommands
+1247 total convars/concommands
 ConVarRef room_type doesn't point to an existing ConVar
 exec: couldn't exec skill1.cfg
 Executing dedicated server config file
