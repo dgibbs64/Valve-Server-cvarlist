@@ -1489,7 +1489,3 @@ zm_zombie_create                         : cmd      :                  : Creates
 zm_zombiemodelgroups_reload              : cmd      :                  : Reloads zombie model groups
 --------------
 1487 total convars/concommands
-src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
-src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
-src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
-src/clientdll/cminterface.cpp (2861) : Assertion Failed: m_VecNetAdrNetFilterCMs.Count() > 0
