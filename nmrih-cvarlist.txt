@@ -1203,6 +1203,7 @@ sv_friction                              : 4        : , "sv", "cheat", "nf", "re
 sv_friendly_fire_factor                  : 0        : , "sv", "rep"    : Damage factor of friendly fire.
 sv_gravity                               : 800      : , "sv", "nf", "rep" : World gravity.
 sv_grenade_blast_radius                  : 256      : , "sv", "cheat", "rep" : Blast radius of grenade
+sv_grenade_rise                          : 0        : , "sv", "rep"    : Warp grenades slightly off ground at detonation to improve effectiveness around clutter.
 sv_hardcore_survival                     : 0        : , "sv", "rep"    : Enables or disables survival hardcore mode
 sv_health_display                        : 1        : , "sv", "rep"    : Whether or not to allow health to be displayed
 sv_health_station_heal_per_tick          : 1        : , "sv", "rep"    : Amount healed by health station per second
@@ -1213,6 +1214,9 @@ sv_helmet_scale_rifle_dmg                : 1        : , "sv", "cheat", "rep" : A
 sv_hudhint_sound                         : 1        : , "sv", "rep"    : 
 sv_idle_autokick_enabled                 : 1        : , "sv", "rep"    : Enable autokicking idle players.
 sv_idle_autokick_time                    : 120      : , "sv", "rep"    : Time a player can be idle before auto kicked from the server.
+sv_idle_item_drop                        : 1        : , "sv", "rep"    : Drops carried item from an idle player.
+sv_idle_item_drop_time                   : 60       : , "sv", "rep"    : How long to wait until dropping a carried item from an idle player, in seconds.
+sv_idle_tracking_method                  : 1        : , "sv", "rep"    : 0 = old behavior, only tracks buttons; 1 = new behavior, also tracks actions that can bypass idle detection.
 sv_ignore_win_loss_state                 : 0        : , "sv", "rep"    : Ignore win / loss state.
 sv_infect_chance_modifier                : 0        : , "sv", "cheat", "rep" : Modifier for infect chance formula
 sv_infect_survival_modifier              : 2        : , "sv", "rep"    : 
@@ -1413,6 +1417,9 @@ sv_sharp_pushback_chance                 : 0        : , "sv", "cheat", "rep" : C
 sv_shove_cost                            : 20       : , "sv", "cheat", "rep" : Stamina cost of shove
 sv_shove_delay                           : 0        : , "sv", "cheat", "rep" : Time delay between shoves, in seconds
 sv_shove_max_action_delay                : 0        : , "sv", "cheat", "rep" : Maximum time delay before user can shove after firing a weapon, in seconds
+sv_shove_multi                           : 0        : , "sv", "cheat", "rep" : Shove multiple zombies directly in front of player
+sv_shove_multi_distance                  : 52       : , "sv", "cheat", "rep" : Distance to allow shove to hit more than one zombie
+sv_shove_multi_max_bashes                : 2        : , "sv", "cheat", "rep" : Maximum number of zombies player can bash per shove
 sv_showcleanedupents                     : 0        : , "sv", "cheat"  : Show entities that are removed on round respawn.
 sv_showimpacts                           : 0        : , "sv", "rep"    : Shows client (red) and server (blue) bullet impact point
 sv_showladders                           : 0        : , "sv"           : Show bbox and dismount points for all ladders (must be set before level load.) 
@@ -1695,4 +1702,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 zomb_squirt                              : cmd      :                  : Squirt all the things! Use -quiet to kill without head split
 zomb_squirt_all                          : cmd      :                  : Squirt ALL the things! Use -quiet to kill without head split.
 --------------
-1694 total convars/concommands
+1701 total convars/concommands
