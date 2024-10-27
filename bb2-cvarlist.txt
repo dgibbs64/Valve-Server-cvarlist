@@ -107,7 +107,6 @@ bb2_arena_hard_mode                      : 0        : , "sv", "rep"    : This wi
 bb2_arena_reinforcement_count            : 10       : , "sv", "rep"    : How many respawns will you allow?
 bb2_arena_respawn_time                   : 20       : , "sv", "rep"    : Server respawn interval, respawns waiting reinforcements every X seconds! Minimum 20 sec.
 bb2_ban_time                             : 30       : , "sv", "rep"    : For how many minutes will a player be banned if a ban vote passes?
-bb2_classic_mode_enabled                 : 0        : , "sv", "rep"    : This will enable BrainBread Classic Mode for Objective Mode. Enabling this will prevent non Walker and Military NPCs from spawning.
 bb2_classic_zombie_noteamchange          : 1        : , "sv", "rep"    : When a player zombie kills a human player the human will not become a zombie on respawn.
 bb2_create_inventory_item                : cmd      :                  : Create some inventory item.
 bb2_create_powerup_item                  : cmd      :                  : Create some powerup item.
@@ -161,6 +160,7 @@ bb2_vote_time                            : 30       : , "sv", "rep"    : The tim
 bb2_vote_time_endgame                    : 15       : , "sv", "rep"    : When the game ends the players will have this much time to vote for the next map.
 bb2_weapon_randomizer_refresh_time       : 120      : , "sv"           : For how long can random weapons spawned by the item_weapon_randomizer stay before being refreshed? (seconds)
 bb2_zombie_kills_required                : 3        : , "sv", "rep"    : If greater than 0, zombies can respawn as humans when they've killed at least this many hostiles. Click a certain button to respawn, whenever you're ready!
+bb2_zombie_lifespan_disable              : 0        : , "sv"           : Disable zombie lifetime logic
 bb2_zombie_lifespan_max                  : 1        : , "sv", "rep"    : The max amount of minutes a regular zombie will last before automatically dying.
 bb2_zombie_lifespan_min                  : 0        : , "sv", "rep"    : The min amount of minutes a regular zombie will last before automatically dying.
 bb2_zombie_lifetime_advanced             : 1        : , "sv"           : Enable more aggressive zombie lifetime, whenever spawners are stopped due to zombie limit they will force an old zombie to die much sooner than originally intended.
