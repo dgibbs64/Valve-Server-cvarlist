@@ -931,8 +931,8 @@ script_attach_debugger_at_startup        : 0        : , "sv"           :
 script_break_in_native_debugger_on_error : 0        : , "sv"           : 
 script_clear_watches                     : cmd      :                  : Clear all watches from the game debug overlay
 script_connect_debugger_on_mapspawn      : 0        : , "sv"           : 
-script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
 script_debug                             : cmd      :                  : Toggle the in-game script debug features
+script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
 script_dump_all                          : cmd      :                  : Dump the state of the VM to the console
 script_execute                           : cmd      :                  : Run a vscript file
 script_find                              : cmd      :                  : Find a key in the VM 
@@ -1264,6 +1264,7 @@ sv_debugtempentities                     : 0        :                  : Show te
 sv_deltaprint                            : 0        :                  : Print accumulated CalcDelta profiling data (only if sv_deltatime is on)
 sv_deltatime                             : 0        :                  : Enable profiling of CalcDelta calls
 sv_disable_querycache                    : 0        : , "sv", "cheat"  : debug - disable trace query cache
+sv_dm_tmp                                : 0        :                  : 
 sv_downloadlist_include_navfile          : 0        :                  : Include map nav files in the download list for clients.
 sv_downloadurl                           : 0        : , "rep"          : Location from which clients can download missing files
 sv_dump_edicts                           : cmd      :                  : Display a list of edicts allocated on the server.
@@ -1568,4 +1569,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1567 total convars/concommands
+1568 total convars/concommands
