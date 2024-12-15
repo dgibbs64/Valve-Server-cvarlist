@@ -144,9 +144,6 @@ autoaim_unlock_target                    : 0        : , "sv"           :
 banid                                    : cmd      :                  : Add a user ID to the ban list.
 banid2                                   : cmd      :                  : 
 banip                                    : cmd      :                  : Add an IP address to the ban list.
-bench_end                                : cmd      :                  : Ends gathering of info.
-bench_start                              : cmd      :                  : Starts gathering of info. Arguments: filename to write results into
-bench_upload                             : cmd      :                  : Uploads most recent benchmark stats to the Valve servers.
 bind                                     : cmd      :                  : Bind a key.
 bind_mac                                 : cmd      :                  : Bind this key but only on Mac, not win32
 BindToggle                               : cmd      :                  : Performs a bind <key> 'increment var <cvar> 0 1 1'
@@ -1633,8 +1630,6 @@ sv_alternateticks                        : 0        : , "sp"           : If set,
 sv_autojump                              : 0        : , "sv"           : 
 sv_autoladderdismount                    : 1        : , "sv", "rep"    : Automatically dismount from ladders when you reach the end (don't have to +USE).
 sv_autosave                              : 1        : , "sv"           : Set to 1 to autosave game on level transition. Does not affect autosave triggers.
-sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
-sv_benchmark_numticks                    : 3300     : , "sv"           : If > 0, then it only runs the benchmark for this # of ticks.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
 sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
@@ -1743,6 +1738,7 @@ sv_pure_retiretime                       : 900      :                  : Seconds
 sv_pure_trace                            : 0        :                  : If set to 1, the server will print a message whenever a client is verifying a CRC for a file.
 sv_pvsskipanimation                      : 1        : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
 sv_querycache_stats                      : cmd      :                  : Display status of the query cache (client only)
+sv_quota_stringcmd_kick                  : 0        :                  : If set to above 0, kick the player if they exceed sv_quota_stringcmdspersecond
 sv_quota_stringcmdspersecond             : 256      :                  : How many string commands per second clients are allowed to submit, 0 to disallow all string commands
 sv_rcon_banpenalty                       : 0        :                  : Number of minutes to ban users who fail rcon authentication
 sv_rcon_log                              : 1        :                  : Enable/disable rcon logging.
@@ -1991,4 +1987,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1990 total convars/concommands
+1986 total convars/concommands
