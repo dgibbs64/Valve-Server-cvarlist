@@ -232,8 +232,6 @@ coop                                     : 0        : , "nf"           : Coopera
 create_flashlight                        : cmd      :                  : 
 cvarlist                                 : cmd      :                  : Show the list of convars/concommands.
 datacachesize                            : 256      :                  : Size in MB.
-dbghist_addline                          : cmd      :                  : Add a line to the debug history. Format: <category id> <line>
-dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Scene Print      3: Alyx Blind      4: Log of damage done to player
 deathmatch                               : 1        : , "nf"           : Running a deathmatch server.
 debug_materialmodifycontrol              : 0        : , "sv"           : 
 debug_physimpact                         : 0        : , "sv"           : 
@@ -786,7 +784,6 @@ physicsshadowupdate_render               : 0        : , "sv"           :
 picker                                   : cmd      :                  : Toggles 'picker' mode.  When picker is on, the bounding box, pivot and debugging text is displayed for whatever entity the player is looking at.  Arguments: full - enables all debug information
 ping                                     : cmd      :                  : Display ping to server.
 pipeline_static_props                    : 1        :                  : 
-player_debug_print_damage                : 0        : , "sv", "cheat"  : When true, print amount and type of all damage received by player to console.
 player_limit_jump_speed                  : 1        : , "sv", "rep"    : 
 player_old_armor                         : 0        : , "sv"           : 
 player_pickup_maxmass                    : 250      : , "sv", "cheat", "rep" : 
@@ -1070,7 +1067,6 @@ sv_parallel_sendsnapshot                 : 0        :                  :
 sv_password                              : 0        : , "nf", "prot", "norecord" : Server password for entry into multiplayer games
 sv_pausable                              : 0        : , "nf"           : Is the server pausable.
 sv_player_display_usercommand_errors     : 0        : , "sv", "cheat"  : 1 = Display warning when command values are out-of-range. 2 = Spew invalid ranges.
-sv_playerperfhistorycount                : 60       : , "sv"           : Number of samples to maintain in player perf history
 sv_precacheinfo                          : cmd      :                  : Show precache info.
 sv_pure                                  : cmd      :                  : Show user data.
 sv_pure_consensus                        : 5        :                  : Minimum number of file hashes to agree to form a consensus.
@@ -1243,4 +1239,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 xc_uncrouch_on_jump                      : 1        : , "a", "sv"      : Uncrouch when jump occurs
 zombie_tree                              : cmd      :                  : Zombie Skill Tree
 --------------
-1242 total convars/concommands
+1238 total convars/concommands
