@@ -2021,4 +2021,4 @@ xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
 2019 total convars/concommands
-Received 7189493 bytes item schema version DE11BFC0 direct data; update is queued.
+Received 7192792 bytes item schema version 0B58CBC8 direct data; update is queued.
