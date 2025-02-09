@@ -1,0 +1,410 @@
+CVar List
+-------------
+adminsfile                       :        0 [ sv, ext, nolog ]
+allow_spectators                 :        1 [ sv, ext ]
+as_compiler_treat_warnings_as_errors :        0 [ ext, prot ]
+as_file_size_quota               :       32 [ ext, prot ]
+as_log_level                     :        0 [ ext, prot ]
+as_script_log_max                :        8 [ ext, prot ]
+bannedcfgfile                    :        0
+clientport                       :    27005
+clockwindow                      :    0.500
+console                          :        1 [ a ]
+coop                             :        0 [ sv ]
+deathmatch                       :        1 [ sv ]
+decalfrequency                   :       30 [ ext, prot ]
+developer                        :        0
+displaysoundlist                 :        0 [ ext ]
+edgefriction                     :        2 [ sv ]
+fakelag                          :        0
+fakeloss                         :        0
+fps_max                          :      100 [ a ]
+fps_override                     :        0 [ a ]
+g_ai_drawpath                    :        0 [ ext, prot, nolog ]
+g_pathfinding                    :        1 [ ext, prot, nolog ]
+g_runai                          :        1 [ ext, prot, nolog ]
+gamebuild                        :     7913 [ sv, ext, nolog ]
+gamename                         :        0 [ sv, ext, nolog ]
+gameversion                      :    5.260 [ sv, ext, nolog ]
+gameversionnum                   :    5.260 [ sv, ext, nolog ]
+host_framerate                   :        0
+host_killtime                    :        0
+host_limitlocal                  :        0
+host_profile                     :        0
+host_speeds                      :        0
+HostMap                          :        0
+hostname                         :        0
+hostport                         :    27015
+hpk_maxsize                      :        2 [ a ]
+ip                               :        0
+ip_clientport                    :        0
+ip_hostport                      :        0
+listipcfgfile                    :        0
+logsdir                          :        0
+lservercfgfile                   :        0
+mapcyclefile                     :        0
+mapvotecfgfile                   :        0 [ sv, ext, nolog ]
+max_queries_sec                  :        3 [ sv, prot ]
+max_queries_sec_global           :       30 [ sv, prot ]
+max_queries_window               :       60 [ sv, prot ]
+motdfile                         :        0
+mp_allowmonsterinfo              :        1 [ ext, prot, nolog ]
+mp_allowmonsters                 :        1 [ ext, prot ]
+mp_allowplayerinfo               :        1 [ ext, prot, nolog ]
+mp_ammo_droprules                :        1 [ ext, prot ]
+mp_ammo_respawndelay             :       -2 [ ext, prot ]
+mp_autocrosshair                 :        0 [ ext, prot ]
+mp_banana                        :        1 [ sv, ext ]
+mp_bantime                       :     1440 [ ext, prot ]
+mp_barnacle_paralyze             :        1 [ ext, prot ]
+mp_chattime                      :        8 [ ext, prot ]
+mp_classic_mode                  :       -1 [ ext, prot ]
+mp_consistency                   :        0 [ sv ]
+mp_defaultteam                   :        0 [ ext ]
+mp_disable_autoclimb             :        1 [ ext, prot, nolog ]
+mp_disable_medkit_points         :        0 [ ext, prot, nolog ]
+mp_disable_pcbalancing           :        0 [ ext, prot, nolog ]
+mp_disable_player_rappel         :        0 [ ext, prot, nolog ]
+mp_disablegaussjump              :        0 [ ext, prot, nolog ]
+mp_dropweapons                   :        1 [ ext, prot, nolog ]
+mp_falldamage                    :        1 [ ext, prot ]
+mp_flashlight                    :        1 [ ext, prot ]
+mp_footsteps                     :        1 [ sv ]
+mp_forcerespawn                  :        0 [ ext, prot ]
+mp_fraglimit                     :        0 [ ext, prot ]
+mp_fragsleft                     :        0 [ ext, prot, nolog ]
+mp_friendlyfire                  :        0 [ ext, prot ]
+mp_grapple_mode                  :        0 [ ext, prot, nolog ]
+mp_hevsuit_voice                 :        0 [ ext, prot, nolog ]
+mp_item_respawndelay             :       -2 [ ext, prot ]
+mp_keep_globalstate              :        0 [ ext, prot ]
+mp_kickbantime                   :       25 [ ext, prot ]
+mp_logecho                       :        1
+mp_logfile                       :        1 [ sv ]
+mp_modelselection                :        1 [ ext, prot ]
+mp_monsterpoints                 :        1 [ ext, prot, nolog ]
+mp_multiplespawn                 :        1 [ ext, prot, nolog ]
+mp_nextmap                       :        0 [ ext, prot, nolog ]
+mp_nextmap_cycle                 :        0 [ sv, ext, nolog ]
+mp_nextmap_cycle_cmds            :        0 [ ext, prot, nolog ]
+mp_nextmap_cycle_maxp            :        0 [ ext, prot, nolog ]
+mp_nextmap_cycle_minp            :        0 [ ext, prot, nolog ]
+mp_nextmap_cycle_rules           :        0 [ ext, prot, nolog ]
+mp_nextmap_ignore_mapcfg         :        1 [ ext, prot, nolog ]
+mp_nextmap_parted_mapcfg_limit   :       -1 [ ext, prot, nolog ]
+mp_no_akimbo_uzis                :        0 [ ext, prot, nolog ]
+mp_noblastgibs                   :        0 [ ext, prot, nolog ]
+mp_nomedkit                      :        0 [ ext, prot ]
+mp_notimelimit                   :        0 [ sv, ext ]
+mp_npckill                       :        2 [ ext, prot, nolog ]
+mp_observer_cyclic               :        0 [ ext, prot ]
+mp_observer_mode                 :        0 [ ext, prot ]
+mp_pcbalancing_factorlist        :        0 [ ext, prot, nolog ]
+mp_playerinactive                :       30 [ ext, prot ]
+mp_playervotedelay               :      120 [ ext, prot ]
+mp_respawndelay                  :        5 [ ext, prot, nolog ]
+mp_startoffset                   :        0 [ ext, prot ]
+mp_suitpower                     :        1 [ ext, prot ]
+mp_survival_minplayers           :        1 [ ext, prot ]
+mp_survival_mode                 :        1 [ ext, prot ]
+mp_survival_nextmap              :        0 [ ext, prot ]
+mp_survival_retries              :        3 [ ext, prot ]
+mp_survival_startdelay           :       30 [ ext, prot ]
+mp_survival_starton              :        1 [ ext, prot ]
+mp_survival_supported            :        0 [ ext, prot ]
+mp_survival_voteallow            :        1 [ ext, prot ]
+mp_teamlist                      :        0 [ ext, prot ]
+mp_teamoverride                  :        1 [ ext ]
+mp_teamplay                      :        0 [ ext, prot ]
+mp_telefrag                      :        1 [ ext, prot ]
+mp_timeleft                      :     5928 [ ext, prot, nolog ]
+mp_timeleft_empty                :      588 [ ext, prot, nolog ]
+mp_timelimit                     :       99 [ ext, prot ]
+mp_timelimit_empty               :       10 [ ext, prot ]
+mp_voteallow                     :        1 [ ext, prot ]
+mp_votebanrequired               :       -1 [ ext, prot ]
+mp_voteclassicmoderequired       :       51 [ ext, prot ]
+mp_votekickrequired              :       80 [ ext, prot ]
+mp_votekill_respawndelay         :       15 [ ext, prot ]
+mp_votekillrequired              :       51 [ ext, prot ]
+mp_votemaprequired               :       67 [ ext, prot ]
+mp_votesurvivalmoderequired      :       51 [ ext, prot ]
+mp_votetimebetween               :       40 [ ext, prot ]
+mp_votetimecheck                 :       16 [ ext, prot ]
+mp_weapon_droprules              :        1 [ ext, prot ]
+mp_weapon_respawndelay           :       -2 [ ext, prot ]
+mp_weaponfadedelay               :       60 [ ext, prot ]
+mp_weaponstay                    :        1 [ ext, prot ]
+net_address                      :        0
+net_chokeloop                    :        0
+net_drawslider                   :        0
+net_log                          :        0
+net_showdrop                     :        0
+net_showpackets                  :        0
+npc_dropweapons                  :        0 [ ext, prot, nolog ]
+pausable                         :        0 [ sv ]
+plugin_list_file                 :        0 [ ext, prot ]
+port                             :    27015
+rcon_password                    :        0 [ prot ]
+servercfgfile                    :        0
+showtriggers                     :        0 [ ext, prot, nolog ]
+sk_12mm_bullet                   :       12 [ ext, prot ]
+sk_556_bullet                    :       15 [ ext, prot ]
+sk_9mm_bullet                    :        9 [ ext, prot ]
+sk_9mmAR_bullet                  :        6 [ ext, prot ]
+sk_agrunt_berserker_dmg_punch    :       30 [ ext, prot ]
+sk_agrunt_dmg_punch              :       20 [ ext, prot ]
+sk_agrunt_health                 :      150 [ ext, prot ]
+sk_agrunt_melee_engage_distance  :      256 [ ext, prot ]
+sk_apache_enable_rockets         :        1 [ ext, prot ]
+sk_apache_health                 :      500 [ ext, prot ]
+sk_babygargantua_dmg_fire        :        2 [ ext, prot ]
+sk_babygargantua_dmg_slash       :       25 [ ext, prot ]
+sk_babygargantua_dmg_stomp       :       50 [ ext, prot ]
+sk_babygargantua_health          :      600 [ ext, prot ]
+sk_barnacle_bite                 :        8 [ ext, prot ]
+sk_barnacle_health               :       50 [ ext, prot ]
+sk_barney_health                 :       65 [ ext, prot ]
+sk_battery                       :       25 [ ext, prot ]
+sk_bigmomma_dmg_blast            :      140 [ ext, prot ]
+sk_bigmomma_dmg_slash            :       60 [ ext, prot ]
+sk_bigmomma_health_factor        :        1 [ ext, prot ]
+sk_bigmomma_radius_blast         :      260 [ ext, prot ]
+sk_blkopsosprey                  :      600 [ ext, prot ]
+sk_bullsquid_dmg_bite            :       25 [ ext, prot ]
+sk_bullsquid_dmg_spit            :       15 [ ext, prot ]
+sk_bullsquid_dmg_whip            :       45 [ ext, prot ]
+sk_bullsquid_health              :      110 [ ext, prot ]
+sk_controller_dmgball            :        4 [ ext, prot ]
+sk_controller_dmgzap             :       20 [ ext, prot ]
+sk_controller_health             :       90 [ ext, prot ]
+sk_controller_speedball          :      900 [ ext, prot ]
+sk_gargantua_dmg_fire            :        4 [ ext, prot ]
+sk_gargantua_dmg_slash           :       50 [ ext, prot ]
+sk_gargantua_dmg_stomp           :      100 [ ext, prot ]
+sk_gargantua_health              :     1000 [ ext, prot ]
+sk_gonome_dmg_guts               :       15 [ ext, prot ]
+sk_gonome_dmg_one_bite           :       15 [ ext, prot ]
+sk_gonome_dmg_one_slash          :       30 [ ext, prot ]
+sk_gonome_health                 :      200 [ ext, prot ]
+sk_grunt_buckshot                :        6 [ ext, prot ]
+sk_grunt_handgrenades            :        1 [ ext, prot ]
+sk_hassassin_enable_cloaking     :        0 [ ext, prot ]
+sk_hassassin_health              :       50 [ ext, prot ]
+sk_headcrab_dmg_bite             :       10 [ ext, prot ]
+sk_headcrab_health               :       20 [ ext, prot ]
+sk_healthcharger                 :       80 [ ext, prot ]
+sk_healthkit                     :       25 [ ext, prot ]
+sk_hgrunt_gspeed                 :      500 [ ext, prot ]
+sk_hgrunt_health                 :      100 [ ext, prot ]
+sk_hgrunt_kick                   :       12 [ ext, prot ]
+sk_hgrunt_pellets                :        7 [ ext, prot ]
+sk_hornet_dmg                    :       10 [ ext, prot ]
+sk_hornet_pdmg                   :       12 [ ext, prot ]
+sk_houndeye_dmg_blast            :       15 [ ext, prot ]
+sk_houndeye_health               :       60 [ ext, prot ]
+sk_hwgrunt_health                :      200 [ ext, prot ]
+sk_hwgrunt_minipellets           :        1 [ ext, prot ]
+sk_ichthyosaur_health            :      350 [ ext, prot ]
+sk_ichthyosaur_shake             :       30 [ ext, prot ]
+sk_islave_dmg_claw               :        8 [ ext, prot ]
+sk_islave_dmg_clawrake           :       24 [ ext, prot ]
+sk_islave_dmg_zap                :       11 [ ext, prot ]
+sk_islave_health                 :       80 [ ext, prot ]
+sk_islave_speed_zap              :        1 [ ext, prot ]
+sk_kingpin_health                :      450 [ ext, prot ]
+sk_kingpin_lightning             :       25 [ ext, prot ]
+sk_kingpin_melee                 :       40 [ ext, prot ]
+sk_kingpin_plasma_blast          :       80 [ ext, prot ]
+sk_kingpin_tele_blast            :       15 [ ext, prot ]
+sk_kingpin_telefrag              :      500 [ ext, prot ]
+sk_leech_dmg_bite                :        5 [ ext, prot ]
+sk_leech_health                  :        3 [ ext, prot ]
+sk_massassin_sniper              :       40 [ ext, prot ]
+sk_miniturret_health             :       80 [ ext, prot ]
+sk_monster_arm                   :        1 [ ext, prot ]
+sk_monster_chest                 :        1 [ ext, prot ]
+sk_monster_head                  :        3 [ ext, prot ]
+sk_monster_leg                   :        1 [ ext, prot ]
+sk_monster_stomach               :        1 [ ext, prot ]
+sk_mortar                        :      200 [ ext, prot ]
+sk_nihilanth_health              :      900 [ ext, prot ]
+sk_nihilanth_zap                 :       30 [ ext, prot ]
+sk_osprey                        :      600 [ ext, prot ]
+sk_otis_bullet                   :       34 [ ext, prot ]
+sk_otis_health                   :       65 [ ext, prot ]
+sk_pitdrone_dmg_bite             :       25 [ ext, prot ]
+sk_pitdrone_dmg_spit             :       15 [ ext, prot ]
+sk_pitdrone_dmg_whip             :       25 [ ext, prot ]
+sk_pitdrone_health               :       60 [ ext, prot ]
+sk_player_arm                    :        1 [ ext, prot ]
+sk_player_chest                  :        1 [ ext, prot ]
+sk_player_head                   :        1 [ ext, prot ]
+sk_player_leg                    :        1 [ ext, prot ]
+sk_player_stomach                :        1 [ ext, prot ]
+sk_plr_357_bullet                :       66 [ ext, prot ]
+sk_plr_762_bullet                :      110 [ ext, prot ]
+sk_plr_9mm_bullet                :       12 [ ext, prot ]
+sk_plr_9mmAR_bullet              :        8 [ ext, prot ]
+sk_plr_9mmAR_grenade             :      100 [ ext, prot ]
+sk_plr_buckshot                  :        9 [ ext, prot ]
+sk_plr_crowbar                   :       15 [ ext, prot ]
+sk_plr_displacer_other           :      250 [ ext, prot ]
+sk_plr_displacer_radius          :      300 [ ext, prot ]
+sk_plr_egon_narrow               :        0 [ ext, prot ]
+sk_plr_egon_wide                 :       12 [ ext, prot ]
+sk_plr_gauss                     :       19 [ ext, prot ]
+sk_plr_grapple                   :       40 [ ext, prot ]
+sk_plr_hand_grenade              :      100 [ ext, prot ]
+sk_plr_HpMedic                   :       10 [ ext, prot ]
+sk_plr_rpg                       :      150 [ ext, prot ]
+sk_plr_satchel                   :      160 [ ext, prot ]
+sk_plr_secondarygauss            :      190 [ ext, prot ]
+sk_plr_shockrifle                :       15 [ ext, prot ]
+sk_plr_shockrifle_beam           :        2 [ ext, prot ]
+sk_plr_shockrifle_recharge       :    6.667 [ ext, prot ]
+sk_plr_spore                     :      100 [ ext, prot ]
+sk_plr_tripmine                  :      150 [ ext, prot ]
+sk_plr_uzi                       :       10 [ ext, prot ]
+sk_plr_wrench                    :       22 [ ext, prot ]
+sk_plr_xbow_bolt_client          :        0 [ ext, prot ]
+sk_plr_xbow_bolt_monster         :       60 [ ext, prot ]
+sk_rgrunt_explode                :      100 [ ext, prot ]
+sk_scientist_heal                :      100 [ ext, prot ]
+sk_scientist_health              :       50 [ ext, prot ]
+sk_sentry_health                 :       80 [ ext, prot ]
+sk_shockroach_dmg_xpl_splash     :      150 [ ext, prot ]
+sk_shockroach_dmg_xpl_touch      :      350 [ ext, prot ]
+sk_shocktrooper_enable_spores    :        1 [ ext, prot ]
+sk_shocktrooper_health           :      200 [ ext, prot ]
+sk_shocktrooper_kick             :       12 [ ext, prot ]
+sk_shocktrooper_maxcharge        :       10 [ ext, prot ]
+sk_snark_dmg_bite                :       10 [ ext, prot ]
+sk_snark_dmg_pop                 :        5 [ ext, prot ]
+sk_snark_health                  :        2 [ ext, prot ]
+sk_sqknest_health                :       50 [ ext, prot ]
+sk_stukabat                      :      123 [ ext, prot ]
+sk_stukabat_dmg_bite             :       12 [ ext, prot ]
+sk_suitcharger                   :      100 [ ext, prot ]
+sk_tentacle                      :      750 [ ext, prot ]
+sk_tor_energybeam                :        3 [ ext, prot ]
+sk_tor_health                    :      800 [ ext, prot ]
+sk_tor_punch                     :       55 [ ext, prot ]
+sk_tor_sonicblast                :       15 [ ext, prot ]
+sk_turret_health                 :      200 [ ext, prot ]
+sk_voltigore_dmg_beam            :       40 [ ext, prot ]
+sk_voltigore_dmg_explode         :      200 [ ext, prot ]
+sk_voltigore_dmg_punch           :       30 [ ext, prot ]
+sk_voltigore_health              :      350 [ ext, prot ]
+sk_zombie_barney_dmg_both_slash  :       40 [ ext, prot ]
+sk_zombie_barney_dmg_one_slash   :       25 [ ext, prot ]
+sk_zombie_barney_health          :      110 [ ext, prot ]
+sk_zombie_dmg_both_slash         :       40 [ ext, prot ]
+sk_zombie_dmg_one_slash          :       25 [ ext, prot ]
+sk_zombie_health                 :      100 [ ext, prot ]
+sk_zombie_soldier_dmg_both_slash :       55 [ ext, prot ]
+sk_zombie_soldier_dmg_one_slash  :       40 [ ext, prot ]
+sk_zombie_soldier_health         :      150 [ ext, prot ]
+skill                            :        2
+skillcfgfile                     :        0 [ sv, ext, nolog ]
+suitvolume                       :    0.250 [ a ]
+sv_accelerate                    :       10 [ sv ]
+sv_admin_icon                    :        0 [ sv, ext, nolog ]
+sv_ai_enemy_detection_mode       :        0 [ ext, prot, nolog ]
+sv_aim                           :        0 [ a, sv ]
+sv_airaccelerate                 :       10 [ sv ]
+sv_allow_dlfile                  :        1
+sv_allowdownload                 :        1
+sv_allowupload                   :        1 [ sv ]
+sv_alltalk                       :        0 [ sv, ext ]
+sv_bounce                        :        1 [ sv ]
+sv_cheats                        :        0 [ sv ]
+sv_clienttrace                   :        1 [ sv ]
+sv_contact                       :        0 [ sv ]
+sv_disable_online_api            :        0 [ ext, prot, nolog ]
+sv_downloadurl                   :        0 [ prot ]
+sv_enableoldqueries              :        0
+sv_failuretime                   :    0.500
+sv_filetransfercompression       :        1
+sv_filetransfermaxsize           : 10485760
+sv_filterban                     :        1
+sv_friction                      :        4 [ sv ]
+sv_gravity                       :      800 [ sv ]
+sv_instancedbaseline             :        1
+sv_lagcompensation               :        5 [ ext, prot ]
+sv_lan                           :        0
+sv_lan_rate                      :    20000
+sv_log_client_commands           :        0 [ ext, prot ]
+sv_log_daily                     :        1
+sv_log_monster_damage            :        1 [ ext, prot ]
+sv_log_monster_deaths            :        0 [ ext, prot ]
+sv_log_monster_monster_kills     :        0 [ ext, prot ]
+sv_log_onefile                   :        0
+sv_log_player_deaths             :        1 [ ext, prot ]
+sv_log_player_frequency          :       30 [ ext, prot ]
+sv_log_singleplayer              :        0
+sv_logbans                       :        0
+sv_logblocks                     :        0 [ sv ]
+sv_logrelay                      :        0
+sv_logsecret                     :        0
+sv_maxrate                       :        0 [ sv ]
+sv_maxspeed                      :      270 [ sv ]
+sv_maxunlag                      :    0.500
+sv_maxupdaterate                 :       30
+sv_maxvelocity                   :     4096
+sv_minrate                       :        0 [ sv ]
+sv_minupdaterate                 :       10
+sv_newunit                       :        0
+sv_notransition                  :        0 [ ext, prot ]
+sv_outofdatetime                 :     1800
+sv_password                      :        0 [ sv, prot ]
+sv_proxies                       :        1 [ sv ]
+sv_rcon_banpenalty               :        0
+sv_rcon_maxfailures              :       10
+sv_rcon_minfailures              :        5
+sv_rcon_minfailuretime           :       30
+sv_report_unknown_entities       :        0 [ ext, prot, nolog ]
+sv_rollangle                     :        2
+sv_rollspeed                     :      200
+sv_send_logos                    :        1
+sv_send_resources                :        1
+sv_skycolor_b                    :      236
+sv_skycolor_g                    :      358
+sv_skycolor_r                    :      358
+sv_skyname                       :        0
+sv_skyvec_x                      :    0.314
+sv_skyvec_y                      :    0.283
+sv_skyvec_z                      :   -0.906
+sv_stats                         :        1
+sv_stepsize                      :       18 [ sv ]
+sv_stopspeed                     :      100 [ sv ]
+sv_timeout                       :       60
+sv_unlag                         :        1
+sv_unlagpush                     :        0
+sv_unlagsamples                  :        1
+sv_uploadmax                     :    0.500 [ sv ]
+sv_version                       : 501848.094
+sv_visiblemaxplayers             :       -1
+sv_voiceenable                   :        1 [ a, sv ]
+sv_wateraccelerate               :       10 [ sv ]
+sv_wateramp                      :    0.013
+sv_waterfriction                 :        1 [ sv ]
+sv_zmax                          :     4096 [ sp ]
+sys_ticrate                      :      100
+violence_ablood                  :        1
+violence_agibs                   :        1
+violence_hblood                  :        1
+violence_hgibs                   :        1
+voice_inputfromfile              :        0
+voice_recordtofile               :        0
+voice_serverdebug                :        0 [ ext ]
+weaponmode_9mmhandgun            :        0 [ ext, prot ]
+weaponmode_crossbow              :        0 [ ext, prot ]
+weaponmode_displacer             :        0 [ ext, prot ]
+weaponmode_eagle                 :        0 [ ext, prot ]
+weaponmode_mp5                   :        0 [ ext, prot ]
+weaponmode_rpg                   :        0 [ ext, prot ]
+weaponmode_shotgun               :        0 [ ext, prot ]
+-------------
+405 Total CVars
+cvarlist ? for syntax
