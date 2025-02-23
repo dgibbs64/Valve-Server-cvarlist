@@ -957,6 +957,7 @@ r_lightaverage                           : 1        :                  : Activat
 r_lightcachemodel                        : -1       : , "cheat"        : 
 r_lightinterp                            : 5        : , "cheat"        : Controls the speed of light interpolation, 0 turns off interpolation
 r_lightmap                               : -1       : , "cheat"        : 
+r_lightmap_bicubic                       : 0        :                  : Enable bi-cubic (high quality) lightmap sampling.
 r_lightstyle                             : -1       : , "cheat"        : 
 r_lockpvs                                : 0        : , "cheat"        : Lock the PVS so you can fly around and inspect what is being drawn.
 r_lod                                    : -1       :                  : 
@@ -1296,8 +1297,10 @@ sv_thinktimecheck                        : 0        : , "sv"           : Check f
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
 sv_turbophysics                          : 1        : , "sv", "rep"    : Turns on turbo physics
 sv_unlockedchapters                      : 99       : , "a", "sv"      : 
+sv_use_steam_networking                  : 0        :                  : 
 sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           : 
+sv_viewmodel_lag_do_angles               : 1        : , "sv", "cheat", "rep" : 
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
 sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec (22kHz, 22kbps) vaudio_celt_high - Newer CELT codec, higher bitrate (44kHz, 44kbps) steam - Use Steam voice API
 sv_voiceenable                           : 1        : , "a", "nf"      : 
@@ -2020,4 +2023,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-2019 total convars/concommands
+2022 total convars/concommands
