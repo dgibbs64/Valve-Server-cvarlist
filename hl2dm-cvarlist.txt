@@ -144,6 +144,7 @@ bind_mac                                 : cmd      :                  : Bind th
 BindToggle                               : cmd      :                  : Performs a bind <key> 'increment var <cvar> 0 1 1'
 birds_debug                              : 0        : , "sv"           : 
 bloodspray                               : cmd      :                  : blood
+bot_mimic                                : 0        : , "sv"           : Bot uses usercmd of player by index.
 breakable_disable_gib_limit              : 0        : , "sv"           : 
 breakable_multiplayer                    : 1        : , "sv"           : 
 buddha                                   : cmd      :                  : Toggle.  Player takes damage but won't die. (Shows red cross when health is zero)
@@ -370,9 +371,74 @@ hap_turret_mag                           : 5        : , "sv"           :
 help                                     : cmd      :                  : Find help about a convar/concommand.
 hl2_darkness_flashlight_factor           : 1        : , "sv"           : 
 hl2_episodic                             : 0        : , "sv", "rep"    : 
-hl2_normspeed                            : 190      : , "sv"           : 
-hl2_sprintspeed                          : 320      : , "sv"           : 
-hl2_walkspeed                            : 150      : , "sv"           : 
+hl2_normspeed                            : 190      : , "sv", "rep"    : 
+hl2_sprintspeed                          : 320      : , "sv", "rep"    : 
+hl2_walkspeed                            : 150      : , "sv", "rep"    : 
+hl2mp_allow_pickup                       : 0        : , "sv"           : 
+hl2mp_bot_add                            : cmd      :                  : Add a bot.
+hl2mp_bot_aggressive                     : 0        : , "sv"           : 
+hl2mp_bot_allow_retreat                  : 1        : , "sv", "cheat"  : If zero, bots will not attempt to retreat if they are are in a bad situation.
+hl2mp_bot_always_full_reload             : 0        : , "sv", "cheat"  : 
+hl2mp_bot_ammo_search_range              : 5000     : , "sv", "cheat"  : How far bots will search to find ammo around them
+hl2mp_bot_auto_vacate                    : 1        : , "sv"           : If nonzero, bots will automatically leave to make room for human players.
+hl2mp_bot_ballistic_elevation_rate       : 0        : , "sv", "cheat"  : When lobbing grenades at far away targets, this is the degree/range slope to raise our aim
+hl2mp_bot_choose_target_interval         : 0        : , "sv", "cheat"  : How often, in seconds, a HL2MPBot can reselect his target
+hl2mp_bot_debug_ammo_scavenging          : 0        : , "sv", "cheat"  : 
+hl2mp_bot_debug_prop_scavenging          : 0        : , "sv", "cheat"  : 
+hl2mp_bot_debug_retreat_to_cover         : 0        : , "sv", "cheat"  : 
+hl2mp_bot_debug_seek_and_destroy         : 0        : , "sv", "cheat"  : 
+hl2mp_bot_debug_sniper                   : 0        : , "sv", "cheat"  : 
+hl2mp_bot_debug_stuck_log                : cmd      :                  : Given a server logfile, visually display bot stuck locations.
+hl2mp_bot_debug_stuck_log_clear          : cmd      :                  : Clear currently loaded bot stuck data
+hl2mp_bot_debug_tags                     : 0        : , "sv", "cheat"  : ent_text will only show tags on bots
+hl2mp_bot_difficulty                     : 2        : , "sv"           : Defines the skill of bots joining the game.  Values are: 0=easy, 1=normal, 2=hard, 3=expert.
+hl2mp_bot_disable_get_prop               : 0        : , "sv", "cheat"  : 
+hl2mp_bot_disable_seek_and_destroy       : 0        : , "sv", "cheat"  : 
+hl2mp_bot_fetch_lost_flag_time           : 10       : , "sv", "cheat"  : How long busy HL2MPBots will ignore the dropped flag before they give up what they are doing and go after it
+hl2mp_bot_fire_weapon_allowed            : 1        : , "sv", "cheat"  : If zero, HL2MPBots will not pull the trigger of their weapons (but will act like they did)
+hl2mp_bot_fire_weapon_min_time           : 1        : , "sv", "cheat"  : 
+hl2mp_bot_flag_kill_on_touch             : 0        : , "sv", "cheat"  : If nonzero, any bot that picks up the flag dies. For testing.
+hl2mp_bot_force_jump                     : 0        : , "sv", "cheat"  : Force bots to continuously jump
+hl2mp_bot_gravgun_only                   : 0        : , "sv"           : If nonzero, HL2MPBots will only use gravity gun weapon
+hl2mp_bot_health_critical_ratio          : 0        : , "sv", "cheat"  : 
+hl2mp_bot_health_ok_ratio                : 0        : , "sv", "cheat"  : 
+hl2mp_bot_health_search_far_range        : 2000     : , "sv", "cheat"  : 
+hl2mp_bot_health_search_near_range       : 1000     : , "sv", "cheat"  : 
+hl2mp_bot_hitscan_range_limit            : 1800     : , "sv", "cheat"  : 
+hl2mp_bot_ignore_real_players            : 0        : , "sv", "cheat"  : 
+hl2mp_bot_join_after_player              : 1        : , "sv"           : If nonzero, bots wait until a player joins before entering the game.
+hl2mp_bot_kick                           : cmd      :                  : Remove a HL2MPBot by name, or all bots ('all').
+hl2mp_bot_kill                           : cmd      :                  : Kill a HL2MPBot by name, or all bots ('all').
+hl2mp_bot_melee_attack_abandon_range     : 500      : , "sv", "cheat"  : If threat is farther away than this, bot will switch back to its primary weapon and attack
+hl2mp_bot_melee_only                     : 0        : , "sv"           : If nonzero, HL2MPBots will only use melee weapons
+hl2mp_bot_near_point_travel_distance     : 750      : , "sv", "cheat"  : If within this travel distance to the current point, bot is 'near' it
+hl2mp_bot_notice_backstab_chance         : 25       : , "sv", "cheat"  : 
+hl2mp_bot_notice_backstab_max_range      : 750      : , "sv", "cheat"  : 
+hl2mp_bot_notice_backstab_min_range      : 100      : , "sv", "cheat"  : 
+hl2mp_bot_notice_gunfire_range           : 3000     : , "sv"           : 
+hl2mp_bot_notice_quiet_gunfire_range     : 500      : , "sv"           : 
+hl2mp_bot_offline_practice               : 0        : , "sv"           : Tells the server that it is in offline practice mode.
+hl2mp_bot_path_lookahead_range           : 300      : , "sv"           : 
+hl2mp_bot_physcannon_wait_fire_time      : 1        : , "sv", "cheat"  : Time to wait after picking up a prop to firing.
+hl2mp_bot_prefix_name_with_difficulty    : 0        : , "sv"           : Append the skill level of the bot to the bot's name
+hl2mp_bot_prop_freak_ratio               : 0        : , "sv"           : 
+hl2mp_bot_prop_hater_ratio               : 0        : , "sv"           : 
+hl2mp_bot_prop_search_important_range    : 400      : , "sv", "cheat"  : How far prop freak bots will search to find and prefer important props around them (like explosive barrels)
+hl2mp_bot_prop_search_min_mass           : 30       : , "sv", "cheat"  : Ignore props under this mass
+hl2mp_bot_prop_search_only_important     : 0        : , "sv", "cheat"  : 
+hl2mp_bot_prop_search_range              : 2000     : , "sv", "cheat"  : How far prop freak bots will search to find props around them
+hl2mp_bot_quota                          : 0        : , "sv"           : Determines the total number of tf bots in the game.
+hl2mp_bot_quota_mode                     : 0        : , "sv"           : Determines the type of quota. Allowed values: 'normal', 'fill', and 'match'. If 'fill', the server will adjust bots to keep N players in the game, where N is bot_quota. If 'match', the server will maintain a 1:N ratio of humans to bots, where N is bot_quota.
+hl2mp_bot_retreat_to_cover_range         : 1000     : , "sv", "cheat"  : 
+hl2mp_bot_shotgunner_range               : 320      : , "sv"           : 
+hl2mp_bot_sniper_aim_error               : 0        : , "sv", "cheat"  : 
+hl2mp_bot_sniper_aim_steady_rate         : 10       : , "sv", "cheat"  : 
+hl2mp_bot_sniper_choose_target_interval  : 3        : , "sv", "cheat"  : How often, in seconds, a zoomed-in Sniper can reselect his target
+hl2mp_bot_taunt_victim_chance            : 20       : , "sv"           : 
+hl2mp_bot_wait_in_cover_max_time         : 2        : , "sv", "cheat"  : 
+hl2mp_bot_wait_in_cover_min_time         : 1        : , "sv", "cheat"  : 
+hl2mp_bot_warp_team_to_me                : cmd      :                  : 
+hl2mp_spawn_frag_fallback_radius         : 48       : , "sv"           : If no spawns are available, kill players with this radius to allow new players to spawn.
 host_flush_threshold                     : 20       :                  : Memory threshold below which the host should flush caches between server instances
 host_framerate                           : 0        :                  : Set to lock per-frame time elapse.
 host_limitlocal                          : 0        :                  : Apply cl_cmdrate and cl_updaterate to loopback connection
@@ -620,7 +686,196 @@ mp_winlimit                              : 0        : , "sv", "nf", "rep" : Max 
 multvar                                  : cmd      :                  : Multiply specified convar value.
 name                                     : 0        : , "a", "user", "print", "server_can_execute" : Current user name
 namelockid                               : cmd      :                  : Prevent name changes for this userID.
+nav_add_to_selected_set                  : cmd      :                  : Add current area to the selected set.
+nav_add_to_selected_set_by_id            : cmd      :                  : Add specified area id to the selected set.
+nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk.
+nav_area_bgcolor                         : 0        : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
+nav_area_max_size                        : 50       : , "sv", "cheat"  : Max area size created in nav generation
+nav_avoid                                : cmd      :                  : Toggles the 'avoid this area when possible' flag used by the AI system.
+nav_begin_area                           : cmd      :                  : Defines a corner of a new Area or Ladder. To complete the Area or Ladder, drag the opposite corner to the desired location and issue a 'nav_end_area' command.
+nav_begin_deselecting                    : cmd      :                  : Start continuously removing from the selected set.
+nav_begin_drag_deselecting               : cmd      :                  : Start dragging a selection area.
+nav_begin_drag_selecting                 : cmd      :                  : Start dragging a selection area.
+nav_begin_selecting                      : cmd      :                  : Start continuously adding to the selected set.
+nav_begin_shift_xy                       : cmd      :                  : Begin shifting the Selected Set.
+nav_build_ladder                         : cmd      :                  : Attempts to build a nav ladder on the climbable surface under the cursor.
+nav_check_file_consistency               : cmd      :                  : Scans the maps directory and reports any missing/out-of-date navigation files.
+nav_check_floor                          : cmd      :                  : Updates the blocked/unblocked status for every nav area.
+nav_check_stairs                         : cmd      :                  : Update the nav mesh STAIRS attribute
+nav_chop_selected                        : cmd      :                  : Chops all selected areas into their component 1x1 areas
+nav_clear_attribute                      : cmd      :                  : Remove given nav attribute from all areas in the selected set.
+nav_clear_selected_set                   : cmd      :                  : Clear the selected set.
+nav_clear_walkable_marks                 : cmd      :                  : Erase any previously placed walkable positions.
+nav_compress_id                          : cmd      :                  : Re-orders area and ladder ID's so they are continuous.
+nav_connect                              : cmd      :                  : To connect two Areas, mark the first Area, highlight the second Area, then invoke the connect command. Note that this creates a ONE-WAY connection from the first to the second Area. To make a two-way connection, also connect the second area to the first.
+nav_coplanar_slope_limit                 : 0        : , "sv", "cheat"  : 
+nav_coplanar_slope_limit_displacement    : 0        : , "sv", "cheat"  : 
+nav_corner_adjust_adjacent               : 18       : , "sv", "cheat"  : radius used to raise/lower corners in nearby areas when raising/lowering corners.
+nav_corner_lower                         : cmd      :                  : Lower the selected corner of the currently marked Area.
+nav_corner_place_on_ground               : cmd      :                  : Places the selected corner of the currently marked Area on the ground.
+nav_corner_raise                         : cmd      :                  : Raise the selected corner of the currently marked Area.
+nav_corner_select                        : cmd      :                  : Select a corner of the currently marked Area. Use multiple times to access all four corners.
+nav_create_area_at_feet                  : 0        : , "sv", "cheat"  : Anchor nav_begin_area Z to editing player's feet
+nav_create_place_on_ground               : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when created by hand.
+nav_crouch                               : cmd      :                  : Toggles the 'must crouch in this area' flag used by the AI system.
+nav_debug_blocked                        : 0        : , "sv", "cheat"  : 
+nav_delete                               : cmd      :                  : Deletes the currently highlighted Area.
+nav_delete_marked                        : cmd      :                  : Deletes the currently marked Area (if any).
+nav_disconnect                           : cmd      :                  : To disconnect two Areas, mark an Area, highlight a second Area, then invoke the disconnect command. This will remove all connections between the two Areas.
+nav_disconnect_outgoing_oneways          : cmd      :                  : For each area in the selected set, disconnect all outgoing one-way connections.
+nav_displacement_test                    : 10000    : , "sv", "cheat"  : Checks for nodes embedded in displacements (useful for in-development maps)
+nav_dont_hide                            : cmd      :                  : Toggles the 'area is not suitable for hiding spots' flag used by the AI system.
+nav_drag_selection_volume_zmax_offset    : 32       : , "sv", "rep"    : The offset of the nav drag volume top from center
+nav_drag_selection_volume_zmin_offset    : 32       : , "sv", "rep"    : The offset of the nav drag volume bottom from center
+nav_draw_limit                           : 500      : , "sv", "cheat"  : The maximum number of areas to draw in edit mode
+nav_dump_selected_set_positions          : cmd      :                  : Write the (x,y,z) coordinates of the centers of all selected nav areas to a file.
+nav_edit                                 : 0        : , "sv", "cheat"  : Set to one to interactively edit the Navigation Mesh. Set to zero to leave edit mode.
+nav_end_area                             : cmd      :                  : Defines the second corner of a new Area or Ladder and creates it.
+nav_end_deselecting                      : cmd      :                  : Stop continuously removing from the selected set.
+nav_end_drag_deselecting                 : cmd      :                  : Stop dragging a selection area.
+nav_end_drag_selecting                   : cmd      :                  : Stop dragging a selection area.
+nav_end_selecting                        : cmd      :                  : Stop continuously adding to the selected set.
+nav_end_shift_xy                         : cmd      :                  : Finish shifting the Selected Set.
+nav_flood_select                         : cmd      :                  : Selects the current Area and all Areas connected to it, recursively. To clear a selection, use this command again.
+nav_gen_cliffs_approx                    : cmd      :                  : Mark cliff areas, post-processing approximation
+nav_generate                             : cmd      :                  : Generate a Navigation Mesh for the current map and save it to disk.
+nav_generate_fencetops                   : 1        : , "sv", "cheat"  : Autogenerate nav areas on fence and obstacle tops
+nav_generate_fixup_jump_areas            : 1        : , "sv", "cheat"  : Convert obsolete jump areas into 2-way connections
+nav_generate_incremental                 : cmd      :                  : Generate a Navigation Mesh for the current map and save it to disk.
+nav_generate_incremental_range           : 2000     : , "sv", "cheat"  : 
+nav_generate_incremental_tolerance       : 0        : , "sv", "cheat"  : Z tolerance for adding new nav areas.
+nav_generate_jump_connections            : 1        : , "sv", "cheat"  : If disabled, don't generate jump connections from jump areas
+nav_jump                                 : cmd      :                  : Toggles the 'traverse this area by jumping' flag used by the AI system.
+nav_ladder_flip                          : cmd      :                  : Flips the selected ladder's direction.
+nav_load                                 : cmd      :                  : Loads the Navigation Mesh for the current map.
+nav_lower_drag_volume_max                : cmd      :                  : Lower the top of the drag select volume.
+nav_lower_drag_volume_min                : cmd      :                  : Lower the bottom of the drag select volume.
+nav_make_sniper_spots                    : cmd      :                  : Chops the marked area into disconnected sub-areas suitable for sniper spots.
+nav_mark                                 : cmd      :                  : Marks the Area or Ladder under the cursor for manipulation by subsequent editing commands.
+nav_mark_attribute                       : cmd      :                  : Set nav attribute for all areas in the selected set.
+nav_mark_unnamed                         : cmd      :                  : Mark an Area with no Place name. Useful for finding stray areas missed when Place Painting.
+nav_mark_walkable                        : cmd      :                  : Mark the current location as a walkable position. These positions are used as seed locations when sampling the map to generate a Navigation Mesh.
+nav_max_view_distance                    : 6000     : , "sv", "cheat"  : Maximum range for precomputed nav mesh visibility (0 = default 1500 units)
+nav_max_vis_delta_list_length            : 64       : , "sv", "cheat"  : 
+nav_merge                                : cmd      :                  : To merge two Areas into one, mark the first Area, highlight the second by pointing your cursor at it, and invoke the merge command.
+nav_merge_mesh                           : cmd      :                  : Merges a saved selected set into the current mesh.
+nav_no_hostages                          : cmd      :                  : Toggles the 'hostages cannot use this area' flag used by the AI system.
+nav_no_jump                              : cmd      :                  : Toggles the 'dont jump in this area' flag used by the AI system.
+nav_place_floodfill                      : cmd      :                  : Sets the Place of the Area under the cursor to the curent Place, and 'flood-fills' the Place to all adjacent Areas. Flood-filling stops when it hits an Area with the same Place, or a different Place than that of the initial Area.
+nav_place_list                           : cmd      :                  : Lists all place names used in the map.
+nav_place_pick                           : cmd      :                  : Sets the current Place to the Place of the Area under the cursor.
+nav_place_replace                        : cmd      :                  : Replaces all instances of the first place with the second place.
+nav_place_set                            : cmd      :                  : Sets the Place of all selected areas to the current Place.
+nav_potentially_visible_dot_tolerance    : 0        : , "sv", "cheat"  : 
+nav_precise                              : cmd      :                  : Toggles the 'dont avoid obstacles' flag used by the AI system.
+nav_quicksave                            : 1        : , "sv", "cheat"  : Set to one to skip the time consuming phases of the analysis.  Useful for data collection and testing.
+nav_raise_drag_volume_max                : cmd      :                  : Raise the top of the drag select volume.
+nav_raise_drag_volume_min                : cmd      :                  : Raise the bottom of the drag select volume.
+nav_recall_selected_set                  : cmd      :                  : Re-selects the stored selected set.
+nav_remove_from_selected_set             : cmd      :                  : Remove current area from the selected set.
+nav_remove_jump_areas                    : cmd      :                  : Removes legacy jump areas, replacing them with connections.
+nav_run                                  : cmd      :                  : Toggles the 'traverse this area by running' flag used by the AI system.
+nav_save                                 : cmd      :                  : Saves the current Navigation Mesh to disk.
+nav_save_selected                        : cmd      :                  : Writes the selected set to disk for merging into another mesh via nav_merge_mesh.
+nav_select_blocked_areas                 : cmd      :                  : Adds all blocked areas to the selected set
+nav_select_damaging_areas                : cmd      :                  : Adds all damaging areas to the selected set
+nav_select_half_space                    : cmd      :                  : Selects any areas that intersect the given half-space.
+nav_select_invalid_areas                 : cmd      :                  : Adds all invalid areas to the Selected Set.
+nav_select_larger_than                   : cmd      :                  : Select nav areas where both dimensions are larger than the given size.
+nav_select_obstructed_areas              : cmd      :                  : Adds all obstructed areas to the selected set
+nav_select_orphans                       : cmd      :                  : Adds all orphan areas to the selected set (highlight a valid area first).
+nav_select_overlapping                   : cmd      :                  : Selects nav areas that are overlapping others.
+nav_select_radius                        : cmd      :                  : Adds all areas in a radius to the selection set
+nav_select_stairs                        : cmd      :                  : Adds all stairway areas to the selected set
+nav_selected_set_border_color            : 100      : , "sv", "cheat"  : Color used to draw the selected set borders while editing.
+nav_selected_set_color                   : 255      : , "sv", "cheat"  : Color used to draw the selected set background while editing.
+nav_set_place_mode                       : cmd      :                  : Sets the editor into or out of Place mode. Place mode allows labelling of Area with Place names.
+nav_shift                                : cmd      :                  : Shifts the selected areas by the specified amount
+nav_show_approach_points                 : 0        : , "sv", "cheat"  : Show Approach Points in the Navigation Mesh.
+nav_show_area_info                       : 0        : , "sv", "cheat"  : Duration in seconds to show nav area ID and attributes while editing
+nav_show_compass                         : 0        : , "sv", "cheat"  : 
+nav_show_continguous                     : 0        : , "sv", "cheat"  : Highlight non-contiguous connections
+nav_show_danger                          : 0        : , "sv", "cheat"  : Show current 'danger' levels.
+nav_show_dumped_positions                : cmd      :                  : Show the (x,y,z) coordinate positions of the given dump file.
+nav_show_func_nav_avoid                  : 0        : , "sv", "cheat"  : Show areas of designer-placed bot avoidance due to func_nav_avoid entities
+nav_show_func_nav_prefer                 : 0        : , "sv", "cheat"  : Show areas of designer-placed bot preference due to func_nav_prefer entities
+nav_show_func_nav_prerequisite           : 0        : , "sv", "cheat"  : Show areas of designer-placed bot preference due to func_nav_prerequisite entities
+nav_show_light_intensity                 : 0        : , "sv", "cheat"  : 
+nav_show_node_grid                       : 0        : , "sv", "cheat"  : 
+nav_show_node_id                         : 0        : , "sv", "cheat"  : 
+nav_show_nodes                           : 0        : , "sv", "cheat"  : 
+nav_show_player_counts                   : 0        : , "sv", "cheat"  : Show current player counts in each area.
+nav_show_potentially_visible             : 0        : , "sv", "cheat"  : Show areas that are potentially visible from the current nav area
+nav_simplify_selected                    : cmd      :                  : Chops all selected areas into their component 1x1 areas and re-merges them together into larger areas
+nav_slope_limit                          : 0        : , "sv", "cheat"  : The ground unit normal's Z component must be greater than this for nav areas to be generated.
+nav_slope_tolerance                      : 0        : , "sv", "cheat"  : The ground unit normal's Z component must be this close to the nav area's Z component to be generated.
+nav_snap_to_grid                         : 0        : , "sv", "cheat"  : Snap to the nav generation grid when creating new nav areas
+nav_solid_props                          : 0        : , "sv", "cheat"  : Make props solid to nav generation/editing
+nav_splice                               : cmd      :                  : To splice, mark an area, highlight a second area, then invoke the splice command to create a new, connected area between them.
+nav_split                                : cmd      :                  : To split an Area into two, align the split line using your cursor and invoke the split command.
+nav_split_place_on_ground                : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when split.
+nav_stand                                : cmd      :                  : Toggles the 'stand while hiding' flag used by the AI system.
+nav_stop                                 : cmd      :                  : Toggles the 'must stop when entering this area' flag used by the AI system.
+nav_store_selected_set                   : cmd      :                  : Stores the current selected set for later retrieval.
+nav_strip                                : cmd      :                  : Strips all Hiding Spots, Approach Points, and Encounter Spots from the current Area.
+nav_subdivide                            : cmd      :                  : Subdivides all selected areas.
+nav_test_node                            : 0        : , "sv", "cheat"  : 
+nav_test_node_crouch                     : 0        : , "sv", "cheat"  : 
+nav_test_node_crouch_dir                 : 4        : , "sv", "cheat"  : 
+nav_test_stairs                          : cmd      :                  : Test the selected set for being on stairs
+nav_toggle_deselecting                   : cmd      :                  : Start or stop continuously removing from the selected set.
+nav_toggle_in_selected_set               : cmd      :                  : Remove current area from the selected set.
+nav_toggle_place_mode                    : cmd      :                  : Toggle the editor into and out of Place mode. Place mode allows labelling of Area with Place names.
+nav_toggle_place_painting                : cmd      :                  : Toggles Place Painting mode. When Place Painting, pointing at an Area will 'paint' it with the current Place.
+nav_toggle_selected_set                  : cmd      :                  : Toggles all areas into/out of the selected set.
+nav_toggle_selecting                     : cmd      :                  : Start or stop continuously adding to the selected set.
+nav_transient                            : cmd      :                  : Toggles the 'area is transient and may become blocked' flag used by the AI system.
+nav_unmark                               : cmd      :                  : Clears the marked Area or Ladder.
+nav_update_blocked                       : cmd      :                  : Updates the blocked/unblocked status for every nav area.
+nav_update_lighting                      : cmd      :                  : Recomputes lighting values
+nav_update_visibility_on_edit            : 0        : , "sv", "cheat"  : If nonzero editing the mesh will incrementally recompue visibility
+nav_use_place                            : cmd      :                  : If used without arguments, all available Places will be listed. If a Place argument is given, the current Place is set.
+nav_walk                                 : cmd      :                  : Toggles the 'traverse this area by walking' flag used by the AI system.
+nav_warp_to_mark                         : cmd      :                  : Warps the player to the marked area.
+nav_world_center                         : cmd      :                  : Centers the nav mesh in the world
+nb_allow_avoiding                        : 1        : , "sv", "cheat"  : 
+nb_allow_climbing                        : 1        : , "sv", "cheat"  : 
+nb_allow_gap_jumping                     : 1        : , "sv", "cheat"  : 
+nb_blind                                 : 0        : , "sv", "cheat"  : Disable vision
+nb_command                               : cmd      :                  : Sends a command string to all bots
+nb_debug                                 : cmd      :                  : Debug NextBots.  Categories are: BEHAVIOR, LOOK_AT, PATH, ANIMATION, LOCOMOTION, VISION, HEARING, EVENTS, ERRORS.
+nb_debug_climbing                        : 0        : , "sv", "cheat"  : 
+nb_debug_filter                          : cmd      :                  : Add items to the NextBot debug filter. Items can be entindexes or part of the indentifier of one or more bots.
+nb_debug_history                         : 1        : , "sv", "cheat"  : If true, each bot keeps a history of debug output in memory
+nb_debug_known_entities                  : 0        : , "sv", "cheat"  : Show the 'known entities' for the bot that is the current spectator target
+nb_delete_all                            : cmd      :                  : Delete all non-player NextBot entities.
+nb_force_look_at                         : cmd      :                  : Force selected bot to look at the local player's position
+nb_goal_look_ahead_range                 : 50       : , "sv", "cheat"  : 
+nb_head_aim_resettle_angle               : 100      : , "sv", "cheat"  : After rotating through this angle, the bot pauses to 'recenter' its virtual mouse on its virtual mousepad
+nb_head_aim_resettle_time                : 0        : , "sv", "cheat"  : How long the bot pauses to 'recenter' its virtual mouse on its virtual mousepad
+nb_head_aim_settle_duration              : 0        : , "sv", "cheat"  : 
+nb_head_aim_steady_max_rate              : 100      : , "sv", "cheat"  : 
+nb_ladder_align_range                    : 50       : , "sv", "cheat"  : 
 nb_last_area_update_tolerance            : 4        : , "sv", "cheat"  : Distance a character needs to travel in order to invalidate cached area
+nb_move_to_cursor                        : cmd      :                  : Tell all NextBots to move to the cursor position
+nb_path_draw_inc                         : 100      : , "sv", "cheat"  : 
+nb_path_draw_segment_count               : 100      : , "sv", "cheat"  : 
+nb_path_segment_influence_radius         : 100      : , "sv", "cheat"  : 
+nb_player_crouch                         : 0        : , "sv", "cheat"  : Force bots to crouch
+nb_player_move                           : 1        : , "sv", "cheat"  : Prevents bots from moving
+nb_player_move_direct                    : 0        : , "sv"           : 
+nb_player_stop                           : 0        : , "sv", "cheat"  : Stop all NextBotPlayers from updating
+nb_player_walk                           : 0        : , "sv", "cheat"  : Force bots to walk
+nb_saccade_speed                         : 1000     : , "sv", "cheat"  : 
+nb_saccade_time                          : 0        : , "sv", "cheat"  : 
+nb_select                                : cmd      :                  : Select the bot you are aiming at for further debug operations.
+nb_speed_look_ahead_range                : 150      : , "sv", "cheat"  : 
+nb_stop                                  : 0        : , "sv", "cheat", "rep" : Stop all NextBots
+nb_update_debug                          : 0        : , "sv", "cheat"  : 
+nb_update_framelimit                     : 15       : , "sv", "cheat"  : 
+nb_update_frequency                      : 0        : , "sv", "cheat"  : 
+nb_update_maxslide                       : 2        : , "sv", "cheat"  : 
+nb_warp_selected_here                    : cmd      :                  : Teleport the selected bot to your cursor position
 net_blockmsg                             : 0        : , "cheat"        : Discards incoming message: <0|1|name>
 net_chan_limit_msec                      : 0        :                  : Netchannel processing is limited to so many milliseconds, abort connection if exceeding budget
 net_chan_stats_dump                      : 0        :                  : Netchannel statistics will dump in the logs upon request
@@ -849,6 +1104,7 @@ r_lightaverage                           : 1        :                  : Activat
 r_lightcachemodel                        : -1       : , "cheat"        : 
 r_lightinterp                            : 5        : , "cheat"        : Controls the speed of light interpolation, 0 turns off interpolation
 r_lightmap                               : -1       : , "cheat"        : 
+r_lightmap_bicubic                       : 0        :                  : Enable bi-cubic (high quality) lightmap sampling.
 r_lightstyle                             : -1       : , "cheat"        : 
 r_lockpvs                                : 0        : , "cheat"        : Lock the PVS so you can fly around and inspect what is being drawn.
 r_lod                                    : -1       :                  : 
@@ -965,6 +1221,7 @@ showsniperdist                           : 0        : , "sv"           :
 showsniperlines                          : 0        : , "sv"           : 
 showtriggers                             : 0        : , "sv", "cheat"  : Shows trigger brushes
 showtriggers_toggle                      : cmd      :                  : Toggle show triggers
+simple_bot_add                           : cmd      :                  : Add a simple bot.
 singlestep                               : 0        : , "cheat"        : Run engine in single step mode ( set next to 1 to advance a frame )
 sk_airboat_drain_rate                    : 10       : , "sv"           : 
 sk_airboat_max_ammo                      : 100      : , "sv"           : 
@@ -1264,7 +1521,6 @@ sv_debugtempentities                     : 0        :                  : Show te
 sv_deltaprint                            : 0        :                  : Print accumulated CalcDelta profiling data (only if sv_deltatime is on)
 sv_deltatime                             : 0        :                  : Enable profiling of CalcDelta calls
 sv_disable_querycache                    : 0        : , "sv", "cheat"  : debug - disable trace query cache
-sv_dm_tmp                                : 0        :                  : 
 sv_downloadlist_include_navfile          : 0        :                  : Include map nav files in the download list for clients.
 sv_downloadurl                           : 0        : , "rep"          : Location from which clients can download missing files
 sv_dump_edicts                           : cmd      :                  : Display a list of edicts allocated on the server.
@@ -1390,8 +1646,10 @@ sv_thinktimecheck                        : 0        : , "sv"           : Check f
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
 sv_unlockedchapters                      : 1        : , "a", "sv"      : 
+sv_use_steam_networking                  : 0        :                  : 
 sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           : 
+sv_viewmodel_lag_do_angles               : 1        : , "sv", "cheat", "rep" : 
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
 sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec (22kHz, 22kbps) vaudio_celt_high - Newer CELT codec, higher bitrate (44kHz, 44kbps) steam - Use Steam voice API
 sv_voiceenable                           : 1        : , "a", "nf"      : 
@@ -1407,6 +1665,7 @@ sv_vote_ui_hide_disabled_issues          : 1        : , "sv"           : Suppres
 sv_wateraccelerate                       : 10       : , "sv", "nf", "rep" : 
 sv_waterdist                             : 12       : , "sv", "rep"    : Vertical view fixup when eyes are near water plane.
 sv_waterfriction                         : 1        : , "sv", "nf", "rep" : 
+sv_wpn_sway_pred_legacy                  : 0        : , "sv", "cheat", "rep" : 
 sys_minidumpexpandedspew                 : 1        :                  : 
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
 systemlinkport                           : 27030    :                  : System Link port
@@ -1549,6 +1808,7 @@ wc_destroy                               : cmd      :                  : When in
 wc_destroy_undo                          : cmd      :                  : When in WC edit mode restores the last deleted node
 wc_link_edit                             : cmd      :                  : 
 weapon_showproficiency                   : 0        : , "sv"           : 
+wipe_nav_attributes                      : cmd      :                  : Clear all nav attributes of selected area.
 writeid                                  : cmd      :                  : Writes a list of permanently-banned user IDs to banned_user.cfg.
 writeip                                  : cmd      :                  : Save the ban list to banned_ip.cfg.
 xbox_autothrottle                        : 1        : , "a", "sv"      : 
@@ -1569,4 +1829,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1568 total convars/concommands
+1828 total convars/concommands
