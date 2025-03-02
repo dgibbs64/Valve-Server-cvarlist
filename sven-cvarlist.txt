@@ -410,4 +410,3 @@ weaponmode_shotgun               :        0 [ ext, prot ]
 cvarlist ? for syntax
 Installing breakpad exception handler for appid(svends_i686)/version(1.0)
 Warning: failed to init SDL thread priority manager: SDL not found
-Installing breakpad exception handler for appid(svends_i686)/version(1.0)
