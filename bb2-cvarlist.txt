@@ -1240,3 +1240,7 @@ xc_uncrouch_on_jump                      : 1        : , "a", "sv"      : Uncrouc
 zombie_tree                              : cmd      :                  : Zombie Skill Tree
 --------------
 1238 total convars/concommands
+Connection to Steam servers successful.
+   Public IP is 20.57.46.41.
+Assigned anonymous gameserver Steam ID [A:1:2997384209:44014].
+VAC secure mode is activated.
