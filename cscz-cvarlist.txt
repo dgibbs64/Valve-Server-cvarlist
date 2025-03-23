@@ -265,3 +265,5 @@ voice_serverdebug :        0
 --------------
 262 Total CVars
 CvarList ? for syntax
+Connection to Steam servers successful.
+   VAC secure mode is activated.
