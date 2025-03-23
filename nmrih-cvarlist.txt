@@ -49,6 +49,7 @@ ai_frametime_limit                       : 50       : , "sv"           : frameti
 ai_hull                                  : cmd      :                  : Controls which connections are shown when ai_show_hull or ai_show_connect commands are used  Arguments: NPC name or classname, <none>=NPC under crosshair
 ai_inhibit_spawners                      : 0        : , "sv", "cheat"  : 
 ai_lead_time                             : 0        : , "sv"           : 
+ai_legacy                                : 0        : , "sv", "rep"    : Runs bugged AI behavior from pre-v1.14.0 for legacy purposes. Unsupported.
 ai_LOS_mode                              : 0        : , "sv", "rep"    : 
 ai_moveprobe_debug                       : 0        : , "sv"           : 
 ai_moveprobe_jump_debug                  : 0        : , "sv"           : 
@@ -1020,6 +1021,7 @@ script_allow_entity_creation_midgame     : 1        : , "sv"           : Allows 
 script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
 script_dump_all                          : cmd      :                  : Dump the state of the VM to the console
 script_dump_hooks                        : cmd      :                  : 
+script_dump_scope                        : cmd      :                  : Usage: script_dump_scope <entindex>
 script_execute                           : cmd      :                  : Run a vscript file
 script_help                              : cmd      :                  : Output help for script functions, optionally with a search string
 script_reload_code                       : cmd      :                  : Execute a vscript file, replacing existing functions with the functions in the run script
@@ -1193,6 +1195,7 @@ sv_extract_pause                         : 3        : , "sv", "cheat", "rep" : T
 sv_extract_previewtime                   : 12       : , "sv", "rep"    : Time the extract cam is active.
 sv_filterban                             : 1        :                  : Set packet filtering by IP mode
 sv_first_aid_heal_amt                    : 30       : , "sv", "cheat", "rep" : Amount of health a first aid kit heals.
+sv_first_draw_activity                   : 1        : , "sv", "rep"    : Allow initial draw animation, e.g. pulling back the hammer on pistols
 sv_flare_gun_explode_damage              : 50       : , "sv", "cheat", "rep" : Damage done by a flare gun explosion
 sv_flare_gun_supply_limit                : 1        : , "sv", "rep"    : Amount of supplies that can be called by a flare gun per round. Set to -1 for infinite.
 sv_footsteps                             : 1        : , "sv", "cheat", "nf", "rep" : Play footstep sound for players
@@ -1321,6 +1324,7 @@ sv_netspike_sendtime_ms                  : 0        :                  : If nonz
 sv_neutral_player_name                   : 0        : , "sv", "rep"    : Display player name tags in neutral color
 sv_nextlevel_on_round_win                : 0        : , "sv", "rep"    : On round win condition, change level to next map instead of resetting.
 sv_ng_zombie_chance                      : 0        : , "sv", "cheat", "rep" : Chance of a zombie being an NG zombie
+sv_ng_zombie_drop_grenade                : 1        : , "sv", "cheat", "rep" : NG zombies can drop grenades as loot on death
 sv_ng_zombie_loot                        : 1        : , "sv", "rep"    : NG zombies can drop loot on death
 sv_no_stam_viewmodel_drop                : 8        : , "sv", "cheat", "rep" : Units the viewmodel drops when not enough stamina for shoving / quick attacking
 sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" : 
@@ -1356,7 +1360,7 @@ sv_pushaway_clientside                   : 0        : , "sv", "rep"    : Clients
 sv_pushaway_force                        : 30000    : , "sv", "rep"    : How hard physics objects are pushed away from the players on the server.
 sv_pushaway_max_force                    : 1000     : , "sv", "rep"    : Maximum amount of force applied to physics objects by players.
 sv_pushaway_min_player_speed             : 75       : , "sv", "rep"    : If a player is moving slower than this, don't push away physics objects (enables ducking behind things).
-sv_pvsskipanimation                      : 1        : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
+sv_pvsskipanimation                      : 0        : , "sv"           : Skips SetupBones when npc's are outside the PVS
 sv_querycache_stats                      : cmd      :                  : Display status of the query cache (client only)
 sv_quickattack_limit                     : 0        : , "sv", "cheat", "rep" : Time for mouse to be held down and still considered quick attack.
 sv_random_spawner_ang_vel                : 40       : , "sv", "cheat", "rep" : Angular velocity for randomly spawned weapons
@@ -1417,7 +1421,7 @@ sv_sharp_pushback_chance                 : 0        : , "sv", "cheat", "rep" : C
 sv_shove_cost                            : 20       : , "sv", "cheat", "rep" : Stamina cost of shove
 sv_shove_delay                           : 0        : , "sv", "cheat", "rep" : Time delay between shoves, in seconds
 sv_shove_max_action_delay                : 0        : , "sv", "cheat", "rep" : Maximum time delay before user can shove after firing a weapon, in seconds
-sv_shove_multi                           : 0        : , "sv", "cheat", "rep" : Shove multiple zombies directly in front of player
+sv_shove_multi                           : 0        : , "sv", "rep"    : Shove multiple zombies directly in front of player
 sv_shove_multi_distance                  : 52       : , "sv", "cheat", "rep" : Distance to allow shove to hit more than one zombie
 sv_shove_multi_max_bashes                : 2        : , "sv", "cheat", "rep" : Maximum number of zombies player can bash per shove
 sv_showcleanedupents                     : 0        : , "sv", "cheat"  : Show entities that are removed on round respawn.
@@ -1481,6 +1485,7 @@ sv_tnt_explode_shake_amplitude           : 10       : , "sv", "cheat", "rep" : A
 sv_tnt_explode_shake_duration            : 3        : , "sv", "cheat", "rep" : Duration of screen shake from TNT explosion
 sv_tnt_explode_shake_frequency           : 225      : , "sv", "cheat", "rep" : Frequency of screen shake from TNT explosion
 sv_tnt_explode_shake_radius              : 2048     : , "sv", "cheat", "rep" : Radius of screen shake from TNT explosion
+sv_trace_hull_attack_offset              : 10       : , "sv", "rep"    : Offsets NPC attack hull's start position forward
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
 sv_unlag_debug                           : 0        : , "sv"           : 
 sv_unlag_npcs                            : 1        : , "sv", "rep"    : Perform lag compensation on NPCs (EXPERIMENTAL)
@@ -1493,6 +1498,7 @@ sv_vaccine_partial_blind_chance          : 0        : , "sv", "cheat", "rep" : C
 sv_vaccine_partial_blind_duration        : 60       : , "sv", "cheat", "rep" : Length (in seconds) of partial blindness effects
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
 sv_voice_cooldown                        : 3        : , "sv", "rep"    : Voice command cooldown (seconds).
+sv_voicecmd_force_transmit_time          : 6        : , "sv", "cheat", "rep" : How long to force a transmit of a voice commanding client
 sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec steam - Use Steam voice API
 sv_voiceenable                           : 1        : , "a", "nf"      : 
 sv_vote_allow_restart_game_skip          : 1        : , "sv", "rep"    : Can players skip waiting phase by voting for round restart?
@@ -1541,14 +1547,28 @@ sv_zombie_buckshot_dmg_scale             : 0        : , "sv", "cheat", "rep" : Z
 sv_zombie_burn_time                      : 10       : , "sv", "cheat", "rep" : If ignited, zombies burn for this long
 sv_zombie_burn_time_noise                : 2        : , "sv", "cheat", "rep" : If ignited, zombies burn for burn_time give or take this much
 sv_zombie_charge_reset_tol               : 60       : , "sv", "cheat", "rep" : Distance for player to move from LKP for zombie to consider 'moved'
+sv_zombie_chase_enemy_on_barricade_fail  : 0        : , "sv", "cheat", "rep" : Should zombies attempt to chase enemies if barricade bash schedule fails?
 sv_zombie_collision_enabled              : 1        : , "sv", "rep"    : Whether or not zombie collision is enabled.
 sv_zombie_collision_group_count          : 3        : , "sv", "cheat", "rep" : Number of collision groups for zombies to use
+sv_zombie_cornerblock_method             : 2        : , "sv", "rep"    : How to deal with 'corner blocking' players, 0 = zombies freeze (~v1.09), 1 = zombies repath (~v1.13), 2 = zombies attack with direct hit trace (default)
+sv_zombie_crawler_attack_barricade       : 0        : , "sv", "cheat", "rep" : Can crawlers attack barricades?
 sv_zombie_crawler_health                 : 50       : , "sv", "cheat", "rep" : Crawler zombie maximum health
+sv_zombie_crawler_open_doors             : 0        : , "sv", "cheat", "rep" : Can crawlers open doors?
+sv_zombie_crawler_swat_items             : 0        : , "sv", "cheat", "rep" : Can crawlers swat items?
 sv_zombie_dmg_onehand                    : 15       : , "sv", "cheat", "rep" : Damage zombie does with one handed attacks
 sv_zombie_dmg_twohand                    : 15       : , "sv", "cheat", "rep" : Damage zombie does with two handed attacks
 sv_zombie_door_dmg                       : 8        : , "sv", "cheat", "rep" : Damage zombies do to doors per hit.
+sv_zombie_explosion_shove                : 1        : , "sv", "cheat", "rep" : Shove zombies on explosions?
 sv_zombie_farthest_phys_obj              : 480      : , "sv", "cheat", "rep" : Zombies only consider swatting objects this close to them
 sv_zombie_fire_size                      : 55       : , "sv", "cheat", "rep" : Size of a zombie fire.
+sv_zombie_fix_barricade_distance         : 1        : , "sv", "cheat", "rep" : Don't attack barricades that are too far away
+sv_zombie_fix_bestsound_alert            : 1        : , "sv", "cheat", "rep" : Don't jitter idle sequence while facing a 'best sound'
+sv_zombie_fix_bite_damage                : 1        : , "sv", "cheat", "rep" : If zombie is biting an enemy, only deal damage to them
+sv_zombie_fix_dawdle                     : 1        : , "sv", "cheat", "rep" : Default behavior after losing enemy waits for 20 seconds, perform idle cycle instead?
+sv_zombie_fix_falling_loot               : 1        : , "sv", "cheat", "rep" : Prevent zombie loot from falling through the ground
+sv_zombie_fix_hitbox_offset              : 1        : , "sv", "cheat", "rep" : Fix zombie hitboxes being off by one? (bug introduced in v1.11.0)
+sv_zombie_fix_physobj_distance           : 1        : , "sv", "cheat", "rep" : Zombies tend to return to objects even if those are too far away, this fixes it
+sv_zombie_fix_rise_collision             : 1        : , "sv", "cheat", "rep" : Fix turned zombies clipping into players after rising?
 sv_zombie_flinch_delay                   : 3        : , "sv", "cheat", "rep" : Zombies ignore damage this many seconds after flinching
 sv_zombie_grab_cooldown                  : 10       : , "sv", "cheat", "rep" : How often zombies will try to grab the same player.
 sv_zombie_grease_chance                  : 0        : , "sv", "cheat", "rep" : Chance that a zombie will switch collision groups after sv_zombie_grease_fails navigation failures.
@@ -1569,7 +1589,10 @@ sv_zombie_sound_decay_time               : 20       : , "sv", "cheat", "rep" : Z
 sv_zombie_sound_react_max                : 12       : , "sv", "cheat", "rep" : Maximum number of zombies that can react to a sound at once
 sv_zombie_sound_react_time               : 0        : , "sv", "cheat", "rep" : How often the sound reaction count is reset
 sv_zombie_squash_mass                    : 300      : , "sv", "cheat", "rep" : Minimum mass that will squish a zombie
+sv_zombie_standoff_on_chase_enemy_fail   : 0        : , "sv", "cheat", "rep" : Standoff instead of wander on chase fail? Requires 'sv_zombie_take_cover_from_enemy 0'
 sv_zombie_swat_delay                     : 5        : , "sv", "cheat", "rep" : How long between zombie physics swat attacks
+sv_zombie_swat_supplies                  : 0        : , "sv", "cheat", "rep" : Can zombies swat health stations/supply pieces?
+sv_zombie_take_cover_from_enemy          : 1        : , "sv", "cheat", "rep" : Should zombies attempt to take cover from unreachable enemies? When off, this may introduce a path failure loop on non-legacy AI (v1.14.0)
 sv_zombie_target_cooldown                : 5        : , "sv", "cheat", "rep" : 
 sv_zombie_unragdoll_think_freq           : 2        : , "sv", "cheat", "rep" : Frequency of a zombie's unragdoll think
 sv_zombie_unreachable_time               : 6        : , "sv", "cheat", "rep" : How long to treat enemy as unreachable, if zombie fails to reach it
@@ -1702,4 +1725,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 zomb_squirt                              : cmd      :                  : Squirt all the things! Use -quiet to kill without head split
 zomb_squirt_all                          : cmd      :                  : Squirt ALL the things! Use -quiet to kill without head split.
 --------------
-1701 total convars/concommands
+1724 total convars/concommands
