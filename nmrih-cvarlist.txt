@@ -1020,6 +1020,7 @@ script                                   : cmd      :                  : Run the
 script_allow_entity_creation_midgame     : 1        : , "sv"           : Allows VScript files to create entities mid-game, as opposed to only creating entities on startup.
 script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
 script_dump_all                          : cmd      :                  : Dump the state of the VM to the console
+script_dump_commands                     : cmd      :                  : 
 script_dump_hooks                        : cmd      :                  : 
 script_dump_scope                        : cmd      :                  : Usage: script_dump_scope <entindex>
 script_execute                           : cmd      :                  : Run a vscript file
@@ -1120,12 +1121,18 @@ sv_arrow_speed_max                       : 3000     : , "sv", "cheat", "rep" : M
 sv_arrow_speed_min                       : 2100     : , "sv", "cheat", "rep" : Minimum speed of arrows (units/sec)
 sv_back_speed_frac                       : 0        : , "sv", "cheat", "rep" : Fraction of movement speed when walking backwards
 sv_backspeed                             : 0        : , "a", "sv", "cheat", "rep" : How much to slow down backwards motion
+sv_ban_items                             : 0        : , "sv", "rep"    : List of banned items, with ',' delimiter.
+sv_ban_items_on_entities                 : 1        : , "sv", "rep"    : Apply item ban list to loose entities
+sv_ban_items_on_random_spawners          : 1        : , "sv", "rep"    : Apply item ban list to random spawners
+sv_ban_items_on_supplies                 : 1        : , "sv", "rep"    : Apply item ban list to supply crates
+sv_ban_items_override                    : 0        : , "sv", "rep"    : Second ban list for use with maps, scripts etc.
 sv_bandage_heal_amt                      : 15       : , "sv", "cheat", "rep" : Amount of health bandages heal on use
 sv_barricade_cooldown                    : 0        : , "sv", "cheat", "rep" : Time after board breaking before barricade point is available again
 sv_barricade_health                      : 150      : , "sv", "cheat", "rep" : Health of barricade boards.
 sv_barricade_opacity                     : 0        : , "sv", "cheat", "rep" : Opacity of barricade points when visible
 sv_barricade_prop_model                  : 0        : , "sv", "cheat", "rep" : Model to use for barricade points
 sv_barricade_show_damage                 : 0        : , "sv", "rep"    : Visualize barricade health by darkening boards according to how much damage they've taken. The value represents how dark the model should be at 0 HP left. E.g. 0.75 means 75% dark at 0 hit point. Use 0.0 for vanilla behavior, 0.75 for QoL plugin default.
+sv_barricade_sounds                      : 1        : , "sv", "cheat", "rep" : Play barricade impact sounds
 sv_bash_cost_per_sec                     : 16       : , "sv", "cheat", "rep" : Cost of stamina per second of bash charge
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
 sv_benchmark_force_start                 : cmd      :                  : Force start the benchmark. This is only for debugging. It's better to set sv_benchmark to 1 and restart the level.
@@ -1142,16 +1149,21 @@ sv_blunt_pushback_chance                 : 0        : , "sv", "cheat", "rep" : C
 sv_bonus_challenge                       : 0        : , "sv", "rep"    : Set to values other than 0 to select a bonus map challenge type.
 sv_bounce                                : 0        : , "sv", "cheat", "nf", "rep" : Bounce multiplier for when physically simulated objects collide with other objects.
 sv_bow_cancel_time                       : 10       : , "sv", "cheat", "rep" : Time until a stretched bow is cancelled
+sv_bow_fix_wallbang                      : 1        : , "sv", "cheat", "rep" : Fix being able to shoot through walls with a bow
 sv_bow_tense_period                      : 2        : , "sv", "cheat", "rep" : Time until a stretched bow becomes 'tense'
 sv_brainstem                             : 0        : , "sv", "cheat", "rep" : Enables/Disables zombie brainstem hitbox
 sv_bullet_bypass_player                  : 0        : , "sv", "rep"    : Should bullets bypass players? Has no effect when friendly fire is on, or if target is infected.
+sv_bullet_impulse                        : 1        : , "sv", "cheat", "rep" : Turns on bullet impulse, which results in more visible knockbacks based on ammo type
 sv_bullet_knockback_chance_max           : 0        : , "sv", "cheat", "rep" : Maximum chance for a bullet to knock a zombie back
 sv_bullet_knockback_chance_min           : 0        : , "sv", "cheat", "rep" : Minimum chance for a bullet to knock a zombie back
 sv_bullet_pen_count                      : 3        : , "sv", "cheat", "rep" : Maximum number of times a bullet can penetrate through a zombie
 sv_bullet_pen_dmg_factor                 : 0        : , "sv", "cheat", "rep" : Damage factor of bullet each time it penetrates
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
+sv_cancel_throw_drop                     : 1        : , "sv", "cheat", "rep" : Fixes a glitch where player could hold drop key to store throw charge after holster.
 sv_chainsaw_drain_rate_active            : 2        : , "sv", "cheat", "rep" : Chainsaw fuel drain rate per second while attacking
 sv_chainsaw_drain_rate_idle              : 0        : , "sv", "cheat", "rep" : Chainsaw fuel drain rate per second while idle
+sv_chainsaw_fix_charge_glitch            : 1        : , "sv", "cheat", "rep" : Fixes a bug where chainsaw can be charged to deal extra damage
+sv_chainsaw_fix_use_entity_glitch        : 1        : , "sv", "cheat", "rep" : Fixes a bug where chainsaw has infinite fuel while using something e.g. supply crate
 sv_challenge                             : 0        : , "sv", "rep"    : Enable challenge mode.
 sv_challenge_validate                    : 1        : , "sv", "rep"    : Validate challenge results.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
@@ -1183,30 +1195,44 @@ sv_difficulty                            : 0        : , "sv", "nf", "rep" : Whic
 sv_disable_querycache                    : 0        : , "sv", "cheat"  : debug - disable trace query cache
 sv_downloadurl                           : 0        : , "rep"          : Location from which clients can download missing files
 sv_drop_ammobox_pct                      : 0        : , "sv", "cheat", "rep" : Amount of ammo zombies will drop inside their dropped ammo boxes
+sv_dropallammo                           : 1        : , "sv", "cheat", "rep" : Allow dropping all ammo by right clicking in the radial wheel
 sv_duck_speed_frac                       : 0        : , "sv", "cheat", "rep" : Fraction of movement speed while ducking
 sv_dump_edicts                           : cmd      :                  : Display a list of edicts allocated on the server.
 sv_dumpstringtables                      : 0        : , "cheat"        : 
 sv_enableoldqueries                      : 0        :                  : Enable support for old style (HL1) server queries
+sv_etool_allow_shove_during_switch       : 1        : , "sv", "cheat", "rep" : Allow players to shove while switching e-tool mode
 sv_etool_mode_switch_time                : 3        : , "sv", "cheat", "rep" : Duration in seconds for when e-tool mode changes.
 sv_etool_pick_damage_modifier            : 1        : , "sv", "cheat", "rep" : Damage multiplier for e-tool when pick is active.
 sv_execmapcfg                            : 1        : , "sv", "rep"    : Autoexec [mapname].cfg on map init.
 sv_extinguisher_always_fire              : 0        : , "sv", "cheat", "rep" : Always able to fire an extinguisher
+sv_extinguisher_use_distance             : 60       : , "sv", "cheat", "rep" : 
 sv_extract_pause                         : 3        : , "sv", "cheat", "rep" : Time after getting extracted that a player is frozen.
 sv_extract_previewtime                   : 12       : , "sv", "rep"    : Time the extract cam is active.
 sv_filterban                             : 1        :                  : Set packet filtering by IP mode
 sv_first_aid_heal_amt                    : 30       : , "sv", "cheat", "rep" : Amount of health a first aid kit heals.
-sv_first_draw_activity                   : 1        : , "sv", "rep"    : Allow initial draw animation, e.g. pulling back the hammer on pistols
+sv_first_draw_activity                   : 1        : , "sv", "cheat", "rep" : Allow initial draw animation, e.g. pulling back the hammer on pistols
+sv_fix_decal_overflow                    : 1        : , "sv"           : Server prevents static infodecals from respawning on round restart.
+sv_flame_legacy                          : 0        : , "sv", "cheat", "rep" : Legacy tracking for flame kills (pre-v1.12.3)
+sv_flare_gun_apply_radius_damage         : 1        : , "sv", "cheat", "rep" : Projectile generates a small explosion that affects props, windows, players/NPCs and so on
 sv_flare_gun_explode_damage              : 50       : , "sv", "cheat", "rep" : Damage done by a flare gun explosion
+sv_flare_gun_fix_oob_supply_drop         : 1        : , "sv", "cheat", "rep" : Crates drop on player position to avoid out of bounds
+sv_flare_gun_passthrough_glass           : 1        : , "sv", "cheat", "rep" : Projectile passes through glass and won't explode on contact
+sv_flare_gun_passthrough_player          : 1        : , "sv", "cheat", "rep" : Projectile passes through players when friendly fire is off
 sv_flare_gun_supply_limit                : 1        : , "sv", "rep"    : Amount of supplies that can be called by a flare gun per round. Set to -1 for infinite.
 sv_footsteps                             : 1        : , "sv", "cheat", "nf", "rep" : Play footstep sound for players
 sv_forced_holiday                        : 0        : , "sv", "rep"    : Enable holiday celebrations, 0 = none, 1 = xmas, 2 = halloween
 sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
 sv_free_knowedge_duration                : 6        : , "sv", "cheat", "rep" : Time after a zombie spawns that it has free knowledge.
+sv_freeze_zombies_on_spawn               : 0        : , "sv", "cheat", "rep" : 
 sv_friction                              : 4        : , "sv", "cheat", "nf", "rep" : World friction.
 sv_friendly_fire_factor                  : 0        : , "sv", "rep"    : Damage factor of friendly fire.
 sv_gravity                               : 800      : , "sv", "nf", "rep" : World gravity.
+sv_grenade_angular_impulse_max           : 128      : , "sv", "cheat", "rep" : 
+sv_grenade_angular_impulse_min           : -128     : , "sv", "cheat", "rep" : 
 sv_grenade_blast_radius                  : 256      : , "sv", "cheat", "rep" : Blast radius of grenade
+sv_grenade_infect_bypass                 : 1        : , "sv", "cheat", "rep" : Infected players dying by explosion won't turn
 sv_grenade_rise                          : 0        : , "sv", "rep"    : Warp grenades slightly off ground at detonation to improve effectiveness around clutter.
+sv_gunshot_suicide                       : 1        : , "sv", "cheat", "rep" : Allow gunshot suicides
 sv_hardcore_survival                     : 0        : , "sv", "rep"    : Enables or disables survival hardcore mode
 sv_health_display                        : 1        : , "sv", "rep"    : Whether or not to allow health to be displayed
 sv_health_station_heal_per_tick          : 1        : , "sv", "rep"    : Amount healed by health station per second
@@ -1214,6 +1240,7 @@ sv_health_station_health                 : 200      : , "sv", "rep"    : Amount 
 sv_health_station_opacity                : 0        : , "sv", "rep"    : Opacity of unused health station
 sv_helmet_scale_dmg                      : 1        : , "sv", "cheat", "rep" : Amount damage is scaled for all other weapons hitting the helmet
 sv_helmet_scale_rifle_dmg                : 1        : , "sv", "cheat", "rep" : Amount damage is scaled for rifles hitting the helmet
+sv_hide_ammo_hud_on_fire                 : 1        : , "sv", "cheat", "rep" : Hide ammo HUD after firing a shot?
 sv_hudhint_sound                         : 1        : , "sv", "rep"    : 
 sv_idle_autokick_enabled                 : 1        : , "sv", "rep"    : Enable autokicking idle players.
 sv_idle_autokick_time                    : 120      : , "sv", "rep"    : Time a player can be idle before auto kicked from the server.
@@ -1226,10 +1253,12 @@ sv_infect_survival_modifier              : 2        : , "sv", "rep"    :
 sv_infection_bypass                      : 0        : , "sv", "rep"    : Damage amounts equal to or higher than this will prevent an infected player from reanimating. Use 0.0 for vanilla behavior (i.e. always reanimate), 100.0 for QoL plugin default.
 sv_infection_chance                      : 1        : , "sv", "cheat", "rep" : Chance for zombie to infect players per hit.
 sv_infectionlength                       : 120      : , "sv", "cheat", "rep" : Length of time it takes for infection to kill a target
+sv_initial_sprint_stamina_penalty        : 15       : , "sv", "cheat", "rep" : How much stamina does sprint initally spend?
 sv_item_dropforce                        : 90       : , "sv", "cheat", "rep" : Force of dropped objects
 sv_item_give                             : 1        : , "sv", "cheat", "rep" : Enable item giving.
 sv_item_give_distance                    : 100      : , "sv", "cheat", "rep" : Max distance for giving items.
 sv_item_glow                             : 1        : , "sv", "rep"    : Enable item glow
+sv_item_pickup_sound                     : 1        : , "sv", "cheat", "rep" : Play sound on item pickup
 sv_itembox_single_use                    : 0        : , "sv", "rep"    : Whether or not players can only take one item per box
 sv_itembox_use_dist                      : 190      : , "sv", "cheat", "rep" : 
 sv_keycode_use_dist                      : 96       : , "sv", "cheat", "rep" : 
@@ -1287,10 +1316,14 @@ sv_maxusrcmdprocessticks                 : 24       : , "sv", "nf"     : Maximum
 sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv", "cheat"  : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server tick; 2+: hold multiple ticks)
 sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a warning when user commands get dropped due to insufficient usrcmd ticks allocated, number of seconds to throttle, negative disabled
 sv_maxvelocity                           : 3500     : , "sv", "cheat", "rep" : Maximum speed any ballistically moving object is allowed to attain per axis.
+sv_medical_allow_use_underwater          : 1        : , "sv", "cheat", "rep" : Allow medical item usage underwater?
+sv_medical_audible_sounds                : 1        : , "sv", "cheat", "rep" : Other players can hear medical item usage?
+sv_medical_instant_apply                 : 0        : , "sv", "cheat", "rep" : Medical items apply instantly
 sv_melee_damage_base                     : 30       : , "sv", "cheat", "rep" : Melee weapon base damage
 sv_melee_damage_head                     : 600      : , "sv", "cheat", "rep" : Melee weapon head damage
 sv_melee_dmg_per_sec                     : 0        : , "sv", "cheat", "rep" : Multiple of base melee damage to do per second of charge
 sv_melee_force_scale                     : 0        : , "sv", "cheat", "rep" : How much to scale force of melee hits by
+sv_melee_impact_style                    : 2        : , "sv", "cheat", "rep" : 0 = nothing, 1 = classic, 2 = particles across arc
 sv_melee_require_stamina                 : 1        : , "sv", "cheat", "rep" : Require enough stamina for melee swing
 sv_melee_trace_secondary                 : 2        : , "sv", "cheat", "rep" : Fire additional trace to prevent melee arcs phasing through what we're facing. 0 = disable, 1 = breakables only, 2 = everything incl. NPCs/players
 sv_melee_trace_show_hits                 : 0        : , "sv", "cheat", "rep" : Show melee trace information
@@ -1300,6 +1333,7 @@ sv_mincmdrate                            : 10       : , "rep"          : This se
 sv_minrate                               : 3500     : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
 sv_minupdaterate                         : 10       : , "rep"          : Minimum updates per second that the server will allow
 sv_minuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime is less than this number of hours, the server will continue running regardless of sv_memlimit.
+sv_molotov_always_burn                   : 0        : , "sv", "cheat", "rep" : Should molotov always cause an inferno, regardless where it hits?
 sv_molotov_burn_damage                   : 3        : , "sv", "cheat", "rep" : Molotov burn damage
 sv_molotov_burn_freq                     : 0        : , "sv", "cheat", "rep" : Molotov burn (damage) frequency in seconds
 sv_molotov_damage_duration               : 20       : , "sv", "cheat", "rep" : Time in seconds that molotov damage radius lasts after explosion
@@ -1327,12 +1361,16 @@ sv_ng_zombie_chance                      : 0        : , "sv", "cheat", "rep" : C
 sv_ng_zombie_drop_grenade                : 1        : , "sv", "cheat", "rep" : NG zombies can drop grenades as loot on death
 sv_ng_zombie_loot                        : 1        : , "sv", "rep"    : NG zombies can drop loot on death
 sv_no_stam_viewmodel_drop                : 8        : , "sv", "cheat", "rep" : Units the viewmodel drops when not enough stamina for shoving / quick attacking
+sv_noclip_ignore_teleport                : 0        : , "sv", "cheat", "rep" : 
 sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" : 
 sv_noclipduringpause                     : 0        : , "sv", "cheat", "rep" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
 sv_noclipspeed                           : 5        : , "a", "sv", "nf", "rep" : 
 sv_noinvlimit                            : 0        : , "sv", "cheat", "rep" : Disable inventory weight limit. (Also removes speed reduction)
+sv_npc_frozen_death_immunity             : 0        : , "sv", "cheat", "rep" : Frozen NPCs won't die, emulates v1.14.1 behavior
+sv_npc_goal_repath_tolerance             : 120      : , "sv", "cheat", "rep" : 
 sv_npc_talker_maxdist                    : 1024     : , "sv"           : NPCs over this distance from the player won't attempt to speak.
 sv_objective_glow                        : 1        : , "sv", "rep"    : Enable objective boundary glow
+sv_objective_update_on_spawn             : 1        : , "sv", "rep"    : Spawned players will receive an active objective, turn this off if it causes problems with custom objective logic.
 sv_observer_health_display               : 1        : , "sv", "rep"    : Whether or not to allow health counters to be displayed for observers / spectators
 sv_parallel_packentities                 : 1        :                  : 
 sv_parallel_sendsnapshot                 : 0        :                  : 
@@ -1340,9 +1378,17 @@ sv_password                              : 0        : , "nf", "prot", "norecord"
 sv_pausable                              : 0        : , "nf"           : Is the server pausable.
 sv_pickup_masslimit                      : 35       : , "sv", "cheat", "rep" : 
 sv_pickup_sizelimit                      : 128      : , "sv", "cheat", "rep" : 
+sv_player_bullet_force_accumulator       : 1        : , "sv", "cheat", "rep" : Apply bullet forces to player ragdolls
+sv_player_death_music                    : 1        : , "sv", "cheat", "rep" : Play a tune on death
 sv_player_display_usercommand_errors     : 0        : , "sv", "cheat"  : 1 = Display warning when command values are out-of-range. 2 = Spew invalid ranges.
+sv_player_duck_on_crawler_grab           : 1        : , "sv", "cheat", "rep" : Allow player duck when a crawler grabs them
 sv_player_fatal_fall_speed               : 700      : , "sv", "cheat", "rep" : Fatal fall speed
+sv_player_fix_hitbox_desync              : 1        : , "sv", "cheat", "rep" : Fixes hitbox desync when looking up and down
+sv_player_follow_ragdoll                 : 1        : , "sv", "cheat", "rep" : Camera follows player ragdoll on death
+sv_player_grab_ff_immunity               : 1        : , "sv", "rep"    : Grabbed players won't take friendly fire
 sv_player_max_safe_fall_speed            : 480      : , "sv", "cheat", "rep" : Maximum safe fall speed
+sv_player_spawn_sound                    : 1        : , "sv", "rep"    : Play local sound on player spawn
+sv_player_water_splash                   : 1        : , "sv", "cheat", "rep" : Players generate splashes on water
 sv_playerperfhistorycount                : 60       : , "sv"           : Number of samples to maintain in player perf history
 sv_postinfection_zombietime              : 4        : , "sv", "cheat", "rep" : Time after death until an infected zombie is spawned
 sv_postround_time                        : 10       : , "sv", "rep"    : Time after round win/loss before reset.
@@ -1377,6 +1423,8 @@ sv_rcon_minfailuretime                   : 30       :                  : Number 
 sv_rcon_whitelist_address                : 0        :                  : When set, rcon failed authentications will never ban this address, e.g. '127.0.0.1'
 sv_realism                               : 0        : , "sv", "rep"    : Enables/disables realism mode.  Headshots will be instant kills and all other areas of the body will take no damage.
 sv_realism_allow_respawn                 : 0        : , "sv", "rep"    : Allow respawns in realism mode.
+sv_realism_fix_bullet_penetration        : 1        : , "sv", "cheat", "rep" : Fixes bullets not penetrating on realism mode
+sv_realism_fix_crawler_damage            : 1        : , "sv", "cheat", "rep" : By default, body damage isn't zeroed on crawlers, as their hitboxes are difficult to hit
 sv_region                                : 255      :                  : The region of the world to report this server in.
 sv_remove_unreasonable_physics           : 1        : , "sv", "rep"    : Removes VPhysics entities that fell out of the map.
 sv_resetscore                            : 0        : , "sv", "rep"    : Reset all player scores on round restart
@@ -1418,12 +1466,17 @@ sv_server_spawn_buffer                   : 25       : , "sv", "rep"    : Time bu
 sv_setsteamaccount                       : cmd      :                  : token Set game server account token to use for logging in to a persistent game server account
 sv_sharp_charged_pushback_chance         : 0        : , "sv", "cheat", "rep" : Chance of a sharp weapon to push back a zombie on a charged attack
 sv_sharp_pushback_chance                 : 0        : , "sv", "cheat", "rep" : Chance of a sharp weapon to push back a zombie
+sv_shove_allow_during_firemode_change    : 1        : , "sv", "cheat", "rep" : Allow players to shove during fire mode change
+sv_shove_allow_during_ironsight          : 1        : , "sv", "cheat", "rep" : Allow players to shove during ironsight raise/lower animation
+sv_shove_allow_during_pickup             : 1        : , "sv", "cheat", "rep" : Allow players to shove while carrying a prop
 sv_shove_cost                            : 20       : , "sv", "cheat", "rep" : Stamina cost of shove
 sv_shove_delay                           : 0        : , "sv", "cheat", "rep" : Time delay between shoves, in seconds
+sv_shove_drain_stamina_on_world_hit      : 0        : , "sv", "cheat", "rep" : If shove hits world, drain stamina
 sv_shove_max_action_delay                : 0        : , "sv", "cheat", "rep" : Maximum time delay before user can shove after firing a weapon, in seconds
 sv_shove_multi                           : 0        : , "sv", "rep"    : Shove multiple zombies directly in front of player
 sv_shove_multi_distance                  : 52       : , "sv", "cheat", "rep" : Distance to allow shove to hit more than one zombie
 sv_shove_multi_max_bashes                : 2        : , "sv", "cheat", "rep" : Maximum number of zombies player can bash per shove
+sv_shove_stab_sound                      : 1        : , "sv", "cheat", "rep" : Play stab sound on applicable shove?
 sv_showcleanedupents                     : 0        : , "sv", "cheat"  : Show entities that are removed on round respawn.
 sv_showimpacts                           : 0        : , "sv", "rep"    : Shows client (red) and server (blue) bullet impact point
 sv_showladders                           : 0        : , "sv"           : Show bbox and dismount points for all ladders (must be set before level load.) 
@@ -1439,6 +1492,7 @@ sv_sks_melee_multiplier_min              : 5        : , "sv", "cheat", "rep" : M
 sv_sks_shove_delay                       : 0        : , "sv", "cheat", "rep" : Time delay between shoves for SKS only, in seconds
 sv_skyname                               : 0        : , "a", "sv", "rep" : Current name of the skybox texture
 sv_sniper_zoom                           : 30       : , "sv", "cheat", "rep" : FoV zoom for sniper rifles
+sv_soloplay_skip_practice                : 1        : , "sv", "rep"    : Skip waiting phase on solo games?
 sv_soundemitter_trace                    : 0        : , "sv", "rep"    : Show all EmitSound calls including their symbolic name and the actual wave file they resolved to 
 sv_spawn_density                         : 1        : , "sv", "cheat", "rep" : Multiplier For Zombie Spawn Zones without specific maximums
 sv_spawn_grace                           : 180      : , "sv", "rep"    : Spawn grace time
@@ -1466,7 +1520,10 @@ sv_stepsize                              : 18       : , "sv", "cheat", "nf", "re
 sv_stopspeed                             : 100      : , "sv", "cheat", "nf", "rep" : Minimum stopping speed when on ground.
 sv_strict_notarget                       : 0        : , "sv"           : If set, notarget will cause entities to never think they are in the pvs
 sv_suicide_black_time                    : 3        : , "sv", "cheat", "rep" : Time a player's screen is black after suiciding.
+sv_suicide_disallow_while_using          : 1        : , "sv", "cheat", "rep" : Disallow contemplating while using a progress trigger
 sv_suicide_dsp                           : 130      : , "sv", "cheat", "rep" : DSP for players contemplating suicide
+sv_suicide_infect_score                  : 1        : , "sv", "cheat", "rep" : Score for gunshot suiciding while infected
+sv_suicide_play_impact_sound             : 1        : , "sv", "cheat", "rep" : Play impact sound on gunshot suicide
 sv_suicide_pushforce                     : 24       : , "sv", "cheat", "rep" : Suicide ragdoll push force
 sv_supply_use_time                       : 3        : , "sv", "rep"    : Time a supply station must be used before a piece is given.
 sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
@@ -1498,9 +1555,11 @@ sv_vaccine_partial_blind_chance          : 0        : , "sv", "cheat", "rep" : C
 sv_vaccine_partial_blind_duration        : 60       : , "sv", "cheat", "rep" : Length (in seconds) of partial blindness effects
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
 sv_voice_cooldown                        : 3        : , "sv", "rep"    : Voice command cooldown (seconds).
+sv_voicecmd_common_sounds                : 1        : , "sv", "cheat", "rep" : Common sounds such as bleeding use hidden voice commands
 sv_voicecmd_force_transmit_time          : 6        : , "sv", "cheat", "rep" : How long to force a transmit of a voice commanding client
 sv_voicecodec                            : 0        :                  : Specifies which voice codec to use. Valid options are: vaudio_speex - Legacy Speex codec (lowest quality) vaudio_celt - Newer CELT codec steam - Use Steam voice API
 sv_voiceenable                           : 1        : , "a", "nf"      : 
+sv_voicesubtitles                        : 1        : , "sv", "cheat", "rep" : Enable voice subtitles in chat.
 sv_vote_allow_restart_game_skip          : 1        : , "sv", "rep"    : Can players skip waiting phase by voting for round restart?
 sv_vote_allow_spectators                 : 0        : , "sv"           : Allow spectators to vote?
 sv_vote_changedifficulty_restart         : 1        : , "sv"           : Change difficulty vote restarts game?
@@ -1535,12 +1594,15 @@ sv_wave_spawn_per_think                  : 35       : , "sv", "cheat", "rep" : N
 sv_wave_spawn_think_rate                 : 6        : , "sv", "cheat", "rep" : How often the wave controller thinks when spawning
 sv_weapon_dropforce                      : 250      : , "sv", "cheat", "rep" : Force of dropped weapons
 sv_weapon_throwforce                     : 800      : , "sv", "cheat", "rep" : Force of thrown weapons
+sv_weapon_unload                         : 1        : , "sv", "cheat", "rep" : Allow unloading of firearms?
 sv_workshop                              : 1        : , "sv"           : Enable server-side Steam Workshop for maps.
 sv_workshop_autoupdate                   : 0        : , "sv"           : Automatically update Workshop maps every level change.
 sv_zippo_equip_delay                     : 0        : , "sv", "cheat", "rep" : Time in seconds that player has to hold IN_MAGLITE before equipping zippo
 sv_zippo_extinguish_time                 : 60       : , "sv", "cheat", "rep" : Time until a zippo extinguishes
+sv_zippo_extinguish_underwater           : 1        : , "sv", "cheat", "rep" : Zippo extinguishes underwater and can't be ignited
 sv_zippo_light_chance                    : 0        : , "sv", "cheat", "rep" : Chance for zippo to be lit on a strike
 sv_zippo_radius                          : 160      : , "sv", "cheat", "rep" : Radius the zippo lights up
+sv_zombie_always_attack_bullseye         : 1        : , "sv", "cheat", "rep" : Zombies don't consider bullseyes as obstructions, when 0, it emulates v1.14.1 behavior
 sv_zombie_ambush_dist                    : 16000    : , "sv", "cheat", "rep" : Distance for a zombie to consider ambushing a player
 sv_zombie_attack_check_delay             : 0        : , "sv", "cheat", "rep" : Delay in seconds for each attack check.
 sv_zombie_buckshot_dmg_scale             : 0        : , "sv", "cheat", "rep" : Zombies take this factor of buckshot damage
@@ -1583,6 +1645,7 @@ sv_zombie_nav_radius                     : 150      : , "sv", "cheat", "rep" : C
 sv_zombie_obstruction_check_delay        : 1        : , "sv", "cheat", "rep" : Delay in seconds for each obstruction check.
 sv_zombie_physobj_swatdist               : 48       : , "sv", "cheat", "rep" : How close to a physics object zombies get before swatting them
 sv_zombie_player_max_swatdist            : 200      : , "sv", "cheat", "rep" : Zombies will not swat physics objects at players farther away than this
+sv_zombie_pound_sound                    : 1        : , "sv", "cheat", "rep" : Zombies play impact sounds when pounding barricades, props, walls, etc.
 sv_zombie_reach                          : 44       : , "sv", "cheat", "rep" : Zombie attack range / reach distance
 sv_zombie_shambler_crawler_chance        : 0        : , "sv", "cheat", "rep" : Chance for shamblers to spawn as crawlers
 sv_zombie_sound_decay_time               : 20       : , "sv", "cheat", "rep" : Zombies lose interest in sounds after this long
@@ -1725,4 +1788,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 zomb_squirt                              : cmd      :                  : Squirt all the things! Use -quiet to kill without head split
 zomb_squirt_all                          : cmd      :                  : Squirt ALL the things! Use -quiet to kill without head split.
 --------------
-1724 total convars/concommands
+1787 total convars/concommands
