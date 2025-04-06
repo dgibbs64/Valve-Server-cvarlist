@@ -331,7 +331,7 @@ emp_sv_official_lastbroken               : -1       : , "sv"           :
 emp_sv_official_lastcheck                : 1        : , "sv"           : 
 emp_sv_official_lasterror                : -1       : , "sv"           : 
 emp_sv_official_portoverride             : -1       : , "sv"           : 
-emp_sv_official_reply                    : -1       : , "sv"           : 
+emp_sv_official_reply                    : 0        : , "sv"           : 
 emp_sv_official_url                      : 0        : , "sv"           : 
 emp_sv_order_building_range              : -1       : , "sv", "nf"     : The distance at which the targeted building has to be away from the ordered player to have the order cancelled.
 emp_sv_order_infantry_range              : 1500     : , "sv", "nf"     : The distance at which the targeted infantry has to be away from the initial target location to have the order cancelled.
