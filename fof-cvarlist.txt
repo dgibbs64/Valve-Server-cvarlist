@@ -1802,4 +1802,3 @@ zombie_moanfreq                          : 1        : , "sv"           :
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
 1800 total convars/concommands
-Warning: failed to init SDL thread priority manager: SDL not found
