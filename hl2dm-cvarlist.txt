@@ -1830,6 +1830,3 @@ zombie_moanfreq                          : 1        : , "sv"           :
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
 1828 total convars/concommands
-Connection to Steam servers successful.
-   Public IP to Steam is 52.234.38.192.
-Assigned anonymous gameserver Steam ID [A:1:3363898373:44926].
