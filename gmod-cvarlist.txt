@@ -215,7 +215,7 @@ creditsdone                              : cmd      :                  :
 curve_bias                               : 0        : , "sv"           : 
 cvarlist                                 : cmd      :                  : Show the list of convars/concommands.
 darkness_ignore_LOS_to_sources           : 1        : , "sv"           : 
-datacachesize                            : 256      :                  : Size in MB.
+datacachesize                            : 512      :                  : Size in MB.
 dbghist_addline                          : cmd      :                  : Add a line to the debug history. Format: <category id> <line>
 dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Scene Print      3: Alyx Blind      4: Log of damage done to player
 deathmatch                               : 1        : , "nf"           : Running a deathmatch server.
@@ -632,7 +632,7 @@ mem_compact                              : cmd      :                  :
 mem_dump                                 : cmd      :                  : Dump memory stats to text file.
 mem_dumpstats                            : 0        :                  : Dump current and max heap usage info to console at end of frame ( set to 2 for continuous output ) 
 mem_force_flush                          : 0        : , "cheat"        : Force cache flush of unlocked resources on every alloc
-mem_max_heapsize                         : 256      :                  : Maximum amount of memory to dedicate to engine hunk and datacache (in mb)
+mem_max_heapsize                         : 512      :                  : Maximum amount of memory to dedicate to engine hunk and datacache (in mb)
 mem_max_heapsize_dedicated               : 64       :                  : Maximum amount of memory to dedicate to engine hunk and datacache, for dedicated server (in mb)
 mem_min_heapsize                         : 48       :                  : Minimum amount of memory to dedicate to engine hunk and datacache (in mb)
 mem_periodicdumps                        : 0        :                  : Write periodic memstats dumps every n seconds.
