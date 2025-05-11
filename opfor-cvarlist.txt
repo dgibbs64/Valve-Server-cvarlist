@@ -60,7 +60,7 @@ mp_multipower   :        0, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1187, sv
+mp_timeleft     :     1186, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
