@@ -64,7 +64,7 @@ mp_teamplay     :        0, sv
 mp_theone       :        0, sv
 mp_theonemode   :        0, sv
 mp_theothers    :        0, sv
-mp_timeleft     :     1186, sv
+mp_timeleft     :     1185, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
