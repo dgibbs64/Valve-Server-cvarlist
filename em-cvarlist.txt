@@ -245,6 +245,8 @@ emp_change_vehicweap                     : cmd      :                  :
 emp_comm_exit                            : cmd      :                  : 
 emp_comm_research                        : cmd      :                  : 
 emp_comm_research_cancel                 : cmd      :                  : 
+emp_comm_research_pause                  : cmd      :                  : 
+emp_comm_research_resume                 : cmd      :                  : 
 emp_comm_rot                             : cmd      :                  : 
 emp_commander_vote                       : cmd      :                  : 
 emp_commander_vote_add_in                : cmd      :                  : 
@@ -254,7 +256,7 @@ emp_debug_refineries                     : cmd      :                  : Debug r
 emp_debug_revive                         : cmd      :                  : Debug player revive
 emp_debug_skill                          : cmd      :                  : Print player skills
 emp_debug_skills                         : cmd      :                  : Prints player skills
-emp_debug_spawn_shell                    : cmd      :                  : Spawns a shell from the center of your screen
+emp_debug_spawn_shell                    : cmd      :                  : Spawns a shell from the center of your screen. Optionally takes the index of the weapon definition as a parameter, and the number of shells to spawn as a second parameter.
 emp_debug_visuals_scouthide              : 0        : , "sv", "cheat"  : Debug visuals for scout hide.
 emp_eng_recycle                          : cmd      :                  : 
 emp_eng_recycle_1                        : cmd      :                  : 
@@ -292,6 +294,7 @@ emp_sv_commander_resource_interval       : 1        : , "sv"           :
 emp_sv_commander_visiblity_interval      : 1        : , "sv"           : 
 emp_sv_debug_build_vehicles              : 0        : , "sv", "nf"     : 
 emp_sv_debug_instant_build               : 0        : , "sv", "nf", "rep" : 
+emp_sv_debug_radar_required              : 1        : , "sv", "nf", "rep", "server_can_execute" : 
 emp_sv_debug_visualize_explosions        : 0        : , "sv", "cheat"  : Draw debug visuals for explosions (Listen Server only)
 emp_sv_destroy_cv                        : cmd      :                  : Destroy command vehicle
 emp_sv_drop_cooked_grenades              : 0        : , "sv", "nf", "rep" : Cooked grenades are dropped when the player is killed
@@ -346,7 +349,7 @@ emp_sv_player_resource_interval          : 1        : , "sv"           :
 emp_sv_refinery_multiplier               : 1        : , "sv", "nf", "rep" : 
 emp_sv_reinforcement_multiplier_be       : 1        : , "sv", "nf"     : 
 emp_sv_reinforcement_multiplier_nf       : 1        : , "sv", "nf"     : 
-emp_sv_research_complete                 : 0        : , "sv", "nf"     : 
+emp_sv_research_complete                 : 0        : , "sv", "nf", "rep", "server_can_execute" : 
 emp_sv_research_item                     : cmd      :                  : Research an item.  Arguments: {research_name} {nf|imp|no argument for both teams}
 emp_sv_research_multiplier               : 1        : , "sv", "nf"     : 
 emp_sv_resolve_players_under_tanks       : 1        : , "sv", "rep"    : 
@@ -362,14 +365,11 @@ emp_sv_suddendeath_countdown             : 2        : , "sv"           :
 emp_sv_tactics_commander_time            : 120      : , "sv", "rep"    : 
 emp_sv_turret_search_interval            : 0        : , "sv", "nf"     : 
 emp_sv_unresearch_item                   : cmd      :                  : Unresearch an item.  Arguments: {research_name} {nf|imp|no argument for both teams}
-emp_sv_v_weapon_disable                  : -1       : , "sv"           : Used to disable weapons(by index number in vehicle_weapons.txt) - optionally prefix with 'imp ' or 'nf '
-emp_sv_v_weapon_enable                   : -1       : , "sv"           : Used to enable weapons(by index number in vehicle_weapons.txt) - optionally prefix with 'imp ' or 'nf '
-emp_sv_vehicle_allow_horns               : 1        : , "sv"           : 
 emp_sv_vehicle_debug_reflective          : 0        : , "sv", "cheat"  : 
-emp_sv_vehicle_fadeout_time              : 60       : , "sv"           : How long a vehicle carcass stays before being removed, death time + cvar duration.
-emp_sv_vehicle_fadeout_time_partial      : 30       : , "sv"           : How long to add to a partial carcass if it's passed it original fadeout time, last recycle time + cvar duration.
+emp_sv_vehicle_fadeout_time              : 180      : , "sv", "nf"     : How long a vehicle carcass stays before being removed, death time + cvar duration.
+emp_sv_vehicle_fadeout_time_partial      : 60       : , "sv", "nf"     : How long to add to a partial carcass if it's passed it original fadeout time, last recycle time + cvar duration.
 emp_sv_vehicle_minimap_interval          : 1        : , "sv"           : 
-emp_sv_vehicle_selfdestruct_time         : 300      : , "sv"           : Empty vehicles will self-destruct after this time limit (in seconds).
+emp_sv_vehicle_selfdestruct_time         : 300      : , "sv", "nf"     : Empty vehicles will self-destruct after this time limit (in seconds).
 emp_sv_vehicle_show_damage               : 0        : , "sv", "cheat"  : Show damage done to tanks
 emp_sv_vote_commander_time               : 60       : , "sv", "nf", "rep" : 
 emp_sv_vote_kick_player                  : 1        : , "sv"           : 
