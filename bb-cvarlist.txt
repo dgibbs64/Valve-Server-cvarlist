@@ -53,11 +53,11 @@ mp_friendlyfire :        0, sv
 mp_logecho      :        1
 mp_logfile      :        1, sv
 mp_recoilratio  :        1, sv
-mp_scoreleft    :      327, sv
+mp_scoreleft    :     1144, sv
 mp_speedratio   :    0.800, sv
 mp_teamplay     :        0, sv
 mp_teamscorelimit :        0, sv
-mp_timeleft     :     1186, sv
+mp_timeleft     :     1187, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
