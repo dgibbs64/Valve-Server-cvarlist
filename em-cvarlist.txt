@@ -283,9 +283,6 @@ emp_squad_lock                           : cmd      :                  :
 emp_sv_antigrief_build_vehicles          : 1        : , "sv", "nf"     : anti-grief features : When turned on, a non-commander player may not build too much vehicles in a given time.  Can be overrided by emp_sv_debug_build_vehicles for testing purposes. 
 emp_sv_autospot_duration                 : 10       : , "sv", "nf"     : The amount of time players are autospotted for.
 emp_sv_base_swap                         : 0        : , "sv", "nf"     : 0=never swap, 1=random swap
-emp_sv_building_box                      : cmd      :                  : 
-emp_sv_building_none                     : cmd      :                  : 
-emp_sv_building_physics                  : cmd      :                  : 
 emp_sv_client_missiles                   : 1        : , "sv"           : 
 emp_sv_client_vehic_auth_movement        : 1        : , "sv", "rep"    : 
 emp_sv_client_vehic_auth_movement_2      : 1        : , "sv", "rep"    : 
@@ -1471,4 +1468,4 @@ xbox_throttlebias                        : 100      : , "a", "sv", "rep" :
 xbox_throttlespoof                       : 200      : , "a", "sv", "rep" : 
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
-1470 total convars/concommands
+1467 total convars/concommands
