@@ -603,3 +603,4 @@ voice_inputfromfile :        0
 voice_recordtofile :        0
 --------------
 601 Total CVars
+CvarList ? for syntax
