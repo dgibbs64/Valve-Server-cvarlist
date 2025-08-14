@@ -142,7 +142,7 @@ autoaim_max_deflect                      : 0        : , "sv"           :
 autoaim_max_dist                         : 2160     : , "sv"           : 
 autoaim_unlock_target                    : 0        : , "sv"           : 
 banid                                    : cmd      :                  : Add a user ID to the ban list.
-banid2                                   : cmd      :                  : 
+banid2                                   : cmd      :                  : Alias of banid, do not use.
 banip                                    : cmd      :                  : Add an IP address to the ban list.
 bind                                     : cmd      :                  : Bind a key.
 bind_mac                                 : cmd      :                  : Bind this key but only on Mac, not win32
@@ -160,7 +160,7 @@ bot_forcefireweapon                      : 0        : , "sv"           : Force b
 bot_mimic                                : 0        : , "sv"           : Bot uses usercmd of player by index.
 bot_mimic_yaw_offset                     : 0        : , "sv"           : Offsets the bot yaw.
 bot_sendcmd                              : 0        : , "sv"           : Forces bots to send the specified command.
-bot_zombie                               : 0        : , "sv"           : Brraaaaaiiiins.
+bot_zombie                               : 0        : , "sv"           : If bot_mimic is not in use, 0=Bots will move randomly by themselves, 1=They will not.
 breakable_disable_gib_limit              : 0        : , "sv"           : 
 breakable_multiplayer                    : 1        : , "sv"           : 
 buddha                                   : cmd      :                  : Toggle.  Player takes damage but won't die. (Shows red cross when health is zero)
@@ -413,9 +413,6 @@ god                                      : cmd      :                  : Toggle.
 groundlist                               : cmd      :                  : Display ground entity list <index>
 hammer_update_entity                     : cmd      :                  : Updates the entity's position/angles when in edit mode
 hammer_update_safe_entities              : cmd      :                  : Updates entities in the map that can safely be updated (don't have parents or are affected by constraints). Also excludes entities mentioned in any hammer_updateignorelist objects in this map.
-hap_airboat_gun_mag                      : 3        : , "sv"           : 
-hap_jeep_cannon_mag                      : 10       : , "sv"           : 
-hap_turret_mag                           : 5        : , "sv"           : 
 help                                     : cmd      :                  : Find help about a convar/concommand.
 hide_server                              : 0        : , "sv"           : Whether the server should be hidden from the master server
 hl1_debug_sentence_volume                : 0        : , "sv"           : 
@@ -437,6 +434,7 @@ host_timer_spin_ms                       : 0        :                  : Use CPU
 host_timescale                           : 1        : , "cheat", "rep" : Prescale the clock by this amount.
 host_workshop_autoupdate                 : 1        : , "sv"           : If set to above 0, will auto update addons from host_workshop_collection on server start.
 host_workshop_collection                 : 0        : , "sv"           : Set to a Steam Workshop Collection ID, and the dedicated server will download Workshop items from given collection on start up.
+host_writeconfig_lua                     : cmd      :                  : Write Lua-defined FCVAR_ARCHIVE convars to disk.
 hostip                                   : 0        :                  : Host game server ip
 hostname                                 : 0        :                  : Hostname for server.
 hostport                                 : 27015    :                  : Host game server port
@@ -501,7 +499,7 @@ key_listboundkeys                        : cmd      :                  : List bo
 kick                                     : cmd      :                  : Kick a player by name.
 kickall                                  : cmd      :                  : Kicks everybody connected with a message.
 kickid                                   : cmd      :                  : Kick a player by userid or uniqueid, with a message.
-kickid2                                  : cmd      :                  : 
+kickid2                                  : cmd      :                  : Alias of kickid, do not use.
 kill                                     : cmd      :                  : Kills the player with generic damage
 killserver                               : cmd      :                  : Shutdown the server.
 killvector                               : cmd      :                  : Kills a player applying force. Usage: killvector <player> <x value> <y value> <z value>
@@ -532,6 +530,7 @@ lua_refresh_file                         : cmd      :                  : Manuall
 lua_reloadents                           : cmd      :                  : Reload all scripted entities
 lua_run                                  : cmd      :                  : Run a Lua command
 lua_run_cl                               : cmd      :                  : Run a Lua command
+lua_strict                               : 0        : , "sv", "nf", "rep" : Enable extra checks for Lua API, such as argument type checking, errors that normally would be silent, etc. Useful to catch bugs in code when developing addons.
 map                                      : cmd      :                  : Start playing on specified map.
 map_background                           : cmd      :                  : Runs a map as the background to the main menu.
 map_noareas                              : 0        :                  : Disable area to area connection testing.
@@ -577,7 +576,6 @@ mat_levelflush                           : 1        :                  :
 mat_lightmap_pfms                        : 0        :                  : Outputs .pfm files containing lightmap data for each lightmap page when a level exits.
 mat_loadtextures                         : 1        : , "cheat"        : 
 mat_luxels                               : 0        : , "cheat"        : 
-mat_maxframelatency                      : 1        :                  : 
 mat_measurefillrate                      : 0        : , "cheat"        : 
 mat_mipmaptextures                       : 1        :                  : 
 mat_monitorgamma                         : 2        :                  : monitor gamma (typically 2.2 for CRT and 1.7 for LCD)
@@ -590,7 +588,6 @@ mat_motion_blur_enabled                  : 1        :                  :
 mat_norendering                          : 0        : , "cheat"        : 
 mat_normalmaps                           : 0        : , "cheat"        : 
 mat_normals                              : 0        : , "cheat"        : 
-mat_parallaxmap                          : 1        :                  : 
 mat_picmip                               : 0        :                  : 
 mat_powersavingsmode                     : 0        : , "a"            : Power Savings Mode
 mat_proxy                                : 0        : , "cheat"        : 
@@ -606,7 +603,6 @@ mat_report_queue_status                  : 0        :                  :
 mat_reporthwmorphmemory                  : cmd      :                  : Reports the amount of size in bytes taken up by hardware morph textures.
 mat_reversedepth                         : 0        : , "cheat"        : 
 mat_savechanges                          : cmd      :                  : saves current video configuration to the registry
-mat_shadowstate                          : 1        :                  : 
 mat_show_ab_hdr                          : 0        :                  : 
 mat_showenvmapmask                       : 0        :                  : 
 mat_showlowresimage                      : 0        : , "cheat"        : 
@@ -663,36 +659,18 @@ monk_headshot_freq                       : 2        : , "sv"           :
 mortar_visualize                         : 0        : , "sv"           : 
 motdfile                                 : 0        : , "sv"           : The MOTD file to load.
 motdfile_text                            : 0        : , "sv"           : The text-only MOTD file to use for clients that have disabled HTML MOTDs.
-mp_allowNPCs                             : 1        : , "sv", "nf"     : 
-mp_allowspectators                       : 1        : , "sv", "rep"    : toggles whether the server allows spectator mode or not
-mp_autocrosshair                         : 1        : , "sv", "nf"     : 
-mp_chattime                              : 10       : , "sv", "rep"    : amount of time players can chat after the game is over
-mp_clan_ready_signal                     : 0        : , "sv"           : Text that team leader from each team must speak for the match to begin
-mp_clan_readyrestart                     : 0        : , "sv"           : If non-zero, game will restart once someone from each team gives the ready signal
 mp_decals                                : 200      : , "a"            : 
-mp_defaultteam                           : 0        : , "sv"           : 
 mp_disable_autokick                      : cmd      :                  : Prevents a userid from being auto-kicked
-mp_fadetoblack                           : 0        : , "sv", "nf", "rep" : fade a player's screen to black when he dies
 mp_falldamage                            : 0        : , "sv", "nf"     : Enables realistic fall damage.
 mp_flashlight                            : 1        : , "sv", "nf"     : 
 mp_footsteps                             : 1        : , "sv", "nf"     : 
 mp_forcecamera                           : 0        : , "sv", "rep"    : Restricts spectator modes for dead players
-mp_forcerespawn                          : 1        : , "sv", "nf"     : 
-mp_fraglimit                             : 0        : , "sv", "nf", "rep" : The number of kills at which the map ends
-mp_friendlyfire                          : 0        : , "sv", "nf", "rep" : Allows team members to injure other members of their team
 mp_mapcycle_empty_timeout_seconds        : 0        : , "sv", "rep"    : If nonzero, server will cycle to the next map if it has been empty on the current map for N seconds
-mp_ready_signal                          : 0        : , "sv"           : Text that each player must speak for the match to begin
-mp_readyrestart                          : 0        : , "sv"           : If non-zero, game will restart once each player gives the ready signal
 mp_restartgame                           : 0        : , "sv"           : If non-zero, game will restart in the specified number of seconds
 mp_restartgame_immediate                 : 0        : , "sv"           : If non-zero, game will restart immediately
 mp_show_voice_icons                      : 1        : , "sv", "rep"    : Show overhead player voice icons when players are speaking. 
-mp_teamlist                              : 0        : , "sv", "nf"     : 
-mp_teamoverride                          : 1        : , "sv"           : 
 mp_teamplay                              : 0        : , "sv", "nf"     : 
 mp_timelimit                             : 0        : , "sv", "nf", "rep" : game time per map in minutes
-mp_waitingforplayers_cancel              : 0        : , "sv"           : Set to 1 to end the WaitingForPlayers period.
-mp_waitingforplayers_restart             : 0        : , "sv"           : Set to 1 to start or restart the WaitingForPlayers period.
-mp_waitingforplayers_time                : 0        : , "sv"           : WaitingForPlayers time length in seconds
 mp_weaponrespawn                         : 0        : , "sv", "nf"     : Makes map-spawned weapons and items (Half-Life 2: Deathmatch) respawn after being picked up. See also sv_hl2mp_* convars.
 mp_weaponstay                            : 0        : , "sv", "nf"     : Disallows players to pick up weapons that they already carry in their inventory.
 multvar                                  : cmd      :                  : Multiply specified convar value.
@@ -1106,7 +1084,6 @@ r_eyeshift_y                             : 0        :                  :
 r_eyeshift_z                             : 0        :                  : 
 r_eyesize                                : 0        :                  : 
 r_fastzreject                            : 0        :                  : Activate/deactivates a fast z-setting algorithm to take advantage of hardware with fast z reject. Use -1 to default to hardware settings
-r_fastzrejectdisp                        : 0        :                  : Activates/deactivates fast z rejection on displacements (360 only). Only active when r_fastzreject is on.
 r_flashlightdepthtexture                 : 1        :                  : 
 r_flashlightscissor                      : 1        :                  : 
 r_flex                                   : 1        :                  : 
@@ -1639,8 +1616,6 @@ sv_client_max_interp_ratio               : 5        : , "rep"          : This ca
 sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1 = let clients set cl_interp_ratio to anything  any other value = set minimum value for cl_interp_ratio
 sv_client_predict                        : 1        : , "rep"          : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients set cl_predict to anything     0 = force cl_predict to 0     1 = force cl_predict to 1
 sv_clockcorrection_msecs                 : 60       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
-sv_consistency                           : 1        : , "rep"          : Legacy variable with no effect!  This was deleted and then added as a temporary kludge to prevent players from being banned by servers running old versions of SMAC
-sv_contact                               : 0        : , "nf"           : Contact email for server sysop
 sv_crazyphysics_defuse                   : 1        : , "sv", "rep"    : Reset the physics objects of entities when we detect their physics are going crazy. Turning this off should be a LAST RESORT - turning it off will allow people to crash sandbox mode using various physics exploits!
 sv_crazyphysics_remove                   : 1        : , "sv", "rep"    : Remove entities when we detect their physics are going crazy. Turning this off should be a LAST RESORT - turning it off will allow people to crash sandbox mode using various physics exploits!
 sv_crazyphysics_vehicles                 : 1        : , "sv", "rep"    : Enable crazy physics detection for vehicles.
@@ -1729,7 +1704,7 @@ sv_noclipspeed                           : 5        : , "a", "sv", "nf", "rep" :
 sv_npc_full_pvs_checks                   : 1        : , "sv"           : If set, do full PVS checks for NPCs, so they do not flicker in multiplayer with more than 1 player. This could be expensive.
 sv_npc_talker_maxdist                    : 1024     : , "sv"           : NPCs over this distance from the player won't attempt to speak.
 sv_parallel_packentities                 : 1        :                  : 
-sv_parallel_sendsnapshot                 : 1        :                  : 
+sv_parallel_sendsnapshot                 : 0        :                  : 
 sv_password                              : 0        : , "nf", "prot", "norecord" : Server password for entry into multiplayer games
 sv_pausable                              : 0        : , "nf"           : Is the server pausable.
 sv_player_display_usercommand_errors     : 0        : , "sv", "cheat"  : 1 = Display warning when command values are out-of-range. 2 = Spew invalid ranges.
@@ -1777,7 +1752,7 @@ sv_startup_time                          : 0        :                  : Sets th
 sv_stats                                 : 1        :                  : Collect CPU usage stats
 sv_steamblockingcheck                    : 0        :                  : Check each new player for Steam blocking compatibility, 1 = message only, 2 >= drop if any member of owning clan blocks,3 >= drop if any player has blocked, 4 >= drop if player has blocked anyone on server
 sv_steamgroup                            : 0        : , "nf"           : The ID of the steam group that this server belongs to. You can find your group's ID on the admin profile page in the steam community.
-sv_sticktoground                         : 1        : , "sv", "rep"    : 
+sv_sticktoground                         : 1        : , "sv", "rep"    : Fixes flying up in the air off of slopes.
 sv_stickysprint                          : 0        : , "a", "sv"      : 
 sv_stopspeed                             : 10       : , "sv", "nf", "rep" : Minimum stopping speed when on ground.
 sv_stressbots                            : 0        : , "cheat"        : If set to 1, the server calculates data and fills packets to bots. Used for perf testing.
@@ -1992,4 +1967,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           : 
 zombie_stepfreq                          : 4        : , "sv"           : 
 --------------
-1991 total convars/concommands
+1966 total convars/concommands
