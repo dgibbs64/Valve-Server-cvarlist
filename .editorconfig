@@ -1,0 +1,35 @@
+# EditorConfig helps developers define and maintain consistent coding styles between different editors and IDEs.
+# http://editorconfig.org/
+
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_size = 4
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[.ansible-lint]
+indent_size = 2
+indent_style = space
+
+[.yamllint]
+indent_size = 2
+indent_style = space
+
+# YAML Files
+[*.{yml,yaml}]
+indent_size = 2
+indent_style = space
+
+# JSON Files
+[*.{json,json5,webmanifest}]
+indent_size = 2
+indent_style = space
+
+# BASH Files
+[*.{.sh}]
+indent_size = 4
+indent_style = tab
