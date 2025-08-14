@@ -1701,7 +1701,7 @@ tf_mm_match_size_ladder_6v6              : 12       : , "sv", "rep"    : Number 
 tf_mm_match_size_ladder_9v9              : 18       : , "sv", "rep"    : Number of players required to play a 9v9 ladder game.
 tf_mm_match_size_mvm                     : 6        : , "sv", "rep"    : How many players in an MvM matchmade group?
 tf_mm_next_map_result_hold_time          : 7        : , "sv"           : 
-tf_mm_next_map_vote_time                 : 30       : , "sv", "rep"    : 
+tf_mm_next_map_vote_time                 : 15       : , "sv", "rep"    : 
 tf_mm_servermode                         : 0        : , "sv", "nf"     : Activates / deactivates Lobby-based hosting mode.    0 = not active    1 = Put in matchmaking pool (Lobby will control current map) 
 tf_mm_strict                             : 0        : , "sv", "nf"     :    0 = Show in server browser, and allow ad-hoc joins    1 = Hide from server browser and only allow joins coordinated through GC matchmaking    2 = Hide from server browser, but allow ad-hoc joins 
 tf_movement_aircurrent_aircontrol_mult   : 0        : , "sv", "cheat", "rep" : Multiplier on air control when player is in an air current (such as airblast)
