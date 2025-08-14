@@ -12,9 +12,9 @@ sleep 10
 
 echo "Display console log"
 if [[ ! -s "log/console/${shortname}server-console.log" ]]; then
-    echo "The console log is empty"
+	echo "The console log is empty"
 else
-    cat "log/console/${shortname}server-console.log"
+	cat "log/console/${shortname}server-console.log"
 fi
 
 cp "log/console/${shortname}server-console.log" ../"${shortname}-cvarlist.txt"
