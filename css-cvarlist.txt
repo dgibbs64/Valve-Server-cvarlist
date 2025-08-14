@@ -1474,7 +1474,3 @@ xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           : 
 --------------
 1472 total convars/concommands
-Connection to Steam servers successful.
-   Public IP to Steam is 172.182.213.65.
-Assigned anonymous gameserver Steam ID [A:1:4155126811:46659].
-VAC secure mode is activated.
