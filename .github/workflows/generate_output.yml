@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # need full history for rebase
 
       - name: Generate matrix with generate-matrix.sh
         run: chmod +x .github/workflows/cvarlist-generate-matrix.sh; .github/workflows/cvarlist-generate-matrix.sh
@@ -46,9 +48,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # ensure we can rebase/push without non-ff issues
 
       # - name: Setup steamcmd
       #   uses: Lordfirespeed/setup-steamcmd@v2
+
+      - name: Prepare git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Sync with remote main
+        run: |
+          git fetch origin main
+          # Rebase local changes (should be none yet) to ensure up-to-date
+          git rebase origin/main || (echo "Rebase failed (unexpected). Aborting and falling back to merge." && git rebase --abort && git merge --no-edit origin/main)
 
       - name: Run get_cvars.sh
         run: ./get_cvars.sh ${{ matrix.shortname }}
@@ -57,12 +72,34 @@ jobs:
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
-      - name: Add and commit changes
-        uses: EndBug/add-and-commit@v9
-        with:
-          fetch: false
-          message: "GitHub Actions build: ${{ steps.date.outputs.date }}"
-          push: true
+      - name: Commit & push (rebase to avoid non-fast-forward)
+        env:
+          DATE: ${{ steps.date.outputs.date }}
+          SHORTNAME: ${{ matrix.shortname }}
+        run: |
+          set -e
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes detected for ${SHORTNAME}; skipping push."
+            exit 0
+          fi
+          commit_msg="cvarlist(${SHORTNAME}): automated update ${DATE}"
+          git commit -m "$commit_msg" || echo "Nothing to commit"
+          # Re-sync in case main advanced while we were generating
+            for attempt in 1 2 3; do
+              echo "Attempt $attempt: rebase & push"
+              if git fetch origin main && git rebase origin/main; then
+                if git push origin HEAD:main; then
+                  echo "Push succeeded"; break
+                fi
+              fi
+              if [ "$attempt" -eq 3 ]; then
+                echo "Final attempt failed; trying force-with-lease as fallback";
+                git push --force-with-lease origin HEAD:main || exit 1
+              else
+                echo "Retrying after 5s..."; sleep 5
+              fi
+            done
       - name: Sleep for 10s
         uses: juliangruber/sleep-action@v2
         with:
