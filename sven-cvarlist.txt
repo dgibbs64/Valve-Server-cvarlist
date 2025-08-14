@@ -117,8 +117,8 @@ mp_teamlist                      :        0 [ ext, prot ]
 mp_teamoverride                  :        1 [ ext ]
 mp_teamplay                      :        0 [ ext, prot ]
 mp_telefrag                      :        1 [ ext, prot ]
-mp_timeleft                      :     5929 [ ext, prot, nolog ]
-mp_timeleft_empty                :      589 [ ext, prot, nolog ]
+mp_timeleft                      :     5928 [ ext, prot, nolog ]
+mp_timeleft_empty                :      588 [ ext, prot, nolog ]
 mp_timelimit                     :       99 [ ext, prot ]
 mp_timelimit_empty               :       10 [ ext, prot ]
 mp_voteallow                     :        1 [ ext, prot ]
@@ -410,4 +410,3 @@ weaponmode_shotgun               :        0 [ ext, prot ]
 cvarlist ? for syntax
 Installing breakpad exception handler for appid(svends_i686)/version(1.0)
 Warning: failed to init SDL thread priority manager: SDL not found
-Installing breakpad exception handler for appid(svends_i686)/version(1.0)
