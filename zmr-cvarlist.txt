@@ -1504,4 +1504,3 @@ zm_zombie_create                         : cmd      :                  : Creates
 zm_zombiemodelgroups_reload              : cmd      :                  : Reloads zombie model groups
 --------------
 1502 total convars/concommands
-[0m
