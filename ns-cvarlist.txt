@@ -185,3 +185,4 @@ voice_recordtofile :        0
 voice_serverdebug :        0
 --------------
 183 Total CVars
+CvarList ? for syntax
