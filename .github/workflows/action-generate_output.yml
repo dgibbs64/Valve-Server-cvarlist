@@ -1,6 +1,5 @@
 ---
-# This workflow generates the output and pushes it to main branch
-
+# Regenerate cvar list outputs and push updates.
 name: Generate Output
 
 on:
@@ -9,6 +8,10 @@ on:
     - cron: "0 0 * * 0"
   push:
     branches: ["main"]
+
+# Minimal required permissions for pushing content updates
+permissions:
+  contents: write
 
 concurrency:
   group: generate_output-${{ github.ref_name }}
@@ -23,36 +26,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0 # need full history for rebase
+          fetch-depth: 0
 
       - name: Generate matrix
-        run: chmod +x scripts/generate-matrix.sh; scripts/generate-matrix.sh
+        run: chmod +x scripts/generate-matrix.sh && scripts/generate-matrix.sh
 
       - name: Set Matrix
         id: set-matrix
         run: |
           shortnamearray=$(cat shortnamearray.json)
           echo "${shortnamearray}"
-          echo -n "matrix=${shortnamearray}" >> $GITHUB_OUTPUT
+          echo "matrix=${shortnamearray}" >> "$GITHUB_OUTPUT"
 
   generate-output:
     needs: create-matrix
     continue-on-error: true
     runs-on: ubuntu-latest
     timeout-minutes: 60
-
     strategy:
       matrix: ${{ fromJSON(needs.create-matrix.outputs.matrix) }}
       max-parallel: 1
-
     steps:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          fetch-depth: 0 # ensure we can rebase/push without non-ff issues
-
-      # - name: Setup steamcmd
-      #   uses: Lordfirespeed/setup-steamcmd@v2
+          fetch-depth: 0
 
       - name: Prepare git identity
         run: |
@@ -62,15 +60,14 @@ jobs:
       - name: Sync with remote main
         run: |
           git fetch origin main
-          # Rebase local changes (should be none yet) to ensure up-to-date
-          git rebase origin/main || (echo "Rebase failed (unexpected). Aborting and falling back to merge." && git rebase --abort && git merge --no-edit origin/main)
+          git rebase origin/main || (echo "Rebase failed; falling back to merge" && git rebase --abort && git merge --no-edit origin/main)
 
       - name: Run get_cvars.sh
-        run: ./get_cvars.sh ${{ matrix.shortname }}
+        run: chmod +x scripts/get_cvars.sh && scripts/get_cvars.sh "${{ matrix.shortname }}"
 
       - name: Get current date
         id: date
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+        run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
 
       - name: Commit & push (rebase to avoid non-fast-forward)
         env:
@@ -78,29 +75,26 @@ jobs:
           SHORTNAME: ${{ matrix.shortname }}
         run: |
           set -e
-          # Only stage expected output artifacts (*.txt) and matrix json
-          git add *.txt shortnamearray.json || true
+          git add -- *.txt shortnamearray.json || true
           if git diff --cached --quiet; then
-            echo "No changes detected for ${SHORTNAME}; skipping push."
-            exit 0
+            echo "No changes detected for ${SHORTNAME}; skipping push."; exit 0
           fi
+
           commit_msg="cvarlist(${SHORTNAME}): automated update ${DATE}"
           git commit -m "$commit_msg" || echo "Nothing to commit"
-          # Re-sync and attempt push with retries
           for attempt in 1 2 3; do
             echo "Attempt $attempt: rebase & push"
             if git fetch origin main && git rebase origin/main; then
-              if git push origin HEAD:main; then
-                echo "Push succeeded"; break
-              fi
+              if git push origin HEAD:main; then echo "Push succeeded"; break; fi
             fi
             if [ "$attempt" -eq 3 ]; then
-              echo "Final attempt failed; trying force-with-lease as fallback"
+              echo "Final attempt failed; trying force-with-lease"
               git push --force-with-lease origin HEAD:main || exit 1
             else
               echo "Retrying after 5s..."; sleep 5
             fi
           done
+
       - name: Sleep for 10s
         uses: juliangruber/sleep-action@v2
         with:
