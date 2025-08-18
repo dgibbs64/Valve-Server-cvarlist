@@ -80,3 +80,25 @@ Example (Team Fortress 2):
 ```bash
 scripts/get_cvars.sh tf2
 ```
+
+#### Docker (optional)
+
+You can attempt to pull a prebuilt LinuxGSM Docker image instead of performing a local install by using the `--docker` flag (or setting `USE_DOCKER=1`). The script will look for an image named `gameservermanagers/gameserver:<shortname>` (override the prefix with `DOCKER_IMAGE_PREFIX`). If the Docker path fails or the image is missing, it gracefully falls back to the native install path.
+
+Example (Action Half-Life via Docker):
+
+```bash
+scripts/get_cvars.sh --docker ahl
+```
+
+Environment variable equivalents:
+
+```bash
+USE_DOCKER=1 DOCKER_IMAGE_PREFIX=gameservermanagers/gameserver scripts/get_cvars.sh ahl
+```
+
+#### Notes
+
+- Docker images may not exist for every shortname; absence just triggers the legacy path.
+- Collected output file naming is unchanged: `<shortname>-cvarlist.txt`.
+- The Docker container is removed after logs are captured.
