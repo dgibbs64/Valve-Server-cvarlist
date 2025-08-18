@@ -62,8 +62,13 @@ jobs:
           git fetch origin main
           git rebase origin/main || (echo "Rebase failed; falling back to merge" && git rebase --abort && git merge --no-edit origin/main)
 
-      - name: Run get_cvars.sh
-        run: chmod +x scripts/get_cvars.sh && scripts/get_cvars.sh "${{ matrix.shortname }}"
+      - name: Run get_cvars.sh (Docker first)
+        env:
+          USE_DOCKER: "1"
+          DOCKER_IMAGE_PREFIX: gameservermanagers/gameserver
+        run: |
+          chmod +x scripts/get_cvars.sh
+          scripts/get_cvars.sh --docker "${{ matrix.shortname }}"
 
       - name: Get current date
         id: date
