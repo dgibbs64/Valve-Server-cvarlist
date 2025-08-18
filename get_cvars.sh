@@ -3,12 +3,12 @@ set -euo pipefail
 shortname="${1}"
 mkdir linuxgsm
 cd linuxgsm || exit
-wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh ${shortname}
+wget -O linuxgsm.sh https://linuxgsm.sh && chmod +x linuxgsm.sh && bash linuxgsm.sh "${shortname}"
 
-./${shortname}server auto-install
-./${shortname}server start
+"./${shortname}server" auto-install
+"./${shortname}server" start
 sleep 10
-./${shortname}server send cvarlist
+"./${shortname}server" send cvarlist
 sleep 10
 
 echo "Display console log"
@@ -19,7 +19,7 @@ else
 fi
 
 cp "log/console/${shortname}server-console.log" ../"${shortname}-cvarlist.txt"
-./${shortname}server stop
+"./${shortname}server" stop
 
 # remove all lines before "cvar list"
 echo "Removing all lines before \"cvar list\""

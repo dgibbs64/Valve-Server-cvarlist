@@ -27,4 +27,4 @@ if ! grep -q '"include":\[' "${out_file}"; then
 fi
 
 echo "Generated matrix:"
-cat "${out_file}" | sed 's/,/,&\n/g'
+sed 's/,/,&\n/g' "${out_file}"
