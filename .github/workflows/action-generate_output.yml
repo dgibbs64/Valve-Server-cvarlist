@@ -10,10 +10,6 @@ on:
   push:
     branches: ["main"]
 
-# Explicit minimal permissions (avoid implicit broad defaults)
-permissions:
-  contents: write  # needed to push updated cvarlist files
-
 concurrency:
   group: generate_output-${{ github.ref_name }}
   cancel-in-progress: true
@@ -70,7 +66,7 @@ jobs:
           git rebase origin/main || (echo "Rebase failed (unexpected). Aborting and falling back to merge." && git rebase --abort && git merge --no-edit origin/main)
 
       - name: Run get_cvars.sh
-        run: chmod +x scripts/get_cvars.sh; scripts/get_cvars.sh ${{ matrix.shortname }}
+        run: ./get_cvars.sh ${{ matrix.shortname }}
 
       - name: Get current date
         id: date
