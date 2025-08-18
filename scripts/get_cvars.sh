@@ -38,8 +38,8 @@ if grep -qi 'total[[:space:]]\+convars/concommands' "${out_file}"; then
 fi
 
 # Whitespace normalization
-sed -i 's/\r$//' "${out_file}"                           # strip CR
-sed -i 's/[[:space:]]\+$//' "${out_file}"                 # strip trailing space
+sed -i 's/\r$//' "${out_file}"            # strip CR
+sed -i 's/[[:space:]]\+$//' "${out_file}" # strip trailing space
 awk 'BEGIN{blank=0} { if ($0 ~ /^[ \t]*$/) { if (blank) next; blank=1; print "" } else { blank=0; print } }' \
   "${out_file}" > "${out_file}.tmp" && mv "${out_file}.tmp" "${out_file}"
 
@@ -49,7 +49,8 @@ min_cvar_lines=100
 
 if [[ ! -s "${final_file}" ]]; then
   echo "Generated file is empty. Removing." >&2
-  rm -f "${final_file}"; exit 1
+  rm -f "${final_file}"
+  exit 1
 fi
 
 line_count=$(wc -l < "${final_file}")
@@ -59,14 +60,16 @@ grep -qi 'convars/concommands' "${final_file}" && has_summary=1 || true
 
 echo "Validation stats: lines=${line_count} cvar_lines=${cvar_line_count} has_summary=${has_summary}" >&2
 
-if (( line_count < min_lines )); then
+if ((line_count < min_lines)); then
   echo "Too few lines (${line_count} < ${min_lines}). Removing." >&2
-  rm -f "${final_file}"; exit 1
+  rm -f "${final_file}"
+  exit 1
 fi
 
-if (( has_summary == 0 )) && (( cvar_line_count < min_cvar_lines )); then
+if ((has_summary == 0)) && ((cvar_line_count < min_cvar_lines)); then
   echo "Incomplete dump (no summary & cvar_lines=${cvar_line_count} < ${min_cvar_lines}). Removing." >&2
-  rm -f "${final_file}"; exit 1
+  rm -f "${final_file}"
+  exit 1
 fi
 
 echo "Display cvarlist"
@@ -77,4 +80,3 @@ cd .. || exit 1
 rm -rf steamcmd linuxgsm || true
 
 IFS=${ifs_backup}
-
