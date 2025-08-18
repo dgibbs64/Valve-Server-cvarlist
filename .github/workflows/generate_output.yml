@@ -10,6 +10,10 @@ on:
   push:
     branches: ["main"]
 
+# Explicit minimal permissions (avoid implicit broad defaults)
+permissions:
+  contents: write  # needed to push updated cvarlist files
+
 concurrency:
   group: generate_output-${{ github.ref_name }}
   cancel-in-progress: true
