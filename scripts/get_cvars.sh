@@ -11,7 +11,7 @@ args=()
 for arg in "$@"; do
   case "$arg" in
     --docker) use_docker=1 ;;
-    -h|--help) usage ;;
+    -h | --help) usage ;;
     *) args+=("$arg") ;;
   esac
 done
@@ -30,35 +30,35 @@ run_docker() {
   local image="${image_prefix}:${shortname}"
   local cname="cvar-${shortname}-$$"
   echo "[docker] Pulling image ${image}" >&2
-  if ! command -v docker >/dev/null 2>&1; then
+  if ! command -v docker > /dev/null 2>&1; then
     echo "docker not available; aborting docker path" >&2
     return 1
   fi
   docker pull "${image}" || return 1
   echo "[docker] Starting container ${cname}" >&2
-  docker run -d --name "${cname}" --rm "${image}" >/dev/null
+  docker run -d --name "${cname}" --rm "${image}" > /dev/null
   # Wait a bit for server to init
   attempts=30
-  while (( attempts > 0 )); do
+  while ((attempts > 0)); do
     if docker logs "${cname}" 2>&1 | grep -qi "cvar"; then
       break
     fi
-    attempts=$((attempts-1))
+    attempts=$((attempts - 1))
     sleep 5
   done
   echo "[docker] Sending cvarlist command" >&2
   # Attempt to send cvarlist; ignore failures
-  docker exec "${cname}" bash -lc "./${shortname}server send cvarlist" 2>/dev/null || true
+  docker exec "${cname}" bash -lc "./${shortname}server send cvarlist" 2> /dev/null || true
   sleep 10
   echo "[docker] Collecting logs" >&2
-  docker logs "${cname}" > "${out_file}.raw" 2>/dev/null || true
+  docker logs "${cname}" > "${out_file}.raw" 2> /dev/null || true
   # Stop container
-  docker rm -f "${cname}" >/dev/null 2>&1 || true
+  docker rm -f "${cname}" > /dev/null 2>&1 || true
   # Extract just the console region similar to non-docker path
   cp "${out_file}.raw" "${out_file}" || true
 }
 
-if (( use_docker == 1 )); then
+if ((use_docker == 1)); then
   if run_docker; then
     echo "Docker path succeeded" >&2
   else
