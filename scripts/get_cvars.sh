@@ -37,25 +37,42 @@ run_docker() {
   docker pull "${image}" || return 1
   echo "[docker] Starting container ${cname}" >&2
   docker run -d --name "${cname}" --rm "${image}" > /dev/null
-  # Wait a bit for server to init
+  local raw="${out_file}.raw"
+  local console_path="/home/linuxgsm/log/console/${shortname}server-console.log"
+  # Allow some startup time then issue cvarlist
   attempts=30
   while ((attempts > 0)); do
-    if docker logs "${cname}" 2>&1 | grep -qi "cvar"; then
+    # break once server script exists inside container
+    if docker exec -u linuxgsm "${cname}" test -x "./${shortname}server"; then
       break
     fi
-    attempts=$((attempts - 1))
-    sleep 5
+    attempts=$((attempts-1))
+    sleep 2
   done
-  echo "[docker] Sending cvarlist command" >&2
-  # Attempt to send cvarlist; ignore failures
-  docker exec "${cname}" bash -lc "./${shortname}server send cvarlist" 2> /dev/null || true
+  echo "[docker] Sending cvarlist command as linuxgsm" >&2
+  docker exec -u linuxgsm "${cname}" bash -lc "./${shortname}server send cvarlist" 2>/dev/null || true
   sleep 10
-  echo "[docker] Collecting logs" >&2
-  docker logs "${cname}" > "${out_file}.raw" 2> /dev/null || true
-  # Stop container
-  docker rm -f "${cname}" > /dev/null 2>&1 || true
-  # Extract just the console region similar to non-docker path
-  cp "${out_file}.raw" "${out_file}" || true
+  if docker exec -u linuxgsm "${cname}" test -s "${console_path}"; then
+    docker cp "${cname}:${console_path}" "${raw}" 2>/dev/null || true
+  fi
+  if [[ ! -s "${raw}" ]]; then
+    docker logs "${cname}" > "${raw}" 2>/dev/null || true
+  fi
+  docker rm -f "${cname}" >/dev/null 2>&1 || true
+  if grep -q 'Do NOT run as root' "${raw}"; then
+    echo "[docker] Root execution warning found. Falling back." >&2
+    return 1
+  fi
+  if [[ ! -s "${raw}" ]]; then
+    echo "[docker] Empty log output. Falling back." >&2
+    return 1
+  fi
+  if ! grep -qi 'cvar' "${raw}"; then
+    echo "[docker] No cvar markers found in log. Falling back." >&2
+    return 1
+  fi
+  cp "${raw}" "${out_file}" || return 1
+  return 0
 }
 
 if ((use_docker == 1)); then
