@@ -46,19 +46,19 @@ run_docker() {
     if docker exec -u linuxgsm "${cname}" test -x "./${shortname}server"; then
       break
     fi
-    attempts=$((attempts-1))
+    attempts=$((attempts - 1))
     sleep 2
   done
   echo "[docker] Sending cvarlist command as linuxgsm" >&2
-  docker exec -u linuxgsm "${cname}" bash -lc "./${shortname}server send cvarlist" 2>/dev/null || true
+  docker exec -u linuxgsm "${cname}" bash -lc "./${shortname}server send cvarlist" 2> /dev/null || true
   sleep 10
   if docker exec -u linuxgsm "${cname}" test -s "${console_path}"; then
-    docker cp "${cname}:${console_path}" "${raw}" 2>/dev/null || true
+    docker cp "${cname}:${console_path}" "${raw}" 2> /dev/null || true
   fi
   if [[ ! -s "${raw}" ]]; then
-    docker logs "${cname}" > "${raw}" 2>/dev/null || true
+    docker logs "${cname}" > "${raw}" 2> /dev/null || true
   fi
-  docker rm -f "${cname}" >/dev/null 2>&1 || true
+  docker rm -f "${cname}" > /dev/null 2>&1 || true
   if grep -q 'Do NOT run as root' "${raw}"; then
     echo "[docker] Root execution warning found. Falling back." >&2
     return 1
