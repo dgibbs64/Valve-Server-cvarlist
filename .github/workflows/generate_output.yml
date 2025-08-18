@@ -25,8 +25,8 @@ jobs:
         with:
           fetch-depth: 0 # need full history for rebase
 
-      - name: Generate matrix with generate-matrix.sh
-        run: chmod +x .github/workflows/cvarlist-generate-matrix.sh; .github/workflows/cvarlist-generate-matrix.sh
+      - name: Generate matrix
+        run: chmod +x scripts/generate-matrix.sh; scripts/generate-matrix.sh
 
       - name: Set Matrix
         id: set-matrix
@@ -66,7 +66,7 @@ jobs:
           git rebase origin/main || (echo "Rebase failed (unexpected). Aborting and falling back to merge." && git rebase --abort && git merge --no-edit origin/main)
 
       - name: Run get_cvars.sh
-        run: ./get_cvars.sh ${{ matrix.shortname }}
+        run: chmod +x scripts/get_cvars.sh; scripts/get_cvars.sh ${{ matrix.shortname }}
 
       - name: Get current date
         id: date
@@ -78,28 +78,29 @@ jobs:
           SHORTNAME: ${{ matrix.shortname }}
         run: |
           set -e
-          git add -A
+          # Only stage expected output artifacts (*.txt) and matrix json
+          git add *.txt shortnamearray.json || true
           if git diff --cached --quiet; then
             echo "No changes detected for ${SHORTNAME}; skipping push."
             exit 0
           fi
           commit_msg="cvarlist(${SHORTNAME}): automated update ${DATE}"
           git commit -m "$commit_msg" || echo "Nothing to commit"
-          # Re-sync in case main advanced while we were generating
-            for attempt in 1 2 3; do
-              echo "Attempt $attempt: rebase & push"
-              if git fetch origin main && git rebase origin/main; then
-                if git push origin HEAD:main; then
-                  echo "Push succeeded"; break
-                fi
+          # Re-sync and attempt push with retries
+          for attempt in 1 2 3; do
+            echo "Attempt $attempt: rebase & push"
+            if git fetch origin main && git rebase origin/main; then
+              if git push origin HEAD:main; then
+                echo "Push succeeded"; break
               fi
-              if [ "$attempt" -eq 3 ]; then
-                echo "Final attempt failed; trying force-with-lease as fallback";
-                git push --force-with-lease origin HEAD:main || exit 1
-              else
-                echo "Retrying after 5s..."; sleep 5
-              fi
-            done
+            fi
+            if [ "$attempt" -eq 3 ]; then
+              echo "Final attempt failed; trying force-with-lease as fallback"
+              git push --force-with-lease origin HEAD:main || exit 1
+            else
+              echo "Retrying after 5s..."; sleep 5
+            fi
+          done
       - name: Sleep for 10s
         uses: juliangruber/sleep-action@v2
         with:
