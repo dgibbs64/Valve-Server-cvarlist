@@ -7,10 +7,10 @@ orig_dir="$(pwd)"
 cleanup() {
   local lgsmdir="${orig_dir}/linuxgsm"
   if [[ -f "${lgsmdir}/${shortname}server" ]]; then
-    "${lgsmdir}/${shortname}server" stop 2>/dev/null || true
+    "${lgsmdir}/${shortname}server" stop 2> /dev/null || true
   fi
   cd "${orig_dir}" || true
-  rm -rf steamcmd linuxgsm 2>/dev/null || true
+  rm -rf steamcmd linuxgsm 2> /dev/null || true
 }
 trap cleanup EXIT
 
