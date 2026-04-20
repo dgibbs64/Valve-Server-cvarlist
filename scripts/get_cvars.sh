@@ -52,6 +52,8 @@ sed -i 's/\r$//' "${out_file}"            # strip CR
 sed -i 's/[[:space:]]\+$//' "${out_file}" # strip trailing space
 awk 'BEGIN{blank=0} { if ($0 ~ /^[ \t]*$/) { if (blank) next; blank=1; print "" } else { blank=0; print } }' \
 	"${out_file}" > "${out_file}.tmp" && mv "${out_file}.tmp" "${out_file}"
+# ensure final newline
+tail -c1 "${out_file}" | od -c | grep -q '\\n' || printf '\n' >> "${out_file}"
 
 min_lines=20
 min_cvar_lines=100
