@@ -1,0 +1,5 @@
+[codespell]
+# Skip generated cvarlist dumps, data files, and third-party dependencies
+skip = *.txt,*.csv,node_modules
+# Game shortnames that codespell flags as misspellings
+ignore-words-list = fof,nd
