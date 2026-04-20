@@ -4,7 +4,7 @@ set -euo pipefail
 # Output: shortnamearray.json
 
 out_file="shortnamearray.json"
-: > "${out_file}"
+
 {
   echo -n '{"include":['
   first=1
@@ -17,12 +17,12 @@ out_file="shortnamearray.json"
     first=0
     printf '{"shortname":"%s"}' "$shortname"
   done < serverlist.csv
-  echo -n ']}'
-} >> "${out_file}"
+  echo ']}'
+} > "${out_file}"
 
-# Validate JSON structure (basic)
-if ! grep -q '"include":\[' "${out_file}"; then
-  echo "Matrix generation failed" >&2
+# Validate JSON structure
+if ! python3 -m json.tool "${out_file}" > /dev/null 2>&1; then
+  echo "Matrix generation failed: invalid JSON" >&2
   exit 1
 fi
 
