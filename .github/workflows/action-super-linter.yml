@@ -51,4 +51,3 @@ jobs:
           VALIDATE_SHELL_SHFMT: false
           VALIDATE_TRIVY: false
           VALIDATE_YAML_PRETTIER: false
-          FILTER_REGEX_EXCLUDE: .*\.txt$
