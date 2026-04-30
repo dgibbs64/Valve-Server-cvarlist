@@ -64,7 +64,9 @@ jobs:
 
       - name: Insert steamuser
         if: contains(fromJson('["ahl2","bs"]'), matrix.shortname)
-        run: echo -e "steamuser=\"${{ secrets.STEAMCMD_USER }}\"\nsteampass='${{ secrets.STEAMCMD_PASS }}'" > lgsm/config-lgsm/${{ matrix.shortname }}server/common.cfg
+        run: |
+          mkdir -pv lgsm/config-lgsm/${{ matrix.shortname }}server
+          echo -e "steamuser=\"${{ secrets.STEAMCMD_USER }}\"\nsteampass='${{ secrets.STEAMCMD_PASS }}'" > lgsm/config-lgsm/${{ matrix.shortname }}server/common.cfg
 
       - name: Run get_cvars.sh
         run: chmod +x scripts/get_cvars.sh && scripts/get_cvars.sh "${{ matrix.shortname }}"
