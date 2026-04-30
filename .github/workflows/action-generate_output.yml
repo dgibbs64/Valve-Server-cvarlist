@@ -64,9 +64,25 @@ jobs:
 
       - name: Insert steamuser
         if: contains(fromJson('["ahl2","bs"]'), matrix.shortname)
+        shell: bash
         run: |
-          mkdir -pv lgsm/config-lgsm/${{ matrix.shortname }}server
-          echo -e "steamuser=\"${{ secrets.STEAMCMD_USER }}\"\nsteampass='${{ secrets.STEAMCMD_PASS }}'" > lgsm/config-lgsm/${{ matrix.shortname }}server/common.cfg
+          set -euo pipefail
+
+          # LinuxGSM instance name is usually "<shortname>server"
+          instance="${{ matrix.shortname }}server"
+
+          # Write to the LinuxGSM config directory that the job log indicates is used
+          mkdir -p "linuxgsm/lgsm/config-lgsm/${instance}"
+
+          cat > "linuxgsm/lgsm/config-lgsm/${instance}/common.cfg" <<EOF
+          steamuser="${{ secrets.STEAMCMD_USER }}"
+          steampass="${{ secrets.STEAMCMD_PASS }}"
+          EOF
+
+          # Optional safety check to fail early with a clear message
+          if [[ -z "${{ secrets.STEAMCMD_USER }}" ]]; then
+            echo "Missing STEAMCMD_USER secret"; exit 1
+          fi
 
       - name: Run get_cvars.sh
         run: chmod +x scripts/get_cvars.sh && scripts/get_cvars.sh "${{ matrix.shortname }}"
