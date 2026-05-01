@@ -72,7 +72,7 @@ while [[ ${elapsed} -lt ${max_wait} ]]; do
 		break
 	fi
 	# If the container has already exited, there's no point waiting further
-	container_status=$(docker inspect --format '{{.State.Status}}' "${container_name}" 2>/dev/null || echo "missing")
+	container_status=$(docker inspect --format '{{.State.Status}}' "${container_name}" 2> /dev/null || echo "missing")
 	if [[ "${container_status}" != "running" ]]; then
 		check_for_fatal_errors
 		echo "Container exited unexpectedly (status: ${container_status}). Last output:" >&2
