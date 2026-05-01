@@ -3,41 +3,79 @@ set -euo pipefail
 
 shortname="${1:?missing server shortname}"
 orig_dir="$(pwd)"
+container_name="${shortname}server_cvarlist"
+data_dir=""
 
 cleanup() {
-	local lgsmdir="${orig_dir}/linuxgsm"
-	if [[ -f "${lgsmdir}/${shortname}server" ]]; then
-		"${lgsmdir}/${shortname}server" stop 2> /dev/null || true
+	docker stop "${container_name}" 2>/dev/null || true
+	docker rm "${container_name}" 2>/dev/null || true
+	if [[ -n "${data_dir}" ]]; then
+		rm -rf "${data_dir}" 2>/dev/null || true
 	fi
-	cd "${orig_dir}" || true
-	rm -rf steamcmd linuxgsm 2> /dev/null || true
 }
 trap cleanup EXIT
 
-mkdir -p linuxgsm
-cd linuxgsm || exit 1
+image="ghcr.io/gameservermanagers/gameserver:${shortname}"
 
-wget -O linuxgsm.sh https://linuxgsm.sh
-chmod +x linuxgsm.sh
-bash linuxgsm.sh "${shortname}"
+echo "Pulling image ${image}..."
+docker pull "${image}"
 
-"./${shortname}server" auto-install
-"./${shortname}server" start
-sleep 10
-"./${shortname}server" send cvarlist
+data_dir=$(mktemp -d)
+
+# Pre-create steam credentials config if provided via environment
+if [[ -n "${STEAMCMD_USER:-}" ]]; then
+	instance="${shortname}server"
+	mkdir -p "${data_dir}/lgsm/config-lgsm/${instance}"
+	{
+		printf 'steamuser="%s"\n' "${STEAMCMD_USER}"
+		printf 'steampass="%s"\n' "${STEAMCMD_PASS:-}"
+	} > "${data_dir}/lgsm/config-lgsm/${instance}/common.cfg"
+fi
+
+# Run container — it auto-installs and auto-starts the game server
+echo "Starting container ${container_name}..."
+docker run -d \
+	--name "${container_name}" \
+	-v "${data_dir}:/data" \
+	"${image}"
+
+# Poll until the server reports online (auto-install can take a long time)
+echo "Waiting for server to come online..."
+max_wait=2400 # 40 minutes
+elapsed=0
+interval=30
+server_online=0
+while [[ ${elapsed} -lt ${max_wait} ]]; do
+	if docker exec --user linuxgsm "${container_name}" "./${shortname}server" status 2>/dev/null | grep -qi "online"; then
+		echo "Server is online"
+		server_online=1
+		break
+	fi
+	echo "  Server not ready yet (${elapsed}s elapsed)..."
+	sleep "${interval}"
+	elapsed=$((elapsed + interval))
+done
+
+if [[ ${server_online} -eq 0 ]]; then
+	echo "Timeout: server did not come online after ${max_wait}s" >&2
+	exit 1
+fi
+
+# Send the cvarlist command via the LinuxGSM console
+echo "Sending cvarlist command..."
+docker exec --user linuxgsm "${container_name}" "./${shortname}server" send cvarlist
 sleep 10
 
 echo "Display console log"
-console_log="log/console/${shortname}server-console.log"
+console_log="${data_dir}/log/console/${shortname}server-console.log"
 if [[ ! -s "${console_log}" ]]; then
 	echo "The console log is empty or missing" >&2
 	exit 1
 fi
 cat "${console_log}"
 
-out_file="../${shortname}-cvarlist.txt"
+out_file="${orig_dir}/${shortname}-cvarlist.txt"
 cp "${console_log}" "${out_file}"
-"./${shortname}server" stop || true
 
 echo "Removing all lines before 'cvar list'"
 sed -ni -Ee '/cvar list/I,$ p' "${out_file}"

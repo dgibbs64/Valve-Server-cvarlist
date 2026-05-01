@@ -62,29 +62,10 @@ jobs:
           git fetch origin main
           git rebase origin/main || (echo "Rebase failed; falling back to merge" && git rebase --abort && git merge --no-edit origin/main)
 
-      - name: Insert steamuser
-        if: contains(fromJson('["ahl2","bs"]'), matrix.shortname)
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          # LinuxGSM instance name is usually "<shortname>server"
-          instance="${{ matrix.shortname }}server"
-
-          # Write to the LinuxGSM config directory that the job log indicates is used
-          mkdir -p "linuxgsm/lgsm/config-lgsm/${instance}"
-
-          cat > "linuxgsm/lgsm/config-lgsm/${instance}/common.cfg" <<EOF
-          steamuser="${{ secrets.STEAMCMD_USER }}"
-          steampass="${{ secrets.STEAMCMD_PASS }}"
-          EOF
-
-          # Optional safety check to fail early with a clear message
-          if [[ -z "${{ secrets.STEAMCMD_USER }}" ]]; then
-            echo "Missing STEAMCMD_USER secret"; exit 1
-          fi
-
       - name: Run get_cvars.sh
+        env:
+          STEAMCMD_USER: ${{ secrets.STEAMCMD_USER }}
+          STEAMCMD_PASS: ${{ secrets.STEAMCMD_PASS }}
         run: chmod +x scripts/get_cvars.sh && scripts/get_cvars.sh "${{ matrix.shortname }}"
 
       - name: Get current date
