@@ -39,19 +39,49 @@ docker run -d \
 	-v "${data_dir}:/data" \
 	"${image}"
 
-# Poll until the server reports online (auto-install can take a long time)
+# Checks container logs for fatal install/start errors; exits with a clear message if found.
+check_for_fatal_errors() {
+	local logs
+	logs=$(docker logs "${container_name}" 2>&1)
+	if echo "${logs}" | grep -q "Missing configuration"; then
+		echo "ERROR: SteamCMD requires Steam credentials for ${shortname}." >&2
+		echo "  Set STEAMCMD_USER and STEAMCMD_PASS in .secrets (or as environment variables)." >&2
+		exit 1
+	elif echo "${logs}" | grep -q "No subscription"; then
+		echo "ERROR: Steam account does not have access to the ${shortname} server app." >&2
+		exit 1
+	elif echo "${logs}" | grep -qE "Error! Installing|FAIL: Executable was not found"; then
+		echo "ERROR: Server installation failed for ${shortname}. Last container output:" >&2
+		echo "${logs}" | tail -20 >&2
+		exit 1
+	fi
+}
+
+# Poll until the entrypoint prints "Tail log files", which is emitted by
+# entrypoint-user.sh immediately after the game server has been started,
+# regardless of game type. Auto-install can take a long time.
 echo "Waiting for server to come online..."
 max_wait=2400 # 40 minutes
 elapsed=0
 interval=30
 server_online=0
 while [[ ${elapsed} -lt ${max_wait} ]]; do
-	if docker exec --user linuxgsm "${container_name}" "./${shortname}server" status 2> /dev/null | grep -qi "online"; then
+	if docker logs "${container_name}" 2>&1 | grep -q "Tail log files"; then
 		echo "Server is online"
 		server_online=1
 		break
 	fi
-	echo "  Server not ready yet (${elapsed}s elapsed)..."
+	# If the container has already exited, there's no point waiting further
+	container_status=$(docker inspect --format '{{.State.Status}}' "${container_name}" 2>/dev/null || echo "missing")
+	if [[ "${container_status}" != "running" ]]; then
+		check_for_fatal_errors
+		echo "Container exited unexpectedly (status: ${container_status}). Last output:" >&2
+		docker logs --tail 20 "${container_name}" 2>&1 >&2
+		exit 1
+	fi
+	check_for_fatal_errors
+	echo "  Server not ready yet (${elapsed}s elapsed)... Last container output:"
+	docker logs --tail 5 "${container_name}" 2>&1 | sed 's/^/    /'
 	sleep "${interval}"
 	elapsed=$((elapsed + interval))
 done
@@ -61,13 +91,36 @@ if [[ ${server_online} -eq 0 ]]; then
 	exit 1
 fi
 
+# Phase 2: wait for the console log to have content, confirming the game
+# server process is actually running and not just launched by LinuxGSM.
+echo "Waiting for console log to have content..."
+console_log="${data_dir}/log/console/${shortname}server-console.log"
+console_wait=600 # 10 minutes
+console_elapsed=0
+console_interval=15
+while [[ ${console_elapsed} -lt ${console_wait} ]]; do
+	if [[ -s "${console_log}" ]]; then
+		echo "Console log has content — server is ready"
+		break
+	fi
+	check_for_fatal_errors
+	echo "  Waiting for console log... (${console_elapsed}s elapsed)... Last container output:"
+	docker logs --tail 5 "${container_name}" 2>&1 | sed 's/^/    /'
+	sleep "${console_interval}"
+	console_elapsed=$((console_elapsed + console_interval))
+done
+
+if [[ ! -s "${console_log}" ]]; then
+	echo "Timeout: console log never got content after ${console_wait}s" >&2
+	exit 1
+fi
+
 # Send the cvarlist command via the LinuxGSM console
 echo "Sending cvarlist command..."
 docker exec --user linuxgsm "${container_name}" "./${shortname}server" send cvarlist
-sleep 10
+sleep 15
 
 echo "Display console log"
-console_log="${data_dir}/log/console/${shortname}server-console.log"
 if [[ ! -s "${console_log}" ]]; then
 	echo "The console log is empty or missing" >&2
 	exit 1
