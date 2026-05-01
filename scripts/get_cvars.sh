@@ -7,10 +7,10 @@ container_name="${shortname}server_cvarlist"
 data_dir=""
 
 cleanup() {
-	docker stop "${container_name}" 2>/dev/null || true
-	docker rm "${container_name}" 2>/dev/null || true
+	docker stop "${container_name}" 2> /dev/null || true
+	docker rm "${container_name}" 2> /dev/null || true
 	if [[ -n "${data_dir}" ]]; then
-		rm -rf "${data_dir}" 2>/dev/null || true
+		rm -rf "${data_dir}" 2> /dev/null || true
 	fi
 }
 trap cleanup EXIT
@@ -46,7 +46,7 @@ elapsed=0
 interval=30
 server_online=0
 while [[ ${elapsed} -lt ${max_wait} ]]; do
-	if docker exec --user linuxgsm "${container_name}" "./${shortname}server" status 2>/dev/null | grep -qi "online"; then
+	if docker exec --user linuxgsm "${container_name}" "./${shortname}server" status 2> /dev/null | grep -qi "online"; then
 		echo "Server is online"
 		server_online=1
 		break
