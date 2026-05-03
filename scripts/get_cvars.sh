@@ -112,7 +112,7 @@ while [[ ${console_elapsed} -lt ${console_wait} ]]; do
 	fi
 	# Some containerized servers fail LinuxGSM self-query checks despite being usable.
 	# If startup progressed enough, try sending cvarlist early rather than waiting out the full timeout.
-	if (( console_elapsed >= 90 )); then
+	if ((console_elapsed >= 90)); then
 		break
 	fi
 	check_for_fatal_errors
