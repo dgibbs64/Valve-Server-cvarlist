@@ -110,6 +110,11 @@ while [[ ${console_elapsed} -lt ${console_wait} ]]; do
 		echo "Console log has content — server is ready"
 		break
 	fi
+	# Some containerized servers fail LinuxGSM self-query checks despite being usable.
+	# If startup progressed enough, try sending cvarlist early rather than waiting out the full timeout.
+	if (( console_elapsed >= 90 )); then
+		break
+	fi
 	check_for_fatal_errors
 	echo "  Waiting for console log... (${console_elapsed}s elapsed)... Last container output:"
 	docker logs --tail 5 "${container_name}" 2>&1 | sed 's/^/    /'
@@ -117,15 +122,25 @@ while [[ ${console_elapsed} -lt ${console_wait} ]]; do
 	console_elapsed=$((console_elapsed + console_interval))
 done
 
-if [[ ! -s "${console_log}" ]]; then
-	echo "Timeout: console log never got content after ${console_wait}s" >&2
-	exit 1
-fi
-
 # Send the cvarlist command via the LinuxGSM console
 echo "Sending cvarlist command..."
-docker exec --user linuxgsm "${container_name}" "./${shortname}server" send cvarlist
-sleep 15
+send_attempts=5
+send_ok=0
+for attempt in $(seq 1 "${send_attempts}"); do
+	if docker exec --user linuxgsm "${container_name}" "./${shortname}server" send cvarlist; then
+		send_ok=1
+		sleep 12
+		if [[ -s "${console_log}" ]] && grep -qi 'cvar list' "${console_log}"; then
+			break
+		fi
+	fi
+	echo "  cvarlist send attempt ${attempt}/${send_attempts} did not produce output yet; retrying..."
+	sleep 8
+done
+
+if [[ ${send_ok} -eq 0 ]]; then
+	skip "failed to send cvarlist command"
+fi
 
 echo "Display console log"
 if [[ ! -s "${console_log}" ]]; then
