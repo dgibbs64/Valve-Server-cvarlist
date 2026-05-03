@@ -68,12 +68,43 @@ jobs:
           git rebase origin/main || (echo "Rebase failed; falling back to merge" && git rebase --abort && git merge --no-edit origin/main)
 
       - name: Run get_cvars.sh
+        id: get_cvars
         env:
           STEAMCMD_USER: ${{ secrets.STEAMCMD_USER }}
           STEAMCMD_PASS: ${{ secrets.STEAMCMD_PASS }}
           MAX_WAIT_SECONDS: "3000"
           CONSOLE_WAIT_SECONDS: "900"
         run: chmod +x scripts/get_cvars.sh && scripts/get_cvars.sh "${{ matrix.shortname }}"
+
+      - name: Record per-server status
+        if: ${{ always() }}
+        env:
+          SHORTNAME: ${{ matrix.shortname }}
+          STEP_OUTCOME: ${{ steps.get_cvars.outcome }}
+        run: |
+          file="${SHORTNAME}-cvarlist.txt"
+          status="failed"
+          details="get_cvars step failed"
+
+          if [[ "${STEP_OUTCOME}" == "success" ]]; then
+            status="no-output"
+            details="script succeeded but no cvar markers found"
+          fi
+
+          if [[ -s "${file}" ]] && grep -qiE 'cvar list|convars/concommands' "${file}"; then
+            status="ok"
+            details="cvar markers detected in output file"
+          fi
+
+          printf '%s\t%s\t%s\n' "${SHORTNAME}" "${status}" "${details}" > "status-${SHORTNAME}.tsv"
+
+      - name: Upload per-server status artifact
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: cvar-status-${{ matrix.shortname }}
+          path: status-${{ matrix.shortname }}.tsv
+          retention-days: 7
 
       - name: Get current date
         id: date
@@ -111,3 +142,50 @@ jobs:
         uses: juliangruber/sleep-action@v2
         with:
           time: 10s
+
+  summarize-results:
+    needs: [create-matrix, generate-output]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Download status artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: cvar-status-*
+          path: cvar-status
+          merge-multiple: true
+
+      - name: Build summary table
+        run: |
+          declare -A status_map
+          declare -A details_map
+
+          if [[ -d cvar-status ]]; then
+            while IFS=$'\t' read -r shortname status details; do
+              [[ -n "${shortname}" ]] || continue
+              status_map["${shortname}"]="${status}"
+              details_map["${shortname}"]="${details}"
+            done < <(cat cvar-status/*.tsv 2> /dev/null || true)
+          fi
+
+          echo "## Cvarlist Generation Summary" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Shortname | Result | Notes |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|---|" >> "$GITHUB_STEP_SUMMARY"
+
+          while IFS= read -r shortname; do
+            [[ -n "${shortname}" ]] || continue
+            status="${status_map[${shortname}]:-not-reported}"
+            details="${details_map[${shortname}]:-no status artifact from matrix job}"
+
+            case "${status}" in
+              ok) label="ok" ;;
+              no-output) label="no-output" ;;
+              failed) label="failed" ;;
+              *) label="not-reported" ;;
+            esac
+
+            echo "| ${shortname} | ${label} | ${details} |" >> "$GITHUB_STEP_SUMMARY"
+          done < <(jq -r '.[].shortname' shortnamearray.json)
