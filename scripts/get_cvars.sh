@@ -31,18 +31,33 @@ data_dir=$(mktemp -d)
 if [[ -n "${STEAMCMD_USER:-}" ]]; then
 	instance="${shortname}server"
 	mkdir -p "${data_dir}/lgsm/config-lgsm/${instance}"
+	mkdir -p "${data_dir}/lgsm/config-lgsm"
 	{
 		printf 'steamuser="%s"\n' "${STEAMCMD_USER}"
 		printf 'steampass="%s"\n' "${STEAMCMD_PASS:-}"
 	} > "${data_dir}/lgsm/config-lgsm/${instance}/common.cfg"
+	{
+		printf 'steamuser="%s"\n' "${STEAMCMD_USER}"
+		printf 'steampass="%s"\n' "${STEAMCMD_PASS:-}"
+	} > "${data_dir}/lgsm/config-lgsm/common.cfg"
 fi
 
 # Run container — it auto-installs and auto-starts the game server
 echo "Starting container ${container_name}..."
-docker run -d \
-	--name "${container_name}" \
-	-v "${data_dir}:/data" \
-	"${image}"
+docker_run_args=(
+	-d
+	--name "${container_name}"
+	-v "${data_dir}:/data"
+)
+
+if [[ -n "${STEAMCMD_USER:-}" ]]; then
+	docker_run_args+=(
+		-e "STEAMCMD_USER=${STEAMCMD_USER}"
+		-e "STEAMCMD_PASS=${STEAMCMD_PASS:-}"
+	)
+fi
+
+docker run "${docker_run_args[@]}" "${image}"
 
 # Checks container logs for fatal install/start errors; exits with a clear message if found.
 check_for_fatal_errors() {
