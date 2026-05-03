@@ -8,6 +8,9 @@ on:
     - cron: "0 0 * * 0"
   push:
     branches: ["main"]
+    paths-ignore:
+      - "*-cvarlist.txt"
+      - "shortnamearray.json"
 
 # Minimal required permissions for pushing content updates
 permissions:
