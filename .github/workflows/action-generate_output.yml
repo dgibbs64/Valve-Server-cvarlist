@@ -45,7 +45,7 @@ jobs:
     needs: create-matrix
     continue-on-error: true
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     strategy:
       matrix: ${{ fromJSON(needs.create-matrix.outputs.matrix) }}
       max-parallel: 1
@@ -70,6 +70,8 @@ jobs:
         env:
           STEAMCMD_USER: ${{ secrets.STEAMCMD_USER }}
           STEAMCMD_PASS: ${{ secrets.STEAMCMD_PASS }}
+          MAX_WAIT_SECONDS: "3000"
+          CONSOLE_WAIT_SECONDS: "900"
         run: chmod +x scripts/get_cvars.sh && scripts/get_cvars.sh "${{ matrix.shortname }}"
 
       - name: Get current date

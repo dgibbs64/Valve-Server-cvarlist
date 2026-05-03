@@ -66,10 +66,11 @@ check_for_fatal_errors() {
 # entrypoint-user.sh immediately after the game server has been started,
 # regardless of game type. Auto-install can take a long time.
 echo "Waiting for server to come online..."
-max_wait=2400 # 40 minutes
+max_wait="${MAX_WAIT_SECONDS:-2400}" # default 40 minutes
 elapsed=0
 interval=30
 server_online=0
+echo "Wait budget: max_wait=${max_wait}s interval=${interval}s"
 while [[ ${elapsed} -lt ${max_wait} ]]; do
 	if docker logs "${container_name}" 2>&1 | grep -q "Tail log files"; then
 		echo "Server is online"
@@ -100,9 +101,10 @@ fi
 # server process is actually running and not just launched by LinuxGSM.
 echo "Waiting for console log to have content..."
 console_log="${data_dir}/log/console/${shortname}server-console.log"
-console_wait=600 # 10 minutes
+console_wait="${CONSOLE_WAIT_SECONDS:-600}" # default 10 minutes
 console_elapsed=0
 console_interval=15
+echo "Console wait budget: console_wait=${console_wait}s interval=${console_interval}s"
 while [[ ${console_elapsed} -lt ${console_wait} ]]; do
 	if [[ -s "${console_log}" ]]; then
 		echo "Console log has content — server is ready"
