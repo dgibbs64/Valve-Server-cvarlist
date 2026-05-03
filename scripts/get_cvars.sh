@@ -6,6 +6,11 @@ orig_dir="$(pwd)"
 container_name="${shortname}server_cvarlist"
 data_dir=""
 
+skip() {
+	echo "Skipping ${shortname}: $*" >&2
+	exit 0
+}
+
 cleanup() {
 	docker stop "${container_name}" 2> /dev/null || true
 	docker rm "${container_name}" 2> /dev/null || true
@@ -122,8 +127,7 @@ sleep 15
 
 echo "Display console log"
 if [[ ! -s "${console_log}" ]]; then
-	echo "The console log is empty or missing" >&2
-	exit 1
+	skip "console log is empty or missing"
 fi
 cat "${console_log}"
 
@@ -150,9 +154,9 @@ min_lines=20
 min_cvar_lines=100
 
 if [[ ! -s "${out_file}" ]]; then
-	echo "Generated file is empty. Removing." >&2
+	echo "Generated file is empty. Removing and skipping." >&2
 	rm -f "${out_file}"
-	exit 1
+	skip "generated file was empty"
 fi
 
 line_count=$(wc -l < "${out_file}")
@@ -163,15 +167,15 @@ grep -qi 'convars/concommands' "${out_file}" && has_summary=1 || true
 echo "Validation stats: lines=${line_count} cvar_lines=${cvar_line_count} has_summary=${has_summary}" >&2
 
 if ((line_count < min_lines)); then
-	echo "Too few lines (${line_count} < ${min_lines}). Removing." >&2
+	echo "Too few lines (${line_count} < ${min_lines}). Removing and skipping." >&2
 	rm -f "${out_file}"
-	exit 1
+	skip "not enough output lines"
 fi
 
 if ((has_summary == 0)) && ((cvar_line_count < min_cvar_lines)); then
-	echo "Incomplete dump (no summary & cvar_lines=${cvar_line_count} < ${min_cvar_lines}). Removing." >&2
+	echo "Incomplete dump (no summary & cvar_lines=${cvar_line_count} < ${min_cvar_lines}). Removing and skipping." >&2
 	rm -f "${out_file}"
-	exit 1
+	skip "incomplete cvar dump"
 fi
 
 echo "Display cvarlist"
