@@ -62,6 +62,18 @@ check_for_fatal_errors() {
 	fi
 }
 
+find_cvar_output_log() {
+	local candidate
+	while IFS= read -r candidate; do
+		[[ -s "${candidate}" ]] || continue
+		if grep -qiE 'cvar list|convars/concommands' "${candidate}"; then
+			echo "${candidate}"
+			return 0
+		fi
+	done < <(find "${data_dir}" -type f \( -name '*console*.log' -o -name '*.log' -o -name '*.txt' \) -size +0c 2> /dev/null)
+	return 1
+}
+
 # Poll until the entrypoint prints "Tail log files", which is emitted by
 # entrypoint-user.sh immediately after the game server has been started,
 # regardless of game type. Auto-install can take a long time.
@@ -101,6 +113,7 @@ fi
 # server process is actually running and not just launched by LinuxGSM.
 echo "Waiting for console log to have content..."
 console_log="${data_dir}/log/console/${shortname}server-console.log"
+discovered_log=""
 console_wait="${CONSOLE_WAIT_SECONDS:-600}" # default 10 minutes
 console_elapsed=0
 console_interval=15
@@ -113,6 +126,11 @@ while [[ ${console_elapsed} -lt ${console_wait} ]]; do
 	# Some containerized servers fail LinuxGSM self-query checks despite being usable.
 	# If startup progressed enough, try sending cvarlist early rather than waiting out the full timeout.
 	if ((console_elapsed >= 90)); then
+		break
+	fi
+	if discovered_log=$(find_cvar_output_log); then
+		console_log="${discovered_log}"
+		echo "Detected log with cvar output: ${console_log}"
 		break
 	fi
 	check_for_fatal_errors
@@ -133,6 +151,11 @@ for attempt in $(seq 1 "${send_attempts}"); do
 		if [[ -s "${console_log}" ]] && grep -qi 'cvar list' "${console_log}"; then
 			break
 		fi
+		if discovered_log=$(find_cvar_output_log); then
+			console_log="${discovered_log}"
+			echo "Detected log with cvar output: ${console_log}"
+			break
+		fi
 	fi
 	echo "  cvarlist send attempt ${attempt}/${send_attempts} did not produce output yet; retrying..."
 	sleep 8
@@ -149,7 +172,12 @@ fi
 cat "${console_log}"
 
 out_file="${orig_dir}/${shortname}-cvarlist.txt"
-cp "${console_log}" "${out_file}"
+if [[ -s "${console_log}" ]]; then
+	cp "${console_log}" "${out_file}"
+else
+	echo "Console log path not found; falling back to container logs"
+	docker logs "${container_name}" > "${out_file}" 2>&1 || true
+fi
 
 echo "Removing all lines before 'cvar list'"
 sed -ni -Ee '/cvar list/I,$ p' "${out_file}"
