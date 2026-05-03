@@ -166,10 +166,11 @@ if [[ ${send_ok} -eq 0 ]]; then
 fi
 
 echo "Display console log"
-if [[ ! -s "${console_log}" ]]; then
-	skip "console log is empty or missing"
+if [[ -s "${console_log}" ]]; then
+	cat "${console_log}"
+else
+	echo "Console log path not found yet; continuing with fallback extraction"
 fi
-cat "${console_log}"
 
 out_file="${orig_dir}/${shortname}-cvarlist.txt"
 if [[ -s "${console_log}" ]]; then
