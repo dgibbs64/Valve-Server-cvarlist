@@ -80,3 +80,12 @@ Example (Team Fortress 2):
 ```bash
 scripts/get_cvars.sh tf2
 ```
+
+### Steam Login Preflight
+
+Authentication mode is decided before container startup:
+
+- If a shortname is listed in `steam-login-required.txt`, the run uses `STEAMCMD_USER` / `STEAMCMD_PASS`.
+- If it is not listed, the run uses anonymous Steam login.
+
+This allows deterministic handling of titles that require account login without guessing from runtime failures.

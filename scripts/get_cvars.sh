@@ -5,8 +5,10 @@ shortname="${1:?missing server shortname}"
 orig_dir="$(pwd)"
 container_name="${shortname}server_cvarlist"
 data_dir=""
-steam_user="${STEAMCMD_USER:-anonymous}"
-steam_pass="${STEAMCMD_PASS:-}"
+login_required_file="${orig_dir}/steam-login-required.txt"
+steam_user="anonymous"
+steam_pass=""
+requires_login="false"
 
 skip() {
 	echo "Skipping ${shortname}: $*" >&2
@@ -23,6 +25,21 @@ cleanup() {
 trap cleanup EXIT
 
 image="ghcr.io/gameservermanagers/gameserver:${shortname}"
+
+if [[ -f "${login_required_file}" ]] && grep -Eqi "^${shortname}[[:space:]]*$" "${login_required_file}"; then
+	requires_login="true"
+fi
+
+if [[ "${requires_login}" == "true" ]]; then
+	if [[ -z "${STEAMCMD_USER:-}" ]]; then
+		skip "requires Steam login but STEAMCMD_USER is not set"
+	fi
+	steam_user="${STEAMCMD_USER}"
+	steam_pass="${STEAMCMD_PASS:-}"
+	echo "Auth mode: steam account (preflight rule)"
+else
+	echo "Auth mode: anonymous"
+fi
 
 echo "Pulling image ${image}..."
 docker pull "${image}"
@@ -62,8 +79,8 @@ check_for_fatal_errors() {
 	local logs
 	logs=$(docker logs "${container_name}" 2>&1)
 	if echo "${logs}" | grep -q "Missing configuration"; then
-		echo "ERROR: SteamCMD requires Steam credentials for ${shortname}." >&2
-		echo "  Set STEAMCMD_USER and STEAMCMD_PASS in .secrets (or as environment variables)." >&2
+		echo "ERROR: SteamCMD reported missing configuration for ${shortname}." >&2
+		echo "  If this server needs account login, add '${shortname}' to steam-login-required.txt." >&2
 		exit 1
 	elif echo "${logs}" | grep -q "No subscription"; then
 		echo "ERROR: Steam account does not have access to the ${shortname} server app." >&2

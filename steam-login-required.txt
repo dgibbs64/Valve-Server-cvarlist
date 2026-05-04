@@ -1,0 +1,6 @@
+# One shortname per line.
+# Servers listed here will use STEAMCMD_USER/STEAMCMD_PASS.
+# Servers not listed will use anonymous login.
+#
+# Example:
+# bd
