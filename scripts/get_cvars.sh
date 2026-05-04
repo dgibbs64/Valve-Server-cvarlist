@@ -5,6 +5,8 @@ shortname="${1:?missing server shortname}"
 orig_dir="$(pwd)"
 container_name="${shortname}server_cvarlist"
 data_dir=""
+steam_user="${STEAMCMD_USER:-anonymous}"
+steam_pass="${STEAMCMD_PASS:-}"
 
 skip() {
 	echo "Skipping ${shortname}: $*" >&2
@@ -27,20 +29,18 @@ docker pull "${image}"
 
 data_dir=$(mktemp -d)
 
-# Pre-create steam credentials config if provided via environment
-if [[ -n "${STEAMCMD_USER:-}" ]]; then
-	instance="${shortname}server"
-	mkdir -p "${data_dir}/lgsm/config-lgsm/${instance}"
-	mkdir -p "${data_dir}/lgsm/config-lgsm"
-	{
-		printf 'steamuser="%s"\n' "${STEAMCMD_USER}"
-		printf 'steampass="%s"\n' "${STEAMCMD_PASS:-}"
-	} > "${data_dir}/lgsm/config-lgsm/${instance}/common.cfg"
-	{
-		printf 'steamuser="%s"\n' "${STEAMCMD_USER}"
-		printf 'steampass="%s"\n' "${STEAMCMD_PASS:-}"
-	} > "${data_dir}/lgsm/config-lgsm/common.cfg"
-fi
+# Always provide Steam config. Most titles can install with anonymous login.
+instance="${shortname}server"
+mkdir -p "${data_dir}/lgsm/config-lgsm/${instance}"
+mkdir -p "${data_dir}/lgsm/config-lgsm"
+{
+	printf 'steamuser="%s"\n' "${steam_user}"
+	printf 'steampass="%s"\n' "${steam_pass}"
+} > "${data_dir}/lgsm/config-lgsm/${instance}/common.cfg"
+{
+	printf 'steamuser="%s"\n' "${steam_user}"
+	printf 'steampass="%s"\n' "${steam_pass}"
+} > "${data_dir}/lgsm/config-lgsm/common.cfg"
 
 # Run container — it auto-installs and auto-starts the game server
 echo "Starting container ${container_name}..."
@@ -50,12 +50,10 @@ docker_run_args=(
 	-v "${data_dir}:/data"
 )
 
-if [[ -n "${STEAMCMD_USER:-}" ]]; then
-	docker_run_args+=(
-		-e "STEAMCMD_USER=${STEAMCMD_USER}"
-		-e "STEAMCMD_PASS=${STEAMCMD_PASS:-}"
-	)
-fi
+docker_run_args+=(
+	-e "STEAMCMD_USER=${steam_user}"
+	-e "STEAMCMD_PASS=${steam_pass}"
+)
 
 docker run "${docker_run_args[@]}" "${image}"
 
