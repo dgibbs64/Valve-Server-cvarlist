@@ -230,9 +230,9 @@ min_lines=20
 min_cvar_lines=100
 
 if [[ ! -s "${out_file}" ]]; then
-	echo "Generated file is empty. Removing and skipping." >&2
+	echo "Generated file is empty. Failing." >&2
 	rm -f "${out_file}"
-	skip "generated file was empty"
+	exit 1
 fi
 
 line_count=$(wc -l < "${out_file}")
@@ -243,15 +243,15 @@ grep -qi 'convars/concommands' "${out_file}" && has_summary=1 || true
 echo "Validation stats: lines=${line_count} cvar_lines=${cvar_line_count} has_summary=${has_summary}" >&2
 
 if ((line_count < min_lines)); then
-	echo "Too few lines (${line_count} < ${min_lines}). Removing and skipping." >&2
+	echo "Too few lines (${line_count} < ${min_lines}). Removing and failing." >&2
 	rm -f "${out_file}"
-	skip "not enough output lines"
+	exit 1
 fi
 
 if ((has_summary == 0)) && ((cvar_line_count < min_cvar_lines)); then
-	echo "Incomplete dump (no summary & cvar_lines=${cvar_line_count} < ${min_cvar_lines}). Removing and skipping." >&2
+	echo "Incomplete dump (no summary & cvar_lines=${cvar_line_count} < ${min_cvar_lines}). Removing and failing." >&2
 	rm -f "${out_file}"
-	skip "incomplete cvar dump"
+	exit 1
 fi
 
 echo "Display cvarlist"
