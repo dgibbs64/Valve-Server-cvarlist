@@ -1,0 +1,3 @@
+[codespell]
+check-hidden =
+skip = package-lock.json,*/package-lock.json,*/go.mod,*/go.sum,*.log,.git,*-cvarlist.txt,*/*-cvarlist.txt,bmdm-server.txt,*/bmdm-server.txt
