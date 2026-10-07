@@ -980,6 +980,7 @@ sv_accelerate                            : 10       : , "sv", "nf", "rep" :
 sv_airaccelerate                         : 10       : , "sv", "nf", "rep" :
 sv_allow_color_correction                : 1        : , "rep"          : Allow or disallow clients to use color correction on this server.
 sv_allow_point_servercommand             : 0        : , "sv"           : Allow use of point_servercommand entities in map. Potentially dangerous for untrusted maps.   disallow : Always disallow   always   : Allow for all maps
+sv_allow_server_adverisement_to_master_server : 1        :                  :
 sv_allow_voice_from_file                 : 1        : , "rep"          : Allow or disallow clients from using voice_inputfromfile on this server.
 sv_allow_votes                           : 1        : , "sv"           : Allow voting?
 sv_allow_wait_command                    : 1        : , "rep"          : Allow or disallow the wait command on clients connected to this server.
@@ -995,8 +996,8 @@ sv_benchmark_numticks                    : 3300     : , "sv"           : If > 0,
 sv_bonus_challenge                       : 0        : , "sv", "rep"    : Set to values other than 0 to select a bonus map challenge type.
 sv_bounce                                : 0        : , "sv", "nf", "rep" : Bounce multiplier for when physically simulated objects collide with other objects.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
-sv_chat_bucket_size_tier1                : 4        : , "sv"           : The maxmimum size of the short term chat msg bucket.
-sv_chat_bucket_size_tier2                : 30       : , "sv"           : The maxmimum size of the long term chat msg bucket.
+sv_chat_bucket_size_tier1                : 4        : , "sv"           : The maximum size of the short term chat msg bucket.
+sv_chat_bucket_size_tier2                : 30       : , "sv"           : The maximum size of the long term chat msg bucket.
 sv_chat_seconds_per_msg_tier1            : 3        : , "sv"           : The number of seconds to accrue an additional short term chat msg.
 sv_chat_seconds_per_msg_tier2            : 10       : , "sv"           : The number of seconds to accrue an additional long term chat msg.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
@@ -1025,6 +1026,7 @@ sv_filterban                             : 1        :                  : Set pac
 sv_footsteps                             : 1        : , "sv", "nf", "rep" : Play footstep sound for players
 sv_forcepreload                          : 0        : , "a"            : Force server side preloading.
 sv_friction                              : 4        : , "sv", "nf", "rep" : World friction.
+sv_friends_only                          : 0        :                  : Whether or not only friends should be allowed to join the game
 sv_gravity                               : 800      : , "sv", "nf", "rep" : World gravity.
 sv_hl1_allowpickup                       : 0        : , "sv"           :
 sv_hl1mp_item_respawn_time               : 30       : , "sv", "nf"     :
@@ -1239,6 +1241,7 @@ voxeltree_box                            : cmd      :                  : View en
 voxeltree_playerview                     : cmd      :                  : View entities in the voxel-tree at the player position.
 voxeltree_sphere                         : cmd      :                  : View entities in the voxel-tree inside sphere <Vector(center), float(radius)>.
 voxeltree_view                           : cmd      :                  : View entities in the voxel-tree.
+vphysics_nan_debug                       : 0        :                  :
 vprof                                    : cmd      :                  : Toggle VProf profiler
 vprof_cachemiss                          : cmd      :                  : Toggle VProf cache miss checking
 vprof_cachemiss_off                      : cmd      :                  : Turn off VProf cache miss checking
@@ -1288,4 +1291,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           :
 --------------
-1287 total convars/concommands
+1290 total convars/concommands
