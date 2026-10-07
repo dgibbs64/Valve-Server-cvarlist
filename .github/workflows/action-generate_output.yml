@@ -11,6 +11,10 @@ on:
     paths-ignore:
       - "*-cvarlist.txt"
       - "shortnamearray.json"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/action-generate_output.yml"
 
 # Minimal required permissions for pushing content updates
 permissions:
@@ -31,8 +35,14 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Pull requests run a small sample of servers as a dry run.
       - name: Generate matrix
-        run: chmod +x scripts/generate-matrix.sh && scripts/generate-matrix.sh
+        env:
+          PR_SHORTNAMES: ${{ github.event_name == 'pull_request' && 'ts tf2c dod' || '' }}
+        run: |
+          chmod +x scripts/generate-matrix.sh
+          # shellcheck disable=SC2086 # word-split the shortname list
+          scripts/generate-matrix.sh ${PR_SHORTNAMES}
 
       - name: Set Matrix
         id: set-matrix
@@ -62,7 +72,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Sync with remote main
-        if: ${{ !env.ACT }}
+        if: ${{ !env.ACT && github.event_name != 'pull_request' }}
         run: |
           git fetch origin main
           git rebase origin/main || (echo "Rebase failed; falling back to merge" && git rebase --abort && git merge --no-edit origin/main)
@@ -110,14 +120,25 @@ jobs:
         id: date
         run: echo "date=$(date +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
 
+      - name: Show changes
+        env:
+          SHORTNAME: ${{ matrix.shortname }}
+        run: |
+          git status --short -- "${SHORTNAME}-cvarlist.txt"
+          git diff --stat -- "${SHORTNAME}-cvarlist.txt"
+
       - name: Commit & push (rebase to avoid non-fast-forward)
-        if: ${{ !env.ACT }}
+        if: ${{ !env.ACT && github.event_name != 'pull_request' }}
         env:
           DATE: ${{ steps.date.outputs.date }}
           SHORTNAME: ${{ matrix.shortname }}
         run: |
           set -e
-          git add -- *.txt shortnamearray.json || true
+          file="${SHORTNAME}-cvarlist.txt"
+          if [[ ! -s "${file}" ]]; then
+            echo "No output for ${SHORTNAME}; skipping push."; exit 0
+          fi
+          git add -- "${file}"
           if git diff --cached --quiet; then
             echo "No changes detected for ${SHORTNAME}; skipping push."; exit 0
           fi
@@ -159,6 +180,8 @@ jobs:
           merge-multiple: true
 
       - name: Build summary table
+        env:
+          MATRIX: ${{ needs.create-matrix.outputs.matrix }}
         run: |
           declare -A status_map
           declare -A details_map
@@ -171,21 +194,33 @@ jobs:
             done < <(cat cvar-status/*.tsv 2> /dev/null || true)
           fi
 
-          echo "## Cvarlist Generation Summary" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Shortname | Result | Notes |" >> "$GITHUB_STEP_SUMMARY"
-          echo "|---|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          {
+            echo "## Cvarlist Generation Summary"
+            echo "| Shortname | Result | Notes |"
+            echo "|---|---|---|"
 
-          while IFS= read -r shortname; do
-            [[ -n "${shortname}" ]] || continue
-            status="${status_map[${shortname}]:-not-reported}"
-            details="${details_map[${shortname}]:-no status artifact from matrix job}"
+            while IFS= read -r shortname; do
+              [[ -n "${shortname}" ]] || continue
+              status="${status_map[${shortname}]:-not-reported}"
+              details="${details_map[${shortname}]:-no status artifact from matrix job}"
 
-            case "${status}" in
-              ok) label="ok" ;;
-              no-output) label="no-output" ;;
-              failed) label="failed" ;;
-              *) label="not-reported" ;;
-            esac
+              case "${status}" in
+                ok) label="ok" ;;
+                no-output) label="no-output" ;;
+                failed) label="failed" ;;
+                *) label="not-reported" ;;
+              esac
 
-            echo "| ${shortname} | ${label} | ${details} |" >> "$GITHUB_STEP_SUMMARY"
-          done < <(jq -r '.[].shortname' shortnamearray.json)
+              echo "| ${shortname} | ${label} | ${details} |"
+            done < <(jq -r '.include[].shortname' <<< "${MATRIX}")
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # Scheduled workflows are disabled after 60 days without repo activity,
+  # and this one only commits when a cvarlist changes.
+  workflow-keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: liskin/gh-workflow-keepalive@v1

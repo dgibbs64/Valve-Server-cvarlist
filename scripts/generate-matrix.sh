@@ -1,6 +1,8 @@
 #!/bin/bash
 set -euo pipefail
-# Generate GitHub Actions matrix file from serverlist.csv
+# Generate GitHub Actions matrix file from serverlist.csv, or from the
+# shortnames given as arguments (e.g. for a pull request dry run).
+# Usage: generate-matrix.sh [shortname...]
 # Output: shortnamearray.json
 
 out_file="shortnamearray.json"
@@ -16,7 +18,7 @@ out_file="shortnamearray.json"
 		fi
 		first=0
 		printf '{"shortname":"%s"}' "$shortname"
-	done < serverlist.csv
+	done < <(if [[ $# -gt 0 ]]; then printf '%s\n' "$@"; else cat serverlist.csv; fi)
 	echo ']}'
 } > "${out_file}"
 
