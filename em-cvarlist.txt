@@ -288,7 +288,6 @@ emp_sv_client_vehic_auth_movement        : 1        : , "sv", "rep"    :
 emp_sv_client_vehic_auth_movement_2      : 1        : , "sv", "rep"    :
 emp_sv_commander_freeze_time             : 60       : , "sv", "nf"     : The amount of time that the command vehicle is frozen for at the beginning of the game.
 emp_sv_commander_resource_interval       : 1        : , "sv"           :
-emp_sv_commander_visiblity_interval      : 1        : , "sv"           :
 emp_sv_debug_build_vehicles              : 0        : , "sv", "nf"     :
 emp_sv_debug_instant_build               : 0        : , "sv", "nf", "rep" :
 emp_sv_debug_radar_required              : 1        : , "sv", "nf", "rep", "server_can_execute" :
@@ -317,14 +316,8 @@ emp_sv_max_turrets                       : 24       : , "sv", "nf"     :
 emp_sv_max_vehicles                      : 32       : , "sv", "nf"     :
 emp_sv_max_walls                         : 64       : , "sv", "nf"     :
 emp_sv_netvisdist_building               : 10000    : , "sv"           : Building networking visibility distance
-emp_sv_netvisdist_commander              : 10000    : , "sv"           : Commander networking visibility distance
+emp_sv_netvisdist_commander              : 5000     : , "sv"           : Commander fog of war proxy visibility distance
 emp_sv_netvisdist_player                 : 10000    : , "sv"           : Player networking visibility distance
-emp_sv_netvisdist_ratedistmax            : 10000    : , "sv"           : Maximum distance to regulate network traffic frequency (lowest frequency of transmission)
-emp_sv_netvisdist_ratedistmin            : 2000     : , "sv"           : Minimum distance to begin regulating network traffic frequency (greatest frequency of transmission)
-emp_sv_netvisdist_ratefacingmul          : 20       : , "sv"           : Multiplier to alter distance between recipient and entity when the recipient is not facing the entity
-emp_sv_netvisdist_ratefacingonly         : 0        : , "sv"           : Only affect the rate of entities behind the player
-emp_sv_netvisdist_ratemax                : 0        : , "sv"           : At the maximum distance, frequency that network traffic is sent
-emp_sv_netvisdist_ratemin                : 0        : , "sv"           : At the minimum distance, frequency that network traffic is sent
 emp_sv_netvisdist_vehicle                : 10000    : , "sv"           : Vehicle networking visibility distance
 emp_sv_official                          : 0        : , "sv"           :
 emp_sv_official_lastbroken               : -1       : , "sv"           :
@@ -339,7 +332,6 @@ emp_sv_order_infantry_update_interval    : 3        : , "sv", "nf"     : The rat
 emp_sv_order_timeout                     : 7        : , "sv", "nf"     : The amount of time that has to pass before an out-of-range order is cancelled.
 emp_sv_order_vehicle_range               : 6000     : , "sv", "nf"     : The distance at which the targeted vehicle has to be away from the ordered player to have the order cancelled.
 emp_sv_player_erepair_speed              : 150      : , "sv", "cheat", "nf" : The e-repair speed in health units per minute. **Not modifiable, for display only.**
-emp_sv_player_flag_update                : 0        : , "sv"           :
 emp_sv_player_minimap_interval           : 1        : , "sv"           :
 emp_sv_player_refinery_multiplier        : 12       : , "sv", "nf", "rep" : Refinery resource output is multiplied by number of players on NF+BE\emp_sv_player_refinery_multiplier
 emp_sv_player_resource_interval          : 1        : , "sv"           :
@@ -356,7 +348,6 @@ emp_sv_resource_integral_term            : 0        : , "sv", "nf"     : Sets th
 emp_sv_resource_multiplier_be            : 5        : , "sv", "nf"     :
 emp_sv_resource_multiplier_nf            : 5        : , "sv", "nf"     :
 emp_sv_respawn_penalty                   : 10       : , "sv", "nf"     :
-emp_sv_sendcomm_ent                      : 0        : , "sv", "cheat"  : Transmit commander(player) entity info, even if the player is in comm interface
 emp_sv_spawn_protection                  : 3        : , "sv", "nf"     : Duration of spawn protection (barracks only)
 emp_sv_suddendeath_countdown             : 2        : , "sv"           :
 emp_sv_tactics_commander_time            : 120      : , "sv", "rep"    :
@@ -365,9 +356,9 @@ emp_sv_unresearch_item                   : cmd      :                  : Unresea
 emp_sv_vehicle_debug_reflective          : 0        : , "sv", "cheat"  :
 emp_sv_vehicle_fadeout_time              : 180      : , "sv", "nf"     : How long a vehicle carcass stays before being removed, death time + cvar duration.
 emp_sv_vehicle_fadeout_time_partial      : 60       : , "sv", "nf"     : How long to add to a partial carcass if it's passed it original fadeout time, last recycle time + cvar duration.
-emp_sv_vehicle_minimap_interval          : 1        : , "sv"           :
 emp_sv_vehicle_selfdestruct_time         : 300      : , "sv", "nf"     : Empty vehicles will self-destruct after this time limit (in seconds).
 emp_sv_vehicle_show_damage               : 0        : , "sv", "cheat"  : Show damage done to tanks
+emp_sv_vis_manager_update_interval       : 0        : , "sv"           : Visibility manager update rate (in seconds)
 emp_sv_vote_commander_time               : 60       : , "sv", "nf", "rep" :
 emp_sv_vote_kick_player                  : 1        : , "sv"           :
 emp_sv_wages                             : 20       : , "sv"           :
@@ -1468,4 +1459,4 @@ xbox_throttlebias                        : 100      : , "a", "sv", "rep" :
 xbox_throttlespoof                       : 200      : , "a", "sv", "rep" :
 xc_crouch_debounce                       : 0        : , "sv"           :
 --------------
-1467 total convars/concommands
+1458 total convars/concommands
