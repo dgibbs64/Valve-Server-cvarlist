@@ -282,7 +282,6 @@ find                                     : cmd      :                  : Find co
 find_ent                                 : cmd      :                  : Find and list all entities with classnames or targetnames that contain the specified substring. Format: find_ent <substring>
 find_ent_index                           : cmd      :                  : Display data for entity matching specified index. Format: find_ent_index <index>
 findflags                                : cmd      :                  : Find concommands by flags.
-findrespawnprobes                        : cmd      :                  :
 fire_absorbrate                          : 3        : , "sv"           :
 fire_dmgbase                             : 1        : , "sv"           :
 fire_dmginterval                         : 1        : , "sv"           :
@@ -317,6 +316,8 @@ fof_course_forced_team                   : 0        : , "sv", "rep"    :
 fof_course_script                        : 0        : , "sv"           :
 fof_debug_printcoords                    : cmd      :                  :
 fof_debug_respawns                       : 0        : , "sv"           :
+fof_debug_respawns_probemap              : cmd      :                  :
+fof_gunshot_wallocclusion                : 1        : , "sv", "rep"    :
 fof_npc_horsekickdamage                  : 100      : , "sv"           : Horse kick damage
 fof_npc_horsekickforce                   : 500      : , "sv"           : Horse kick force applied to player
 fof_player_prog                          : 0        : , "sv", "nf", "rep" :
@@ -351,7 +352,6 @@ fof_sv_ghost_town                        : 0        : , "sv", "rep"    :
 fof_sv_ghost_town_xbow                   : 0        : , "sv", "rep"    :
 fof_sv_headshots_only                    : 0        : , "sv", "rep"    :
 fof_sv_health_max                        : 100      : , "sv", "nf", "rep" :
-fof_sv_idlekick_whitelist                : 1        : , "sv"           :
 fof_sv_item_respawn_time                 : 60       : , "sv", "nf"     :
 fof_sv_mapcycle_dm                       : 0        : , "sv"           :
 fof_sv_mapcycle_dm_12                    : 0        : , "sv"           :
@@ -497,7 +497,6 @@ g_Language                               : 0        : , "sv", "rep"    :
 g_ragdoll_important_maxcount             : 2        : , "sv", "rep"    :
 g_ragdoll_maxcount                       : 16       : , "sv", "rep"    :
 g_test_new_antlion_jump                  : 1        : , "a", "sv"      :
-generaterespawnprobes                    : cmd      :                  :
 give                                     : cmd      :                  : Give item to player.  Arguments: <item_name>
 givecurrentammo                          : cmd      :                  : Give a supply of ammo for current weapon..
 global_set                               : cmd      :                  : global_set <globalname> <state>: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD).
@@ -926,7 +925,7 @@ net_fakelag                              : 0        : , "cheat"        : Lag all
 net_fakeloss                             : 0        : , "cheat"        : Simulate packet loss as a percentage (negative means drop 1/n packets)
 net_maxcleartime                         : 4        :                  : Max # of seconds we can wait for next packets to be sent based on rate setting (0 == no limit).
 net_maxfilesize                          : 16       :                  : Maximum allowed file size for uploading in MB
-net_maxfragments                         : 1260     :                  : Max fragment bytes per packet
+net_maxfragments                         : 1024     :                  : Max fragment bytes per packet
 net_maxpacketdrop                        : 5000     :                  : Ignore any packets with the sequence number more than this ahead (0 == no limit)
 net_maxroutable                          : 1260     : , "a", "user"    : Requested max packet size before packets are 'split'.
 net_queue_trace                          : 0        :                  :
@@ -1505,7 +1504,7 @@ sv_cacheencodedents                      : 1        :                  : If set 
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
 sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
 sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate.
-sv_client_max_interp_ratio               : 5        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_interp_ratio is -1, then this cvar has no effect.
+sv_client_max_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_interp_ratio is -1, then this cvar has no effect.
 sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1 = let clients set cl_interp_ratio to anything  any other value = set minimum value for cl_interp_ratio
 sv_client_predict                        : 1        : , "rep"          : This can be used to force the value of cl_predict for connected clients (only while they are connected).    -1 = let clients set cl_predict to anything     0 = force cl_predict to 0     1 = force cl_predict to 1
 sv_clockcorrection_msecs                 : 60       : , "sv"           : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
@@ -1556,7 +1555,7 @@ sv_maxcmdrate                            : 100      : , "rep"          : (If sv_
 sv_maxrate                               : 100000   : , "rep"          : Max bandwidth rate allowed on server, 0 == unlimited
 sv_maxreplay                             : 0        :                  : Maximum replay time in seconds
 sv_maxroutable                           : 1260     :                  : Server upper bound on net_maxroutable that a client can use.
-sv_maxupdaterate                         : 100      : , "rep"          : Maximum updates per second that the server will allow
+sv_maxupdaterate                         : 128      : , "rep"          : Maximum updates per second that the server will allow
 sv_maxuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime exceeds this number of hours, the server will exit.
 sv_maxusrcmdprocessticks                 : 24       : , "sv", "nf"     : Maximum number of client-issued usrcmd ticks that can be replayed in packet loss conditions, 0 to allow no restrictions
 sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv", "cheat"  : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server tick; 2+: hold multiple ticks)
@@ -1564,7 +1563,7 @@ sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a
 sv_memlimit                              : 0        :                  : If set, whenever a game ends, if the total memory used by the server is greater than this # of megabytes, the server will exit.
 sv_mincmdrate                            : 33       : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
 sv_minrate                               : 50000    : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
-sv_minupdaterate                         : 33       : , "rep"          : Minimum updates per second that the server will allow
+sv_minupdaterate                         : 64       : , "rep"          : Minimum updates per second that the server will allow
 sv_minuptimelimit                        : 0        :                  : If set, whenever a game ends, if the server uptime is less than this number of hours, the server will continue running regardless of sv_memlimit.
 sv_motd_unload_on_dismissal              : 0        : , "sv"           : If enabled, the MOTD contents will be unloaded when the player closes the MOTD.
 sv_namechange_cooldown_seconds           : 30       :                  : When a client name change is received, wait N seconds before allowing another name change
@@ -1630,7 +1629,7 @@ sv_test_scripted_sequences               : 0        : , "sv"           : Tests f
 sv_teststepsimulation                    : 1        : , "sv"           :
 sv_thinktimecheck                        : 0        : , "sv"           : Check for thinktimes all on same timestamp.
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
-sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
+sv_turbophysics                          : 1        : , "sv", "rep"    : Turns on turbo physics
 sv_unlockedchapters                      : 1        : , "a", "sv"      :
 sv_usercmd_custom_random_seed            : 1        : , "sv", "cheat"  : When enabled server will populate an additional random seed independent of the client
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           :
@@ -1801,4 +1800,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           :
 zombie_stepfreq                          : 4        : , "sv"           :
 --------------
-1800 total convars/concommands
+1799 total convars/concommands
