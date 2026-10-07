@@ -1345,6 +1345,7 @@ sv_vote_quorum_ratio                     : 0        : , "sv", "nf"     : The min
 sv_vote_timer_allow_early_finish         : 1        : , "sv"           : If all votes are in, whether to end the vote (for debugging)
 sv_vote_timer_duration                   : 15       : , "sv"           : How long to allow voting on an issue
 sv_vote_ui_hide_disabled_issues          : 1        : , "sv"           : Suppress listing of disabled issues in the vote setup screen.
+sv_wallbug                               : 0        : , "sv", "rep"    :
 sv_wateraccelerate                       : 10       : , "sv", "nf", "rep" :
 sv_waterdist                             : 12       : , "sv", "rep"    : Vertical view fixup when eyes are near water plane.
 sv_waterfriction                         : 1        : , "sv", "nf", "rep" :
@@ -1533,6 +1534,7 @@ tf_bot_wait_in_cover_max_time            : 2        : , "sv", "cheat"  :
 tf_bot_wait_in_cover_min_time            : 1        : , "sv", "cheat"  :
 tf_bot_warp_team_to_me                   : cmd      :                  :
 tf_cart_spell_drop_rate                  : 4        : , "sv"           :
+tf_christmas_ball_chance                 : 100      : , "sv", "rep"    : Percent chance of a christmas beach ball spawning at each round start
 tf_clamp_airducks                        : 1        : , "sv", "rep"    :
 tf_classlimit                            : 0        : , "sv", "nf", "rep" : Limit on how many players can be any class (i.e. tf_class_limit 2 would limit 2 players per class).
 tf_clear_attribute                       : cmd      :                  : Remove given attribute from all areas in the selected set.
@@ -1816,16 +1818,18 @@ tf_populator_debug                       : 0        : , "sv", "cheat"  :
 tf_populator_health_multiplier           : 1        : , "sv", "cheat", "rep", "norecord" :
 tf_powerup_max_charge_time               : 30       : , "sv", "cheat"  :
 tf_powerup_mode                          : 0        : , "sv", "nf"     : Enable/disable powerup mode. Not compatible with Mann Vs Machine mode
-tf_powerup_mode_dominant_multiplier      : 3        : , "sv", "cheat"  : The multiple by which a player must exceed the median kills by in order to be considered dominant
-tf_powerup_mode_imbalance_consecutive_min_players : 10       : , "sv", "cheat"  : Minimum number of players on the server before consecutive imbalance measures trigger team balancing
-tf_powerup_mode_imbalance_consecutive_time : 1200     : , "sv", "cheat"  : Teams are balanced if consecutive imbalance measures for the same team are triggered in less time (seconds)
-tf_powerup_mode_imbalance_delta          : 24       : , "sv", "cheat"  : Powerup kill score lead one team must have before imbalance measures are initiated
-tf_powerup_mode_killcount_timer_length   : 300      : , "sv", "cheat"  : How long to wait between kill count tests that determine if a player is dominating
+tf_powerup_mode_dominant_multiplier      : 3        : , "sv", "rep"    : The multiple by which a player must exceed the median kills by in order to be considered dominant
+tf_powerup_mode_imbalance_consecutive_min_players : 10       : , "sv", "rep"    : Minimum number of players on the server before consecutive imbalance measures trigger team balancing
+tf_powerup_mode_imbalance_consecutive_time : 1200     : , "sv", "rep"    : Teams are balanced if consecutive imbalance measures for the same team are triggered in less time (seconds)
+tf_powerup_mode_imbalance_delta          : 24       : , "sv", "rep"    : Powerup kill score lead one team must have before imbalance measures are initiated
+tf_powerup_mode_killcount_timer_length   : 300      : , "sv", "rep"    : How long to wait between kill count tests that determine if a player is dominating
 tf_preround_push_from_damage_enable      : 0        : , "sv"           : If enabled, this will allow players using certain type of damage to move during pre-round freeze time.
 tf_quests_spew_trackers                  : cmd      :                  : Spews all currently active quest trackers
 tf_rd_max_points_override                : 0        : , "sv"           : When changed, overrides the current max points
 tf_rd_return_max_time                    : 90       : , "sv"           :
 tf_rd_return_min_time                    : 30       : , "sv"           :
+tf_ready_countdown_minimum               : 60       : , "sv"           : When players ready up never reduce the countdown timer below this number of seconds
+tf_ready_countdown_reduce_per_player     : 30       : , "sv"           : How many seconds we should reduce the countdown timer by per player readying up
 tf_resolve_stuck_players                 : 1        : , "sv", "rep"    :
 tf_select_ambush_areas                   : cmd      :                  : Add good ambush spots to the selected set. For debugging.
 tf_select_ambush_areas_close_range       : 300      : , "sv", "cheat"  :
@@ -1979,6 +1983,7 @@ voxeltree_box                            : cmd      :                  : View en
 voxeltree_playerview                     : cmd      :                  : View entities in the voxel-tree at the player position.
 voxeltree_sphere                         : cmd      :                  : View entities in the voxel-tree inside sphere <Vector(center), float(radius)>.
 voxeltree_view                           : cmd      :                  : View entities in the voxel-tree.
+vphysics_nan_debug                       : 0        :                  :
 vprof                                    : cmd      :                  : Toggle VProf profiler
 vprof_cachemiss                          : cmd      :                  : Toggle VProf cache miss checking
 vprof_cachemiss_off                      : cmd      :                  : Turn off VProf cache miss checking
@@ -2029,4 +2034,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           :
 --------------
-2028 total convars/concommands
+2033 total convars/concommands
