@@ -688,7 +688,6 @@ nav_use_place                            : cmd      :                  : If used
 nav_walk                                 : cmd      :                  : Toggles the 'traverse this area by walking' flag used by the AI system.
 nav_warp_to_mark                         : cmd      :                  : Warps the player to the marked area.
 nav_world_center                         : cmd      :                  : Centers the nav mesh in the world
-nb_last_area_update_tolerance            : 4        : , "sv", "cheat"  : Distance a character needs to travel in order to invalidate cached area
 net_blockmsg                             : 0        : , "cheat"        : Discards incoming message: <0|1|name>
 net_channels                             : cmd      :                  : Shows net channel info
 net_chokeloop                            : 0        :                  : Apply bandwidth choke to loopback packets
@@ -939,13 +938,13 @@ singlestep                               : 0        : , "cheat"        : Run eng
 sk_apc_missile_damage                    : 15       : , "sv"           :
 sk_bullseye_health                       : 0        : , "sv"           :
 sk_crow_health                           : 1        : , "sv"           :
-sk_npc_boss_fred_camp_dmg                : 20       : , "sv", "cheat"  : When someone stands on Fred's head, how much % of their total HP should they lose as punishment?
+sk_npc_boss_fred_camp_dmg                : 20       : , "sv"           : When someone stands on Fred's head, how much % of their total HP should they lose as punishment?
 sk_npc_boss_fred_max_jump_height         : 300      : , "sv"           : Set how high Fred can jump!
-sk_npc_boss_fred_rage_blastdmg           : 50       : , "sv", "cheat"  : When Fred enters rage mode how much radius damage % should he do?
+sk_npc_boss_fred_rage_blastdmg           : 50       : , "sv"           : When Fred enters rage mode how much radius damage % should he do?
 sk_npc_boss_fred_rage_damage             : 110      : , "sv"           : When Fred is taking damage higher or equal to this value he will insta rage.
 sk_npc_boss_fred_rage_duration           : 60       : , "sv"           : For how long should Fred rage?
 sk_npc_boss_fred_rage_health             : 30       : , "sv"           : When Fred has this much % left of his max health he will go into a rage mode.
-sk_npc_boss_fred_regenrate               : 0        : , "sv", "cheat"  : Set the health regen rate for Fred.
+sk_npc_boss_fred_regenrate               : 0        : , "sv"           : Set the health regen rate for Fred.
 sk_npc_zombie_speed_override             : 0        : , "sv"           : Override Zombie Move Speed
 sk_weapon_brick_throwdistance            : 250      : , "sv"           :
 sk_weapon_brick_throwforce               : 6000     : , "sv"           :
@@ -1239,4 +1238,4 @@ xc_crouch_debounce                       : 0        : , "sv"           :
 xc_uncrouch_on_jump                      : 1        : , "a", "sv"      : Uncrouch when jump occurs
 zombie_tree                              : cmd      :                  : Zombie Skill Tree
 --------------
-1238 total convars/concommands
+1237 total convars/concommands
