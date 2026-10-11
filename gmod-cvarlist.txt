@@ -1,6 +1,5 @@
 cvar list
 --------------
-_resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
 _restart                                 : cmd      :                  : Shutdown and restart the engine.
 achievement_debug                        : 0        : , "sv", "cheat", "rep" : Turn on achievement debug msgs.
 act                                      : cmd      :                  : Plays a 'taunt' animation, if the server allows it. Valid options are: wave, agree, disagree, becon, bow, salute, forward, group, halt, pers, muscle, laugh, cheer, zombie, dance, robot.
@@ -138,9 +137,7 @@ async_resume                             : cmd      :                  :
 async_serialize                          : 0        :                  : Force async reads to serialize for profiling
 async_simulate_delay                     : 0        :                  : Simulate a delay of up to a set msec per file operation
 async_suspend                            : cmd      :                  :
-autoaim_max_deflect                      : 0        : , "sv"           :
 autoaim_max_dist                         : 2160     : , "sv"           :
-autoaim_unlock_target                    : 0        : , "sv"           :
 banid                                    : cmd      :                  : Add a user ID to the ban list.
 banid2                                   : cmd      :                  : Alias of banid, do not use.
 banip                                    : cmd      :                  : Add an IP address to the ban list.
@@ -174,8 +171,6 @@ bulletspeed                              : 6000     : , "sv"           :
 cache_print                              : cmd      :                  : cache_print [section] Print out contents of cache memory.
 cache_print_lru                          : cmd      :                  : cache_print_lru [section] Print out contents of cache memory.
 cache_print_summary                      : cmd      :                  : cache_print_summary [section] Print out a summary contents of cache memory.
-cast_hull                                : cmd      :                  : Tests hull collision detection
-cast_ray                                 : cmd      :                  : Tests collision detection
 catapult_physics_drag_boost              : 2        : , "sv", "rep"    :
 ch_createairboat                         : cmd      :                  : Spawn airboat in front of the player.
 ch_createjalopy                          : cmd      :                  : Spawn jalopy in front of the player.
@@ -199,13 +194,12 @@ cl_sidespeed                             : 10000    : , "sv", "cheat", "rep" :
 cl_spewscriptintro                       : 0        : , "sv"           :
 cl_upspeed                               : 10000    : , "sv", "cheat", "rep" :
 clear_debug_overlays                     : cmd      :                  : clears debug overlays
-clientport                               : 27005    :                  : Host game client port
+clientport                               : 30924    :                  : Host game client port
 closecaption                             : 0        : , "a", "user"    : Enable close captioning.
 closecaption_mp                          : 0        : , "sv"           : Allow closecaptions in multiplayer (for dedicated servers)
 collision_shake_amp                      : 0        : , "sv"           :
 collision_shake_freq                     : 0        : , "sv"           :
 collision_shake_time                     : 0        : , "sv"           :
-collision_test                           : cmd      :                  : Tests collision system
 combine_guard_spawn_health               : 1        : , "sv"           :
 combine_spawn_health                     : 1        : , "sv"           :
 con_timestamp                            : 0        :                  : Prefix console.log entries with timestamps
@@ -216,8 +210,6 @@ curve_bias                               : 0        : , "sv"           :
 cvarlist                                 : cmd      :                  : Show the list of convars/concommands.
 darkness_ignore_LOS_to_sources           : 1        : , "sv"           :
 datacachesize                            : 512      :                  : Size in MB.
-dbghist_addline                          : cmd      :                  : Add a line to the debug history. Format: <category id> <line>
-dbghist_dump                             : cmd      :                  : Dump the debug history to the console. Format: <category id>     Categories:      0: Entity I/O      1: AI Decisions      2: Scene Print      3: Alyx Blind      4: Log of damage done to player
 deathmatch                               : 1        : , "nf"           : Running a deathmatch server.
 debug_materialmodifycontrol              : 0        : , "sv"           :
 debug_physimpact                         : 0        : , "sv"           :
@@ -232,8 +224,6 @@ dispcoll_drawplane                       : 0        : , "sv"           :
 displaysoundlist                         : 0        : , "sv"           :
 dog_debug                                : 0        : , "sv"           :
 dog_max_wait_time                        : 7        : , "sv"           :
-drawcross                                : cmd      :                  : Draws a cross at the given location  Arguments: x y z
-drawline                                 : cmd      :                  : Draws line between two 3D Points.  Green if no collision  Red is collides with something  Arguments: x1 y1 z1 x2 y2 z2
 dt_ShowPartialChangeEnts                 : 0        :                  : (SP only) - show entities that were copied using small optimized lists (FL_EDICT_PARTIAL_CHANGE).
 dt_UsePartialChangeEnts                  : 1        :                  : (SP only) - enable FL_EDICT_PARTIAL_CHANGE optimization.
 dti_flush                                : cmd      :                  : Write out the datatable instrumentation files (you must run with -dti for this to work).
@@ -251,10 +241,9 @@ dumpstringtables                         : cmd      :                  : Print s
 dumpstringtables_new                     : cmd      :                  : Dumps the named string table, or list them if none
 dupe_save                                : cmd      :                  : Save the current dupe!
 echo                                     : cmd      :                  : Echo text to console.
-engine_no_focus_sleep                    : 50       : , "a"            :
+enable_fast_math                         : 1        :                  : Turns Denormals-Are-Zeroes and Flush-to-Zero on or off
 ent_absbox                               : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_attachments                          : cmd      :                  : Displays the attachment points on an entity.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
-ent_autoaim                              : cmd      :                  : Displays the entity's autoaim radius.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_bbox                                 : cmd      :                  : Displays the movement bounding box for the given entity(ies) in orange.  Some entites will also display entity specific overlays.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_cancelpendingentfires                : cmd      :                  : Cancels all ent_fire created outputs that are currently waiting for their delay to expire.
 ent_create                               : cmd      :                  : Creates an entity of the given type where the player is looking.  Additional parameters can be passed in in the form: ent_create <entity name> <param 1 name> <param 1> <param 2 name> <param 2>...<param N name> <param N>
@@ -268,7 +257,7 @@ ent_messages_draw                        : 0        : , "sv", "cheat"  : Visuali
 ent_name                                 : cmd      :                  :
 ent_orient                               : cmd      :                  : Orient the specified entity to match the player's angles. By default, only orients target entity's YAW. Use the 'allangles' option to orient on all axis.  Format: ent_orient <entity name> <optional: allangles>
 ent_pause                                : cmd      :                  : Toggles pausing of input/output message processing for entities.  When turned on processing of all message will stop.  Any messages displayed with 'ent_messages' will stop fading and be displayed indefinitely. To step through the messages one by one use 'ent_step'.
-ent_pivot                                : cmd      :                  : Displays the pivot for the given entity(ies).  (y=up=green, z=forward=blue, x=left=red).   Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+ent_pivot                                : cmd      :                  : Displays the pivot for the given entity(ies).  (x=forward=red, y=left=green, z=up=blue).   Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_rbox                                 : cmd      :                  : Displays the total bounding box for the given entity(s) in green.  Some entites will also display entity specific overlays.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_remove                               : cmd      :                  : Removes the given entity(s)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_remove_all                           : cmd      :                  : Removes all entities of the specified type  Arguments:    {entity_name} / {class_name}
@@ -284,12 +273,9 @@ exit                                     : cmd      :                  : Exit th
 explode                                  : cmd      :                  : Kills the player with explosive damage
 explodevector                            : cmd      :                  : Kills a player applying an explosive force. Usage: explodevector <player> <x value> <y value> <z value>
 faceposer_randomize                      : cmd      :                  :
-fadein                                   : cmd      :                  : fadein {time r g b}: Fades the screen in from black or from the specified color over the given number of seconds.
-fadeout                                  : cmd      :                  : fadeout {time r g b}: Fades the screen to black or to the specified color over the given number of seconds.
 filesystem_buffer_size                   : 0        :                  : Size of per file buffers. 0 for none
 filesystem_max_stdio_read                : 16       :                  :
 filesystem_native                        : 1        :                  : Use native FS or STDIO
-filesystem_report_buffered_io            : 0        :                  :
 filesystem_unbuffered_io                 : 1        :                  :
 find                                     : cmd      :                  : Find concommands with the specified string in their name/help text.
 find_ent                                 : cmd      :                  : Find and list all entities with classnames or targetnames that contain the specified substring. Format: find_ent <substring>
@@ -319,7 +305,7 @@ flush_locked                             : cmd      :                  : Flush u
 fog_enable_water_fog                     : 1        : , "cheat"        :
 fog_volume_debug                         : 0        : , "sv", "cheat"  : If enabled, prints diagnostic information about the current fog volume
 fov                                      : cmd      :                  : Change players FOV
-fps_max                                  : 150      : , "a"            : Frame rate limiter.
+fps_max                                  : 150      : , "a"            : Frame rate limiter. 0 = unlimited.
 free_pass_peek_debug                     : 0        : , "sv"           :
 fs_monitor_read_from_pack                : 0        :                  : 0:Off, 1:Any, 2:Sync only
 fs_printopenfiles                        : cmd      :                  : Show all files currently opened by the engine.
@@ -336,35 +322,35 @@ g_ai_citizen_show_enemy                  : 0        : , "sv"           :
 g_antlion_cascade_push                   : 1        : , "a", "sv"      :
 g_antlionguard_hemorrhage                : 1        : , "sv"           : If 1, guard will emit a bleeding particle effect when wounded.
 g_debug_angularsensor                    : 0        : , "sv", "cheat"  :
-g_debug_antlion                          : 0        : , "sv"           :
-g_debug_antlion_worker                   : 0        : , "sv"           :
-g_debug_antlionguard                     : 0        : , "sv"           :
+g_debug_antlion                          : 0        : , "sv", "cheat"  :
+g_debug_antlion_worker                   : 0        : , "sv", "cheat"  :
+g_debug_antlionguard                     : 0        : , "sv", "cheat"  :
 g_debug_antlionmaker                     : 0        : , "sv", "cheat"  :
 g_debug_basehelicopter                   : 0        : , "sv", "cheat"  :
 g_debug_basescanner                      : 0        : , "sv", "cheat"  :
-g_debug_combine_camera                   : 0        : , "sv"           :
+g_debug_combine_camera                   : 0        : , "sv", "cheat"  :
 g_debug_constraint_sounds                : 0        : , "sv", "cheat"  : Enable debug printing about constraint sounds.
-g_debug_cscanner                         : 0        : , "sv"           :
-g_debug_darkness                         : 0        : , "sv"           : Show darkness mode lightsources.
-g_debug_doors                            : 0        : , "sv"           :
-g_debug_dropship                         : 0        : , "sv"           :
-g_debug_dynamicresupplies                : 0        : , "sv"           : Debug item_dynamic_resupply spawning. Set to 1 to see text printouts of the spawning. Set to 2 to see lines drawn to other items factored into the spawning.
+g_debug_cscanner                         : 0        : , "sv", "cheat"  :
+g_debug_darkness                         : 0        : , "sv", "cheat"  : Show darkness mode lightsources.
+g_debug_doors                            : 0        : , "sv", "cheat"  :
+g_debug_dropship                         : 0        : , "sv", "cheat"  :
+g_debug_dynamicresupplies                : 0        : , "sv", "cheat"  : Debug item_dynamic_resupply spawning. Set to 1 to see text printouts of the spawning. Set to 2 to see lines drawn to other items factored into the spawning.
 g_debug_gunship                          : 0        : , "sv", "cheat"  :
 g_debug_headcrab                         : 0        : , "sv", "cheat"  :
-g_debug_hunter_charge                    : 0        : , "sv"           :
-g_debug_injured_follow                   : 0        : , "sv"           :
-g_debug_npc_vehicle_roles                : 0        : , "sv"           :
+g_debug_hunter_charge                    : 0        : , "sv", "cheat"  :
+g_debug_injured_follow                   : 0        : , "sv", "cheat"  :
+g_debug_npc_vehicle_roles                : 0        : , "sv", "cheat"  :
 g_debug_physcannon                       : 0        : , "sv", "cheat", "rep" :
 g_debug_ragdoll_removal                  : 0        : , "sv", "cheat", "rep" :
 g_debug_trackpather                      : 0        : , "sv", "cheat"  :
 g_debug_transitions                      : 0        : , "sv"           : Set to 1 and restart the map to be warned if the map has no trigger_transition volumes. Set to 2 to see a dump of all entities & associated results during a transition.
-g_debug_turret                           : 0        : , "sv"           :
-g_debug_turret_ceiling                   : 0        : , "sv"           :
+g_debug_turret                           : 0        : , "sv", "cheat"  :
+g_debug_turret_ceiling                   : 0        : , "sv", "cheat"  :
 g_debug_vehiclebase                      : 0        : , "sv", "cheat"  :
 g_debug_vehicledriver                    : 0        : , "sv", "cheat"  :
 g_debug_vehicleexit                      : 0        : , "sv", "cheat"  :
 g_debug_vehiclesound                     : 0        : , "sv", "cheat"  :
-g_debug_vortigaunt_aim                   : 0        : , "sv"           :
+g_debug_vortigaunt_aim                   : 0        : , "sv", "cheat"  :
 g_helicopter_bomb_danger_radius          : 120      : , "sv"           :
 g_helicopter_bullrush_bomb_enemy_distance : 0        : , "sv"           :
 g_helicopter_bullrush_bomb_speed         : 850      : , "sv"           : The maximum distance the player can be from the chopper before it stops firing
@@ -378,32 +364,32 @@ g_helicopter_maxfiringdist               : 2500     : , "sv"           : The max
 g_jeepexitspeed                          : 100      : , "sv", "cheat"  :
 g_Language                               : 0        : , "sv", "rep"    :
 g_ragdoll_important_maxcount             : 2        : , "sv", "rep"    :
-g_ragdoll_maxcount                       : 32       : , "sv", "rep"    :
+g_ragdoll_maxcount                       : 32       : , "sv", "rep"    : Maximum amount of ragdoll 'gibs' allowed to exist at the same time.
 g_test_new_antlion_jump                  : 1        : , "a", "sv"      :
 gamemode                                 : 0        :                  : The current gamemode
 give                                     : cmd      :                  : Give item to player.  Arguments: <item_name>
 givecurrentammo                          : cmd      :                  : Give a supply of ammo for current weapon..
 global_set                               : cmd      :                  : global_set <globalname> <state>: Sets the state of the given env_global (0 = OFF, 1 = ON, 2 = DEAD).
-gm_giveswep                              : cmd      :                  :
+gm_giveswep                              : cmd      :                  : Give a sandbox weapons directly to the executing player.
 gm_load                                  : cmd      :                  :
 gm_save                                  : cmd      :                  :
 gm_showhelp                              : cmd      :                  :
 gm_showspare1                            : cmd      :                  :
 gm_showspare2                            : cmd      :                  :
 gm_showteam                              : cmd      :                  :
-gm_spawn                                 : cmd      :                  : Spawns props/ragdolls
-gm_spawnsent                             : cmd      :                  :
-gm_spawnswep                             : cmd      :                  :
-gm_spawnvehicle                          : cmd      :                  :
+gm_spawn                                 : cmd      :                  : Spawn sandbox props, ragdolls, and effects.
+gm_spawnsent                             : cmd      :                  : Spawn sandbox scripted entities.
+gm_spawnswep                             : cmd      :                  : Spawn sandbox weapons where the player is looking at.
+gm_spawnvehicle                          : cmd      :                  : Spawn sandbox vehicles.
 gmod_admin_cleanup                       : cmd      :                  :
 gmod_camera                              : cmd      :                  :
 gmod_cleanup                             : cmd      :                  :
 gmod_language                            : 0        : , "a"            :
 gmod_maxammo                             : 9999     : , "sv", "rep"    : If set to above 0, overrides max ammo carried per player of all ammo types. Otherwise ammo type's max ammo is used.
-gmod_mcore_test                          : 0        :                  : if you find this, don't go around enabling it and then complaining about issues
-gmod_physiterations                      : 4        : , "sv", "rep", "demo", "lua_server" : Improves physics accuracy at the expense of performance.
+gmod_mcore_test                          : 0        :                  : Toggle on experimental multicore rendering. If you find this, don't go around enabling it and then complaining about issues.
+gmod_physiterations                      : 4        : , "sv", "rep", "demo", "lua_server" : Additional solver iterations make constraint systems more stable.
 gmod_sneak_attack                        : 1        : , "sv"           : If set to zero, disables Half-Life 2's Sneak Attack feature, where headshotting NPCs who have not seen the player would result in an instant kill.
-gmod_spawnnpc                            : cmd      :                  :
+gmod_spawnnpc                            : cmd      :                  : Spawn sandbox NPCs.
 gmod_suit                                : 0        : , "sv", "rep"    : Set to non zero to enable Half-Life 2 aux suit power stuff.
 gmod_tool                                : cmd      :                  :
 gmod_undo                                : cmd      :                  :
@@ -438,8 +424,6 @@ host_writeconfig_lua                     : cmd      :                  : Write L
 hostip                                   : 0        :                  : Host game server ip
 hostname                                 : 0        :                  : Hostname for server.
 hostport                                 : 27015    :                  : Host game server port
-hud_airboathint_numentries               : 10       : , "sv"           :
-hud_jeephint_numentries                  : 10       : , "sv"           :
 hunter_allow_dissolve                    : 1        : , "sv"           :
 hunter_allow_nav_jump                    : 0        : , "sv"           :
 hunter_charge                            : 1        : , "sv"           :
@@ -480,7 +464,6 @@ hunter_plant_adjust_z                    : 12       : , "sv"           :
 hunter_random_expressions                : 0        : , "sv"           :
 hunter_retreat_striderbusters            : 1        : , "sv"           : If true, the hunter will retreat when a buster is glued to him.
 hunter_seek_thrown_striderbusters_tolerance : 400      : , "sv"           :
-hunter_shoot_flechette                   : cmd      :                  : Fires a hunter flechette where the player is looking.
 hunter_show_weapon_los_condition         : 0        : , "sv"           :
 hunter_show_weapon_los_z                 : 0        : , "sv"           :
 hunter_siege_frequency                   : 12       : , "sv"           :
@@ -493,7 +476,6 @@ ip_steam                                 : 0        :                  : Overrid
 jalopy_blocked_exit_max_speed            : 50       : , "sv"           :
 jalopy_cargo_anim_time                   : 1        : , "sv"           :
 jalopy_radar_test_ent                    : 0        : , "sv"           :
-kdtree_test                              : cmd      :                  : Tests spatial partition for entities queries.
 key_findbinding                          : cmd      :                  : Find key bound to specified command string.
 key_listboundkeys                        : cmd      :                  : List bound keys with bindings.
 kick                                     : cmd      :                  : Kick a player by name.
@@ -523,7 +505,7 @@ lua_error_url                            : 0        : , "sv", "rep", "norecord" 
 lua_filestats                            : cmd      :                  : Lua File Stats
 lua_find                                 : cmd      :                  : Find any variable by name on the server.
 lua_findhooks                            : cmd      :                  : Find hooks by event name and hook identifier on the server.
-lua_log_sv                               : 0        : , "sv"           :
+lua_log_sv                               : 0        : , "sv"           : Log serverside Lua errors to lua_errors_server.txt.
 lua_networkvar_bytespertick              : 256      : , "sv"           :
 lua_openscript                           : cmd      :                  : Open a Lua script
 lua_refresh_file                         : cmd      :                  : Manually refresh a serverside Lua script, as if it was auto refreshed by editing it.
@@ -531,6 +513,7 @@ lua_reloadents                           : cmd      :                  : Reload 
 lua_run                                  : cmd      :                  : Run a Lua command
 lua_run_cl                               : cmd      :                  : Run a Lua command
 lua_strict                               : 0        : , "sv", "nf", "rep" : Enable extra checks for Lua API, such as argument type checking, errors that normally would be silent, etc. Useful to catch bugs in code when developing addons.
+lzma_persistent_buffer                   : 0        :                  : If set, attempt to keep a persistent buffer for the LZMA decoder dictionary. This avoids re-allocating a ~16-64meg buffer for each operation, at the expensive of keeping extra memory around when it is not in-use.
 map                                      : cmd      :                  : Start playing on specified map.
 map_background                           : cmd      :                  : Runs a map as the background to the main menu.
 map_noareas                              : 0        :                  : Disable area to area connection testing.
@@ -541,7 +524,7 @@ mat_accelerate_adjust_exposure_down      : 3        : , "cheat"        :
 mat_antialias                            : 0        :                  :
 mat_bufferprimitives                     : 0        :                  :
 mat_bumpbasis                            : 0        : , "cheat"        :
-mat_bumpmap                              : 1        :                  :
+mat_bumpmap                              : 1        :                  : Enable/Disable bumpmPPINF for A/B or perf testing/debugging.
 mat_compressedtextures                   : 1        :                  :
 mat_configcurrent                        : cmd      :                  : show the current video control panel config for the material system
 mat_debugalttab                          : 0        : , "cheat"        :
@@ -557,7 +540,7 @@ mat_dxlevel                              : 92       :                  :
 mat_envmapsize                           : 128      :                  :
 mat_envmaptgasize                        : 32       :                  :
 mat_excludetextures                      : 0        :                  :
-mat_fastnobump                           : 0        : , "cheat"        :
+mat_fastnobump                           : 0        : , "cheat"        : Binds 1-texel normal map for quick internal testing.
 mat_fastspecular                         : 1        :                  : Enable/Disable specularity for visual testing.  Will not reload materials and will not affect perf.
 mat_fillrate                             : 0        : , "cheat"        :
 mat_filterlightmaps                      : 1        :                  :
@@ -566,11 +549,10 @@ mat_forceaniso                           : 1        :                  :
 mat_forcedynamic                         : 0        : , "cheat"        :
 mat_forcehardwaresync                    : 1        :                  :
 mat_forcemanagedtextureintohardware      : 1        :                  :
-mat_fullbright                           : 0        : , "cheat"        :
+mat_fullbright                           : 0        : , "cheat"        : Disable all lighting.
 mat_hdr_enabled                          : cmd      :                  : Report if HDR is enabled for debugging
 mat_hdr_level                            : 2        : , "a"            : Set to 0 for no HDR, 1 for LDR+bloom on HDR maps, and 2 for full HDR on HDR maps.
 mat_hdr_manual_tonemap_rate              : 1        :                  :
-mat_hdr_tonemapscale                     : 1        : , "cheat"        : The HDR tonemap scale. 1 = Use autoexposure, 0 = eyes fully closed, 16 = eyes wide open.
 mat_info                                 : cmd      :                  : Shows material system info
 mat_levelflush                           : 1        :                  :
 mat_lightmap_pfms                        : 0        :                  : Outputs .pfm files containing lightmap data for each lightmap page when a level exits.
@@ -578,21 +560,20 @@ mat_loadtextures                         : 1        : , "cheat"        :
 mat_luxels                               : 0        : , "cheat"        :
 mat_measurefillrate                      : 0        : , "cheat"        :
 mat_mipmaptextures                       : 1        :                  :
-mat_monitorgamma                         : 2        :                  : monitor gamma (typically 2.2 for CRT and 1.7 for LCD)
+mat_monitorgamma                         : 2        : , "a"            : monitor gamma (typically 2.2 for CRT and 1.7 for LCD)
 mat_monitorgamma_tv_enabled              : 0        : , "a"            :
 mat_monitorgamma_tv_exp                  : 2        :                  :
 mat_monitorgamma_tv_range_max            : 255      :                  :
 mat_monitorgamma_tv_range_min            : 16       :                  :
 mat_morphstats                           : 0        : , "cheat"        :
 mat_motion_blur_enabled                  : 1        :                  :
-mat_norendering                          : 0        : , "cheat"        :
-mat_normalmaps                           : 0        : , "cheat"        :
+mat_normalmaps                           : 0        : , "cheat"        : Display raw normal maps (bumpmaps) on all surfaces that have them.
 mat_normals                              : 0        : , "cheat"        :
 mat_picmip                               : 0        :                  :
 mat_powersavingsmode                     : 0        : , "a"            : Power Savings Mode
 mat_proxy                                : 0        : , "cheat"        :
 mat_queue_mode                           : -1       : , "a"            : The queue/thread mode the material system should use: -1=default, 0=synchronous single thread, 2=queued multithreaded
-mat_queue_report                         : 0        : , "a"            : Report thread stalls.  Positive number will filter by stalls >= time in ms.  -1 reports all locks.
+mat_queue_report                         : 0        :                  : Report thread stalls.  Positive number will filter by stalls >= time in ms.  -1 reports all locks.
 mat_reducefillrate                       : 0        :                  :
 mat_reduceparticles                      : 0        :                  :
 mat_reloadallmaterials                   : cmd      :                  : Reloads all materials
@@ -603,7 +584,7 @@ mat_report_queue_status                  : 0        :                  :
 mat_reporthwmorphmemory                  : cmd      :                  : Reports the amount of size in bytes taken up by hardware morph textures.
 mat_reversedepth                         : 0        : , "cheat"        :
 mat_savechanges                          : cmd      :                  : saves current video configuration to the registry
-mat_show_ab_hdr                          : 0        :                  :
+mat_show_ab_hdr                          : 0        : , "cheat"        :
 mat_showenvmapmask                       : 0        :                  :
 mat_showlowresimage                      : 0        : , "cheat"        :
 mat_showmaterials                        : cmd      :                  : Show materials.
@@ -622,7 +603,6 @@ mat_tonemapping_occlusion_use_stencil    : 0        :                  :
 mat_trilinear                            : 0        :                  :
 mat_vsync                                : 0        :                  : Force sync to vertical retrace
 mat_wireframe                            : 0        : , "cheat"        :
-matchmakingport                          : 27025    :                  : Host Matchmaking port
 maxplayers                               : cmd      :                  : Change the maximum number of players allowed on this server.
 mem_compact                              : cmd      :                  :
 mem_dump                                 : cmd      :                  : Dump memory stats to text file.
@@ -647,7 +627,7 @@ metropolice_move_and_melee               : 1        : , "sv"           :
 mission_list                             : cmd      :                  : List all available tactical missions
 mission_show                             : cmd      :                  : Show the given mission
 mod_forcetouchdata                       : 1        :                  : Forces all model file data into cache on model load.
-mod_load_fakestall                       : 0        :                  : Forces all ANI file loading to stall for specified ms
+mod_load_fakestall                       : 0        : , "cheat"        : Forces all ANI file loading to stall for specified ms
 mod_load_showstall                       : 0        :                  : 1 - show hitches , 2 - show stalls
 mod_lock_mdls_on_load                    : 0        :                  :
 mod_test_mesh_not_available              : 0        : , "cheat"        :
@@ -659,7 +639,7 @@ monk_headshot_freq                       : 2        : , "sv"           :
 mortar_visualize                         : 0        : , "sv"           :
 motdfile                                 : 0        : , "sv"           : The MOTD file to load.
 motdfile_text                            : 0        : , "sv"           : The text-only MOTD file to use for clients that have disabled HTML MOTDs.
-mp_decals                                : 200      : , "a"            :
+mp_decals                                : 1024     : , "a"            : Set r_decals to this value in multiplayer.
 mp_disable_autokick                      : cmd      :                  : Prevents a userid from being auto-kicked
 mp_falldamage                            : 0        : , "sv", "nf"     : Enables realistic fall damage.
 mp_flashlight                            : 1        : , "sv", "nf"     :
@@ -677,7 +657,7 @@ multvar                                  : cmd      :                  : Multipl
 name                                     : 0        : , "a", "user", "print", "server_can_execute" : Current user name
 nav_add_to_selected_set                  : cmd      :                  : Add current area to the selected set.
 nav_add_to_selected_set_by_id            : cmd      :                  : Add specified area id to the selected set.
-nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk.
+nav_analyze                              : cmd      :                  : Re-analyze the current Navigation Mesh and save it to disk. Requires nav_edit set to 1.
 nav_area_bgcolor                         : 0        : , "sv", "cheat"  : RGBA color to draw as the background color for nav areas while editing.
 nav_area_max_size                        : 50       : , "sv", "cheat"  : Max area size created in nav generation
 nav_avoid                                : cmd      :                  : Toggles the 'avoid this area when possible' flag used by the AI system.
@@ -876,7 +856,7 @@ net_fakelag                              : 0        : , "cheat"        : Lag all
 net_fakeloss                             : 0        : , "cheat"        : Simulate packet loss as a percentage (negative means drop 1/n packets)
 net_maxcleartime                         : 4        :                  : Max # of seconds we can wait for next packets to be sent based on rate setting (0 == no limit).
 net_maxfilesize                          : 16       :                  : Maximum allowed file size for uploading in MB
-net_maxfragments                         : 1260     :                  : Max fragment bytes per packet
+net_maxfragments                         : 24576    :                  : Max fragment bytes per packet. Will in effect be multiple of the minimum value.
 net_maxpacketdrop                        : 5000     :                  : Ignore any packets with the sequence number more than this ahead (0 == no limit)
 net_maxroutable                          : 1260     : , "a", "user"    : Requested max packet size before packets are 'split'.
 net_queue_trace                          : 0        :                  :
@@ -956,11 +936,6 @@ old_radiusdamage                         : 0        : , "sv", "rep"    :
 opt_EnumerateLeavesFastAlgorithm         : 1        :                  : Use the new SIMD version of CEngineBSPTree::EnumerateLeavesInBox.
 option_duck_method                       : 1        : , "a", "sv", "rep" :
 p2p_enabled                              : 1        : , "sv"           : Allow clients to connect to your listen server via Steam's peer-to-peer API.
-particle_test_attach_attachment          : 0        : , "sv", "cheat"  : Attachment index for attachment mode
-particle_test_attach_mode                : 0        : , "sv", "cheat"  : Possible Values: 'start_at_attachment', 'follow_attachment', 'start_at_origin', 'follow_origin'
-particle_test_file                       : 0        : , "sv", "cheat"  : Name of the particle system to dynamically spawn
-particle_test_start                      : cmd      :                  : Dispatches the test particle system with the parameters specified in particle_test_file,  particle_test_attach_mode and particle_test_attach_param on the entity the player is looking at.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
-particle_test_stop                       : cmd      :                  : Stops all particle systems on the selected entities.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 passenger_collision_response_threshold   : 250      : , "sv"           :
 passenger_debug_entry                    : 0        : , "sv"           :
 passenger_debug_transition               : 0        : , "sv"           :
@@ -1009,7 +984,6 @@ picker                                   : cmd      :                  : Toggles
 ping                                     : cmd      :                  : Display ping to server.
 pipeline_static_props                    : 1        :                  :
 player_debug_print_damage                : 0        : , "sv", "cheat"  : When true, print amount and type of all damage received by player to console.
-player_limit_jump_speed                  : 1        : , "sv", "rep"    :
 player_old_armor                         : 0        : , "sv"           :
 player_showpredictedposition             : 0        : , "sv"           :
 player_showpredictedposition_timestep    : 1        : , "sv"           :
@@ -1020,7 +994,7 @@ player_squad_autosummon_time             : 5        : , "sv"           :
 player_squad_autosummon_time_after_combat : 8        : , "sv"           :
 player_squad_double_tap_time             : 0        : , "sv"           :
 player_squad_transient_commands          : 1        : , "sv", "rep"    :
-player_throwforce                        : 1000     : , "sv", "rep"    :
+player_throwforce                        : 1000     : , "sv", "rep"    : How strong +use pickup throw force is.
 plugin_load                              : cmd      :                  : plugin_load <filename> : loads a plugin
 plugin_pause                             : cmd      :                  : plugin_pause <index> : pauses a loaded plugin
 plugin_pause_all                         : cmd      :                  : pauses all loaded plugins
@@ -1028,8 +1002,8 @@ plugin_print                             : cmd      :                  : Prints 
 plugin_unload                            : cmd      :                  : plugin_unload <index> : unloads a plugin
 plugin_unpause                           : cmd      :                  : plugin_unpause <index> : unpauses a disabled plugin
 plugin_unpause_all                       : cmd      :                  : unpauses all disabled plugins
-prop_active_gib_limit                    : 999999   : , "sv"           :
-prop_active_gib_max_fade_time            : 999999   : , "sv"           :
+prop_active_gib_limit                    : 200      : , "sv"           : Stop creating new gibs entirely when active gib amount is higher than this value.
+prop_active_gib_max_fade_time            : 100      : , "sv"           : Fade out any new gibs quickly if the active gib amount is higher than this value
 prop_crosshair                           : cmd      :                  : Shows name for prop looking at
 prop_debug                               : cmd      :                  : Toggle prop debug mode. If on, props will show colorcoded bounding boxes. Red means ignore all damage. White means respond physically to damage but never break. Green maps health in the range of 100 down to 1.
 prop_dynamic_create                      : cmd      :                  : Creates a dynamic prop with a specific .mdl aimed away from where the player is looking.  Arguments: {.mdl name}
@@ -1037,7 +1011,6 @@ prop_physics_create                      : cmd      :                  : Creates
 props_break_max_pieces                   : -1       : , "sv"           : Maximum prop breakable piece count (-1 = model default)
 props_break_max_pieces_perframe          : -1       : , "sv", "rep"    : Maximum prop breakable piece count per frame (-1 = model default)
 quit                                     : cmd      :                  : Exit the engine.
-r_3dnow                                  : cmd      :                  : Enable/disable 3DNow code
 r_ambientboost                           : 1        : , "a"            : Set to boost ambient term if it is totally swamped by local lights
 r_ambientfactor                          : 5        : , "a"            : Boost ambient cube by no more than this factor
 r_ambientfraction                        : 0        : , "cheat"        : Fraction of direct lighting that ambient cube must be below to trigger boosting
@@ -1047,7 +1020,7 @@ r_debugrandomstaticlighting              : 0        : , "cheat"        : Set to 
 r_decal_cover_count                      : 4        :                  :
 r_decal_overlap_area                     : 0        :                  :
 r_decal_overlap_count                    : 3        :                  :
-r_decals                                 : 2048     :                  :
+r_decals                                 : 2048     :                  : Maximum amount of decals to display. (Map reload required)
 r_decalstaticprops                       : 1        :                  : Decal static props test
 r_DispBuildable                          : 0        : , "cheat"        :
 r_DispDrawAxes                           : 0        :                  :
@@ -1061,7 +1034,7 @@ r_drawfuncdetail                         : 1        : , "cheat"        : Render 
 r_drawleaf                               : -1       : , "cheat"        : Draw the specified leaf.
 r_drawlightcache                         : 0        : , "cheat"        : 0: off 1: draw light cache entries 2: draw rays
 r_drawmodeldecals                        : 1        :                  :
-r_DrawModelLightOrigin                   : 0        : , "cheat"        :
+r_DrawModelLightOrigin                   : 0        : , "cheat"        : Draw model light origin for debugging. Entities can overwrite this and it will be reflected in the visualization.
 r_drawmodelstatsoverlay                  : 0        : , "cheat"        :
 r_drawmodelstatsoverlaydistance          : 500      : , "cheat"        :
 r_drawmodelstatsoverlaymax               : 1        : , "a"            : time in milliseconds beyond which a model overlay is fully red in r_drawmodelstatsoverlay 2
@@ -1085,7 +1058,6 @@ r_eyeshift_z                             : 0        :                  :
 r_eyesize                                : 0        :                  :
 r_fastzreject                            : 0        :                  : Activate/deactivates a fast z-setting algorithm to take advantage of hardware with fast z reject. Use -1 to default to hardware settings
 r_flashlightdepthtexture                 : 1        :                  :
-r_flashlightscissor                      : 1        :                  :
 r_flex                                   : 1        :                  :
 r_flushlod                               : cmd      :                  : Flush and reload LODs.
 r_glint_alwaysdraw                       : 0        :                  :
@@ -1101,11 +1073,10 @@ r_lightinterp                            : 5        : , "cheat"        : Control
 r_lightmap                               : -1       : , "cheat"        :
 r_lightstyle                             : -1       : , "cheat"        :
 r_lockpvs                                : 0        : , "cheat"        : Lock the PVS so you can fly around and inspect what is being drawn.
-r_lod                                    : -1       :                  :
+r_lod                                    : -1       :                  : Force all entities/models to use given level of detail (LOD). -1 means use distance based LOD.
 r_maxmodeldecal                          : 50       :                  :
 r_modelwireframedecal                    : 0        : , "cheat"        :
 r_nohw                                   : 0        : , "cheat"        :
-r_norefresh                              : 0        :                  :
 r_nosw                                   : 0        : , "cheat"        :
 r_novis                                  : 0        : , "cheat"        : Turn off the PVS.
 r_occludeemaxarea                        : 0        :                  : Prevents occlusion testing for entities that take up more than X% of the screen. 0 means use whatever the level said to use.
@@ -1116,30 +1087,30 @@ r_occlusionspew                          : 0        : , "cheat"        : Activat
 r_overlayfadeenable                      : 0        :                  :
 r_overlayfademax                         : 2000     :                  :
 r_overlayfademin                         : 1750     :                  :
-r_overlaywireframe                       : 0        :                  :
+r_overlaywireframe                       : 0        : , "cheat"        :
 r_partition_level                        : -1       : , "cheat"        : Displays a particular level of the spatial partition system. Use -1 to disable it.
 r_printdecalinfo                         : cmd      :                  :
 r_proplightingfromdisk                   : 1        :                  : 0=Off, 1=On, 2=Show Errors
 r_proplightingpooling                    : -1       : , "cheat"        : 0 - off, 1 - static prop color meshes are allocated from a single shared vertex buffer (on hardware that supports stream offset)
 r_randomflex                             : 0        : , "cheat"        :
+r_renderoverlaybatch                     : 1        :                  : Enable of disable overlay batch rendering.
 r_renderoverlayfragment                  : 1        :                  :
-r_rootlod                                : 0        : , "a"            : Root LOD
+r_rootlod                                : 0        : , "a"            : The model detail setting. Lower values = higher model detail.
 r_shadow_allowbelow                      : 0        :                  : Allow r_shadowfromworldlights to alter shadow angles from light sources below entity's position.
 r_shadow_allowdynamic                    : 0        :                  : Allow r_shadowfromworldlights to alter shadow angles from dynamic light sources as well.
 r_shadowrendertotexture                  : 0        :                  :
 r_showenvcubemap                         : 0        : , "cheat"        :
 r_skin                                   : 0        : , "cheat"        :
 r_spray_lifetime                         : 2        :                  : Number of rounds player sprays are visible
-r_sse2                                   : cmd      :                  : Enable/disable SSE2 code
 r_staticprop_lod                         : -1       :                  :
-r_staticpropinfo                         : 0        :                  :
+r_staticpropinfo                         : 0        : , "cheat"        :
 r_studio_stats                           : 0        : , "cheat"        :
 r_teeth                                  : 1        :                  :
 r_unloadlightmaps                        : 0        : , "cheat"        :
 r_vehicleBrakeRate                       : 1        : , "sv", "cheat"  :
 r_VehicleViewDampen                      : 0        : , "sv", "cheat", "nf", "rep" :
 r_visocclusion                           : 0        : , "cheat"        : Activate/deactivate wireframe rendering of what the occlusion system is doing.
-r_visualizetraces                        : 0        : , "sv", "cheat"  :
+r_visualizetraces                        : 0        : , "sv", "cheat"  : Visualize active ray and hull traces. Set to 2 to also visualize hull trace sizes.
 r_waterforceexpensive                    : 0        : , "a"            :
 r_waterforcereflectentities              : 0        :                  :
 rcon_password                            : 0        : , "norecord"     : remote console password.
@@ -1184,7 +1155,7 @@ sbox_noclip                              : 0        : , "a", "nf", "rep", "lua_s
 sbox_persist                             : 0        : , "a", "nf", "lua_server" : If not empty, enables 'Make Persistent' option when you right click on props while holding C, allowing you to save them across sessions. Changing this convar will save existing persistent props, cleanup the whole map and load props from given file.
 sbox_playershurtplayers                  : 0        : , "a", "nf", "lua_server" : If enabled, players will be able to hurt each other
 sbox_weapons                             : 0        : , "a", "nf", "lua_server" : If enabled, each player will receive default Half-Life 2 weapons on each spawn
-scene_async_prefetch_spew                : 0        : , "sv"           : Display async .ani file loading info.
+scene_async_prefetch_spew                : 0        : , "sv", "cheat"  : Display async .ani file loading info.
 scene_clamplookat                        : 1        : , "sv"           : Clamp head turns to a max of 20 degrees per think.
 scene_clientflex                         : 1        : , "sv", "rep"    : Do client side flex animation.
 scene_flatturn                           : 1        : , "sv"           :
@@ -1192,10 +1163,10 @@ scene_flush                              : cmd      :                  : Flush a
 scene_forcecombined                      : 0        : , "sv"           : When playing back, force use of combined .wav files even in english.
 scene_maxcaptionradius                   : 1200     : , "sv"           : Only show closed captions if recipient is within this many units of speaking actor (0==disabled).
 scene_print                              : 0        : , "sv", "rep"    : When playing back a scene, print timing and event info to console.
-scene_showfaceto                         : 0        : , "a", "sv"      : When playing back, show the directions of faceto events.
-scene_showlook                           : 0        : , "a", "sv"      : When playing back, show the directions of look events.
-scene_showmoveto                         : 0        : , "a", "sv"      : When moving, show the end location.
-scene_showunlock                         : 0        : , "a", "sv"      : Show when a vcd is playing but normal AI is running.
+scene_showfaceto                         : 0        : , "sv", "cheat"  : When playing back, show the directions of faceto events.
+scene_showlook                           : 0        : , "sv", "cheat"  : When playing back, show the directions of look events.
+scene_showmoveto                         : 0        : , "sv", "cheat"  : When moving, show the end location.
+scene_showunlock                         : 0        : , "sv", "cheat"  : Show when a vcd is playing but normal AI is running.
 sensor_debugragdoll                      : 0        : , "sv", "nf", "demo", "lua_server" :
 sensor_stretchragdoll                    : 0        : , "sv", "nf", "demo", "lua_server" :
 server_game_time                         : cmd      :                  : Gives the game time in seconds (server's curtime)
@@ -1206,12 +1177,10 @@ setpause                                 : cmd      :                  : Set the
 setpos                                   : cmd      :                  : Move player to specified origin (must have sv_cheats).
 setpos_exact                             : cmd      :                  : Move player to an exact specified origin (must have sv_cheats).
 shake                                    : cmd      :                  : Shake the screen.
-showhitlocation                          : 0        : , "sv"           :
 showsniperdist                           : 0        : , "sv"           :
 showsniperlines                          : 0        : , "sv"           :
 showtriggers                             : 0        : , "sv", "cheat"  : Shows trigger brushes
 showtriggers_toggle                      : cmd      :                  : Toggle show triggers
-simple_bot_add                           : cmd      :                  : Add a simple bot.
 singlestep                               : 0        : , "cheat"        : Run engine in single step mode ( set next to 1 to advance a frame )
 sk_advisor_health                        : 1000     : , "sv"           :
 sk_agrunt_dmg_punch                      : 20       : , "sv"           :
@@ -1540,7 +1509,6 @@ snd_vox_captiontrace                     : 0        :                  : Shows s
 snd_vox_globaltimeout                    : 300      :                  :
 snd_vox_sectimetout                      : 300      :                  :
 snd_vox_seqtimetout                      : 300      :                  :
-sniper_xbox_delay                        : 1        : , "sv"           :
 sniperspeak                              : 0        : , "sv"           :
 sniperviewdist                           : 35       : , "sv"           :
 soundpatch_captionlength                 : 2        : , "sv", "rep"    : How long looping soundpatch captions should display for.
@@ -1582,13 +1550,12 @@ strider_show_weapon_los_z                : 0        : , "sv"           :
 strider_test_height                      : 0        : , "sv"           :
 striderbuster_allow_all_damage           : 0        : , "sv"           : If set to '1' the bomb will detonate on any damage taken.  Otherwise only the player may trigger it.
 striderbuster_autoaim_radius             : 64       : , "sv"           :
-striderbuster_debugseek                  : 0        : , "sv"           :
+striderbuster_debugseek                  : 0        : , "sv", "cheat"  :
 striderbuster_die_detach                 : 1        : , "sv"           :
 striderbuster_dive_force                 : -200     : , "sv"           :
 striderbuster_falloff_power              : 4        : , "sv"           : Order of the distance falloff. 1 = linear 2 = quadratic
 striderbuster_health                     : 14       : , "sv"           :
 striderbuster_leg_stick_dist             : 80       : , "sv"           : If the buster hits a strider's leg, the max distance from the head at which it sticks anyway.
-striderbuster_magnetic_force_hunter      : 1750000  : , "sv"           : Intensity of magnade's attraction to a hunter.
 striderbuster_magnetic_force_strider     : 750000   : , "sv"           : Intensity of magnade's attraction to a strider.
 striderbuster_shot_velocity              : 2500     : , "sv"           : Speed at which launch the bomb from the physcannon
 striderbuster_use_particle_flare         : 1        : , "sv"           :
@@ -1610,7 +1577,6 @@ sv_autoladderdismount                    : 1        : , "sv", "rep"    : Automat
 sv_autosave                              : 1        : , "sv"           : Set to 1 to autosave game on level transition. Does not affect autosave triggers.
 sv_cacheencodedents                      : 1        :                  : If set to 1, does an optimization to prevent extra SendTable_Encode calls.
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
-sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
 sv_client_cmdrate_difference             : 20       : , "rep"          : cl_cmdrate is moved to within sv_client_cmdrate_difference units of cl_updaterate before it is clamped between sv_mincmdrate and sv_maxcmdrate.
 sv_client_max_interp_ratio               : 5        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected). If sv_client_min_interp_ratio is -1, then this cvar has no effect.
 sv_client_min_interp_ratio               : 1        : , "rep"          : This can be used to limit the value of cl_interp_ratio for connected clients (only while they are connected).               -1 = let clients set cl_interp_ratio to anything  any other value = set minimum value for cl_interp_ratio
@@ -1629,7 +1595,6 @@ sv_deltaprint                            : 0        :                  : Print a
 sv_deltatime                             : 0        :                  : Enable profiling of CalcDelta calls
 sv_disable_querycache                    : 0        : , "sv", "cheat"  : debug - disable trace query cache
 sv_downloadurl                           : 0        : , "rep"          : Location from which clients can download missing files
-sv_dumpstringtables                      : 0        : , "cheat"        :
 sv_enableoldqueries                      : 0        :                  : Enable support for old style (HL1) server queries
 sv_filterban                             : 1        :                  : Set packet filtering by IP mode
 sv_footsteps                             : 1        : , "sv", "nf", "rep" : Play footstep sound for players
@@ -1641,7 +1606,6 @@ sv_hibernate_drop_bots                   : 1        :                  : Kicks b
 sv_hibernate_think                       : 0        :                  : Forces the server to think even when hibernating
 sv_hl2mp_item_respawn_time               : 30       : , "sv", "nf"     :
 sv_hl2mp_weapon_respawn_time             : 20       : , "sv", "nf"     :
-sv_hudhint_sound                         : 1        : , "sv", "rep"    :
 sv_infinite_aux_power                    : 0        : , "sv", "cheat"  :
 sv_kickerrornum                          : 0        : , "a", "sv"      : Kick clients if they have this many Lua errors. Set to 0 to never kick.
 sv_ladder_useonly                        : 0        : , "sv", "rep"    : If set, ladders can only be mounted by pressing +USE
@@ -1649,13 +1613,14 @@ sv_ladderautomountdot                    : 0        : , "sv", "rep"    : When au
 sv_lagcompensateself                     : 0        : , "sv", "cheat"  : Player can lag compensate themselves.
 sv_lagcompensationforcerestore           : 1        : , "sv", "cheat"  : Don't test validity of a lag comp restore, just do it.
 sv_lan                                   : 0        :                  : Server is a lan server. ( no authentication, no non-class C addresses ) Use 'hide_server' cvar to hide the server from the server browser.
-sv_loadingurl                            : 0        : , "a"            : URL to show to clients while joining the server. Must start with http:// or https://
+sv_loadingurl                            : 0        :                  : URL to show to clients while joining the server. Must start with http:// or https://
 sv_location                              : 0        :                  : The location of the server to be displayed in the server browser. Format is ISO 3166-1 alpha-2 country codes, all possible icons are in the materials/flags16/ folder.
 sv_log_client_errors                     : 1        : , "sv"           : Above 0 = log clientside errors to 'clientside_errors.txt'. 0 = Log to console only. Below 0 = do not even print those errors on console.
 sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
+sv_log_storetime                         : 0        :                  : If set, amount of hours to keep server logs before deleting them automatically. (8760 for a year, 730 for a month. 0=don't delete)
 sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
 sv_logblocks                             : 0        :                  : If true when log when a query is blocked (can cause very large log files)
-sv_logdownloadlist                       : 1        :                  :
+sv_logdownloadlist                       : 0        :                  : Log precached files for each map into DownloadLists/<mapname>.lst
 sv_logecho                               : 1        : , "a"            : Echo log information to the console.
 sv_logfile                               : 1        : , "a"            : Log server information in the log file.
 sv_logfilecompress                       : 0        : , "a"            : Gzip compress logfile and rename to logfilename.log.gz on close.
@@ -1665,7 +1630,7 @@ sv_logsdir                               : 0        : , "a"            : Folder 
 sv_logsecret                             : 0        :                  : If set then include this secret when doing UDP logging (will use 0x53 as packet type, not usual 0x52)
 sv_lowedict_action                       : 0        :                  : 0 - no action, 1 - warn to log file, 2 - attempt to restart the game, if applicable, 3 - restart the map, 4 - go to the next map in the map cycle.
 sv_lowedict_threshold                    : 8        :                  : When only this many edicts are free, take the action specified by sv_lowedict_action.
-sv_massreport                            : 0        : , "sv"           :
+sv_massreport                            : 0        : , "sv", "cheat"  : Draw mass of every object.
 sv_master_share_game_socket              : 1        :                  : Use the game's socket to communicate to the master server. If this is 0, then it will create a socket on -steamport + 1 to communicate to the master server on.
 sv_max_connects_sec                      : 2        :                  : Maximum connections per second to respond to from a single IP address.
 sv_max_connects_sec_global               : 0        :                  : Maximum connections per second to respond to from anywhere.
@@ -1687,7 +1652,7 @@ sv_maxusrcmdprocessticks                 : 24       : , "sv", "nf"     : Maximum
 sv_maxusrcmdprocessticks_holdaim         : 1        : , "sv", "cheat"  : Hold client aim for multiple server sim ticks when client-issued usrcmd contains multiple actions (0: off; 1: hold this server tick; 2+: hold multiple ticks)
 sv_maxusrcmdprocessticks_warning         : -1       : , "sv"           : Print a warning when user commands get dropped due to insufficient usrcmd ticks allocated, number of seconds to throttle, negative disabled
 sv_maxvelocity                           : 3500     : , "sv", "rep"    : Maximum speed any ballistically moving object is allowed to attain per axis.
-sv_maxvoicepacketsperframe               : 48       :                  : How many voice packets the server will accept from a single client per frame/tick, before the client is kicked. 0 to disable. Higher values will make the server more vulnerable to DoS attacks.
+sv_maxvoicepacketsperframe               : 48       : , "sv"           : How many voice packets the server will accept from a single client per frame/tick, before the client is kicked. 0 to disable. Higher values will make the server more vulnerable to DoS attacks.
 sv_memlimit                              : 0        : , "cheat"        : If set, whenever the server is empty, if the total memory used by the server is greater than this # of megabytes, the server will exit.
 sv_mincmdrate                            : 10       : , "rep"          : This sets the minimum value for cl_cmdrate. 0 == unlimited.
 sv_minrate                               : 3500     : , "rep"          : Min bandwidth rate allowed on server, 0 == unlimited
@@ -1697,10 +1662,10 @@ sv_netspike                              : cmd      :                  : Write n
 sv_netspike_on_reliable_snapshot_overflow : 0        :                  : If nonzero, the server will dump a netspike trace if a client is dropped due to reliable snapshot overflow
 sv_netspike_output                       : 1        :                  : Where the netspike data be written?  Sum of the following values: 1=netspike.txt, 2=ordinary server log
 sv_netspike_sendtime_ms                  : 0        :                  : If nonzero, the server will dump a netspike trace if it takes more than N ms to prepare a snapshot to a single client.  This feature does take some CPU cycles, so it should be left off when not in use.
-sv_no_ain_files                          : 0        :                  : Disables sending of .ain files associated with currently active map. Use at your own risk. Must be set before map load! (Such as in autoexec.cfg)
 sv_noclipaccelerate                      : 5        : , "a", "sv", "nf", "rep" :
 sv_noclipduringpause                     : 0        : , "sv", "cheat", "rep" : If cheats are enabled, then you can noclip with the game paused (for doing screenshots, etc.).
 sv_noclipspeed                           : 5        : , "a", "sv", "nf", "rep" :
+sv_nomap_timeout                         : 0        :                  : Amount of seconds to wait without a map running before the dedicated server will close. Values of 0 or below disable this behavior.
 sv_npc_full_pvs_checks                   : 1        : , "sv"           : If set, do full PVS checks for NPCs, so they do not flicker in multiplayer with more than 1 player. This could be expensive.
 sv_npc_talker_maxdist                    : 1024     : , "sv"           : NPCs over this distance from the player won't attempt to speak.
 sv_parallel_packentities                 : 1        :                  :
@@ -1735,7 +1700,8 @@ sv_robust_explosions                     : 1        : , "sv", "rep"    :
 sv_rollangle                             : 0        : , "sv", "nf", "rep" : Max view roll angle
 sv_rollspeed                             : 200      : , "sv", "nf", "rep" :
 sv_setsteamaccount                       : cmd      :                  : token Set game server account token to use for logging in to a persistent game server account
-sv_show_crosshair_target                 : 0        : , "sv"           :
+sv_show_crosshair_target                 : 0        : , "sv", "cheat"  :
+sv_showhitboxes                          : -1       : , "sv", "cheat"  : Send server-side hitboxes for specified entity to client (NOTE:  this uses lots of bandwidth, use on listen server only).
 sv_showimpacts                           : 0        : , "sv", "rep"    : Shows client (red) and server (blue) bullet impact point (1=both, 2=client-only, 3=server-only)
 sv_showladders                           : 0        : , "sv"           : Show bbox and dismount points for all ladders (must be set before level load.)
 sv_showlagcompensation                   : 0        : , "sv", "cheat"  : Show lag compensated hitboxes whenever a player is lag compensated.
@@ -1743,11 +1709,13 @@ sv_showlagcompensation_duration          : 4        : , "sv", "cheat"  : Duratio
 sv_shutdown                              : cmd      :                  : Sets the server to shutdown next time it's empty
 sv_shutdown_timeout_minutes              : 360      : , "rep"          : If sv_shutdown is pending, wait at most N minutes for server to drain before forcing shutdown.
 sv_signon_dos_disconnect                 : 20       :                  : Number of extra signon state confirmations required to disconnect a misbehaving client. 0 = unlimited
-sv_skyname                               : 0        : , "a", "sv", "rep" : Current name of the skybox texture
+sv_skyname                               : 0        : , "sv", "rep"    : Current name of the skybox texture
 sv_soundemitter_trace                    : 0        : , "sv", "rep"    : Show all EmitSound calls including their symbolic name and the actual wave file they resolved to
+sv_soundscape_printdebuginfo             : cmd      :                  : print soundscapes
 sv_specaccelerate                        : 5        : , "a", "sv", "nf", "rep" :
 sv_specnoclip                            : 1        : , "a", "sv", "nf", "rep" :
 sv_specspeed                             : 3        : , "a", "sv", "nf", "rep" :
+sv_standable_normal                      : 0        : , "sv", "rep"    : Dictates default standable and walkable normal. Lower values mean steeper surfaces can be walked and stood on without sliding off. Values above 1 mean no surface can be stood on.
 sv_startup_time                          : 0        :                  : Sets the starting CurTime of the server (in seconds). This is used for finding issues on a server that has been running for a long time. You don't need to change this.
 sv_stats                                 : 1        :                  : Collect CPU usage stats
 sv_steamblockingcheck                    : 0        :                  : Check each new player for Steam blocking compatibility, 1 = message only, 2 >= drop if any member of owning clan blocks,3 >= drop if any player has blocked, 4 >= drop if player has blocked anyone on server
@@ -1763,24 +1731,20 @@ sv_thinktimecheck                        : 0        : , "sv"           : Check f
 sv_timeout                               : 180      :                  : After this many seconds without a message from a client, the client is dropped
 sv_timeout_signon                        : 300      :                  : After this many seconds without a message from a client, the client is dropped (while connecting)
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
-sv_unlockedchapters                      : 1        : , "a", "sv"      :
 sv_use_steam_voice                       : 1        : , "rep"          : Enable/disable using Steam Voice instead of the old voice codec (if enabled, voice_inputfromfile will no longer function).
 sv_usercmd_custom_random_seed            : 0        : , "sv"           : When enabled server will populate an additional random seed independent of the client
 sv_usermessage_maxsize                   : 1024     : , "sv"           : The max number of bytes to output per tick
 sv_vehicle_autoaim_scale                 : 8        : , "sv"           :
 sv_visiblemaxplayers                     : -1       :                  : Overrides the max players reported to prospective clients
-sv_voiceenable                           : 1        : , "a", "nf"      :
+sv_voiceenable                           : 1        : , "nf"           :
 sv_wateraccelerate                       : 10       : , "sv", "nf", "rep" :
 sv_waterfriction                         : 1        : , "sv", "nf", "rep" :
 sys_minidumpexpandedspew                 : 1        :                  :
 sys_minidumpspewlines                    : 500      :                  : Lines of crash dump console spew to keep.
-systemlinkport                           : 27030    :                  : System Link port
-template_debug                           : 0        : , "sv"           :
-test_dispatcheffect                      : cmd      :                  : Test a clientside dispatch effect.  Usage: test_dispatcheffect <effect name> <distance away> <flags> <magnitude> <scale>  Defaults are: <distance 1024> <flags 0> <magnitude 0> <scale 0>
+template_debug                           : 0        : , "sv", "cheat"  :
 test_massive_dmg                         : 30       : , "sv"           :
 test_massive_dmg_clip                    : 0        : , "sv"           :
-testscript_debug                         : 0        :                  : Debug test scripts.
-tf_escort_score_rate                     : 1        : , "sv", "cheat"  : Score for escorting the train, in points per second
+testscript_debug                         : 0        : , "cheat"        : Debug test scripts.
 think_limit                              : 0        : , "sv", "rep"    : Maximum think time in milliseconds, warning is printed if this is exceeded.
 threadpool_affinity                      : 1        :                  : Enable setting affinity
 thumper_show_radius                      : 0        : , "sv", "cheat"  : If true, advisor will use her custom impact damage table.
@@ -1825,7 +1789,7 @@ toolmode_allow_weld                      : 1        : , "sv", "nf", "rep", "demo
 toolmode_allow_wheel                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'wheel' tool.
 toolmode_allow_winch                     : 1        : , "sv", "nf", "rep", "demo", "lua_server" : Set to 0 to disallow players being able to use the 'winch' tool.
 trace                                    : cmd      :                  :
-trace_report                             : 0        : , "sv"           :
+trace_report                             : 0        : , "sv", "cheat"  :
 ttt_allow_discomb_jump                   : 0        : , "a", "nf", "rep", "lua_server" :
 ttt_credits_starting                     : 2        : , "a", "nf", "rep", "lua_server" :
 ttt_debug_preventwin                     : 0        : , "a", "nf", "rep", "lua_server" :
@@ -1894,7 +1858,7 @@ unpause                                  : cmd      :                  : Unpause
 use                                      : cmd      :                  : Use a particular weapon  Arguments: <weapon_name>
 user                                     : cmd      :                  : Show user data.
 users                                    : cmd      :                  : Show user info for players on server.
-vcr_verbose                              : 0        :                  : Write extra information into .vcr file.
+vcr_verbose                              : 0        : , "cheat"        : Write extra information into .vcr file.
 vehicle_flushscript                      : cmd      :                  : Flush and reload all vehicle scripts
 version                                  : cmd      :                  : Print version info string.
 violence_ablood                          : 1        :                  : Draw alien blood
@@ -1906,10 +1870,7 @@ voice_inputfromfile                      : 0        :                  : Get voi
 voice_recordtofile                       : 0        :                  : Record mic data and decompressed voice data into 'voice_micdata.wav' and 'voice_decompressed.wav'
 voice_serverdebug                        : 0        : , "sv"           :
 vox_reload                               : cmd      :                  : Reload sentences.txt file
-voxeltree_box                            : cmd      :                  : View entities in the voxel-tree inside box <Vector(min), Vector(max)>.
-voxeltree_playerview                     : cmd      :                  : View entities in the voxel-tree at the player position.
-voxeltree_sphere                         : cmd      :                  : View entities in the voxel-tree inside sphere <Vector(center), float(radius)>.
-voxeltree_view                           : cmd      :                  : View entities in the voxel-tree.
+vphysics_nan_debug                       : 0        :                  :
 vprof                                    : cmd      :                  : Toggle VProf profiler
 vprof_cachemiss                          : cmd      :                  : Toggle VProf cache miss checking
 vprof_cachemiss_off                      : cmd      :                  : Turn off VProf cache miss checking
@@ -1967,4 +1928,4 @@ zombie_decaymin                          : 0        : , "sv"           :
 zombie_moanfreq                          : 1        : , "sv"           :
 zombie_stepfreq                          : 4        : , "sv"           :
 --------------
-1966 total convars/concommands
+1927 total convars/concommands
