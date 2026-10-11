@@ -54,7 +54,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1071, sv
+mp_timeleft     :     1083, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -413,13 +413,18 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:47:08.259 hldmserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:45:51.121 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:45:51.123 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:46:11.214 hldmserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:46:11.388 hldmserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:46:12.265 hldmserver: MONITOR: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/hldmserver-console.log <==
 cvarlist
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:47:09.268 hldmserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:46:12.318 hldmserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:46:12.323 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
 
 ==> /data/log/console/hldmserver-console.log <==
 CVar List
@@ -478,7 +483,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1049, sv
+mp_timeleft     :     1062, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -517,6 +522,11 @@ sk_apache_health3 :      400
 sk_barney_health1 :       35
 sk_barney_health2 :       35
 sk_barney_health3 :       35
+
+==> /data/log/script/hldmserver-script.log <==
+Oct 11 04:46:12.325 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/hldmserver-console.log <==
 sk_battery1     :       15
 sk_battery2     :       15
 sk_battery3     :       10
@@ -837,15 +847,23 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:47:09.274 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:47:09.276 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 20:47:29.361 hldmserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:46:14.081 hldmserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 04:46:15.711 hldmserver: MONITOR: INFO: Checking session: CHECKING
+Oct 11 04:46:15.927 hldmserver: MONITOR: PASS: Checking session: OK
+Oct 11 04:46:17.535 hldmserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 11 04:46:17.989 hldmserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 11 04:46:17.991 hldmserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 11 04:46:17.992 hldmserver: MONITOR: INFO: Players: 0/16
+Oct 11 04:46:17.994 hldmserver: MONITOR: INFO: Map: crossfire
+Oct 11 04:46:18.000 hldmserver: MONITOR: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:46:18.001 hldmserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:46:32.417 hldmserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/hldmserver-console.log <==
 cvarlist
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:47:30.364 hldmserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:46:33.472 hldmserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/hldmserver-console.log <==
 CVar List
@@ -904,7 +922,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1028, sv
+mp_timeleft     :     1041, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1263,29 +1281,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:47:30.371 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:47:30.372 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 20:47:41.682 hldmserver: CORE: PASS: Using cached IP as public IP address
-Oct 07 20:47:42.503 hldmserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 20:47:44.166 hldmserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 20:47:45.794 hldmserver: MONITOR: INFO: Checking session: CHECKING
-Oct 07 20:47:46.007 hldmserver: MONITOR: PASS: Checking session: OK
-Oct 07 20:47:47.615 hldmserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
-Oct 07 20:47:48.035 hldmserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 07 20:47:48.037 hldmserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 07 20:47:48.039 hldmserver: MONITOR: INFO: Players: 0/16
-Oct 07 20:47:48.041 hldmserver: MONITOR: INFO: Map: crossfire
-Oct 07 20:47:48.046 hldmserver: MONITOR: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:47:48.048 hldmserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 07 20:47:50.460 hldmserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:46:33.479 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:46:33.480 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:46:53.572 hldmserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/hldmserver-console.log <==
 cvarlist
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:47:51.465 hldmserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 07 20:47:51.470 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:47:51.472 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:46:54.628 hldmserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/hldmserver-console.log <==
 CVar List
@@ -1344,7 +1348,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1007, sv
+mp_timeleft     :     1020, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1703,15 +1707,16 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:48:11.556 hldmserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:46:54.634 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:46:54.635 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:47:14.727 hldmserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/hldmserver-console.log <==
 cvarlist
 
 ==> /data/log/script/hldmserver-script.log <==
-Oct 07 20:48:12.557 hldmserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 07 20:48:12.562 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:48:12.564 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:47:15.785 hldmserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:47:15.790 hldmserver: SEND: INFO: LinuxGSM version: v26.2.0
 
 ==> /data/log/console/hldmserver-console.log <==
 CVar List
@@ -1770,7 +1775,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :      986, sv
+mp_timeleft     :      999, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1875,6 +1880,11 @@ sk_healthcharger3 :       25
 sk_healthkit1   :       15
 sk_healthkit2   :       15
 sk_healthkit3   :       10
+==> /data/log/script/hldmserver-script.log <==
+Oct 11 04:47:15.792 hldmserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/hldmserver-console.log <==
+
 sk_hgrunt_gspeed1 :      400
 sk_hgrunt_gspeed2 :      600
 sk_hgrunt_gspeed3 :      800
@@ -2127,3 +2137,17 @@ voice_serverdebug :        0
 --------------
 408 Total CVars
 CvarList ? for syntax
+
+==> /data/log/script/hldmserver-script.log <==
+Oct 11 04:47:18.077 hldmserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:47:18.919 hldmserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 04:47:21.013 hldmserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 04:47:22.643 hldmserver: MONITOR: INFO: Checking session: CHECKING
+Oct 11 04:47:22.858 hldmserver: MONITOR: PASS: Checking session: OK
+Oct 11 04:47:24.466 hldmserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 11 04:47:24.911 hldmserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 11 04:47:24.912 hldmserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 11 04:47:24.914 hldmserver: MONITOR: INFO: Players: 0/16
+Oct 11 04:47:24.916 hldmserver: MONITOR: INFO: Map: crossfire
+Oct 11 04:47:24.921 hldmserver: MONITOR: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:47:24.923 hldmserver: MONITOR: PASS: core_exit.sh exiting with code: 0
