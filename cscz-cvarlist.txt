@@ -110,6 +110,11 @@ mp_mirrordamage :        0, sv
 mp_playerid     :        0, sv
 mp_roundtime    :        5, sv
 mp_scoreboard_showhealth :        3, sv
+
+==> /data/log/script/csczserver-script.log <==
+Oct 11 04:02:55.480 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/csczserver-console.log <==
 mp_scoreboard_showmoney :        3, sv
 mp_startmoney   :      800, sv
 mp_timeleft     :        0, sv
@@ -267,15 +272,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:45:18.279 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:45:18.280 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:45:38.364 csczserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:03:15.570 csczserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/csczserver-console.log <==
 cvarlist
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:45:39.346 csczserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:03:16.620 csczserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:03:16.625 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:03:16.627 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/csczserver-console.log <==
 CVar List
@@ -547,15 +552,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:45:39.352 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:45:39.353 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:45:59.438 csczserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:03:36.719 csczserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/csczserver-console.log <==
 cvarlist
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:46:00.425 csczserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:03:37.768 csczserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:03:37.774 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:03:37.775 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/csczserver-console.log <==
 CVar List
@@ -827,27 +832,27 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:46:00.431 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:46:00.432 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:46:10.482 csczserver: CORE: PASS: Using cached IP as public IP address
-Oct 07 19:46:11.277 csczserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 19:46:14.157 csczserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 19:46:15.783 csczserver: MONITOR: INFO: Checking session: CHECKING
-Oct 07 19:46:15.995 csczserver: MONITOR: PASS: Checking session: OK
-Oct 07 19:46:17.602 csczserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
-Oct 07 19:46:18.018 csczserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 07 19:46:18.020 csczserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 07 19:46:18.021 csczserver: MONITOR: INFO: Players: 0/16
-Oct 07 19:46:18.023 csczserver: MONITOR: INFO: Map: de_dust2
-Oct 07 19:46:18.028 csczserver: MONITOR: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:46:18.029 csczserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:46:20.515 csczserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:03:48.473 csczserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:03:49.299 csczserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 04:03:51.425 csczserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 04:03:53.055 csczserver: MONITOR: INFO: Checking session: CHECKING
+Oct 11 04:03:53.271 csczserver: MONITOR: PASS: Checking session: OK
+Oct 11 04:03:54.879 csczserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 11 04:03:55.328 csczserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 11 04:03:55.329 csczserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 11 04:03:55.331 csczserver: MONITOR: INFO: Players: 0/16
+Oct 11 04:03:55.333 csczserver: MONITOR: INFO: Map: de_dust2
+Oct 11 04:03:55.339 csczserver: MONITOR: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:03:55.340 csczserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:03:57.867 csczserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/csczserver-console.log <==
 cvarlist
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:46:21.497 csczserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:03:58.920 csczserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:03:58.925 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:03:58.927 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/csczserver-console.log <==
 CVar List
@@ -1119,17 +1124,14 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:46:21.502 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:46:21.504 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:46:41.590 csczserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:04:19.018 csczserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/csczserver-console.log <==
 cvarlist
 
 ==> /data/log/script/csczserver-script.log <==
-Oct 07 19:46:42.575 csczserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 07 19:46:42.580 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:46:42.581 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:04:20.065 csczserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:04:20.071 csczserver: SEND: INFO: LinuxGSM version: v26.2.0
 
 ==> /data/log/console/csczserver-console.log <==
 CVar List
@@ -1259,7 +1261,12 @@ net_graph       :        0, a
 net_graphpos    :        1, a
 net_graphwidth  :      150
 net_log         :        0
-net_scale       :        5, a
+net_sc
+==> /data/log/script/csczserver-script.log <==
+Oct 11 04:04:20.073 csczserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/csczserver-console.log <==
+ale       :        5, a
 net_showdrop    :        0
 net_showpackets :        0
 pausable        :        0, sv
