@@ -52,6 +52,11 @@ mp_clan_scoring :        0, sv
 mp_clan_scoring_bonus_allies :       -1, sv
 mp_clan_scoring_bonus_axis :       -1, sv
 mp_clan_scoring_delay :       60, sv
+
+==> /data/log/script/dodserver-script.log <==
+Oct 11 04:26:52.178 dodserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/dodserver-console.log <==
 mp_clan_scoring_values_allies :   111111, sv
 mp_clan_scoring_values_axis :   111111, sv
 mp_clan_showcutscenes :        1
@@ -461,15 +466,17 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:14:37.606 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:14:37.608 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 20:14:57.698 dodserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:26:52.185 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:26:52.186 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:27:12.278 dodserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dodserver-console.log <==
 cvarlist
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:14:58.762 dodserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:27:13.343 dodserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:27:13.348 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:27:13.349 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/dodserver-console.log <==
 CVar List
@@ -935,15 +942,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:14:58.768 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:14:58.769 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 20:15:18.860 dodserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:27:33.441 dodserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dodserver-console.log <==
 cvarlist
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:15:19.922 dodserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:27:34.504 dodserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:27:34.510 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:27:34.511 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/dodserver-console.log <==
 CVar List
@@ -1409,29 +1416,30 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:15:19.928 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:15:19.929 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 20:15:30.892 dodserver: CORE: PASS: Using cached IP as public IP address
-Oct 07 20:15:31.736 dodserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 20:15:33.379 dodserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 20:15:35.010 dodserver: MONITOR: INFO: Checking session: CHECKING
-Oct 07 20:15:35.225 dodserver: MONITOR: PASS: Checking session: OK
-Oct 07 20:15:36.833 dodserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
-Oct 07 20:15:37.280 dodserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 07 20:15:37.281 dodserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 07 20:15:37.283 dodserver: MONITOR: INFO: Players: 0/16
-Oct 07 20:15:37.285 dodserver: MONITOR: INFO: Map: dod_Anzio
-Oct 07 20:15:37.291 dodserver: MONITOR: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:15:37.292 dodserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 07 20:15:40.021 dodserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:27:34.603 dodserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:27:35.446 dodserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 04:27:37.288 dodserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 04:27:38.918 dodserver: MONITOR: INFO: Checking session: CHECKING
+Oct 11 04:27:39.132 dodserver: MONITOR: PASS: Checking session: OK
+Oct 11 04:27:40.739 dodserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+
+==> /data/log/console/dodserver-console.log <==
+[S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
+
+==> /data/log/script/dodserver-script.log <==
+Oct 11 04:27:41.196 dodserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 11 04:27:41.198 dodserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 11 04:27:41.199 dodserver: MONITOR: INFO: Players: 0/16
+Oct 11 04:27:41.201 dodserver: MONITOR: INFO: Map: dod_Anzio
+Oct 11 04:27:41.206 dodserver: MONITOR: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:27:41.208 dodserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:27:54.601 dodserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dodserver-console.log <==
 cvarlist
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:15:41.086 dodserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 07 20:15:41.091 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:15:41.092 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:27:55.663 dodserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/dodserver-console.log <==
 CVar List
@@ -1897,13 +1905,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:16:01.184 dodserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 04:27:55.669 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:27:55.670 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:28:15.767 dodserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dodserver-console.log <==
 cvarlist
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:16:02.248 dodserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 04:28:16.834 dodserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/dodserver-console.log <==
 CVar List
@@ -2369,5 +2379,5 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dodserver-script.log <==
-Oct 07 20:16:02.255 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 20:16:02.256 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 04:28:16.840 dodserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 04:28:16.842 dodserver: SEND: PASS: core_exit.sh exiting with code: 0
