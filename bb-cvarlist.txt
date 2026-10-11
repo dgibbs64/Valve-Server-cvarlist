@@ -57,7 +57,7 @@ mp_scoreleft    :        0, sv
 mp_speedratio   :    0.800, sv
 mp_teamplay     :        0, sv
 mp_teamscorelimit :        0, sv
-mp_timeleft     :     1183, sv
+mp_timeleft     :     1180, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -441,15 +441,16 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:16.184 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:28:16.185 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:28:36.272 bbserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 03:44:19.027 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 03:44:19.028 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 03:44:39.100 bbserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/bbserver-console.log <==
 cvarlist
 
 ==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:37.288 bbserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 03:44:40.072 bbserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 03:44:40.077 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
 
 ==> /data/log/console/bbserver-console.log <==
 CVar List
@@ -511,7 +512,7 @@ mp_scoreleft    :        0, sv
 mp_speedratio   :    0.800, sv
 mp_teamplay     :        0, sv
 mp_teamscorelimit :        0, sv
-mp_timeleft     :     1161, sv
+mp_timeleft     :     1159, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -566,11 +567,6 @@ sk_bigmomma_radius_blast1 :      250
 sk_bigmomma_radius_blast2 :      250
 sk_bigmomma_radius_blast3 :      275
 sk_bullsquid_dmg_bite1 :       15
-
-==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:37.293 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
-
-==> /data/log/console/bbserver-console.log <==
 sk_bullsquid_dmg_bite2 :       25
 sk_bullsquid_dmg_bite3 :       25
 sk_bullsquid_dmg_spit1 :       10
@@ -706,6 +702,11 @@ sk_player_stomach1 :        1
 sk_player_stomach2 :        1
 sk_player_stomach3 :        1
 sk_plr_357_bullet1 :       40
+
+==> /data/log/script/bbserver-script.log <==
+Oct 11 03:44:40.078 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/bbserver-console.log <==
 sk_plr_357_bullet2 :       40
 sk_plr_357_bullet3 :       40
 sk_plr_9mm_bullet1 :        8
@@ -725,11 +726,6 @@ sk_plr_crowbar2 :       10
 sk_plr_crowbar3 :       10
 sk_plr_egon_narrow1 :        6
 sk_plr_egon_narrow2 :        6
-
-==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:37.295 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
-
-==> /data/log/console/bbserver-console.log <==
 sk_plr_egon_narrow3 :        6
 sk_plr_egon_wide1 :       14
 sk_plr_egon_wide2 :       14
@@ -905,15 +901,13 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:57.379 bbserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 03:44:59.694 bbserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 03:45:00.144 bbserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 03:45:00.471 bbserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 03:45:01.112 bbserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/bbserver-console.log <==
 cvarlist
-
-==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:58.403 bbserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/bbserver-console.log <==
 CVar List
 --------------
 _sv_override_scientist_mdl :        0
@@ -973,7 +967,7 @@ mp_scoreleft    :        0, sv
 mp_speedratio   :    0.800, sv
 mp_teamplay     :        0, sv
 mp_teamscorelimit :        0, sv
-mp_timeleft     :     1140, sv
+mp_timeleft     :     1138, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1274,11 +1268,6 @@ sv_gravity      :      800, sv
 sv_instancedbaseline :        1
 sv_lan          :        0
 sv_lan_rate     :    20000
-
-==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:58.410 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
-
-==> /data/log/console/bbserver-console.log <==
 sv_log_onefile  :        0
 sv_log_singleplayer :        0
 sv_logbans      :        0
@@ -1362,33 +1351,32 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/bbserver-script.log <==
-Oct 07 19:28:58.412 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:28:59.696 bbserver: CORE: PASS: Using cached IP as public IP address
-Oct 07 19:29:00.507 bbserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 19:29:02.221 bbserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 07 19:29:03.848 bbserver: MONITOR: INFO: Checking session: CHECKING
-Oct 07 19:29:04.062 bbserver: MONITOR: PASS: Checking session: OK
-Oct 07 19:29:05.669 bbserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 11 03:45:01.116 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 03:45:01.117 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 03:45:02.246 bbserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 11 03:45:03.869 bbserver: MONITOR: INFO: Checking session: CHECKING
+Oct 11 03:45:04.080 bbserver: MONITOR: PASS: Checking session: OK
+Oct 11 03:45:05.686 bbserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
 
 ==> /data/log/console/bbserver-console.log <==
 [S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
 
 ==> /data/log/script/bbserver-script.log <==
-Oct 07 19:29:06.103 bbserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 07 19:29:06.104 bbserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 07 19:29:06.106 bbserver: MONITOR: INFO: Players: 0/16
-Oct 07 19:29:06.108 bbserver: MONITOR: INFO: Map: bb_chp4_slaywatch
-Oct 07 19:29:06.113 bbserver: MONITOR: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:29:06.114 bbserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 07 19:29:18.495 bbserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 03:45:06.049 bbserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 11 03:45:06.051 bbserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 11 03:45:06.052 bbserver: MONITOR: INFO: Players: 0/16
+Oct 11 03:45:06.053 bbserver: MONITOR: INFO: Map: bb_chp4_slaywatch
+Oct 11 03:45:06.058 bbserver: MONITOR: INFO: LinuxGSM version: v26.2.0
+Oct 11 03:45:06.059 bbserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 11 03:45:21.184 bbserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/bbserver-console.log <==
 cvarlist
 
 ==> /data/log/script/bbserver-script.log <==
-Oct 07 19:29:19.526 bbserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 07 19:29:19.531 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:29:19.532 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 11 03:45:22.151 bbserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 03:45:22.155 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 03:45:22.156 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/bbserver-console.log <==
 CVar List
@@ -1450,7 +1438,7 @@ mp_scoreleft    :        0, sv
 mp_speedratio   :    0.800, sv
 mp_teamplay     :        0, sv
 mp_teamscorelimit :        0, sv
-mp_timeleft     :     1119, sv
+mp_timeleft     :     1117, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1834,10 +1822,17 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/bbserver-script.log <==
-Oct 07 19:29:39.619 bbserver: CORE: PASS: Using cached IP as public IP address
+Oct 11 03:45:42.223 bbserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/bbserver-console.log <==
 cvarlist
+
+==> /data/log/script/bbserver-script.log <==
+Oct 11 03:45:43.193 bbserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 11 03:45:43.197 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
+Oct 11 03:45:43.198 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/bbserver-console.log <==
 CVar List
 --------------
 _sv_override_scientist_mdl :        0
@@ -1897,7 +1892,7 @@ mp_scoreleft    :        0, sv
 mp_speedratio   :    0.800, sv
 mp_teamplay     :        0, sv
 mp_teamscorelimit :        0, sv
-mp_timeleft     :     1098, sv
+mp_timeleft     :     1095, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1993,11 +1988,6 @@ sk_hassassin_health3 :       50
 sk_headcrab_dmg_bite1 :        5
 sk_headcrab_dmg_bite2 :       10
 sk_headcrab_dmg_bite3 :       10
-
-==> /data/log/script/bbserver-script.log <==
-Oct 07 19:29:40.638 bbserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/bbserver-console.log <==
 sk_headcrab_health1 :       10
 sk_headcrab_health2 :       10
 sk_headcrab_health3 :       20
@@ -2284,7 +2274,3 @@ voice_serverdebug :        0
 --------------
 436 Total CVars
 CvarList ? for syntax
-
-==> /data/log/script/bbserver-script.log <==
-Oct 07 19:29:40.645 bbserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 07 19:29:40.646 bbserver: SEND: PASS: core_exit.sh exiting with code: 0
