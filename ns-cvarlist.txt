@@ -83,11 +83,6 @@ mp_votedowntime :      180, sv
 mp_votepercentneeded :    0.400, sv
 mp_weaponstay   :    0.500, sv
 multicastport   :    27025
-
-==> /data/log/script/nsserver-script.log <==
-Oct 11 05:09:16.015 nsserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/nsserver-console.log <==
 net_address     :        0
 net_chokeloop   :        0
 net_drawslider  :        0
@@ -193,17 +188,17 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:09:16.019 nsserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 11 05:09:16.020 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 11 05:09:36.083 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 18 04:09:37.688 nsserver: SEND: INFO: LinuxGSM version: v26.3.0
+Oct 18 04:09:37.689 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 18 04:09:57.767 nsserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/nsserver-console.log <==
 cvarlist
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:09:37.051 nsserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 11 05:09:37.055 nsserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 11 05:09:37.056 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 18 04:09:58.783 nsserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 18 04:09:58.787 nsserver: SEND: INFO: LinuxGSM version: v26.3.0
+Oct 18 04:09:58.788 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/nsserver-console.log <==
 CVar List
@@ -396,15 +391,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:09:57.120 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 18 04:10:18.867 nsserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/nsserver-console.log <==
 cvarlist
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:09:58.096 nsserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 11 05:09:58.100 nsserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 11 05:09:58.101 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 18 04:10:19.878 nsserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 18 04:10:19.883 nsserver: SEND: INFO: LinuxGSM version: v26.3.0
+Oct 18 04:10:19.884 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/nsserver-console.log <==
 CVar List
@@ -597,27 +592,25 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:10:08.524 nsserver: CORE: PASS: Using cached IP as public IP address
-Oct 11 05:10:09.307 nsserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 11 05:10:10.839 nsserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 11 05:10:12.460 nsserver: MONITOR: INFO: Checking session: CHECKING
-Oct 11 05:10:12.671 nsserver: MONITOR: PASS: Checking session: OK
-Oct 11 05:10:14.276 nsserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
-Oct 11 05:10:14.637 nsserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 11 05:10:14.638 nsserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 11 05:10:14.639 nsserver: MONITOR: INFO: Players: 0/16
-Oct 11 05:10:14.641 nsserver: MONITOR: INFO: Map: ns_hera
-Oct 11 05:10:14.645 nsserver: MONITOR: INFO: LinuxGSM version: v26.2.0
-Oct 11 05:10:14.646 nsserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 11 05:10:18.165 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 18 04:10:31.676 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 18 04:10:32.479 nsserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 18 04:10:34.783 nsserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 18 04:10:36.410 nsserver: MONITOR: INFO: Checking session: CHECKING
+Oct 18 04:10:36.623 nsserver: MONITOR: PASS: Checking session: OK
+Oct 18 04:10:38.230 nsserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 18 04:10:38.641 nsserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 18 04:10:38.642 nsserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 18 04:10:38.644 nsserver: MONITOR: INFO: Players: 0/16
+Oct 18 04:10:38.645 nsserver: MONITOR: INFO: Map: ns_hera
+Oct 18 04:10:38.650 nsserver: MONITOR: INFO: LinuxGSM version: v26.3.0
+Oct 18 04:10:38.651 nsserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 18 04:10:39.962 nsserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/nsserver-console.log <==
 cvarlist
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:10:19.136 nsserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 11 05:10:19.140 nsserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 11 05:10:19.141 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 18 04:10:40.971 nsserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/nsserver-console.log <==
 CVar List
@@ -810,15 +803,17 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:10:39.206 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 18 04:10:40.976 nsserver: SEND: INFO: LinuxGSM version: v26.3.0
+Oct 18 04:10:40.977 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 18 04:11:01.054 nsserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/nsserver-console.log <==
 cvarlist
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 11 05:10:40.182 nsserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 11 05:10:40.187 nsserver: SEND: INFO: LinuxGSM version: v26.2.0
-Oct 11 05:10:40.187 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 18 04:11:02.065 nsserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 18 04:11:02.070 nsserver: SEND: INFO: LinuxGSM version: v26.3.0
+Oct 18 04:11:02.071 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/nsserver-console.log <==
 CVar List
