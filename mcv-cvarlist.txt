@@ -588,6 +588,7 @@ mat_bumpbasis                            : 0        : , "cheat"        :
 mat_bumpmap                              : 1        :                  :
 mat_compressedtextures                   : 1        :                  :
 mat_configcurrent                        : cmd      :                  : show the current video control panel config for the material system
+mat_csm_pcss                             : 0        : , "a"            : Enable Percentage Closer Soft Shadows filter for CSM shadows.
 mat_custommaterialusage                  : cmd      :                  : Show memory usage for custom weapon materials.
 mat_debugalttab                          : 0        : , "cheat"        :
 mat_debugdepth                           : 0        :                  :
@@ -637,6 +638,7 @@ mat_parallaxmap                          : 1        : , "a"            :
 mat_phong                                : 1        :                  :
 mat_picmip                               : 0        :                  :
 mat_powersavingsmode                     : 0        : , "a"            : Power Savings Mode
+mat_prefer_alphatocoverage               : 1        : , "a"            : Prefer Alpha To Coverage over AlphatestReference for foliage rendering (Requires MSAA to be enabled).
 mat_processtoolvars                      : 0        :                  :
 mat_proxy                                : 0        : , "cheat"        :
 mat_queue_mode                           : -1       :                  : The queue/thread mode the material system should use: -1=default, 0=synchronous single thread, 1=queued single thread, 2=queued
@@ -729,6 +731,7 @@ morph_debug                              : 0        :                  :
 morph_path                               : 7        :                  :
 mortar_visualize                         : 0        : , "sv"           :
 motdfile                                 : 0        : , "sv"           : The MOTD file to load.
+mp_allow_building_props                  : 0        : , "sv", "rep"    : Allow prop building in non-zombie gamemodes. This command needs to be issued before map is loaded.
 mp_allow_parachute                       : 0        : , "sv", "rep"    : Allow to enable parachute.
 mp_allowNPCs                             : 1        : , "sv", "nf"     :
 mp_allowspectators                       : 1        : , "sv", "rep"    : toggles whether the server allows spectator mode or not
@@ -785,7 +788,7 @@ mp_footsteps_serverside                  : 1        : , "sv"           : Makes t
 mp_force_assign_teams                    : 0        : , "sv", "rep"    : Players don't get to choose what team they are on, it is auto assinged.
 mp_force_deploy_after_death              : 0        : , "sv", "rep"    : Ask player to press Deploy button to respawn.
 mp_force_pick_time                       : 30       : , "sv", "rep"    : The amount of time a player has on the team screen to make a selection before being auto-teamed
-mp_forcecamera                           : 0        : , "sv", "rep"    : Restricts spectator modes for dead players. 0 = Any team. 1 = Only own team. 2 = Any team; fade to black on death. 3 = Only own
+mp_forcecamera                           : 1        : , "sv", "rep"    : Restricts spectator modes for dead players. 0 = Any team. 1 = Only own team. 2 = Any team; fade to black on death. 3 = Only own
 mp_forcerespawn                          : 1        : , "sv", "nf"     :
 mp_forcerespawnplayers                   : cmd      :                  : Force all players to respawn.
 mp_forcewin                              : cmd      :                  : Forces team to win
@@ -855,7 +858,7 @@ mp_random_loadout                        : 0        : , "sv", "rep"    : Give ra
 mp_random_weapons                        : 0        : , "sv", "rep"    : Allow to use random weapons.
 mp_randomspawn                           : 0        : , "sv", "rep"    : Enable or disable random spawning points
 mp_randomspawn_dist                      : 0        : , "sv", "rep"    : If using mp_randomspawn, determines whether to test distance when selecting this spot.
-mp_randomspawn_friednly_dist             : 512      : , "sv", "rep"    : If using mp_randomspawn, determines whether to test distance to friendly team members when selecting this spot.
+mp_randomspawn_friendly_dist             : 512      : , "sv", "rep"    : If using mp_randomspawn, determines whether to test distance to friendly team members when selecting this spot.
 mp_randomspawn_los                       : 1        : , "sv", "rep"    : If using mp_randomspawn, determines whether to test Line of Sight when spawning.
 mp_require_gun_use_to_acquire            : 0        : , "sv"           : Whether guns must be +used to acquire or default is touch-to-pickup
 mp_respawn_immunitytime                  : 3        : , "sv", "rep"    : How many seconds after respawn immunity lasts.
@@ -1666,6 +1669,8 @@ sv_disable_pas                           : 1        : , "sv", "cheat", "rep" :
 sv_disable_radar                         : 0        : , "sv", "rep"    :
 sv_disablefreezecam                      : 1        : , "sv", "rep"    : Turn on/off freezecam on server
 sv_downloadurl                           : 0        : , "rep"          : Location from which clients can download missing files
+sv_drawhud                               : 1        : , "sv", "rep"    : Enable HUD display on the server (Health, Stamina, Ammo)
+sv_drawhud_force_deathnotices            : 1        : , "sv", "rep"    : Enable HUD kill feed and score feed display on the server. 0 = Disable kill feed and score feed. 1 = Enable kill feed and score
 sv_drowning_damage_initial               : 2        : , "sv", "rep"    :
 sv_drowning_damage_max                   : 5        : , "sv", "rep"    :
 sv_dump_class_info                       : cmd      :                  : Dump server class infos.
@@ -1684,6 +1689,7 @@ sv_falldamage_scale                      : 1        : , "sv", "rep"    :
 sv_falldamage_to_below_player_multiplier : 1        : , "sv", "rep"    : Scale damage when distributed across two players
 sv_falldamage_to_below_player_ratio      : 150      : , "sv", "rep"    : Landing on a another player's head gives them this ratio of the damage.
 sv_filterban                             : 1        :                  : Set packet filtering by IP mode
+sv_firstperson_death                     : 0        : , "sv", "rep"    : Force first person death to be on at all times. 0 = Off. 1 = On.
 sv_footstep_sound_frequency              : 0        : , "sv", "cheat", "rep" : How frequent to hear the player's step sound or how fast they appear to be running from first person.
 sv_force_transmit_ents                   : 0        : , "sv"           : Will transmit all entities to client, regardless of PVS conditions (will still skip based on transmit flags, however).
 sv_force_transmit_players                : 0        : , "sv"           : Will transmit players to all clients regardless of PVS checks.
@@ -1711,7 +1717,9 @@ sv_hibernate_when_empty                  : 1        :                  : Puts th
 sv_hibernate_zombie_bot_count            : 12       : , "sv"           : Spawn N bots when sv_hibernate_zombie_mode is active.
 sv_hibernate_zombie_mode                 : 1        :                  : Don't confuse with game mode. If enabled, this will spawn bots so they will play on server when no players are connected, essen
 sv_highlight_distance                    : 4096     : , "sv", "rep"    :
+sv_hitmarkers_enable                     : 1        : , "sv", "rep"    : Enforce certain hitmarkers setting on clients.
 sv_hp_leech                              : 0        : , "sv", "rep"    : Reward attacker with health after killing someone.
+sv_hud_damagenumbers_enable              : 1        : , "sv", "rep"    : Enforce certain damagenumbers setting on clients.
 sv_infinite_ammo                         : 0        : , "sv", "rep"    : Player's active weapon will never run out of ammo. If set to 2 then player has infinite total ammo but still has to reload the
 sv_jump_impulse                          : 301      : , "sv", "rep"    : Initial upward velocity for player jumps; sqrt(2*gravity*height).
 sv_kick_ban_duration                     : 3        : , "sv", "nf", "rep" : How long should a kick ban from the server should last (in minutes)
@@ -1725,7 +1733,7 @@ sv_ledge_mantle_helper                   : 1        : , "sv", "rep"    : 1=Only 
 sv_load_forced_client_names_file         : cmd      :                  : Loads a file containing SteamID64 names for clients
 sv_log_http_record_before_any_listeners  : 0        : , "sv"           :
 sv_log_onefile                           : 0        : , "a"            : Log server information to only one file.
-sv_logbans                               : 0        : , "a"            : Log server bans in the server logs.
+sv_logbans                               : 1        : , "a"            : Log server bans in the server logs.
 sv_logblocks                             : 0        :                  : If true when log when a query is blocked (can cause very large log files)
 sv_logdownloadlist                       : 0        :                  :
 sv_logecho                               : 1        : , "a"            : Echo log information to the console.
@@ -1802,6 +1810,7 @@ sv_pure_trace                            : 0        :                  : If set 
 sv_pvsskipanimation                      : 1        : , "a", "sv"      : Skips SetupBones when npc's are outside the PVS
 sv_querycache_stats                      : cmd      :                  : Display status of the query cache (client only)
 sv_quota_stringcmdspersecond             : 40       :                  : How many string commands per second clients are allowed to submit, 0 to disallow all string commands
+sv_radar_display_shooters                : 0        : , "sv", "rep"    : If enabled, shooting will make you appear on radar for everyone.
 sv_rcon_banpenalty                       : 0        :                  : Number of minutes to ban users who fail rcon authentication
 sv_rcon_log                              : 1        :                  : Enable/disable rcon logging.
 sv_rcon_maxfailures                      : 10       :                  : Max number of times a user can fail rcon authentication before being banned
@@ -1866,11 +1875,12 @@ sv_steamgroup_exclusive                  : 0        :                  : If set,
 sv_stopspeed                             : 80       : , "sv", "nf", "rep" : Minimum stopping speed when on ground.
 sv_stressbots                            : 0        :                  : If set to 1, the server calculates data and fills packets to bots. Used for perf testing.
 sv_strict_notarget                       : 0        : , "sv"           : If set, notarget will cause entities to never think they are in the pvs
+sv_suppress_viewpunch                    : 0        : , "sv", "rep"    :
 sv_tags                                  : 0        : , "nf"           : Server tags. Used to provide extra information to clients when they're browsing for servers. Separate tags with a comma.
 sv_talk_after_dying_time                 : 0        : , "sv", "rep"    : The number of seconds a player can continue talking after dying as if they were still alive
 sv_talk_enemy_dead                       : 1        : , "sv", "rep"    : Dead players can hear all dead enemy communication (voice, chat)
 sv_talk_enemy_living                     : 1        : , "sv", "rep"    : Living players can hear all living enemy communication (voice, chat)
-sv_teamid_overhead                       : 1        : , "sv", "nf", "rep" : Shows teamID over player's heads.  0 = off, 1 = on
+sv_teamid_overhead                       : 1        : , "sv", "nf", "rep" : Shows teamID over player's heads. 0 = Off. 1 = Own team.
 sv_teamid_overhead_always_prohibit       : 0        : , "sv", "nf", "rep" : Determines whether cl_teamid_overhead_always is prohibited.
 sv_teamid_overhead_maxdist               : 0        : , "sv", "rep"    : If >0, server will override cl_teamid_overhead_maxdist
 sv_teamid_overhead_maxdist_spec          : 0        : , "sv", "rep"    : If >0, server will override cl_teamid_overhead_maxdist_spec
@@ -2059,6 +2069,9 @@ vietnam_airstrike_cooldown_gg            : 30       : , "sv", "cheat", "nf", "re
 vietnam_airstrike_independant            : 0        : , "sv", "rep"    : If true, airstrike limits are independant from gamerules
 vietnam_allowdual_primary                : 1        : , "sv"           :
 vietnam_allowdual_secondary              : 1        : , "sv"           :
+vietnam_ammobox_mountedgun_refill_scale  : 0        : , "sv", "rep"    : Refill certain percentage of total ammo of mounteg gun.
+vietnam_ammobox_refill_scale_zm          : 0        : , "sv", "rep"    : Refill certain percentage of total ammo in Zombie Mode.
+vietnam_ammobox_regen                    : 1        : , "sv", "rep"    : If ammo boxes should regenerate or not. 0 = Off. 1 = On.
 vietnam_api_log_requests                 : 0        : , "a", "sv"      : 1 = API requests will be logged to console, 2 = API requests that are sensitive will also be logged to console (DANGER! Only se
 vietnam_api_reauthenticate               : cmd      :                  : Reauth with HTTP API.
 vietnam_api_url                          : 0        : , "sv"           : URL of the Vietnam api (e.g. http://localhost:3000)
@@ -2068,6 +2081,8 @@ vietnam_ballistics_first_segment_always_accurate : 1        : , "sv", "cheat", "
 vietnam_ballistics_reduction             : 1        : , "sv", "cheat", "rep" : How much to reduce bullet damage, velocity and max fly distance
 vietnam_ballistics_show_stats            : 0        : , "sv", "cheat", "rep" : Show bullet simulation info
 vietnam_bayonet_equip_enabled            : 1        : , "sv", "rep"    : Enables or disables bayonet feature.
+vietnam_bayonet_range_attack             : 54       : , "sv", "rep"    : Range attack of attached bayonet
+vietnam_bayonet_range_attack_long        : 58       : , "sv", "rep"    : Range attack of attached long bayonet
 vietnam_body_armor                       : 0        : , "sv", "rep"    : Force Body Armor: 1. Always on. -1. Always off. .
 vietnam_bot_health_regen                 : 1        : , "sv", "nf", "rep" : Toggles bot health regeneration functionality
 vietnam_conquest_start_tickets_us        : 250      : , "sv", "nf", "rep" : Set initial amount of tickets for United States team in Conquest
@@ -2086,6 +2101,7 @@ vietnam_dshk_overheat_rate               : 0        : , "sv", "rep"    : At whic
 vietnam_dshk_spread                      : 0        : , "sv", "rep"    : Minigun spray in degrees from forward.
 vietnam_force_weapon                     : cmd      :                  : Force specific weapon on player
 vietnam_gg_tiers_max                     : 28       : , "sv", "cheat", "nf", "rep" : Defines amount of available weapon tiers.
+vietnam_grenade_adjust_fuze              : 1        : , "sv", "rep"    : If a grenades fuze time should be adjusted or not. 0 = Off. 1 = On.
 vietnam_gungame_infinite_ammo            : 1        : , "sv", "rep"    : Specifies whether the player has infinite total ammo in gungame
 vietnam_health_regen                     : 1        : , "sv", "nf", "rep" : Toggles player health regeneration functionality
 vietnam_health_regen_amount              : 1        : , "sv", "nf", "rep" : Defines the amount of additional health granted to players upon regeneration
@@ -2094,6 +2110,7 @@ vietnam_health_regen_speed               : 0        : , "sv", "nf", "rep" : Defi
 vietnam_health_threshold                 : 50       : , "sv", "nf", "rep" : Defines the threshold health after which start regeneration
 vietnam_health_threshold_healed          : 100      : , "sv", "nf", "rep" : Defines the bigger threshold health after which start regeneration when player was healed
 vietnam_health_threshold_healed_medic_self : 75       : , "sv", "nf", "rep" : Threshold health regeneration when medic heals himself
+vietnam_hit_sound_feedback               : 1        : , "sv"           : Kill and hit sound effects for when you kill or hit a player. 0 = Off. 1 = On.
 vietnam_kc_pickup_cooldown               : 1        : , "sv"           : Cooldown time before tag is available for pickup
 vietnam_killconfirmed_maxscore           : 50       : , "sv", "nf", "rep" : Set max score to win the match
 vietnam_lms_respawntime                  : 5        : , "sv", "nf", "rep" : Set respawn time in seconds for Last Man Standing
@@ -2101,11 +2118,12 @@ vietnam_loadout_file_name                : 0        : , "sv", "nf", "rep" : Usag
 vietnam_lts_respawntime                  : 5        : , "sv", "nf", "rep" : Set respawn time in seconds for Last Team Standing
 vietnam_m134_ammo                        : 500      : , "sv", "rep"    : Ammo of this turret.
 vietnam_m134_damage                      : 55       : , "sv", "rep"    : Base bullet damage.
-vietnam_m134_delay_attack                : 0        : , "sv", "rep"    : How in seconds should start attack.
 vietnam_m134_firerate                    : 20       : , "sv", "rep"    : Rounds per second.
 vietnam_m134_health                      : 500      : , "sv", "rep"    : Health of this turret.
 vietnam_m134_overheat_rate               : 0        : , "sv", "rep"    : At which rate M134 Browning will increase overheat level.
 vietnam_m134_spread                      : 0        : , "sv", "rep"    : Minigun spray in degrees from forward.
+vietnam_m134_winddown_duration           : 0        : , "sv", "rep"    : Wind down time.
+vietnam_m134_windup_duration             : 0        : , "sv", "rep"    : Wind up time.
 vietnam_m2browning_ammo                  : 300      : , "sv", "rep"    : Ammo of this turret.
 vietnam_m2browning_damage                : 55       : , "sv", "rep"    : Base bullet damage.
 vietnam_m2browning_firerate              : 8        : , "sv", "rep"    : Rounds per second.
@@ -2119,15 +2137,25 @@ vietnam_m40rr_health                     : 500      : , "sv", "rep"    : Health 
 vietnam_m40rr_overheat_rate              : 0        : , "sv", "rep"    : At which rate m40rr will increase overheat level.
 vietnam_m40rr_radius                     : 384      : , "sv"           : Rocket explosion radius.
 vietnam_m40rr_spread                     : 0        : , "sv", "rep"    : Spray in degrees from forward.
+vietnam_m40rr_velocity_shoot_rocket      : 2500     : , "sv", "rep"    : Velocity of shoot rocket for recoilless rifles turrets.
 vietnam_max_mines_placed                 : 3        : , "sv", "rep"    : Determines the amount of mines you can place until you cant place anymore.
+vietnam_medkit_regen                     : 1        : , "sv", "rep"    : If medical kits should regenerate or not. 0 = Off. 1 = On.
 vietnam_mine_min_install_radius          : 26       : , "sv", "rep"    :
+vietnam_mk19_ammo                        : 34       : , "sv", "rep"    : Ammo of this turret.
+vietnam_mk19_damage                      : 250      : , "sv", "rep"    : Rocket explosion damage.
+vietnam_mk19_firerate                    : 2        : , "sv", "rep"    : Rounds per second.
+vietnam_mk19_health                      : 500      : , "sv", "rep"    : Health of this turret.
+vietnam_mk19_overheat_rate               : 0        : , "sv", "rep"    : At which rate MK19 will increase overheat level.
+vietnam_mk19_radius                      : 384      : , "sv"           : Rocket explosion radius.
+vietnam_mk19_spread                      : 0        : , "sv", "rep"    : Spray in degrees from forward.
+vietnam_mk19_velocity_shoot_grenade      : 2500     : , "sv", "rep"    : Velocity of shoot grenade for MK19.
 vietnam_mountedgun_cooldown_rate         : 0        : , "sv"           : How quickly mounted gun will cool down after overheating.
 vietnam_mountedgun_explosion_damage      : 40       : , "sv"           : Explosion Damage.
 vietnam_mountedgun_explosion_radius      : 20       : , "sv"           : Explosion Radius.
 vietnam_mountedgun_max_distance          : 8192     : , "sv", "rep"    : Max shooting distance.
 vietnam_mountedgun_no_dismount_period    : 0        : , "sv", "rep"    : Do not let player dismount from this gun when pressing move buttons during given period in seconds.
 vietnam_mountedgun_overheat_time         : 2        : , "sv"           : How long mounted gun will remain in overheated state.
-vietnam_mountedgun_velocity_shoot_rocket : 2500     : , "sv", "rep"    : Velocity of shoot rocket for recoilless rifles turrets.
+vietnam_mountedgun_spinning_cooldown_rate_scale : 0        : , "sv"           : Scale cooldown rate by this amount if barrels are spinning.
 vietnam_oddball_maxscore                 : 180      : , "sv", "nf", "rep" : Set max seconds to win the match
 vietnam_oddball_pickup_cooldown          : 1        : , "sv"           : Cooldown time before oddball is available for pickup
 vietnam_player_breathing                 : 1        : , "sv", "rep"    :
@@ -2141,6 +2169,7 @@ vietnam_prone_recoil                     : 1        : , "sv", "rep"    : Recoil 
 vietnam_reload_explosion_manifest        : cmd      :                  :
 vietnam_ricochets_enabled                : 1        : , "sv", "cheat", "rep" :
 vietnam_spawnableprop_damage_by_owner    : 0        : , "sv"           : Decide whether spawnable prop can be damaged by the owner.
+vietnam_spawnroom_outline_player         : 1        : , "sv", "rep"    : Outlines an enemy that's in your spawn. 0 = Off. 1 = On.
 vietnam_spg9_ammo                        : 30       : , "sv", "rep"    : Ammo of this turret.
 vietnam_spg9_damage                      : 250      : , "sv", "rep"    : Rocket explosion damage.
 vietnam_spg9_firerate                    : 0        : , "sv", "rep"    : Rounds per second.
@@ -2148,20 +2177,25 @@ vietnam_spg9_health                      : 500      : , "sv", "rep"    : Health 
 vietnam_spg9_overheat_rate               : 0        : , "sv", "rep"    : At which rate spg9 will increase overheat level.
 vietnam_spg9_radius                      : 384      : , "sv"           : Rocket explosion radius.
 vietnam_spg9_spread                      : 0        : , "sv", "rep"    : Spray in degrees from forward.
+vietnam_spg9_velocity_shoot_rocket       : 2500     : , "sv", "rep"    : Velocity of shoot rocket for recoilless rifles turrets.
+vietnam_spotting                         : 1        : , "sv", "rep"    : Enables spotting for radio callouts and flare guns. 0 = Off. 1 = On. 2 = Flare guns only.
+vietnam_spotting_outline                 : 1        : , "sv", "rep"    : An outline appears when spotting a player from long range. 0 = Off. 1 = On.
 vietnam_wave_challenge_frequency         : 0        : , "sv", "nf", "rep" : Defines the frequency of challenge waves (i.e. defines x, where every x wave is a challenge wave)
 vietnam_zombies_allow_player_bots        : 0        : , "sv", "rep"    : Allow player bots to spawn in Zombie Mode.
 vietnam_zombies_assist_reward            : 30       : , "sv", "nf", "rep" : Credits earned for assist kill to another player.
 vietnam_zombies_currency_bonus_headshot  : 0        : , "sv", "nf", "rep" : Gives a currency bonus for a headshot.
 vietnam_zombies_currency_win_wave        : 0        : , "sv", "nf", "rep" : Provide currency income to all players at the end of each waves, the value will increase with each wave.
 vietnam_zombies_default_carry_weight     : 15       : , "sv", "nf", "rep" : Default weapon carry weight for players in Zombie Mode. They can extend it using special items.
-vietnam_zombies_difficulty_mode          : 1        : , "sv", "nf"     : Switch between four (0-3) difficulty modes.
+vietnam_zombies_difficulty_mode          : 1        : , "sv", "rep"    : Switch between four (0-3) difficulty modes.
 vietnam_zombies_extramagazine_price      : 3000     : , "sv", "nf", "rep" : Cost of extra magazine perk in zombie mode.
+vietnam_zombies_extramagazine_ratio      : 0        : , "sv", "rep"    : Certain percentage of total ammo per extra magazine perk level.
 vietnam_zombies_extranades_price         : 500      : , "sv", "nf", "rep" : Cost of extra nades perk in zombie mode.
 vietnam_zombies_extraprops_price         : 1000     : , "sv", "nf", "rep" : Cost of extra spawnable props perk in zombie mode.
 vietnam_zombies_extraweight_price        : 1500     : , "sv", "nf", "rep" : Cost of extra carry weight perk in zombie mode.
 vietnam_zombies_giveammo_reward          : 250      : , "sv", "nf", "rep" : Credits earned for giving ammo to another player.
 vietnam_zombies_givehealth_reward        : 250      : , "sv", "nf", "rep" : Credits earned for healing another player.
 vietnam_zombies_interim_time             : 60       : , "sv", "nf", "rep" : Duration of interim period in for Zombie Mode
+vietnam_zombies_item_money_value         : 50       : , "sv", "nf", "rep" : Amount of picking and throwing money value.
 vietnam_zombies_max_props                : 5        : , "sv", "nf", "rep" : Max of placed props.
 vietnam_zombies_parachute_price          : 2000     : , "sv", "nf", "rep" : Cost of parachute perk in zombie mode.
 vietnam_zombies_perk_multiplier          : 2        : , "sv", "nf", "rep" : Base for perk price scaling in zombie mode. a in a^x, where x is perk level.
@@ -2268,7 +2302,7 @@ weapon_accuracy_nospread                 : 0        : , "sv", "rep"    : Disable
 weapon_accuracy_shotgun_spread_patterns  : 0        : , "sv", "rep"    :
 weapon_air_spread_scale                  : 1        : , "sv", "rep"    : Scale factor for jumping inaccuracy, set to 0 to make jumping accuracy equal to standing
 weapon_auto_cleanup_time                 : 0        : , "sv"           : If set to non-zero, weapons will delete themselves after the specified time (in seconds) if no players are near.
-weapon_bash_abort_reload                 : 1        : , "sv", "rep"    : If enabled, bashing will abort reload.
+weapon_bash_abort_reload                 : 0        : , "sv", "rep"    : If enabled, bashing will abort reload.
 weapon_damage_falloff                    : 1        : , "sv", "rep"    : Modify weapon damage falloff reduction.
 weapon_firemode_attack_hold              : 1        : , "sv", "rep"    : Allows to fire by holding MOUSE1 button in semi-automatic and burst mode.
 weapon_flamethrower_debug                : 0        : , "sv"           :
@@ -2281,7 +2315,10 @@ weapon_m9a1_radius                       : 5        : , "sv", "rep"    :
 weapon_m9a1_zombie_distance              : 1024     : , "sv", "rep"    :
 weapon_m9a1_zombie_radius                : 7        : , "sv", "rep"    :
 weapon_molotov_maxdetonateslope          : 30       : , "sv", "rep"    : Maximum angle of slope on which the molotov will detonate
-weapon_near_empty_sound                  : 1        : , "sv", "cheat", "rep" :
+weapon_morphine_dmg_scale                : 0        : , "sv", "rep"    : Incoming damage scale while under influence of morphine.
+weapon_morphine_effect_duration          : 20       : , "sv", "rep"    : Effect duration in seconds.
+weapon_morphine_heal                     : 20       : , "sv", "rep"    :
+weapon_near_empty_sound                  : 1        : , "sv", "rep"    : Plays the near empty sound for when you're about to run out of ammo when firing. 0 = Off. 1 = On.
 weapon_recoil_decay1_exp                 : 3        : , "sv", "rep"    : Decay factor exponent for weapon recoil
 weapon_recoil_decay2_exp                 : 8        : , "sv", "rep"    : Decay factor exponent for weapon recoil
 weapon_recoil_decay2_lin                 : 18       : , "sv", "rep"    : Decay factor (linear term) for weapon recoil
@@ -2290,9 +2327,13 @@ weapon_recoil_scale                      : 1        : , "sv", "rep"    : Overall
 weapon_recoil_scale_motion_controller    : 1        : , "sv", "cheat", "rep" : Overall scale factor for recoil. Used to reduce recoil.  Only for motion controllers
 weapon_recoil_vel_decay                  : 4        : , "sv", "rep"    : Decay factor for weapon recoil velocity
 weapon_recoil_view_punch_extra           : 0        : , "sv", "rep"    : Additional (non-aim) punch added to view from recoil
+weapon_reload_full_ammo                  : 0        : , "sv", "rep"    : When you reload it discards the ammo you have left over and reloads a full new magazine from your reserve ammo. 0 = Off. 1 = On
 weapon_reticle_knife_show                : 0        : , "sv", "rep"    : When enabled will show knife reticle on clients. Used for game modes requiring target id display when holding a knife.
 weapon_show_grenade_crosshair            : 1        : , "sv", "rep"    : Enable or disable crosshair for grenades. Enforced by server.
 weapon_showproficiency                   : 0        : , "sv"           :
+weapon_sniper_scope_breath               : 1        : , "sv", "rep"    : Allows holding your breath to maintain perfect accuracy with a sniper for a short amount of time. 0 = Off. 1 = On.
+weapon_sniper_scope_breath_sway          : 1        : , "sv", "rep"    : Sniper sways when you're out of breath. 0 = Off. 1 = On.
+weapon_sniper_scope_glint                : 1        : , "sv", "rep"    : Shows the sniper scope glint from a player scoping in with a sniper rifle. 0 = Off. 1 = On.
 weapon_sniper_scope_motion               : 1        : , "sv", "rep"    : Enables or disables lowering sniper weapon viewmodel while in air.
 weapon_sound_falloff_multiplier          : 1        : , "sv", "cheat", "rep" : Scaling for falloff of weapon firing sounds
 whitelistcmd                             : cmd      :                  : Runs a whitelisted command.
@@ -2375,6 +2416,14 @@ zombie_crow_vert_damping                 : 1        : , "sv"           :
 zombie_dog_attack_damage                 : 5        : , "sv"           :
 zombie_dog_attack_melee_range            : 160      : , "sv"           :
 zombie_dog_attack_range                  : 20       : , "sv"           :
+zombie_dog_burning_attack_damage         : 5        : , "sv"           :
+zombie_dog_burning_attack_melee_range    : 160      : , "sv"           :
+zombie_dog_burning_attack_range          : 20       : , "sv"           :
+zombie_dog_burning_cash_reward           : 0        : , "sv"           :
+zombie_dog_burning_flame_damage          : 3        : , "sv"           :
+zombie_dog_burning_flame_damage_interval : 0        : , "sv"           :
+zombie_dog_burning_ignite_damage_lifetime : 4        : , "sv"           :
+zombie_dog_burning_run_speed             : 170      : , "sv"           :
 zombie_dog_cash_reward                   : 0        : , "sv"           :
 zombie_dog_run_speed                     : 170      : , "sv"           :
 zombie_elephant_attack_damage            : 300      : , "sv"           :
@@ -2410,9 +2459,11 @@ zombie_health_buffalo                    : 1500     : , "sv"           :
 zombie_health_burning                    : 250      : , "sv"           :
 zombie_health_crow                       : 20       : , "sv"           :
 zombie_health_dog                        : 75       : , "sv"           :
+zombie_health_dog_burning                : 75       : , "sv"           :
 zombie_health_elephant                   : 10000    : , "sv"           :
 zombie_health_gun                        : 550      : , "sv"           :
 zombie_health_havoc                      : 3000     : , "sv"           :
+zombie_health_killgore                   : 15000    : , "sv"           :
 zombie_health_orange                     : 2000     : , "sv"           :
 zombie_health_ranged                     : 300      : , "sv"           :
 zombie_health_rat                        : 1        : , "sv"           :
@@ -2420,6 +2471,28 @@ zombie_health_regular                    : 100      : , "sv"           :
 zombie_health_screamer                   : 500      : , "sv"           :
 zombie_health_slasher                    : 225      : , "sv"           :
 zombie_jump_height                       : 50       : , "sv"           :
+zombie_killgore_attack_damage            : 75       : , "sv"           :
+zombie_killgore_attack_melee_range       : 80       : , "sv"           :
+zombie_killgore_attack_range             : 40       : , "sv"           :
+zombie_killgore_cash_reward              : 0        : , "sv"           :
+zombie_killgore_flame_damage             : 1        : , "sv"           :
+zombie_killgore_flame_damage_interval    : 0        : , "sv"           :
+zombie_killgore_health_regeneration      : 20       : , "sv"           :
+zombie_killgore_health_regeneration_interval : 0        : , "sv"           :
+zombie_killgore_ignite_damage_lifetime   : 3        : , "sv"           :
+zombie_killgore_rage_speed               : 300      : , "sv"           :
+zombie_killgore_refire_cooldown_time     : 25       : , "sv"           :
+zombie_killgore_rock_damage_ground       : 50       : , "sv"           :
+zombie_killgore_rock_damage_ground_radius : 150      : , "sv"           :
+zombie_killgore_rock_damage_player       : 30       : , "sv"           :
+zombie_killgore_rock_damage_player_radius : 150      : , "sv"           :
+zombie_killgore_rock_elasticity          : 0        : , "sv"           :
+zombie_killgore_rock_friction            : 0        : , "sv"           :
+zombie_killgore_rock_gravity             : 1        : , "sv"           :
+zombie_killgore_rock_maxflames           : 4        : , "sv"           :
+zombie_killgore_rock_velocity            : 1200     : , "sv"           :
+zombie_killgore_run_speed                : 230      : , "sv"           :
+zombie_killgore_walk_speed               : 150      : , "sv"           :
 zombie_mode_debug                        : 0        : , "sv", "cheat"  :
 zombie_mode_stop                         : 0        : , "sv", "cheat"  :
 zombie_orange_attack_damage              : 65       : , "sv"           :
@@ -2478,4 +2551,4 @@ zombie_step_height                       : 18       : , "sv"           :
 zombie_walk_speed                        : 40       : , "sv"           :
 zombie_walk_speed_buffalo                : 40       : , "sv"           :
 --------------
-2477 total convars/concommands
+2550 total convars/concommands
