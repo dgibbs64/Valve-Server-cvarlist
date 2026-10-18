@@ -4,6 +4,9 @@ _resetgamestats                          : cmd      :                  : Erases 
 _restart                                 : cmd      :                  : Shutdown and restart the engine.
 addbot                                   : cmd      :                  : Add a bot. Usage: addbot [-count <n>] [-profile <name>] [-name <botname>] [-team <name>] [-class <name>]
 addip                                    : cmd      :                  : Add an IP address to the ban list.
+af_ang_vel                               : 20       : , "sv", "cheat"  :
+af_throw_grav                            : 1        : , "sv", "cheat"  :
+af_throw_speed                           : 2500     : , "sv", "cheat"  :
 ai_auto_contact_solver                   : 1        : , "sv"           :
 ai_block_damage                          : 0        : , "sv"           :
 ai_clear_bad_links                       : cmd      :                  : Clears bits set on nav links indicating link is unusable
@@ -140,7 +143,6 @@ bot_aim_skill_roll_max                   : 200      : , "sv", "cheat"  :
 bot_aim_spread                           : 1        : , "sv", "cheat"  :
 bot_attack_ignoreblock                   : 0        : , "sv", "cheat"  :
 bot_auto_nav_generate                    : 1        : , "sv"           : Automatically generate navigation mesh if it doesn't exist.
-bot_blast_radius                         : 128      : , "sv", "cheat"  :
 bot_blockhere                            : cmd      :                  : Order the bot to stand and block using a shield
 bot_chatter                              : 0        : , "sv"           : Enable/Disable bot chatter.
 bot_chatter_humanize                     : 1        : , "sv"           : Humanize bot chatter by e.g. simulating typos.
@@ -152,9 +154,9 @@ bot_chatter_whine_chance                 : 0        : , "sv"           : Percent
 bot_clearcond                            : cmd      :                  : Clear condition from the bot
 bot_cycle                                : 1        : , "sv"           : Enable/Disable bot cycling through the server.
 bot_debug                                : 0        : , "sv"           : Display the debug information panel for bots
+bot_debug_counter                        : 0        : , "sv"           :
 bot_debug_invalid_schedule               : 0        : , "sv", "cheat"  :
 bot_debug_ladders                        : 0        : , "sv", "cheat"  :
-bot_debug_projectile_drop                : 0        : , "sv", "cheat"  :
 bot_debug_stuck                          : 0        : , "sv", "cheat"  :
 bot_debug_think_we_fell                  : 0        : , "sv", "cheat"  :
 bot_defend_complete_time                 : 5        : , "sv", "cheat"  :
@@ -166,7 +168,6 @@ bot_enemy_max_chase_time                 : 8        : , "sv", "cheat"  :
 bot_enemy_min_chase_time                 : 4        : , "sv", "cheat"  :
 bot_enemy_near_distance                  : 1024     : , "sv", "cheat"  :
 bot_enemy_path_tolerance                 : 16       : , "sv", "cheat"  :
-bot_fair_fight                           : 1        : , "sv", "cheat"  :
 bot_feeler_trail_time                    : 0        : , "sv", "cheat"  :
 bot_givespecial                          : cmd      :                  : Give full special meter to bot
 bot_goforchest                           : cmd      :                  : Schedules the bot to go after the chest the player is pointing to.
@@ -182,7 +183,6 @@ bot_nearby_pickup_distance               : 256      : , "sv", "cheat"  :
 bot_obj_drop_mag                         : 35       : , "sv", "cheat"  :
 bot_obj_ignore_time                      : 10       : , "sv", "cheat"  :
 bot_profile_dir                          : 0        : , "sv"           : Look up bot profiles from this directory.
-bot_push_away_force                      : 4        : , "sv", "cheat"  :
 bot_pushaway_force                       : 15000    : , "sv", "cheat"  :
 bot_pushaway_max_force                   : 10000    : , "sv", "cheat"  :
 bot_pushaway_movement_multiplier_max     : 1        : , "sv", "cheat"  :
@@ -226,6 +226,7 @@ cl_clock_correction_force_server_tick    : 999      : , "cheat"        : Force c
 cl_clock_showdebuginfo                   : 0        : , "cheat"        : Show debugging info about the clock drift.
 cl_clockdrift_max_ms                     : 150      : , "cheat"        : Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.
 cl_clockdrift_max_ms_threadmode          : 0        : , "cheat"        : Maximum number of milliseconds the clock is allowed to drift before the client snaps its clock to the server's.
+cl_emissive_shader                       : 1        : , "a", "user"    :
 cl_forwardspeed                          : 450      : , "sv", "cheat", "rep" :
 cl_resend                                : 6        :                  : Delay in seconds before the client will resend the 'connect' attempt
 cl_show_connectionless_packet_warnings   : 0        :                  : Show console messages about ignored connectionless packets on the client.
@@ -243,6 +244,29 @@ commentary                               : 0        : , "sv"           : Desired
 commentary_available                     : 0        : , "sv"           : Automatically set by the game when a commentary file is available for the current map.
 commentary_cvarsnotchanging              : cmd      :                  :
 commentary_finishnode                    : cmd      :                  :
+comp_allowdraws                          : 1        : , "sv", "nf", "rep" : Allow round draws if both players die at the same time
+comp_ammogivesshield                     : 1        : , "sv", "nf", "rep" : Gives Shield on Ammo Pickup
+comp_classlimits                         : 1        : , "sv", "nf", "rep" : Amount of Classes per team
+comp_crits                               : 1        : , "sv", "nf", "rep" : Crits in overtime
+comp_disablereadyup                      : 0        : , "sv", "nf", "rep" :  1: Disables readyup 2: Disables round start from readying up
+comp_duplicatetimeout                    : 10       : , "sv", "nf", "rep" :
+comp_forfeit                             : 0        : , "sv", "nf", "rep" : Forfeit
+comp_gamequota                           : 2        : , "sv", "nf", "rep" : Round wins required to win a half
+comp_intermission_music                  : 0        : , "sv", "nf", "rep" : File path to intermission music
+comp_lose_delay                          : 0        : , "sv", "nf", "rep" : How long it takes for the round to end after a team loses
+comp_maxplayers                          : 4        : , "sv", "nf", "rep" : Maximum players per team
+comp_minplayers                          : 2        : , "sv", "nf", "rep" : Minimum players per team
+comp_overtime_roundquota                 : 2        : , "sv", "nf", "rep" : Round wins required to win overtime
+comp_redoround                           : 0        : , "sv", "nf", "rep" : Restart the last round
+comp_roundend_delay                      : 3        : , "sv", "nf", "rep" : When a team wins, how long should it take for round end screen to appear
+comp_roundquota                          : 5        : , "sv", "nf", "rep" : Round wins required to win a half
+comp_roundtimer                          : 130      : , "sv", "nf", "rep" : Round time for Last Team Standing gamemode
+comp_roundtimer_sd                       : 45       : , "sv", "nf", "rep" : Round time for Last Team Standing gamemode
+comp_specialbuildrate                    : 2        : , "sv", "nf", "rep" :
+comp_startdelay_warmup                   : 10       : , "sv", "nf", "rep" : How long it should take before the match begins once every player is ready
+comp_teamone_name                        : 0        : , "sv", "nf", "rep" :
+comp_teamtwo_name                        : 0        : , "sv", "nf", "rep" :
+comp_warmups                             : 1        : , "sv", "nf", "rep" : Warmup rounds
 compready                                : cmd      :                  : Spawn with mp_competitive_respawn
 con_logfile                              : 0        :                  : Console output gets written to this file
 con_timestamp                            : 0        :                  : Prefix console.log entries with timestamps
@@ -259,6 +283,7 @@ debug_fur                                : 0        :                  :
 debug_kothspawns                         : 0        : , "sv", "cheat", "nf", "rep" :
 debug_materialmodifycontrol              : 0        : , "sv"           :
 debug_melee_traces                       : 0        : , "sv", "cheat", "nf" : If set to 1, lines will be drawn for melee swing traces
+debug_path                               : 0        : , "sv", "nf", "rep" : Display player trails of every player.
 debug_physimpact                         : 0        : , "sv"           :
 debug_player_expressions                 : 0        : , "sv", "cheat"  :
 debug_player_spatialspeech               : 0        : , "sv", "cheat"  :
@@ -266,6 +291,7 @@ debug_player_spatialspeech_disable       : 0        : , "sv", "cheat"  :
 debug_player_spatialspeech_mourning      : 0        : , "sv", "cheat"  :
 debug_player_spatialspeech_querydist     : 500      : , "sv", "cheat"  :
 debug_readout_mode                       : 0        : , "sv", "rep"    : Show complete readouts, WIP
+debug_script_proxy_print_buffer          : 0        : , "sv", "cheat"  :
 debug_touchlinks                         : 0        : , "sv"           : Spew touch link activity
 debug_trigger_jump                       : 0        : , "sv", "cheat"  :
 decalfrequency                           : 10       : , "sv", "nf"     :
@@ -321,11 +347,13 @@ ent_rbox                                 : cmd      :                  : Display
 ent_remove                               : cmd      :                  : Removes the given entity(s)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_remove_all                           : cmd      :                  : Removes all entities of the specified type  Arguments:    {entity_name} / {class_name}
 ent_rotate                               : cmd      :                  : Rotates an entity by a specified # of degrees
+ent_script_dump                          : cmd      :                  : Dumps the names and values of this entity's script scope to the console  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_setname                              : cmd      :                  : Sets the targetname of the given entity(s)  Arguments:    {new entity name} {entity_name} / {class_name} / no argument picks what player is looking at
 ent_show_response_criteria               : cmd      :                  : Print, to the console, an entity's current criteria set used to select responses.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 ent_step                                 : cmd      :                  : When 'ent_pause' is set this will step through one waiting input / output message at a time.
 ent_teleport                             : cmd      :                  : Teleport the specified entity to where the player is looking.  Format: ent_teleport <entity name>
 ent_text                                 : cmd      :                  : Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
+ent_text_allow_script                    : 1        : , "sv"           :
 ent_viewoffset                           : cmd      :                  : Displays the eye position for the given entity(ies) in red.  Arguments:    {entity_name} / {class_name} / no argument picks what player is looking at
 exec                                     : cmd      :                  : Execute script file.
 exit                                     : cmd      :                  : Exit the engine.
@@ -605,15 +633,18 @@ mod_touchalldata                         : 1        :                  : Touch m
 mod_trace_load                           : 0        :                  :
 motdfile                                 : 0        : , "sv"           : The MOTD file to load.
 motdfile_text                            : 0        : , "sv"           : The text-only MOTD file to use for clients that have disabled HTML MOTDs.
-moveplayer                               : cmd      :                  : Forces a player to change team.  Format: moveplayer <userid> <team>
-moveplayerid                             : cmd      :                  : Forces a player to change team.  Format: moveplayer <userid> <team>
+moveplayer                               : cmd      :                  : Forces a player to change team.  Format: moveplayer <name> <team>
+moveplayerid                             : cmd      :                  : Forces a player to change team.  Format: moveplayerid <userid> <team>
 mp_afkprotector_chestdroptime            : 20       : , "sv", "nf", "rep" : AFK chest carriers drop the chest after this many seconds of idling
+mp_afkprotector_competitive_time         : 120      : , "sv", "nf", "rep" : Time to go AFK in Comp
 mp_afkprotector_dealmethod               : 1        : , "sv", "nf", "rep" : 0 = Do nothing, 1 = Move to spectator, 2 = Kick from the server, 3 = Move to spectator, but kick if they still AFK.
+mp_afkprotector_force                    : 0        : , "sv", "nf", "rep" : Force AFK protector even on listen servers/competitive
 mp_afkprotector_kickadmins               : 0        : , "sv", "nf", "rep" : Admins lose their immunity to AFK kicks.
 mp_afkprotector_kickspecs                : 0        : , "sv", "nf", "rep" : Always kick inactive spectators. Set to 2 to kick unassigned players as well.
 mp_afkprotector_time                     : 90       : , "sv", "nf", "rep" : Deal with AFK players after this many seconds of idling, see mp_afkprotector_dealmethod for dealing methods.
 mp_afkprotector_trinketdroptime          : 20       : , "sv", "nf", "rep" : AFK trinket carriers drop the trinket after this many seconds of idling
 mp_alldrunk                              : 0        : , "sv", "nf", "rep" :
+mp_allow_bodyimpact                      : 0        : , "sv", "nf", "rep" : Allow damage to be done with a velocity induced body impact.
 mp_allow_bunnyhop                        : 0        : , "sv", "nf", "rep" :
 mp_allow_custom_balance                  : 0        : , "sv", "nf", "rep" : Allow custom weapon/class scripts, reload map to take effect. NOTE: This will flag your server as 'modded'!
 mp_allowNPCs                             : 1        : , "sv", "nf"     :
@@ -668,24 +699,6 @@ mp_combobonus_damage                     : 1        : , "sv", "nf", "rep" : Max 
 mp_combobonus_finisher                   : 1        : , "sv", "nf", "rep" : Max Combo Multiplier for Finishers
 mp_combobonus_swap_max                   : 2        : , "sv", "cheat", "nf", "rep" : Max Combo Multiplier
 mp_combobonus_swap_min                   : 1        : , "sv", "cheat", "nf", "rep" : Max Combo Multiplier
-mp_comp_allowdraws                       : 1        : , "sv", "nf", "rep" : Allow round draws if both players die at the same time
-mp_comp_crits                            : 1        : , "sv", "nf", "rep" : Crits in overtime
-mp_comp_forfeit                          : 0        : , "sv", "nf", "rep" : Forfeit
-mp_comp_gamequota                        : 2        : , "sv", "nf", "rep" : Round wins required to win a half
-mp_comp_overtime_roundquota              : 2        : , "sv", "nf", "rep" : Round wins required to win overtime
-mp_comp_respawnables_boardinghook        : 1        : , "sv", "nf", "rep" : Amount of boardinghooks allowed per game
-mp_comp_respawnables_caltrops            : 2        : , "sv", "nf", "rep" : Amount of caltrops allowed per game
-mp_comp_respawnables_limited             : 0        : , "sv", "nf", "rep" : Limited respawns for items
-mp_comp_respawnables_parrots             : 15       : , "sv", "nf", "rep" : Amount of parrots allowed per game
-mp_comp_respawnables_powderkeg           : 0        : , "sv", "nf", "rep" : Amount of powderkegs allowed per game
-mp_comp_respawnables_smokebombs          : 1        : , "sv", "nf", "rep" : Amount of smokebombs allowed per game
-mp_comp_retryround                       : 0        : , "sv", "nf", "rep" : Restart the last round
-mp_comp_roundend_delay                   : 3        : , "sv", "nf", "rep" : When a team wins, how long should it take for round end screen to appear
-mp_comp_roundquota                       : 3        : , "sv", "nf", "rep" : Round wins required to win a half
-mp_comp_roundtimer                       : 130      : , "sv", "nf", "rep" : Round time for Last Team Standing gamemode
-mp_comp_roundtimer_sd                    : 45       : , "sv", "nf", "rep" : Round time for Last Team Standing gamemode
-mp_comp_startdelay                       : 3        : , "sv", "nf", "rep" : ugh
-mp_comp_warmups                          : 1        : , "sv", "nf", "rep" : Warmup rounds
 mp_competitive                           : 0        : , "sv", "nf", "rep" : Forces Competitive rules on all maps. Change takes effect immediately.
 mp_decals                                : 200      : , "a"            :
 mp_default_assassinate                   : 0        : , "sv", "nf", "rep" : Health required to instakill with assassin special
@@ -693,9 +706,12 @@ mp_default_assassinate_backstab          : 0        : , "sv", "nf", "rep" : Heal
 mp_default_assassinate_distance          : 1650     : , "sv", "nf", "rep" : Distance before enemies are no longer shown to the assassin
 mp_default_assassinate_floor             : 45       : , "sv", "nf", "rep" : Health required to instakill with assassin special
 mp_default_assassinate_sounddistance     : 250      : , "sv", "nf", "rep" : Distance before enemies are no longer shown to the assassin
+mp_default_assbow_poisontime             : 5        : , "sv", "nf"     :
 mp_default_assspecial_speedmult          : 1        : , "sv", "nf", "rep" :
 mp_default_blockspeed                    : 0        : , "sv", "nf", "rep" : Speed multiplier for blockspeed
+mp_default_chukonu_speed                 : 0        : , "sv", "nf", "rep" : Minimum Chukonu Movespeed
 mp_default_hinderedspeed                 : 100      : , "sv", "nf", "rep" :
+mp_default_impactdamage                  : 90       : , "sv", "nf", "rep" : Maximum damage done with a velocity induced body impact.
 mp_default_jumpspread                    : 0        : , "sv", "nf", "rep" : Added spread when jumping with ranged weapons
 mp_default_shieldbashdelay               : 1        : , "sv", "nf", "rep" : Time between bash and attack
 mp_default_shieldbashtime                : 1        : , "sv", "nf", "rep" : Time to attack with a post-bash swing
@@ -711,7 +727,7 @@ mp_disable_autokick                      : cmd      :                  : Prevent
 mp_disable_dodge                         : 0        : , "sv", "nf", "rep" :
 mp_disable_kick                          : 0        : , "sv", "nf", "rep" : Enable/Disable kick.
 mp_disable_respawn_times                 : 0        : , "sv", "nf", "rep" : Disable respawn times
-mp_disable_wallkick                      : 0        : , "sv", "nf", "rep" : Enable/Disable wallkick.
+mp_disable_wallkick                      : 1        : , "sv", "nf", "rep" : Enable/Disable wallkick.
 mp_disabledteam                          : 0        : , "sv", "nf", "rep" : Team that is disabled
 mp_disablepickups                        : 0        : , "sv", "nf", "rep" : Disables item pickups.
 mp_disablespecial                        : 0        : , "sv", "nf", "rep" : Disables player specials.
@@ -725,10 +741,10 @@ mp_dodge_duration                        : 1        : , "sv", "nf", "rep" :
 mp_dodge_easing_mode                     : 4        : , "sv", "nf", "rep" :
 mp_dodge_forwardonly_cameraspeed         : 255      : , "sv", "cheat", "nf", "rep" :
 mp_dodge_midair                          : 0        : , "sv", "nf", "rep" :
+mp_dodge_pistolinaccuracy                : 1        : , "sv", "nf", "rep" :
 mp_dodge_speed_boost_time                : 0        : , "sv", "nf", "rep" :
 mp_dodge_speed_multiplier_min            : 0        : , "sv", "nf", "rep" :
 mp_dodge_speed_multiplier_peak           : 2        : , "sv", "nf", "rep" :
-mp_dodge_swingdelay                      : 0        : , "sv", "rep"    :
 mp_door_blocked_react_dist               : 350      : , "sv", "nf", "rep" : How far away should we consider a door to be in blocking range
 mp_door_dist                             : 100      : , "sv", "nf", "rep" :
 mp_drunk_heal                            : 20       : , "sv", "nf", "rep" : Drunky
@@ -741,7 +757,7 @@ mp_explosion_blockration                 : 0        : , "sv", "rep"    :
 mp_fadetoblack                           : 0        : , "sv", "nf", "rep" : fade a player's screen to black when he dies
 mp_fallbonus_damage                      : 1        : , "sv", "nf", "rep" : Max Fall bonus
 mp_fallbonus_decrement                   : 1        : , "sv", "nf", "rep" :
-mp_fallbonus_maxspeed                    : 40       : , "sv", "nf", "rep" : Maximum speed for max fall bonus
+mp_fallbonus_maxspeed                    : 35       : , "sv", "nf", "rep" : Maximum speed for max fall bonus
 mp_fallbonus_minspeed                    : 15       : , "sv", "nf", "rep" : Minimum speed for max fall bonus
 mp_falldamage                            : 1        : , "sv", "nf"     :
 mp_fastchestrespawn_enabled              : 1        : , "sv", "nf", "rep" : Enabled/Disable fast chest respawn if chest is carried for less than 5 seconds.
@@ -749,7 +765,7 @@ mp_ff_affects_kick_attack                : 1        : , "sv", "nf", "rep" : Can 
 mp_ff_autokick                           : 1        : , "sv", "nf", "rep" : Auto-kick team killers.
 mp_ff_autokick_banminutes                : 30       : , "sv", "nf", "rep" : Ban length in minutes. Set 0 for kick only.
 mp_ff_autokick_limit                     : 5        : , "sv", "nf", "rep" : Auto-kick after this amount of TKs.
-mp_ff_damagescale                        : 0        : , "sv", "nf", "rep" : FF damage gets scaled by this value.
+mp_ff_damagescale                        : 1        : , "sv", "nf", "rep" : FF damage gets scaled by this value.
 mp_ff_message                            : 1        : , "sv", "nf", "rep" : Shows message to a player when their teammate hurts a friend.
 mp_filterdeadchat                        : 0        : , "sv", "nf", "rep" : Should dead player's chat be visible to player's alive
 mp_fixedspread                           : 1        : , "sv", "nf", "rep" : Enable Fixed Spread
@@ -761,6 +777,9 @@ mp_fraglimit                             : 0        : , "sv", "nf", "rep" : The 
 mp_freeforall                            : 0        : , "sv", "nf", "rep" : Enable Free For All.
 mp_freezecam                             : 1        : , "sv", "nf", "rep" : Enables/Disables death cam to freeze on killer when a player dies
 mp_friendlyfire                          : 0        : , "sv", "nf", "rep" : Allows team members to injure other members of their team
+mp_gamemode_gungame                      : 0        : , "sv", "nf", "rep" :
+mp_gamemode_randomizer                   : 0        : , "sv", "nf", "rep" : Give random weapons to players on spawn.
+mp_gamemode_rootjack                     : 0        : , "sv", "nf", "rep" :
 mp_gamemodeintro                         : 1        : , "sv", "nf", "rep" : Show game mode intros for players at round start
 mp_glow_distance                         : 600      : , "sv", "cheat", "nf", "rep" :
 mp_headicons                             : 1        : , "sv", "nf", "rep" : Show player head icons such as voice/text chat and nemesis. Disabling this ignores client option.
@@ -796,12 +815,13 @@ mp_kick_physics_maxvolume                : 300      : , "sv", "nf", "rep" : Max 
 mp_kick_physics_push                     : 400      : , "sv", "nf", "rep" : Kick physics push.
 mp_kick_physics_pushmulti                : 300      : , "sv", "nf", "rep" : Kick physics push multiplier.
 mp_kick_player_push                      : 250      : , "sv", "nf", "rep" : Kick player push.
+mp_kick_player_push_boot                 : 310      : , "sv", "nf", "rep" : Kick player push.
 mp_kick_player_push_juggernaut           : 1000     : , "sv", "nf", "rep" : Kick player push.
 mp_kick_range                            : 60       : , "sv", "nf", "rep" : Kick range.
 mp_kick_range_air                        : 70       : , "sv", "nf", "rep" : Kick range when midair.
 mp_kick_reflectradius                    : 42       : , "sv", "nf", "rep" : Kick reflect radius.
 mp_kick_wall_delay                       : 5        : , "sv", "nf", "rep" : Delay between kicks.
-mp_kick_wallkick_boost                   : 275      : , "sv", "rep"    : Wall boost for kicking
+mp_kick_wallkick_boost                   : 350      : , "sv", "rep"    : Wall boost for kicking
 mp_kick_wallkick_upboost                 : 70       : , "sv", "rep"    : Wall boost for kicking
 mp_killdelay                             : 0        : , "sv"           :
 mp_koth_fight_invuln_time                : 0        : , "sv", "cheat", "nf", "rep" :
@@ -813,7 +833,10 @@ mp_koth_powerup_threshold                : 3        : , "sv", "nf", "rep" :
 mp_koth_respawn_time                     : 7        : , "sv", "nf", "rep" :
 mp_limitteams                            : 1        : , "sv", "nf", "rep" : Max. allowed diference between team player counts
 mp_longbow_fanspread                     : 20       : , "sv", "nf", "rep" :
+mp_longbow_maxhits                       : 2        : , "sv", "nf", "rep" :
 mp_longbow_shotcount                     : 4        : , "sv", "nf", "rep" :
+mp_lord_kick_physics_maxmass             : 600      : , "sv", "nf", "rep" : Max object mass that can be kicked.
+mp_lord_punch_pushforce                  : 550      : , "sv", "rep"    :
 mp_lts_adjustroundtimer                  : 1        : , "sv", "nf", "rep" : Should the round timer be adjusted by player count?
 mp_lts_alivecheck_method                 : 0        : , "sv", "nf", "rep" : 0 = Check every second (classic default) 1 = Check on player death
 mp_lts_allowdraws                        : 1        : , "sv", "nf", "rep" : Allow round draws. If not, when time limit is hit during sudden death, the win goes to team with more HP
@@ -821,9 +844,10 @@ mp_lts_override_sdtime                   : 0        : , "sv", "nf", "rep" : Alwa
 mp_lts_roundend_delay                    : 1        : , "sv", "nf", "rep" : When a team wins, how long should it take for round end screen to appear
 mp_mapcycle_empty_timeout_seconds        : 0        : , "sv", "rep"    : If nonzero, server will cycle to the next map if it has been empty on the current map for N seconds
 mp_matchbased                            : 0        : , "sv", "nf", "rep" : Should the time/round limited games be considered as matches
+mp_melee_dodge_swingdelay                : 0        : , "sv", "rep"    : time locked out of rolling after swinging
 mp_meleedamagemultiplier                 : 1        : , "sv", "nf", "rep" : Melee damage multiplier
 mp_meleeparrytime                        : 0        : , "sv", "nf", "rep" : Time it takes to parry
-mp_meleerangeboost                       : 0        : , "sv", "nf", "rep" : Increases the range of all melee weapons by this amount (see also mp_meleerangescale)
+mp_meleerangeboost                       : 5        : , "sv", "nf", "rep" : Increases the range of all melee weapons by this amount (see also mp_meleerangescale)
 mp_meleerangescale                       : 1        : , "sv", "nf", "rep" : Scales the range of all melee weapons by this amount (scale is applied first, then boost)
 mp_moveduringsuicide                     : 0        : , "sv", "nf", "rep" : Determines whether players can move during sucidie.
 mp_nemesis                               : 1        : , "sv", "nf", "rep" : Enable dominations and revenges.
@@ -835,12 +859,16 @@ mp_noparrystun                           : 0        : , "a", "sv", "nf", "rep" :
 mp_nospread                              : 0        : , "sv", "nf", "rep" : Enable Spread
 mp_nowaittime                            : 0        : , "sv", "rep"    : Bypass wait time
 mp_overtime_dm                           : 120      : , "sv", "nf", "rep" : If non-zero, overtime will be used if there's a draw, in seconds.
+mp_parrot_cook_lifetime                  : 5        : , "sv", "nf", "rep" :
 mp_parrot_diewithowner                   : 0        : , "sv", "nf"     :
 mp_parrot_flamestodie                    : 3        : , "sv", "nf", "rep" :
 mp_parrot_kick                           : 0        : , "sv", "nf", "rep" : Kick parrots to death.
-mp_parrot_kickforce                      : 800      : , "sv", "nf", "rep" :
-mp_parrot_knockouttime                   : 2        : , "sv", "nf", "rep" :
+mp_parrot_kickforce                      : 7500     : , "sv", "nf", "rep" :
+mp_parrot_knockouttime                   : 4        : , "sv", "nf", "rep" :
+mp_parrot_pickup                         : 15       : , "sv", "rep"    :
+mp_parrot_stuck_noclip_time              : 5        : , "sv", "nf", "rep" :
 mp_pausegame                             : cmd      :                  : Pauses the game on next round start
+mp_payload_defusespeed                   : 80       : , "sv", "nf", "rep" :
 mp_perfectparry_time                     : 1        : , "a", "sv", "nf", "rep" : Time parry lasts for
 mp_pickup_lifetime                       : 60       : , "sv", "nf", "rep" : Time in seconds before a projectile pickup disappears
 mp_pickup_radius                         : 12       : , "sv", "nf", "rep" : Radius of a pickup
@@ -854,6 +882,7 @@ mp_ping_time                             : 0        : , "sv", "nf", "rep" : Time
 mp_player_pushaway_max_force             : 200      : , "sv", "rep", "server_can_execute" :
 mp_player_pushaway_min_force             : 20       : , "sv", "rep", "server_can_execute" :
 mp_poison_damage                         : 0        : , "sv", "nf", "rep" : Max health of a character that is poisoned
+mp_poison_damage_lord                    : 150      : , "sv", "nf", "rep" : Max health of a character that is poisoned
 mp_poison_damagetime                     : 6        : , "sv", "nf", "rep" : Seconds poison lasts
 mp_poison_tick                           : 0        : , "sv", "nf", "rep" : Poison tick
 mp_poop_dmg                              : 2        : , "sv", "nf", "rep" :
@@ -861,7 +890,6 @@ mp_poop_headshot                         : 0        : , "sv", "nf", "rep" :
 mp_projectile_use_combinedboxes          : 0        : , "sv", "nf", "rep" : Use vague Hitbox detection along with BBox
 mp_projectile_use_hitboxes               : 0        : , "sv", "nf", "rep" : Use hitboxes for projectile hit calculation.
 mp_randomclass                           : 0        : , "a", "sv"      :
-mp_randomizer                            : 0        : , "sv", "nf", "rep" : Give random weapons to players on spawn.
 mp_randsuddendeath                       : 0        : , "sv", "nf", "rep" : Pecrent chance sudden death will occur right at the start of the round. (Time for round will still be as usual)
 mp_respawntime                           : 5        : , "sv", "nf", "rep" : Respawn time in seconds
 mp_respawntime_waves                     : 10       : , "sv", "nf", "rep" : Respawn time in seconds
@@ -877,9 +905,11 @@ mp_roundtime_dm                          : 0        : , "sv", "nf", "rep" : If n
 mp_roundtimer_lastteamstanding           : 45       : , "sv", "nf", "rep" : Round time for Last Team Standing gamemode
 mp_ruleset                               : 0        : , "sv", "nf", "rep" : Which ruleset should be used.
 mp_scaledamage                           : 1        : , "sv", "cheat", "nf", "rep" :
+mp_scaleknockback                        : 1        : , "a", "sv", "nf", "rep" : Disables Knockback
 mp_shield_chargedecaytime                : 2        : , "sv", "rep"    : Charge shield on damage.
 mp_shield_chargeondamage                 : 1        : , "sv", "rep"    : Charge shield on damage.
 mp_shield_chargepercent                  : 0        : , "sv", "rep"    : Shield charge gained per damage.
+mp_shield_lordheal                       : 0        : , "sv", "rep"    : Shield boost time.
 mp_shield_oldstun                        : 0        : , "sv", "rep"    : Use the old shield stun system.
 mp_shield_speedboost                     : 30       : , "sv", "nf", "rep" :
 mp_shield_speedboosttime                 : 0        : , "sv", "rep"    : Shield boost time.
@@ -890,15 +920,17 @@ mp_smokebomb_respawn_time                : 50       : , "sv", "nf", "rep" : Smok
 mp_special_duration_assassin             : 17       : , "sv", "nf", "rep" : Assassin special duration
 mp_special_duration_berserker            : 15       : , "sv", "nf", "rep" : Berserker special duration
 mp_special_duration_gestir               : 3        : , "sv", "nf", "rep" : gestir special duration
+mp_special_max_bloat                     : 1        : , "sv", "nf"     : Special spawn requirement bloat
 mp_special_spear_movespeed               : 245      : , "sv", "nf", "rep" : Speed gestir charge moves when NOT holding m1
 mp_special_spear_movespeed_fast          : 340      : , "sv", "nf", "rep" : Speed gestir charge moves when holding m1
 mp_stamina_decay                         : 3        : , "sv", "nf", "rep" : Maximum actions before achieving max cooldown
 mp_stamina_maxactions                    : 4        : , "sv", "nf", "rep" : Maximum actions before achieving max cooldown
 mp_stamina_maxcooldown                   : 6        : , "sv", "nf", "rep" : Maximum time between actions
-mp_stamina_mincooldown                   : 0        : , "sv", "nf", "rep" : Minimum time between actions
+mp_stamina_mincooldown                   : 2        : , "sv", "nf", "rep" : Minimum time between actions
 mp_stomp_damage                          : 175      : , "sv", "nf"     :
 mp_suddendeathtime                       : 45       : , "sv", "nf", "rep" : Time in seconds that Sudden Death Mode will last
 mp_suicide_interval                      : 5        : , "sv"           : Time to wait before player can suicide again
+mp_swapteams                             : cmd      :                  : Swaps two/three teams.
 mp_teamlist                              : 0        : , "sv", "nf"     :
 mp_teamoverride                          : 1        : , "sv"           :
 mp_teamplay                              : 0        : , "sv", "nf"     :
@@ -911,17 +943,18 @@ mp_temperature_fire_heatratio            : 4        : , "sv", "nf", "rep" : Heat
 mp_temperature_freeze                    : -100     : , "sv", "nf", "rep" : Temperature to freeze
 mp_temperature_freeze_heatratio          : 5        : , "sv", "nf", "rep" : Heat reduced by generic freeze
 mp_temperature_freeze_impervious         : 0        : , "sv", "nf", "rep" : Time impervious to the person who froze you
-mp_temperature_frozen                    : -135     : , "sv", "nf", "rep" : Minimum temperature
+mp_temperature_frozen                    : -150     : , "sv", "nf", "rep" : Minimum temperature
 mp_temperature_hot                       : 66       : , "sv", "nf", "rep" : Temperature to hot debuff
 mp_temperature_hurt_time                 : 0        : , "sv", "nf", "rep" : Time between temperature damage ticks
 mp_temperature_ignite                    : 100      : , "sv", "nf", "rep" : Temperature to ignite
+mp_temperature_lockout                   : 2        : , "sv", "nf", "rep" : Time between temperature change after extinguishing
 mp_temperature_normal                    : 0        : , "sv", "nf", "rep" : Temperature default
 mp_temperature_rollextinguish            : 30       : , "sv", "nf", "rep" : Temperature reduced on roll
 mp_temperature_stall                     : 2        : , "sv", "nf", "rep" : Temperature stall on damage
 mp_temperature_tick                      : 1        : , "sv", "nf", "rep" : Temperature tick
 mp_temperature_tick_berserk              : 2        : , "sv", "nf", "rep" : Temperature tick
 mp_temperature_tick_time                 : 0        : , "sv", "nf", "rep" : Temperature tick time
-mp_territory_regen_bloat                 : 2        : , "sv", "nf", "rep" : Territory Regen Bloat
+mp_territory_regen_bloat                 : 1        : , "sv", "nf", "rep" : Territory Regen Bloat
 mp_territorycapdeteriorate               : 60       : , "sv", "nf", "rep" : Time in seconds it takes for a capture to fully deteriorate.
 mp_territorywindelay                     : 30       : , "sv", "nf", "rep" : Win delay after all territories have been captured by the same team.
 mp_thirdperson                           : 0        : , "sv", "nf", "rep" : Allow players to use thirdperson mode.
@@ -933,17 +966,20 @@ mp_trinketrespawn                        : 30       : , "sv", "nf", "rep" : How 
 mp_trinketwars_killmultiplier            : 1        : , "sv", "nf", "rep" : The number of kills required to win the game is the total number of players multiplied by this value.
 mp_trinketwars_maxkills                  : 32       : , "sv", "nf", "rep" : Don't allow the number of kills required to win the game to be more than this value.
 mp_trinketwars_minkills                  : 4        : , "sv", "nf", "rep" : Don't allow the number of kills required to win the game to be less than this value.
+mp_twosword_launchforce                  : 250      : , "sv", "rep"    :
+mp_twosword_pullforce                    : 2        : , "sv", "rep"    :
+mp_twosword_pushforce                    : 3        : , "sv", "rep"    :
 mp_unpausegame                           : cmd      :                  : Resume the game
-mp_vikingshield_comedown                 : 0        : , "sv", "nf"     :
-mp_vikingshield_force                    : 340      : , "sv", "nf"     :
-mp_vikingshield_specialpush              : 800      : , "sv", "nf"     :
-mp_vikingshield_specialpush2             : 250      : , "sv", "nf"     :
+mp_vikingshield_comedown                 : 0        : , "sv", "nf", "rep" :
+mp_vikingshield_force                    : 340      : , "sv", "nf", "rep" :
+mp_vikingshield_specialpush              : 800      : , "sv", "nf", "rep" :
+mp_vikingshield_specialpush2             : 250      : , "sv", "nf", "rep" :
 mp_waitingforplayers_cancel              : 0        : , "sv"           : Set to 1 to end the WaitingForPlayers period.
 mp_waitingforplayers_restart             : 0        : , "sv"           : Set to 1 to start or restart the WaitingForPlayers period.
 mp_waitingforplayers_time                : 0        : , "sv"           : WaitingForPlayers time length in seconds
 mp_walkspeed_berserk                     : 1        : , "sv", "nf", "rep" : Berserker's movespeed bonus whilst berserking.
 mp_walkspeed_chest                       : 170      : , "sv", "nf", "rep" : Chest static walkspeed.
-mp_walkspeed_hook_user                   : 120      : , "sv", "nf", "rep" : Hook Puller static walkspeed.
+mp_walkspeed_hook_user                   : 80       : , "sv", "nf", "rep" : Hook Puller static walkspeed.
 mp_walkspeed_hook_victim                 : 0        : , "sv", "nf", "rep" : Hook Pullee static walkspeed.
 mp_weaponstay                            : 0        : , "sv", "nf"     :
 mp_winlimit                              : 0        : , "sv", "nf", "rep" : Win limit in number of rounds
@@ -1219,21 +1255,21 @@ plugin_print                             : cmd      :                  : Prints 
 plugin_unload                            : cmd      :                  : plugin_unload <index> : unloads a plugin
 plugin_unpause                           : cmd      :                  : plugin_unpause <index> : unpauses a disabled plugin
 plugin_unpause_all                       : cmd      :                  : unpauses all disabled plugins
-pop_a_zit                                : cmd      :                  : Pops zits... for debugging
+pop                                      : cmd      :                  : Explode whatever living thing is under your crosshair
 prop_active_gib_limit                    : 999999   : , "sv"           :
 prop_active_gib_max_fade_time            : 999999   : , "sv"           :
 prop_crosshair                           : cmd      :                  : Shows name for prop looking at
 prop_debug                               : cmd      :                  : Toggle prop debug mode. If on, props will show colorcoded bounding boxes. Red means ignore all damage. White means respond physically to damage but never break. Green maps health in the range of 100 down to 1.
 prop_dynamic_create                      : cmd      :                  : Creates a dynamic prop with a specific .mdl aimed away from where the player is looking.  Arguments: {.mdl name}
 prop_physics_create                      : cmd      :                  : Creates a physics prop with a specific .mdl aimed away from where the player is looking.  Arguments: {.mdl name}
-props_break_max_pieces                   : -1       : , "sv"           : Maximum prop breakable piece count (-1 = model default)
+props_break_max_pieces                   : -1       : , "sv", "rep"    : Maximum prop breakable piece count (-1 = model default)
 props_break_max_pieces_perframe          : -1       : , "sv", "rep"    : Maximum prop breakable piece count per frame (-1 = model default)
 pvk2_max_usercmd_future_ticks            : 8        : , "sv"           : Prevents clients from running usercmds too far in the future. Prevents speed hacks.
 pvk2_ping                                : cmd      :                  :
 pvk2_selfping                            : cmd      :                  :
 pvk2_version                             : 1        : , "sv"           :
 pvk2_version_server                      : cmd      :                  : PVK2 Server Version
-pvk2_vtest_loadouts                      : 2        : , "sv", "rep"    :
+pvk2_vtest_loadouts                      : 0        : , "sv", "rep"    :
 quit                                     : cmd      :                  : Exit the engine.
 r_3dnow                                  : cmd      :                  : Enable/disable 3DNow code
 r_AirboatViewDampenDamp                  : 1        : , "sv", "cheat", "nf", "rep" :
@@ -1373,14 +1409,14 @@ rr_debugrule                             : 0        : , "sv"           : If set 
 rr_dumpresponses                         : 0        : , "sv"           : Dump all response_rules.txt and rules (requires restart)
 rr_reloadresponsesystems                 : cmd      :                  : Reload all response system scripts.
 rs_cvar                                  : cmd      :                  : Applies a cvar in ruleset context.
-rtv_allow                                : 1        : , "sv", "rep"    : Allow change level vote issue
-rtv_enabletime                           : 60       : , "sv", "nf", "rep" : Time before RTV Enables
+rtv_allow                                : 1        : , "sv", "rep"    : Allow rock the vote.
+rtv_enabletime                           : 60       : , "sv", "nf"     : Time before RTV Enables
+rtv_map_prefix_filter_list               : 0        : , "sv"           : Filter given map prefixes when populating maps from mapcycle or loose files
 rtv_nextlevel_random                     : 1        : , "sv"           : Next level will be randomized from mapcycle
-rtv_populate_loose_files                 : 1        : , "sv", "rep"    : Searches maps directory for all .bsp files and adds those to the random selection pool.
-rtv_postvoteaction                       : 1        : , "sv"           : 0 = Switch immediately to nextlevel vote winner, 1 = Override nextlevel vote with new RTV selection
-rtv_quota                                : 0        : , "sv", "nf", "rep" : Percent of player votes required to change map
-rtv_search_extensive                     : 0        : , "sv"           : Searches extra sources for maps. 0 checks for maps via ConVar 'mapcyclefile'. 1 checks for maps in all available map sources instead, but still prioritizes mapcyclefile.
-rtvcyclefile                             : 0        : , "sv"           : Name of the .txt file used to cycle the maps on multiplayer servers
+rtv_populate_loose_files                 : 0        : , "sv"           : Searches maps directory for all .bsp files and adds those to the random selection pool.
+rtv_postvoteaction                       : 0        : , "sv"           : 0 = Switch immediately to nextlevel vote winner, 1 = Override nextlevel vote with new RTV selection
+rtv_quota                                : 0        : , "sv", "nf"     : Percent of player votes required to change map
+rtv_sm_workaround                        : 1        : , "sv"           : If SourceMod RTV or mapchooser is detected, disable built-in implementation
 ruleset_dump_validated_cvars             : cmd      :                  : Dump cvars that are available for rulesets.
 ruleset_get_hash                         : cmd      :                  : Get checksum of the current ruleset.
 ruleset_reload_scripts                   : cmd      :                  : Reloads weapon scripts.
@@ -1400,6 +1436,19 @@ scene_showfaceto                         : 0        : , "a", "sv"      : When pl
 scene_showlook                           : 0        : , "a", "sv"      : When playing back, show the directions of look events.
 scene_showmoveto                         : 0        : , "a", "sv"      : When moving, show the end location.
 scene_showunlock                         : 0        : , "a", "sv"      : Show when a vcd is playing but normal AI is running.
+script                                   : cmd      :                  : Run the text as a script
+script_allow_entity_creation_midgame     : 1        : , "sv"           : Allows VScript files to create entities mid-game, as opposed to only creating entities on startup.
+script_connect_debugger_on_mapspawn      : 0        : , "sv"           :
+script_debug                             : cmd      :                  : Connect the vscript VM to the script debugger
+script_dump_all                          : cmd      :                  : Dump the state of the VM to the console
+script_dump_commands                     : cmd      :                  :
+script_dump_hooks                        : cmd      :                  :
+script_dump_scope                        : cmd      :                  : Usage: script_dump_scope <entindex>
+script_execute                           : cmd      :                  : Run a vscript file
+script_help                              : cmd      :                  : Output help for script functions, optionally with a search string
+script_reload_code                       : cmd      :                  : Execute a vscript file, replacing existing functions with the functions in the run script
+script_reload_entity_code                : cmd      :                  : Execute all of this entity's VScripts, replacing existing functions with the functions in the run scripts
+script_reload_think                      : cmd      :                  : Execute an activation script, replacing existing functions with the functions in the run script
 server_game_time                         : cmd      :                  : Gives the game time in seconds (server's curtime)
 servercfgfile                            : 0        : , "sv"           :
 setang                                   : cmd      :                  : Snap player eyes to specified pitch yaw <roll:optional> (must have sv_cheats).
@@ -1471,6 +1520,8 @@ surfaceprop                              : cmd      :                  : Reports
 sv_accelerate                            : 10       : , "sv", "nf", "rep" :
 sv_admin_groupid                         : 0        : , "a", "sv", "rep" :
 sv_admin_grouptag                        : 0        : , "a", "sv", "rep" :
+sv_airaccel_bondispecial                 : 20       : , "sv", "nf", "rep" :
+sv_airaccel_lord                         : 20       : , "sv", "nf", "rep" :
 sv_airaccel_walljump                     : 35       : , "sv", "nf", "rep" :
 sv_airaccelerate                         : 10       : , "sv", "nf", "rep" :
 sv_allow_color_correction                : 1        : , "rep"          : Allow or disallow clients to use color correction on this server.
@@ -1480,7 +1531,7 @@ sv_allow_votes                           : 1        : , "sv"           : Allow v
 sv_allow_wait_command                    : 1        : , "rep"          : Allow or disallow the wait command on clients connected to this server.
 sv_allowdownload                         : 1        :                  : Allow clients to download files
 sv_allowupload                           : 1        :                  : Allow clients to upload customizations files
-sv_alltalk                               : 0        : , "sv", "nf", "rep" : Players can hear all other players, no team restrictions
+sv_alltalk                               : 0        : , "sv", "nf", "rep" : 1: Players can hear all other players, no team restrictions 2: Players can only hear other players if they are within the proximity distance, but can always hear teammates.
 sv_alternateticks                        : 0        : , "sp"           : If set, server only simulates entities on even numbered ticks.
 sv_autosave                              : 1        : , "sv"           : Set to 1 to autosave game on level transition. Does not affect autosave triggers.
 sv_benchmark_autovprofrecord             : 0        : , "sv"           : If running a benchmark and this is set, it will record a vprof file over the duration of the benchmark with filename benchmark.vprof.
@@ -1495,12 +1546,12 @@ sv_caltrops_count                        : 10       : , "sv", "rep"    :
 sv_caltrops_crittime                     : 0        : , "sv", "rep"    :
 sv_caltrops_firstcrittime                : 2        : , "sv", "rep"    :
 sv_caltrops_lifetime                     : 45       : , "sv", "rep"    :
-sv_caltrops_melee_damage_mult            : 0        : , "sv", "cheat", "rep" :
-sv_caltrops_outpush                      : 175      : , "sv", "nf", "rep" :
+sv_caltrops_melee_damage_mult            : 0        : , "sv", "rep"    :
+sv_caltrops_outpush                      : 205      : , "sv", "nf", "rep" :
 sv_caltrops_respawn_time                 : 20       : , "sv", "rep"    :
 sv_caltrops_speed_reduction_mult         : 0        : , "sv", "nf", "rep" :
 sv_caltrops_speed_reduction_time         : 0        : , "sv", "rep"    :
-sv_caltrops_throw_delay                  : 0        : , "sv", "cheat", "rep" : Caltrops throw delay
+sv_caltrops_throw_delay                  : 0        : , "sv", "rep"    : Caltrops throw delay
 sv_caltrops_uppush                       : 210      : , "sv", "nf", "rep" :
 sv_cheats                                : 0        : , "nf", "rep"    : Allow cheats on server
 sv_clearhinthistory                      : cmd      :                  : Clear memory of server side hints displayed to the player.
@@ -1612,6 +1663,7 @@ sv_rcon_whitelist_address                : 0        :                  : When se
 sv_region                                : 255      :                  : The region of the world to report this server in.
 sv_remove_unreasonable_physics           : 1        : , "sv", "rep"    : Removes VPhysics entities that fell out of the map.
 sv_restrict_aspect_ratio_fov             : 1        : , "rep"          : This can be used to limit the effective FOV of users using wide-screen resolutions with aspect ratios wider than 1.85:1 (slightly wider than 16:9).     0 = do not cap effective FOV     1 = limit the effective FOV on windowed mode users using resolutions         greater than 1.85:1     2 = limit the effective FOV on both windowed mode and full-screen users
+sv_script_think_interval                 : 0        : , "sv"           :
 sv_setsteamaccount                       : cmd      :                  : token Set game server account token to use for logging in to a persistent game server account
 sv_showimpacts                           : 0        : , "sv", "rep"    : Shows client (red) and server (blue) bullet impact point
 sv_showladders                           : 0        : , "sv"           : Show bbox and dismount points for all ladders (must be set before level load.)
@@ -1620,6 +1672,7 @@ sv_shutdown                              : cmd      :                  : Sets th
 sv_shutdown_cancel                       : cmd      :                  : Cancels pending sv_shutdown command
 sv_shutdown_timeout_minutes              : 360      : , "rep"          : If sv_shutdown is pending, wait at most N minutes for server to drain before forcing shutdown.
 sv_signon_dos_disconnect                 : 20       :                  : Number of extra signon state confirmations required to disconnect a misbehaving client.
+sv_simbullet_mindamage_range             : 200      : , "sv", "nf", "rep" :
 sv_simbullet_visualize                   : 0        : , "sv", "cheat", "nf", "rep" : Visualize simulated bullets
 sv_skyname                               : 0        : , "a", "sv", "rep" : Current name of the skybox texture
 sv_skyoverride                           : 0        : , "a", "sv", "rep" : Skybox texture to override with in maps. If this is empty, the original skybox will be used.
@@ -1637,9 +1690,10 @@ sv_tags                                  : 0        : , "nf"           : Server 
 sv_test_scripted_sequences               : 0        : , "sv"           : Tests for scripted sequences that are embedded in the world. Run through your map with this set to check for NPCs falling through the world.
 sv_teststepsimulation                    : 1        : , "sv"           :
 sv_thinktimecheck                        : 0        : , "sv"           : Check for thinktimes all on same timestamp.
-sv_throwpistol_angular_impulse_max       : 8        : , "sv", "cheat", "rep" :
-sv_throwpistol_angular_impulse_min       : -8       : , "sv", "cheat", "rep" :
-sv_throwpistol_velocity                  : 450      : , "sv", "cheat", "rep" :
+sv_throwbottle_velocity                  : 450      : , "sv", "rep"    :
+sv_throwpistol_angular_impulse_max       : 8        : , "sv", "rep"    :
+sv_throwpistol_angular_impulse_min       : -8       : , "sv", "rep"    :
+sv_throwpistol_velocity                  : 650      : , "sv", "rep"    :
 sv_tickbase_max_future_time              : 5        : , "sv"           : If non-zero, deal with clients that go too far in the future, in seconds.
 sv_timeout                               : 65       :                  : After this many seconds without a message from a client, the client is dropped
 sv_turbophysics                          : 0        : , "sv", "rep"    : Turns on turbo physics
@@ -1652,6 +1706,7 @@ sv_voiceenable                           : 1        : , "a", "nf"      :
 sv_vote_allow_spectators                 : 0        : , "sv"           : Allow spectators to vote?
 sv_vote_bot_persist                      : 0        : , "sv"           : Should bot vote result persist over level changes and player count?
 sv_vote_changeruleset_restart            : 1        : , "sv"           : Change ruleset vote restarts game?
+sv_vote_comp_creation_timer              : 30       : , "sv"           : How long before a player can attempt to call another vote (in seconds (in competitive )).
 sv_vote_creation_timer                   : 150      : , "sv"           : How long before a player can attempt to call another vote (in seconds).
 sv_vote_extendmap_time                   : 10       : , "sv"           : Map time limit will be incremented by this value (in minutes) if extend map vote passes
 sv_vote_failure_timer                    : 300      : , "sv"           : A vote that fails cannot be re-submitted for this long
@@ -1693,6 +1748,7 @@ Test_RemoveAllRandomEntities             : cmd      :                  :
 Test_SpawnRandomEntities                 : cmd      :                  :
 test_zerkme                              : cmd      :                  : lol
 testscript_debug                         : 0        :                  : Debug test scripts.
+teststun                                 : cmd      :                  : Stuns the player
 tf_escort_score_rate                     : 1        : , "sv", "cheat"  : Score for escorting the train, in points per second
 think_limit                              : 0        : , "sv", "rep"    : Maximum think time in milliseconds, warning is printed if this is exceeded.
 threadpool_affinity                      : 1        :                  : Enable setting affinity
@@ -1810,4 +1866,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           :
 --------------
-1809 total convars/concommands
+1865 total convars/concommands
