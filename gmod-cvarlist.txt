@@ -194,7 +194,7 @@ cl_sidespeed                             : 10000    : , "sv", "cheat", "rep" :
 cl_spewscriptintro                       : 0        : , "sv"           :
 cl_upspeed                               : 10000    : , "sv", "cheat", "rep" :
 clear_debug_overlays                     : cmd      :                  : clears debug overlays
-clientport                               : 30924    :                  : Host game client port
+clientport                               : 30192    :                  : Host game client port
 closecaption                             : 0        : , "a", "user"    : Enable close captioning.
 closecaption_mp                          : 0        : , "sv"           : Allow closecaptions in multiplayer (for dedicated servers)
 collision_shake_amp                      : 0        : , "sv"           :
