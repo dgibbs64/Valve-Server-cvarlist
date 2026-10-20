@@ -53,7 +53,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1071, sv
+mp_timeleft     :     1075, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -413,15 +413,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:22:02.533 ricochetserver: SEND: INFO: LinuxGSM version: v26.3.0
-Oct 18 04:22:02.534 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 18 04:22:22.624 ricochetserver: CORE: PASS: Using cached IP as public IP address
+Oct 20 21:46:43.486 ricochetserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 20 21:46:43.489 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 20 21:47:03.613 ricochetserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/ricochetserver-console.log <==
 cvarlist
 
 ==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:22:23.661 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 20 21:47:04.705 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/ricochetserver-console.log <==
 CVar List
@@ -479,7 +479,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1050, sv
+mp_timeleft     :     1053, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -839,17 +839,15 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:22:23.668 ricochetserver: SEND: INFO: LinuxGSM version: v26.3.0
-Oct 18 04:22:23.669 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 18 04:22:43.759 ricochetserver: CORE: PASS: Using cached IP as public IP address
+Oct 20 21:47:04.720 ricochetserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 20 21:47:04.724 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 20 21:47:24.848 ricochetserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/ricochetserver-console.log <==
 cvarlist
 
 ==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:22:44.796 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 18 04:22:44.801 ricochetserver: SEND: INFO: LinuxGSM version: v26.3.0
-Oct 18 04:22:44.802 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 20 21:47:25.940 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/ricochetserver-console.log <==
 CVar List
@@ -907,7 +905,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1029, sv
+mp_timeleft     :     1032, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1267,25 +1265,27 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:22:57.231 ricochetserver: CORE: PASS: Using cached IP as public IP address
-Oct 18 04:22:58.055 ricochetserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 18 04:23:00.580 ricochetserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 18 04:23:02.210 ricochetserver: MONITOR: INFO: Checking session: CHECKING
-Oct 18 04:23:02.424 ricochetserver: MONITOR: PASS: Checking session: OK
-Oct 18 04:23:04.032 ricochetserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
-Oct 18 04:23:04.479 ricochetserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 18 04:23:04.480 ricochetserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 18 04:23:04.482 ricochetserver: MONITOR: INFO: Players: 0/16
-Oct 18 04:23:04.484 ricochetserver: MONITOR: INFO: Map: rc_arena
-Oct 18 04:23:04.489 ricochetserver: MONITOR: INFO: LinuxGSM version: v26.3.0
-Oct 18 04:23:04.491 ricochetserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 18 04:23:04.893 ricochetserver: CORE: PASS: Using cached IP as public IP address
+Oct 20 21:47:25.955 ricochetserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 20 21:47:25.958 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 20 21:47:37.585 ricochetserver: CORE: PASS: Using cached IP as public IP address
+Oct 20 21:47:38.454 ricochetserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 20 21:47:40.924 ricochetserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 20 21:47:42.553 ricochetserver: MONITOR: INFO: Checking session: CHECKING
+Oct 20 21:47:42.774 ricochetserver: MONITOR: PASS: Checking session: OK
+Oct 20 21:47:44.390 ricochetserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 20 21:47:44.859 ricochetserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 20 21:47:44.863 ricochetserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 20 21:47:44.867 ricochetserver: MONITOR: INFO: Players: 0/16
+Oct 20 21:47:44.871 ricochetserver: MONITOR: INFO: Map: rc_arena
+Oct 20 21:47:44.883 ricochetserver: MONITOR: INFO: LinuxGSM version: v26.4.0
+Oct 20 21:47:44.887 ricochetserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 20 21:47:46.822 ricochetserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/ricochetserver-console.log <==
 cvarlist
 
 ==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:23:05.929 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 20 21:47:47.169 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/ricochetserver-console.log <==
 CVar List
@@ -1343,7 +1343,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1007, sv
+mp_timeleft     :     1011, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1703,19 +1703,12 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:23:05.935 ricochetserver: SEND: INFO: LinuxGSM version: v26.3.0
-Oct 18 04:23:05.936 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 18 04:23:26.026 ricochetserver: CORE: PASS: Using cached IP as public IP address
+Oct 20 21:47:47.183 ricochetserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 20 21:47:47.187 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 20 21:48:07.312 ricochetserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/ricochetserver-console.log <==
 cvarlist
-
-==> /data/log/script/ricochetserver-script.log <==
-Oct 18 04:23:27.062 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 18 04:23:27.067 ricochetserver: SEND: INFO: LinuxGSM version: v26.3.0
-Oct 18 04:23:27.068 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
-
-==> /data/log/console/ricochetserver-console.log <==
 CVar List
 --------------
 _sv_override_scientist_mdl :        0
@@ -1771,7 +1764,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :      986, sv
+mp_timeleft     :      990, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1877,6 +1870,11 @@ sk_healthcharger1 :       50
 sk_healthcharger2 :       40
 sk_healthcharger3 :       25
 sk_healthkit1   :       15
+
+==> /data/log/script/ricochetserver-script.log <==
+Oct 20 21:48:08.402 ricochetserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/ricochetserver-console.log <==
 sk_healthkit2   :       15
 sk_healthkit3   :       10
 sk_hgrunt_gspeed1 :      400
@@ -2129,3 +2127,7 @@ voice_serverdebug :        0
 --------------
 408 Total CVars
 CvarList ? for syntax
+
+==> /data/log/script/ricochetserver-script.log <==
+Oct 20 21:48:08.416 ricochetserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 20 21:48:08.420 ricochetserver: SEND: PASS: core_exit.sh exiting with code: 0
