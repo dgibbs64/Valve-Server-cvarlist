@@ -274,6 +274,11 @@ ent_teleport                             : cmd      :                  : Telepor
 ent_text                                 : cmd      :                  : Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)  Arguments:    {entity_
 ent_text_allow_script                    : 0        : , "sv", "cheat"  :
 ent_viewoffset                           : cmd      :                  : Displays the eye position for the given entity(ies) in red.  Arguments:    {entity_name} / {class_name} / no argument picks wha
+
+==> /data/log/script/l4d2server-script.log <==
+Oct 20 21:27:14.274 l4d2server: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/l4d2server-console.log <==
 exec                                     : cmd      :                  : Execute script file.
 exit                                     : cmd      :                  : Exit the engine.
 explode                                  : cmd      :                  : Kills the player with explosive damage
@@ -538,6 +543,11 @@ music_dynamic_calm_decay                 : 15       : , "sv", "cheat"  :
 music_dynamic_CI_sight_decay             : 8        : , "sv", "cheat"  :
 music_dynamic_damage_decay               : 10       : , "sv", "cheat"  :
 music_dynamic_damage_duck_damage_max     : 1        : , "sv", "cheat"  :
+
+==> /data/log/script/l4d2server-script.log <==
+Oct 20 21:27:14.295 l4d2server: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/l4d2server-console.log <==
 music_dynamic_damage_duck_damage_min     : 0        : , "sv", "cheat"  :
 music_dynamic_damage_duck_max            : 0        : , "sv", "cheat"  :
 music_dynamic_damage_duck_min            : 0        : , "sv", "cheat"  :
@@ -627,6 +637,11 @@ nav_corner_raise                         : cmd      :                  : Raise t
 nav_corner_select                        : cmd      :                  : Select a corner of the currently marked Area. Use multiple times to access all four corners.
 nav_create_area_at_feet                  : 0        : , "sv", "cheat"  : Anchor nav_begin_area Z to editing player's feet
 nav_create_place_on_ground               : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when created by hand.
+
+==> /data/log/script/l4d2server-script.log <==
+Oct 20 21:27:14.302 l4d2server: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/l4d2server-console.log <==
 nav_crouch                               : cmd      :                  : Toggles the 'must crouch in this area' flag used by the AI system.
 nav_debug_blocked                        : 0        : , "sv", "cheat"  :
 nav_debug_finale_area                    : 0        : , "sv", "cheat"  : Show extents of finale area and selected finale center
