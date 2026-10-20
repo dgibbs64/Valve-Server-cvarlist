@@ -1,5 +1,10 @@
 cvar list
 --------------
+
+==> /data/log/script/cs2server-script.log <==
+Oct 20 21:02:14.426 cs2server: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/cs2server-console.log <==
 _record                                                                          : cmd              : cheat, norecord, release         : Record a demo incrementally.
 adsp_debug                                                                       : 0                : a                                :
 ai_debug_dyninteractions                                                         : 0                : sv, cheat                        : Debug the NPC dynamic interaction system.
@@ -1549,6 +1554,11 @@ sv_clantags_enabled                                                             
 sv_clockcorrection_msecs                                                         : 30               : sv, release                      : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
 sv_cluster                                                                       : 0                : release                          : Data center cluster this server lives in.
 sv_competitive_minspec                                                           : true             : sv, nf, rep, release             : Enable to force certain client convars to minimum/maximum values to help prevent competitive advantages.
+
+==> /data/log/script/cs2server-script.log <==
+Oct 20 21:02:14.589 cs2server: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/cs2server-console.log <==
 sv_cq_trim_bloat_remainder                                                       : 1                : sv, release                      : When trimming a bloated CQ, leave at least N more commands than the minimum
 sv_cq_trim_bloat_space                                                           : 0                : sv, release                      : When trimming a bloated CQ, try to leave room for N more commands to be added.  0 will trim only what is needed to remove the immediate bloat, a very large value will reset the whole queue.
 sv_cq_trim_catchup_remainder                                                     : 1                : sv, release                      : When trimming an overful CQ due to app 'catchup' request, leave at least N more commands than the minimum
