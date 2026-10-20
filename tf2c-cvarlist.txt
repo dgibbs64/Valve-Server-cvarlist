@@ -1,5 +1,10 @@
 cvar list
 --------------
+
+==> /data/log/script/tf2cserver-script.log <==
+Oct 20 22:09:53.956 tf2cserver: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/tf2cserver-console.log <==
 _resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
 _restart                                 : cmd      :                  : Shutdown and restart the engine.
 achievement_debug                        : 0        : , "sv", "cheat", "rep" : Turn on achievement debug msgs.
@@ -166,7 +171,7 @@ bot_forceattack_down                     : 1        : , "sv"           : When fi
 bot_forcefireweapon                      : 0        : , "sv"           : Force bots with the specified weapon to fire.
 bot_hurt                                 : cmd      :                  : Hurt a bot by team, or all bots ('all').
 bot_jump                                 : 0        : , "sv", "cheat"  : Force all bots to repeatedly jump.
-bot_kick                                 : cmd      :                  : Remove a bot by name, or an entire team ('red' or 'blue'), or all bots ('all').
+bot_kick                                 : cmd      :                  : Remove a bot by name, or an entire team ('red', 'blue', 'green' or 'yellow'), or all bots ('all').
 bot_kill                                 : cmd      :                  : Kills a bot. Usage: bot_kill <bot name>
 bot_mimic                                : 0        : , "sv"           : Bot uses usercmd of player by index.
 bot_mimic_inverse                        : 0        : , "sv"           : Bot uses usercmd of player by index.
@@ -512,6 +517,11 @@ mat_hdr_level                            : 2        : , "a"            : Set to 
 mat_hdr_manual_tonemap_rate              : 1        :                  :
 mat_hdr_tonemapscale                     : 1        : , "cheat"        : The HDR tonemap scale. 1 = Use autoexposure, 0 = eyes fully closed, 16 = eyes wide open.
 mat_info                                 : cmd      :                  : Shows material system info
+==> /data/log/script/tf2cserver-script.log <==
+Oct 20 22:09:53.962 tf2cserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/tf2cserver-console.log <==
+
 mat_levelflush                           : 1        :                  :
 mat_lightmap_pfms                        : 0        :                  : Outputs .pfm files containing lightmap data for each lightmap page when a level exits.
 mat_loadtextures                         : 1        : , "cheat"        :
@@ -871,7 +881,8 @@ nb_speed_look_ahead_range                : 150      : , "sv", "cheat"  :
 nb_stop                                  : 0        : , "sv", "cheat", "rep" : Stop all NextBots
 nb_update_debug                          : 0        : , "sv", "cheat"  :
 nb_update_framelimit                     : 15       : , "sv", "cheat"  :
-nb_update_frequency                      : 0        : , "sv", "cheat"  :
+nb_update_frequency                      : 0        : , "sv"           :
+nb_update_frequency_npc                  : 0        : , "sv"           :
 nb_update_maxslide                       : 2        : , "sv", "cheat"  :
 nb_warp_selected_here                    : cmd      :                  : Teleport the selected bot to your cursor position
 net_blockmsg                             : 0        : , "cheat"        : Discards incoming message: <0|1|name>
@@ -915,7 +926,8 @@ net_udp_rcvbuf                           : 131072   :                  : Default
 net_usesocketsforloopback                : 0        :                  : Use network sockets layer even for listen server local player's packets (multiplayer only).
 net_warningthrottle                      : 5        :                  : Network warning throttling to specified Hz rate
 next                                     : 0        : , "cheat"        : Set to 1 to advance to next frame ( when singlestep == 1 )
-nextlevel                                : 0        : , "sv", "nf", "rep" : If set to a valid map name, will trigger a changelevel to the specified map at the end of the round
+nextlevel                                : 0        : , "sv", "nf"     : If set to a valid map name, will trigger a changelevel to the specified map at the end of the round
+nextlevel_display                        : 0        : , "sv", "rep"    :
 noclip                                   : cmd      :                  : Toggle. Player becomes non-solid and flies.
 noclip_changelevel                       : 0        : , "sv", "cheat"  :
 notarget                                 : cmd      :                  : Toggle. Player becomes hidden to NPCs.
@@ -1522,6 +1534,7 @@ tf2c_allow_building_pickup               : 1        : , "sv", "nf", "rep" : Allo
 tf2c_allow_special_classes               : 0        : , "sv", "nf", "rep" : Enables gamemode specific classes (Civilian, ...) in normal gameplay
 tf2c_allow_special_suicides              : 1        : , "sv", "nf", "rep" : Allows commands like boioing, stomp, and fizzle. (1 = Enabled, 2 = Enabled + Extra Death Commands)
 tf2c_arena_drop_healthkit_on_death       : 1        : , "sv", "rep"    : If enabled, players will drop health packs that only heal their killer's team.
+tf2c_attack_during_freeze                : 0        : , "sv", "nf", "rep" : Allow attacking during freeze time
 tf2c_autojump                            : 0        : , "sv", "nf", "rep" : Allow player to continuously jump by holding down the jump button.
 tf2c_bot_random_loadouts                 : 1        : , "sv"           : Bots spawn with random items
 tf2c_bot_random_loadouts_custom_only     : 0        : , "sv"           : Bots do not consider stock items when selecting loadout
@@ -1556,10 +1569,11 @@ tf2c_duckjump                            : 0        : , "sv", "nf", "rep" : Togg
 tf2c_earthquake_vertical_speed_const     : 200      : , "sv", "nf", "rep" : Const part of vertical velocity push on earthquake attack
 tf2c_earthquake_vertical_speed_mult      : 3        : , "sv", "nf", "rep" : Multiply damage by this amount to get vertical velocity push on earthquake attack
 tf2c_force_proximity_voice               : 0        : , "sv", "nf"     : Forces proximity voice for everyone
+tf2c_freeroam                            : 0        : , "sv"           : Disables round timer, setup & waiting for players
 tf2c_groundspeed_cap                     : 1        : , "sv", "nf", "rep" : Toggles the max speed cap imposed when a player is standing on the ground.
 tf2c_heallauncher_heal_duration          : 1        : , "sv", "cheat", "rep" :
 tf2c_hunstman_aimassist                  : 7        : , "sv", "nf"     : Sets The Size of the Huntsmans Hitbox
-tf2c_infinite_ammo                       : 0        : , "sv", "nf", "rep" : Enabled infinite ammo for all players. Weapons still need to be reloaded
+tf2c_infinite_ammo                       : 0        : , "sv", "nf", "rep" : Enabled infinite ammo for all players. 1 = Infinite Reserve. 2 = Infinite Clip & Reserve
 tf2c_jumppad_height                      : 770      : , "sv", "rep"    : Vertical force applied to jump pad users
 tf2c_jumppad_height_hwg_mult             : 1        : , "sv", "rep"    : Multiplier for vertical force applied to jump pad users (Heavy Weapons Guy only)
 tf2c_jumppad_speed                       : 475      : , "sv", "rep"    : Horizontal speed applied to jump pad users
@@ -1569,16 +1583,18 @@ tf2c_maxspeed                            : 520      : , "sv", "nf", "rep" : The 
 tf2c_medigun_3team_uber_rate             : 1        : , "sv", "nf", "rep" : In 3team, medigun charge rate is multiplied by this (except in Arena)
 tf2c_medigun_4team_uber_rate             : 2        : , "sv", "nf", "rep" : In 4team, medigun charge rate is multiplied by this (except in Arena)
 tf2c_medigun_critboostable               : 1        : , "sv", "nf", "rep" : Grants the medigun increased charge and heal rate under (mini)crits. 0 = off 1 = minicrit 2 = minicrit + crit
+tf2c_melee_sweep_debug                   : 0        : , "sv", "cheat", "rep" : Draw the server traces of melee sweep attacks for this many seconds.
 tf2c_mirv_impact_damage                  : 30       : , "sv", "nf", "rep" : Damage of MIRV impact.
 tf2c_mirv_impact_stun_duration           : 0        : , "sv", "nf", "rep" : Duration of stun of MIRV impact on player.
 tf2c_mirv_impact_stun_secondary_duration : 1        : , "sv", "nf", "rep" : Duration of stun of MIRV impact on player.
 tf2c_mirv_impact_stun_secondary_movespeed : 0        : , "sv", "nf", "rep" : Value of stun of MIRV impact on player, movespeed.
 tf2c_mirv_impact_stun_value              : 0        : , "sv", "nf", "rep" : Value of stun of MIRV impact on player, multiplier.
+tf2c_nemesis_relationships               : 1        : , "sv", "nf", "rep" : Enable domination/revenge system.
 tf2c_projectiles_pass_teammates          : 1        : , "sv", "nf"     : If enabled, projectiles start colliding with teammates 0.25s after being fired or reflected.
 tf2c_randomizer_attributes               : 0        : , "sv", "nf", "rep" : When set, randomize weapon attributes on spawn.
 tf2c_randomizer_attributes_roll_count    : 6        : , "sv", "nf"     : How many times to roll for an attribute on a weapon.
 tf2c_randomizer_attributes_roll_fail_chance : 40       : , "sv", "nf"     : The percent chance out of 100 to fail to roll for an attribute.
-tf2c_randomizer_attributes_roll_projectile_chance : 0        : , "sv", "nf"     : The percent chance out of 100 for a weapon to get a new projectile.
+tf2c_randomizer_attributes_roll_projectile_chance : 15       : , "sv", "nf"     : The percent chance out of 100 for a weapon to get a new projectile.
 tf2c_randomizer_chickendrops             : 0        : , "sv", "nf"     : Chickens will lay a random pickup instead of always being an egg.
 tf2c_randomizer_classes                  : 0        : , "sv", "nf", "rep" : When set, randomize player classes on spawn.
 tf2c_randomizer_config                   : 0        : , "sv", "nf"     : Config file that Randomizer Mode will load it's data from.
@@ -1603,7 +1619,7 @@ tf2c_show_hitscan_hull                   : 0        : , "sv", "cheat", "rep" : S
 tf2c_sniperrifle_tracer                  : 1        : , "sv", "rep"    : Draw tracer for tf_weapon_sniperrifle class weapons
 tf2c_spawncamp_window_default            : 6        : , "sv", "nf", "rep" : If undefined or default in the map, seconds after spawn during which killed players are eligible for no respawn wave time. Remaining time always capped at 1 second after leaving spawn.
 tf2c_spywalk                             : 1        : , "sv", "nf", "rep" : Allows Disguised Spies to use their regular movement speed rather than their disguise's by using +SPEED
-tf2c_sticky_touch_fix                    : 1        : , "sv", "rep"    : 0 = off, 1 = stickybombs attach to static func_brush and func_breakable, 2 = also attach to static func_door
+tf2c_sticky_touch_fix                    : 1        : , "sv", "rep"    : 0 = off, 1 = stickybombs attach to static func_brush, func_breakable and only func_door with allowstickies set to 1, 2 = always attach to static func_door
 tf2c_teleporter_sync                     : 1        : , "sv", "nf", "rep" : Sync sappers and repairs between linked teleporters.
 tf2c_tranq_healing_resistance            : 0        : , "sv", "nf", "rep" : Healing multiplier when tranq'd
 tf2c_tranq_self                          : cmd      :                  : Tranq yourself. Idiot.
@@ -1620,6 +1636,12 @@ tf2c_vip_low_health_sound_threshold      : 0        : , "sv", "nf", "rep" : Low 
 tf2c_vip_low_health_warning_delay        : 20       : , "sv", "nf", "rep" : The time in seconds before another VIP health warning may play
 tf2c_vip_low_health_warning_sound        : 0        : , "sv", "nf", "rep" : Play a warning sound when your VIP's health drops below the percentage set by tf2c_vip_low_health_jingle_threshold.
 tf2c_vip_regen                           : 5        : , "sv", "nf", "rep" : Regenerate this much HP per second under Civilian's morale boost
+tf2c_vip_scary                           : -1       :                  : When the Scary VIP should be active. -1: Only if enabled in tf_logic_holiday. 0: Never. 1: Always.
+tf2c_vip_scary_angle                     : 45       :                  : How much the Scary VIP needs to look at targets to trigger the scare.
+tf2c_vip_scary_prestuntime               : 0        :                  : Time it takes before a target is scare stunned.
+tf2c_vip_scary_radius                    : 192      :                  : Range in units Scary VIP can scare stun targets.
+tf2c_vip_scary_stuncooldown              : 1        :                  : Time it takes before a target can be scare stunned again.
+tf2c_vip_scary_stuntime                  : 3        :                  : How long the Scary VIP scare stuns targets.
 tf2c_vip_switchteams                     : 0        : , "sv", "nf", "rep" : If enabled, the game switches the previous VIP to another team next round
 tf2c_voice_pitch_tranq                   : 0        : , "sv", "nf", "rep" : Voice shift multiplier when for player under effect of Tranq
 tf2c_voice_pitch_vip_haste               : 1        : , "sv", "nf", "rep" : Voice shift multiplier when for player under effect of VIP Haste
@@ -1875,7 +1897,7 @@ tf_halloween_bot_attack_range            : 200      : , "sv", "cheat"  :
 tf_halloween_bot_chase_duration          : 30       : , "sv", "cheat"  :
 tf_halloween_bot_chase_range             : 1500     : , "sv", "cheat"  :
 tf_halloween_bot_health_base             : 3000     : , "sv", "cheat"  :
-tf_halloween_bot_health_per_player       : 200      : , "sv", "cheat"  :
+tf_halloween_bot_health_per_player       : 300      : , "sv", "cheat"  :
 tf_halloween_bot_min_player_count        : 10       : , "sv", "cheat"  :
 tf_halloween_bot_quit_range              : 2000     : , "sv", "cheat"  :
 tf_halloween_bot_speed                   : 400      : , "sv", "cheat"  :
@@ -2156,6 +2178,7 @@ tf_wipe_attributes                       : cmd      :                  : Clear a
 think_limit                              : 0        : , "sv", "rep"    : Maximum think time in milliseconds, warning is printed if this is exceeded.
 threadpool_affinity                      : 0        :                  : Enable setting affinity
 toggle                                   : cmd      :                  : Toggles a convar on or off, or cycles through a set of values.
+toss                                     : cmd      :                  : Toss yourself forward
 trace_report                             : 0        : , "sv"           :
 training_continue                        : cmd      :                  : Tells training that it should continue.
 tv_allow_camera_man                      : 1        : , "sv"           : Auto director allows spectators to become camera man
@@ -2216,6 +2239,7 @@ voxeltree_playerview                     : cmd      :                  : View en
 voxeltree_sphere                         : cmd      :                  : View entities in the voxel-tree inside sphere <Vector(center), float(radius)>.
 voxeltree_view                           : cmd      :                  : View entities in the voxel-tree.
 vphysics_nan_debug                       : 0        :                  :
+vplugin_config                           : 0        : , "sv"           : Config file that the vplugins system will load
 vprof                                    : cmd      :                  : Toggle VProf profiler
 vprof_cachemiss                          : cmd      :                  : Toggle VProf cache miss checking
 vprof_cachemiss_off                      : cmd      :                  : Turn off VProf cache miss checking
@@ -2266,4 +2290,4 @@ xbox_throttlebias                        : 100      : , "a", "sv"      :
 xbox_throttlespoof                       : 200      : , "a", "sv"      :
 xc_crouch_debounce                       : 0        : , "sv"           :
 --------------
-2265 total convars/concommands
+2279 total convars/concommands
