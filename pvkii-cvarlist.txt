@@ -383,6 +383,11 @@ fire_heatscale                           : 1        : , "sv"           :
 fire_incomingheatscale                   : 0        : , "sv"           :
 fire_maxabsorb                           : 50       : , "sv"           :
 firetarget                               : cmd      :                  :
+
+==> /data/log/script/pvkiiserver-script.log <==
+Oct 20 21:47:04.193 pvkiiserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/pvkiiserver-console.log <==
 fish_dormant                             : 0        : , "sv", "cheat", "rep" : Turns off interactive fish behavior. Fish become immobile and unresponsive.
 fixmyshield                              : cmd      :                  : Repairs your equipped shield
 flex_expression                          : 0        : , "sv"           :
