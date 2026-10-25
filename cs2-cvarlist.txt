@@ -1,10 +1,5 @@
 cvar list
 --------------
-
-==> /data/log/script/cs2server-script.log <==
-Oct 20 21:02:14.426 cs2server: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/cs2server-console.log <==
 _record                                                                          : cmd              : cheat, norecord, release         : Record a demo incrementally.
 adsp_debug                                                                       : 0                : a                                :
 ai_debug_dyninteractions                                                         : 0                : sv, cheat                        : Debug the NPC dynamic interaction system.
@@ -1011,6 +1006,11 @@ nav_smooth_spring_factor_speed                                                  
 nav_smooth_spring_forward_dist_base                                              : 50               : sv, cheat                        :
 nav_smooth_spring_forward_dist_time_limit                                        : 1                : sv, cheat                        :
 nav_smooth_spring_max_dist                                                       : 36               : sv, cheat                        :
+
+==> /data/log/script/cs2server-script.log <==
+Oct 25 03:37:50.153 cs2server: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/cs2server-console.log <==
 nav_smooth_spring_tension_max_override                                           : -1               : sv, cheat                        :
 nav_smooth_spring_timestep_factor_accel                                          : 100              : sv, cheat                        :
 nav_smooth_spring_timestep_factor_speed                                          : 100              : sv, cheat                        :
@@ -1310,6 +1310,11 @@ script_debug                                                                    
 script_dump_all                                                                  : cmd              : sv, cheat                        : Dump the state of the VM to the console
 script_find                                                                      : cmd              : sv, cheat                        : Find a key in the VM
 script_help                                                                      : cmd              : sv, cheat                        : Output help for script functions
+
+==> /data/log/script/cs2server-script.log <==
+Oct 25 03:37:50.158 cs2server: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/cs2server-console.log <==
 script_reload                                                                    : cmd              : sv, cheat                        : Reload scripts
 script_reload_code                                                               : cmd              : sv, cheat                        : Execute a vscript file, replacing existing functions with the functions in the run script
 script_reload_entity_code                                                        : cmd              : sv, cheat                        : Execute all of this entity's VScripts, replacing existing functions with the functions in the run scripts
@@ -1554,11 +1559,6 @@ sv_clantags_enabled                                                             
 sv_clockcorrection_msecs                                                         : 30               : sv, release                      : The server tries to keep each player's m_nTickBase withing this many msecs of the server absolute tickcount
 sv_cluster                                                                       : 0                : release                          : Data center cluster this server lives in.
 sv_competitive_minspec                                                           : true             : sv, nf, rep, release             : Enable to force certain client convars to minimum/maximum values to help prevent competitive advantages.
-
-==> /data/log/script/cs2server-script.log <==
-Oct 20 21:02:14.589 cs2server: SEND: INFO: LinuxGSM version: v26.4.0
-
-==> /data/log/console/cs2server-console.log <==
 sv_cq_trim_bloat_remainder                                                       : 1                : sv, release                      : When trimming a bloated CQ, leave at least N more commands than the minimum
 sv_cq_trim_bloat_space                                                           : 0                : sv, release                      : When trimming a bloated CQ, try to leave room for N more commands to be added.  0 will trim only what is needed to remove the immediate bloat, a very large value will reset the whole queue.
 sv_cq_trim_catchup_remainder                                                     : 1                : sv, release                      : When trimming an overful CQ due to app 'catchup' request, leave at least N more commands than the minimum
@@ -1921,6 +1921,13 @@ voice_loopback_no_networking                                                    
 voice_player_speaking_delay_threshold                                            : 0.5              : sv, cheat                        :
 voice_test_log_send                                                              : false            : release                          :
 voice_threshold                                                                  : -120             : cl, a                            : decibel threshold for how loud the talker's input signal is before we think they are talking.
+voice_webrtc_aec                                                                 : true             : a                                : WebRTC: cancel game audio echoing from the speakers into the microphone (AEC3).
+voice_webrtc_agc                                                                 : true             : a                                : WebRTC: adaptive digital automatic gain control (AGC2).
+voice_webrtc_apm                                                                 : false            : a                                : Process in-process voice chat microphone audio with the WebRTC audio processing module (requires voice_in_process).
+voice_webrtc_fixed_gain_db                                                       : 0                : a                                : WebRTC: fixed digital gain in dB applied to the microphone before the adaptive gain stage.
+voice_webrtc_hpf                                                                 : true             : a                                : WebRTC: high-pass filter to remove DC offset and low rumble.
+voice_webrtc_ns                                                                  : true             : a                                : WebRTC: noise suppression.
+voice_webrtc_ns_level                                                            : 2                : a                                : WebRTC: noise suppression aggressiveness, 0 (low) to 3 (very high).
 volume                                                                           : 1                : a                                : Sound volume
 volume_fog_debug_volumes                                                         : false            : cheat                            :
 volume_fog_dither_scale                                                          : 1                : cheat                            :
@@ -1938,4 +1945,4 @@ weapon_reticle_knife_show                                                       
 weapon_sound_falloff_multiplier                                                  : 1                : sv, rep, cheat, release          : Scaling for falloff of weapon firing sounds
 writekeybindings                                                                 : cmd              : release                          : Saves current key bindings to disk.
 --------------
-1927 total convars/concommands
+1934 total convars/concommands
