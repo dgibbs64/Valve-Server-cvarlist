@@ -60,7 +60,7 @@ mp_friendlyfire :        0, sv
 mp_logecho      :        1
 mp_logfile      :        1, sv
 mp_teamplay     :        1, sv
-mp_timeleft     :     1185, sv
+mp_timeleft     :     1181, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -188,23 +188,20 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 21:59:55.203 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 21:59:55.206 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 20 22:00:01.662 tfcserver: CORE: PASS: Using cached IP as public IP address
-Oct 20 22:00:02.861 tfcserver: UPDATE: INFO: Using anonymous Steam login
-Oct 20 22:00:06.514 tfcserver: UPDATE: PASS: Checking local build
+Oct 25 04:31:53.973 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:31:53.976 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/tfcserver-console.log <==
-L 10/20/2026 - 22:00:11: World triggered "#dustbowl_60_secs"
+L 10/25/2026 - 04:32:06: World triggered "#dustbowl_60_secs"
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:15.325 tfcserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:32:14.834 tfcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/tfcserver-console.log <==
 cvarlist
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:16.406 tfcserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 25 04:32:15.131 tfcserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/tfcserver-console.log <==
 CVar List
@@ -269,7 +266,7 @@ mp_friendlyfire :        0, sv
 mp_logecho      :        1
 mp_logfile      :        1, sv
 mp_teamplay     :        1, sv
-mp_timeleft     :     1163, sv
+mp_timeleft     :     1160, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -397,24 +394,12 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:16.419 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 22:00:16.422 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 20 22:00:16.456 tfcserver: UPDATE: PASS: Checking remote build
-Oct 20 22:00:17.168 tfcserver: UPDATE: INFO: No update available
-Oct 20 22:00:17.172 tfcserver: UPDATE: INFO: Local build: 15961496
-Oct 20 22:00:17.175 tfcserver: UPDATE: INFO: Remote build: 15961496
-Oct 20 22:00:17.179 tfcserver: UPDATE: INFO: Branch: public
-Oct 20 22:00:17.192 tfcserver: UPDATE: INFO: LinuxGSM version: v26.4.0
-Oct 20 22:00:17.196 tfcserver: UPDATE: PASS: core_exit.sh exiting with code: 0
-Oct 20 22:00:36.541 tfcserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:32:15.143 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:32:15.146 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:32:35.253 tfcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/tfcserver-console.log <==
 cvarlist
-
-==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:37.612 tfcserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/tfcserver-console.log <==
 CVar List
 --------------
 _sv_override_scientist_mdl :        0
@@ -477,7 +462,7 @@ mp_friendlyfire :        0, sv
 mp_logecho      :        1
 mp_logfile      :        1, sv
 mp_teamplay     :        1, sv
-mp_timeleft     :     1142, sv
+mp_timeleft     :     1139, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -573,6 +558,11 @@ sv_wateramp     :        0
 sv_waterfriction :        1, sv
 sv_zmax         :     8096
 sys_ticrate     :      100
+
+==> /data/log/script/tfcserver-script.log <==
+Oct 25 04:32:36.304 tfcserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/tfcserver-console.log <==
 tfc_adminpwd    :        0, sv
 tfc_autokick_kills :        5
 tfc_autokick_time :      180
@@ -605,37 +595,38 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:37.625 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 22:00:37.628 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:32:36.316 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:32:36.319 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/tfcserver-console.log <==
-L 10/20/2026 - 22:00:41: World triggered "#dustbowl_30_secs"
+L 10/25/2026 - 04:32:36: World triggered "#dustbowl_30_secs"
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:41.837 tfcserver: CORE: PASS: Using cached IP as public IP address
-Oct 20 22:00:42.700 tfcserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 20 22:00:45.165 tfcserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 20 22:00:46.789 tfcserver: MONITOR: INFO: Checking session: CHECKING
-Oct 20 22:00:47.715 tfcserver: MONITOR: PASS: Checking session: OK
-Oct 20 22:00:48.620 tfcserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 25 04:32:37.109 tfcserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:32:37.957 tfcserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 25 04:32:39.867 tfcserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 25 04:32:41.491 tfcserver: MONITOR: INFO: Checking session: CHECKING
+Oct 25 04:32:41.709 tfcserver: MONITOR: PASS: Checking session: OK
+Oct 25 04:32:43.324 tfcserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
 
 ==> /data/log/console/tfcserver-console.log <==
 [S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:49.700 tfcserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 20 22:00:49.740 tfcserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 20 22:00:49.778 tfcserver: MONITOR: INFO: Players: 0/16
-Oct 20 22:00:49.813 tfcserver: MONITOR: INFO: Map: dustbowl
-Oct 20 22:00:49.926 tfcserver: MONITOR: INFO: LinuxGSM version: v26.4.0
-Oct 20 22:00:49.961 tfcserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 20 22:00:57.742 tfcserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:32:43.744 tfcserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 25 04:32:43.748 tfcserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 25 04:32:43.751 tfcserver: MONITOR: INFO: Players: 0/16
+Oct 25 04:32:43.755 tfcserver: MONITOR: INFO: Map: dustbowl
+Oct 25 04:32:43.766 tfcserver: MONITOR: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:32:43.769 tfcserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:32:56.425 tfcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/tfcserver-console.log <==
+L 10/25/2026 - 04:32:56: World triggered "#dustbowl_10_secs"
 cvarlist
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:58.814 tfcserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 25 04:32:57.474 tfcserver: SEND: PASS: Command "cvarlist" sent to console
 
 ==> /data/log/console/tfcserver-console.log <==
 CVar List
@@ -700,7 +691,7 @@ mp_friendlyfire :        0, sv
 mp_logecho      :        1
 mp_logfile      :        1, sv
 mp_teamplay     :        1, sv
-mp_timeleft     :     1121, sv
+mp_timeleft     :     1118, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -828,23 +819,17 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:00:58.826 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 22:00:58.829 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:32:57.485 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:32:57.489 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
 
 ==> /data/log/console/tfcserver-console.log <==
-L 10/20/2026 - 22:01:01: World triggered "#dustbowl_10_secs"
-L 10/20/2026 - 22:01:11: World triggered "#dustbowl_gates_open"
+L 10/25/2026 - 04:33:06: World triggered "#dustbowl_gates_open"
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:01:18.947 tfcserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:33:17.594 tfcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/tfcserver-console.log <==
 cvarlist
-
-==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:01:20.314 tfcserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/tfcserver-console.log <==
 CVar List
 --------------
 _sv_override_scientist_mdl :        0
@@ -907,7 +892,7 @@ mp_friendlyfire :        0, sv
 mp_logecho      :        1
 mp_logfile      :        1, sv
 mp_teamplay     :        1, sv
-mp_timeleft     :     1100, sv
+mp_timeleft     :     1097, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        0, sv
 multicastport   :    27025
@@ -1035,5 +1020,6 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/tfcserver-script.log <==
-Oct 20 22:01:20.438 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 22:01:20.473 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:33:18.642 tfcserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 25 04:33:18.653 tfcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:33:18.656 tfcserver: SEND: PASS: core_exit.sh exiting with code: 0
