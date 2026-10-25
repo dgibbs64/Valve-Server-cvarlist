@@ -97,6 +97,11 @@ ai_use_clipped_paths                     : 1        : , "sv"           :
 ai_use_efficiency                        : 1        : , "sv"           :
 ai_use_frame_think_limits                : 1        : , "sv"           :
 ai_use_think_optimizations               : 1        : , "sv"           :
+==> /data/log/script/zmrserver-script.log <==
+Oct 25 04:44:24.341 zmrserver: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/zmrserver-console.log <==
+
 ai_use_visibility_cache                  : 1        : , "sv"           :
 ai_vehicle_avoidance                     : 1        : , "sv", "cheat"  :
 ainet_generate_report                    : cmd      :                  : Generate a report to the console.
@@ -455,6 +460,11 @@ mat_tonemapping_occlusion_use_stencil    : 0        :                  :
 mat_trilinear                            : 0        :                  :
 mat_vrmode_adapter                       : -1       :                  :
 mat_vsync                                : 0        :                  : Force sync to vertical retrace
+
+==> /data/log/script/zmrserver-script.log <==
+Oct 25 04:44:24.346 zmrserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/zmrserver-console.log <==
 mat_wireframe                            : 0        : , "cheat"        :
 matchmakingport                          : 27025    :                  : Host Matchmaking port
 maxplayers                               : cmd      :                  : Change the maximum number of players allowed on this server.
