@@ -188,9 +188,428 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 20 21:40:26.100 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 21:40:26.104 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 20 21:40:46.206 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:11:24.485 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:11:24.489 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:11:41.950 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:11:42.860 nsserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 25 04:11:44.652 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:11:45.297 nsserver: MONITOR: PASS: Using cached IP as public IP address
+
+==> /data/log/console/nsserver-console.log <==
+cvarlist
+
+==> /data/log/script/nsserver-script.log <==
+Oct 25 04:11:45.865 nsserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/nsserver-console.log <==
+CVar List
+--------------
+_sv_override_scientist_mdl :        0
+bannedcfgfile   :        0
+clientport      :    27005
+clockwindow     :    0.500
+console         :        0, a
+coop            :        0, sv
+deathmatch      :        1, sv
+decalfrequency  :       30, sv
+developer       :        0
+disconcfgfile   :        0
+displaysoundlist :        0
+edgefriction    :        2, sv
+fakelag         :        0
+fakeloss        :        0
+fps_max         :      100, a
+fps_override    :        0, a
+host_framerate  :        0
+host_killtime   :        0
+host_limitlocal :        0
+host_profile    :        0
+host_speeds     :        0
+HostMap         :        0
+hostname        :        0
+hostport        :    27015
+hpk_maxsize     :        4, a
+ip              :        0
+ip_clientport   :        0
+ip_hostport     :        0
+logsdir         :        0
+lservercfgfile  :        0
+mapchangecfgfile :        0
+mapcyclefile    :        0
+max_queries_sec :        3, sv
+max_queries_sec_global :       30, sv
+max_queries_window :       60, sv
+motdfile        :        0
+mp_allowmonsters :        0, sv
+mp_allowspectators :        1, sv
+mp_autoconcede  :        4, sv
+mp_autocrosshair :        0, sv
+mp_blockscripts :        0, sv
+mp_chattime     :       10, sv
+mp_combattime   :       15, sv
+mp_consistency  :        0, sv
+mp_countdowntime :    0.200, sv
+mp_deathmatchmode :        0, sv
+mp_defaultteam  :        0
+mp_drawdamage   :        0, sv
+mp_eastereggchance :        5, sv
+mp_falldamage   :        1, sv
+mp_flashlight   :        1, sv
+mp_footsteps    :        1, sv
+mp_forcerespawn :        1, sv
+mp_fraglimit    :        0, sv
+mp_fragsleft    :        0, sv
+mp_friendlyfire :        0, sv
+mp_ironman      :        0, sv
+mp_ironmantime  :        2, sv
+mp_killdelay    :        3, sv
+mp_latejointime :    1.500, sv
+mp_limitteams   :        1
+mp_logdetail    :        0, sv
+mp_logecho      :        1
+mp_logfile      :        1, sv
+mp_mapvoteratio :    0.600, sv
+mp_minvotesneeded :        3, sv
+mp_serverops    :        0
+mp_team1damagepercent :      100, sv
+mp_team2damagepercent :      100, sv
+mp_team3damagepercent :      100, sv
+mp_team4damagepercent :      100, sv
+mp_teamlist     :        0, sv
+mp_teamoverride :        1
+mp_teamplay     :        0, sv
+mp_timeleft     :        0, sv
+mp_timelimit    :       60, sv
+mp_tournamentmode :        0, sv
+mp_uplink       :        1, sv
+mp_votecasttime :        2, sv
+mp_votedowntime :      180, sv
+mp_votepercentneeded :    0.400, sv
+mp_weaponstay   :    0.500, sv
+multicastport   :    27025
+net_address     :        0
+net_chokeloop   :        0
+net_drawslider  :        0
+net_graph       :        0, a
+net_graphpos    :        1, a
+net_graphwidth  :      150
+net_log         :        0
+net_scale       :        5, a
+net_showdrop    :        0
+net_showpackets :        0
+pausable        :        0, sv
+port            :    27015
+rcon_password   :        0
+servercfgfile   :        0
+skill           :        1
+suitvolume      :    0.250, a
+sv_accelerate   :       10, sv
+sv_aim          :        0, a
+sv_airaccelerate :       10, sv
+sv_allow_autoaim :        0, sv
+sv_allow_dlfile :        1
+sv_allow_shaders :        0, sv
+sv_allowdownload :        1
+sv_allowupload  :        1, sv
+sv_alltalk      :        0
+sv_bounce       :        1, sv
+sv_cheats       :        0, sv
+sv_clienttrace  :    3.500, sv
+sv_contact      :        0, sv
+sv_downloadurl  :        0
+sv_enableoldqueries :        0
+sv_failuretime  :    0.500
+sv_filetransfercompression :        1
+sv_filetransfermaxsize : 10485760
+sv_filterban    :        1
+sv_friction     :        4, sv
+sv_gravity      :      800, sv
+sv_instancedbaseline :        1
+sv_lan          :        0
+sv_lan_rate     :    20000
+sv_log_onefile  :        0
+sv_log_singleplayer :        0
+sv_logbans      :        0
+sv_logblocks    :        0, sv
+sv_logrelay     :        0
+sv_logsecret    :        0
+sv_maxrate      :        0, sv
+sv_maxspeed     :     4000, sv
+sv_maxunlag     :    0.500
+sv_maxupdaterate :       30
+sv_maxvelocity  :     2000
+sv_minrate      :        0, sv
+sv_minupdaterate :       10
+sv_newunit      :        0
+sv_outofdatetime :     1800
+sv_password     :        0, sv
+sv_proxies      :        1, sv
+sv_rcon_banpenalty :        0
+sv_rcon_maxfailures :       10
+sv_rcon_minfailures :        5
+sv_rcon_minfailuretime :       30
+sv_rollangle    :        2
+sv_rollspeed    :      200
+sv_send_logos   :        1
+sv_send_resources :        1
+sv_skycolor_b   :       15
+sv_skycolor_g   :       15
+sv_skycolor_r   :       35
+sv_skyname      :        0
+sv_skyvec_x     :   -0.707
+sv_skyvec_y     :    0.707
+sv_skyvec_z     :        0
+sv_spectatormaxspeed :      500
+sv_stats        :        1
+sv_stepsize     :       18, sv
+sv_stopspeed    :      100, sv
+sv_structurelimit :      300, sv
+sv_timeout      :       60
+sv_unlag        :        1
+sv_unlagpush    :        0
+sv_unlagsamples :        1
+sv_uploadmax    :    0.500, sv
+sv_uploadmaxcount :       10, sv
+sv_use_steam_networking :        0
+sv_version      :  112.200
+sv_visiblemaxplayers :       -1
+sv_voiceenable  :        1, a, sv
+sv_wateraccelerate :       10, sv
+sv_wateramp     :        0
+sv_waterfriction :        1, sv
+sv_zmax         :    10000
+sys_ticrate     :      100
+ui_cmd_on_connect :        0
+violence_ablood :        1, a
+violence_agibs  :        0, a
+violence_hblood :        1, a
+violence_hgibs  :        0, a
+voice_inputfromfile :        0
+voice_recordtofile :        0
+voice_serverdebug :        0
+--------------
+183 Total CVars
+CvarList ? for syntax
+
+==> /data/log/script/nsserver-script.log <==
+Oct 25 04:11:45.879 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:11:45.884 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:11:46.929 nsserver: MONITOR: INFO: Checking session: CHECKING
+Oct 25 04:11:47.151 nsserver: MONITOR: PASS: Checking session: OK
+Oct 25 04:11:48.769 nsserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+
+==> /data/log/console/nsserver-console.log <==
+[S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
+
+==> /data/log/script/nsserver-script.log <==
+Oct 25 04:11:49.255 nsserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 25 04:11:49.260 nsserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 25 04:11:49.264 nsserver: MONITOR: INFO: Players: 0/16
+Oct 25 04:11:49.269 nsserver: MONITOR: INFO: Map: ns_hera
+Oct 25 04:11:49.283 nsserver: MONITOR: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:11:49.287 nsserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:12:06.162 nsserver: CORE: PASS: Using cached IP as public IP address
+
+==> /data/log/console/nsserver-console.log <==
+cvarlist
+CVar List
+--------------
+_sv_override_scientist_mdl :        0
+bannedcfgfile   :        0
+clientport      :    27005
+clockwindow     :    0.500
+console         :        0, a
+coop            :        0, sv
+deathmatch      :        1, sv
+decalfrequency  :       30, sv
+developer       :        0
+disconcfgfile   :        0
+displaysoundlist :        0
+edgefriction    :        2, sv
+fakelag         :        0
+fakeloss        :        0
+fps_max         :      100, a
+fps_override    :        0, a
+host_framerate  :        0
+host_killtime   :        0
+host_limitlocal :        0
+host_profile    :        0
+host_speeds     :        0
+HostMap         :        0
+hostname        :        0
+hostport        :    27015
+hpk_maxsize     :        4, a
+ip              :        0
+ip_clientport   :        0
+ip_hostport     :        0
+logsdir         :        0
+lservercfgfile  :        0
+mapchangecfgfile :        0
+mapcyclefile    :        0
+max_queries_sec :        3, sv
+max_queries_sec_global :       30, sv
+max_queries_window :       60, sv
+motdfile        :        0
+mp_allowmonsters :        0, sv
+mp_allowspectators :        1, sv
+mp_autoconcede  :        4, sv
+mp_autocrosshair :        0, sv
+mp_blockscripts :        0, sv
+mp_chattime     :       10, sv
+mp_combattime   :       15, sv
+mp_consistency  :        0, sv
+mp_countdowntime :    0.200, sv
+mp_deathmatchmode :        0, sv
+mp_defaultteam  :        0
+mp_drawdamage   :        0, sv
+mp_eastereggchance :        5, sv
+mp_falldamage   :        1, sv
+mp_flashlight   :        1, sv
+mp_footsteps    :        1, sv
+mp_forcerespawn :        1, sv
+mp_fraglimit    :        0, sv
+mp_fragsleft    :        0, sv
+mp_friendlyfire :        0, sv
+mp_ironman      :        0, sv
+mp_ironmantime  :        2, sv
+mp_killdelay    :        3, sv
+mp_latejointime :    1.500, sv
+mp_limitteams   :        1
+mp_logdetail    :        0, sv
+mp_logecho      :        1
+
+==> /data/log/script/nsserver-script.log <==
+Oct 25 04:12:07.166 nsserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/nsserver-console.log <==
+mp_logfile      :        1, sv
+mp_mapvoteratio :    0.600, sv
+mp_minvotesneeded :        3, sv
+mp_serverops    :        0
+mp_team1damagepercent :      100, sv
+mp_team2damagepercent :      100, sv
+mp_team3damagepercent :      100, sv
+mp_team4damagepercent :      100, sv
+mp_teamlist     :        0, sv
+mp_teamoverride :        1
+mp_teamplay     :        0, sv
+mp_timeleft     :        0, sv
+mp_timelimit    :       60, sv
+mp_tournamentmode :        0, sv
+mp_uplink       :        1, sv
+mp_votecasttime :        2, sv
+mp_votedowntime :      180, sv
+mp_votepercentneeded :    0.400, sv
+mp_weaponstay   :    0.500, sv
+multicastport   :    27025
+net_address     :        0
+net_chokeloop   :        0
+net_drawslider  :        0
+net_graph       :        0, a
+net_graphpos    :        1, a
+net_graphwidth  :      150
+net_log         :        0
+net_scale       :        5, a
+net_showdrop    :        0
+net_showpackets :        0
+pausable        :        0, sv
+port            :    27015
+rcon_password   :        0
+servercfgfile   :        0
+skill           :        1
+suitvolume      :    0.250, a
+sv_accelerate   :       10, sv
+sv_aim          :        0, a
+sv_airaccelerate :       10, sv
+sv_allow_autoaim :        0, sv
+sv_allow_dlfile :        1
+sv_allow_shaders :        0, sv
+sv_allowdownload :        1
+sv_allowupload  :        1, sv
+sv_alltalk      :        0
+sv_bounce       :        1, sv
+sv_cheats       :        0, sv
+sv_clienttrace  :    3.500, sv
+sv_contact      :        0, sv
+sv_downloadurl  :        0
+sv_enableoldqueries :        0
+sv_failuretime  :    0.500
+sv_filetransfercompression :        1
+sv_filetransfermaxsize : 10485760
+sv_filterban    :        1
+sv_friction     :        4, sv
+sv_gravity      :      800, sv
+sv_instancedbaseline :        1
+sv_lan          :        0
+sv_lan_rate     :    20000
+sv_log_onefile  :        0
+sv_log_singleplayer :        0
+sv_logbans      :        0
+sv_logblocks    :        0, sv
+sv_logrelay     :        0
+sv_logsecret    :        0
+sv_maxrate      :        0, sv
+sv_maxspeed     :     4000, sv
+sv_maxunlag     :    0.500
+sv_maxupdaterate :       30
+sv_maxvelocity  :     2000
+sv_minrate      :        0, sv
+sv_minupdaterate :       10
+sv_newunit      :        0
+sv_outofdatetime :     1800
+sv_password     :        0, sv
+sv_proxies      :        1, sv
+sv_rcon_banpenalty :        0
+sv_rcon_maxfailures :       10
+sv_rcon_minfailures :        5
+sv_rcon_minfailuretime :       30
+sv_rollangle    :        2
+sv_rollspeed    :      200
+sv_send_logos   :        1
+sv_send_resources :        1
+sv_skycolor_b   :       15
+sv_skycolor_g   :       15
+sv_skycolor_r   :       35
+sv_skyname      :        0
+sv_skyvec_x     :   -0.707
+sv_skyvec_y     :    0.707
+sv_skyvec_z     :        0
+sv_spectatormaxspeed :      500
+sv_stats        :        1
+sv_stepsize     :       18, sv
+sv_stopspeed    :      100, sv
+sv_structurelimit :      300, sv
+sv_timeout      :       60
+sv_unlag        :        1
+sv_unlagpush    :        0
+sv_unlagsamples :        1
+sv_uploadmax    :    0.500, sv
+sv_uploadmaxcount :       10, sv
+sv_use_steam_networking :        0
+sv_version      :  112.200
+sv_visiblemaxplayers :       -1
+sv_voiceenable  :        1, a, sv
+sv_wateraccelerate :       10, sv
+sv_wateramp     :        0
+sv_waterfriction :        1, sv
+sv_zmax         :    10000
+sys_ticrate     :      100
+ui_cmd_on_connect :        0
+violence_ablood :        1, a
+violence_agibs  :        0, a
+violence_hblood :        1, a
+violence_hgibs  :        0, a
+voice_inputfromfile :        0
+voice_recordtofile :        0
+voice_serverdebug :        0
+--------------
+183 Total CVars
+CvarList ? for syntax
+
+==> /data/log/script/nsserver-script.log <==
+Oct 25 04:12:07.181 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:12:07.185 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:12:27.335 nsserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/nsserver-console.log <==
 cvarlist
@@ -384,18 +803,14 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 20 21:40:47.263 nsserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 20 21:40:47.274 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 21:40:47.277 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 20 21:41:07.381 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:12:28.488 nsserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 25 04:12:28.502 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:12:28.507 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:12:48.642 nsserver: CORE: PASS: Using cached IP as public IP address
+Oct 25 04:12:49.410 nsserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/nsserver-console.log <==
 cvarlist
-
-==> /data/log/script/nsserver-script.log <==
-Oct 20 21:41:08.448 nsserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/nsserver-console.log <==
 CVar List
 --------------
 _sv_override_scientist_mdl :        0
@@ -586,419 +1001,17 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/nsserver-script.log <==
-Oct 20 21:41:08.460 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 21:41:08.463 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 20 21:41:19.200 nsserver: CORE: PASS: Using cached IP as public IP address
-Oct 20 21:41:20.571 nsserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 20 21:41:22.950 nsserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 20 21:41:23.717 nsserver: MONITOR: INFO: Checking session: CHECKING
-Oct 20 21:41:23.933 nsserver: MONITOR: PASS: Checking session: OK
-Oct 20 21:41:25.547 nsserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
-Oct 20 21:41:25.946 nsserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 20 21:41:25.950 nsserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 20 21:41:25.953 nsserver: MONITOR: INFO: Players: 0/16
-Oct 20 21:41:25.956 nsserver: MONITOR: INFO: Map: ns_hera
-Oct 20 21:41:25.967 nsserver: MONITOR: INFO: LinuxGSM version: v26.4.0
-Oct 20 21:41:25.970 nsserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 20 21:41:28.563 nsserver: CORE: PASS: Using cached IP as public IP address
-
-==> /data/log/console/nsserver-console.log <==
-cvarlist
-
-==> /data/log/script/nsserver-script.log <==
-Oct 20 21:41:29.621 nsserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/nsserver-console.log <==
-CVar List
---------------
-_sv_override_scientist_mdl :        0
-bannedcfgfile   :        0
-clientport      :    27005
-clockwindow     :    0.500
-console         :        0, a
-coop            :        0, sv
-deathmatch      :        1, sv
-decalfrequency  :       30, sv
-developer       :        0
-disconcfgfile   :        0
-displaysoundlist :        0
-edgefriction    :        2, sv
-fakelag         :        0
-fakeloss        :        0
-fps_max         :      100, a
-fps_override    :        0, a
-host_framerate  :        0
-host_killtime   :        0
-host_limitlocal :        0
-host_profile    :        0
-host_speeds     :        0
-HostMap         :        0
-hostname        :        0
-hostport        :    27015
-hpk_maxsize     :        4, a
-ip              :        0
-ip_clientport   :        0
-ip_hostport     :        0
-logsdir         :        0
-lservercfgfile  :        0
-mapchangecfgfile :        0
-mapcyclefile    :        0
-max_queries_sec :        3, sv
-max_queries_sec_global :       30, sv
-max_queries_window :       60, sv
-motdfile        :        0
-mp_allowmonsters :        0, sv
-mp_allowspectators :        1, sv
-mp_autoconcede  :        4, sv
-mp_autocrosshair :        0, sv
-mp_blockscripts :        0, sv
-mp_chattime     :       10, sv
-mp_combattime   :       15, sv
-mp_consistency  :        0, sv
-mp_countdowntime :    0.200, sv
-mp_deathmatchmode :        0, sv
-mp_defaultteam  :        0
-mp_drawdamage   :        0, sv
-mp_eastereggchance :        5, sv
-mp_falldamage   :        1, sv
-mp_flashlight   :        1, sv
-mp_footsteps    :        1, sv
-mp_forcerespawn :        1, sv
-mp_fraglimit    :        0, sv
-mp_fragsleft    :        0, sv
-mp_friendlyfire :        0, sv
-mp_ironman      :        0, sv
-mp_ironmantime  :        2, sv
-mp_killdelay    :        3, sv
-mp_latejointime :    1.500, sv
-mp_limitteams   :        1
-mp_logdetail    :        0, sv
-mp_logecho      :        1
-mp_logfile      :        1, sv
-mp_mapvoteratio :    0.600, sv
-mp_minvotesneeded :        3, sv
-mp_serverops    :        0
-mp_team1damagepercent :      100, sv
-mp_team2damagepercent :      100, sv
-mp_team3damagepercent :      100, sv
-mp_team4damagepercent :      100, sv
-mp_teamlist     :        0, sv
-mp_teamoverride :        1
-mp_teamplay     :        0, sv
-mp_timeleft     :        0, sv
-mp_timelimit    :       60, sv
-mp_tournamentmode :        0, sv
-mp_uplink       :        1, sv
-mp_votecasttime :        2, sv
-mp_votedowntime :      180, sv
-mp_votepercentneeded :    0.400, sv
-mp_weaponstay   :    0.500, sv
-multicastport   :    27025
-net_address     :        0
-net_chokeloop   :        0
-net_drawslider  :        0
-net_graph       :        0, a
-net_graphpos    :        1, a
-net_graphwidth  :      150
-net_log         :        0
-net_scale       :        5, a
-net_showdrop    :        0
-net_showpackets :        0
-pausable        :        0, sv
-port            :    27015
-rcon_password   :        0
-servercfgfile   :        0
-skill           :        1
-suitvolume      :    0.250, a
-sv_accelerate   :       10, sv
-sv_aim          :        0, a
-sv_airaccelerate :       10, sv
-sv_allow_autoaim :        0, sv
-sv_allow_dlfile :        1
-sv_allow_shaders :        0, sv
-sv_allowdownload :        1
-sv_allowupload  :        1, sv
-sv_alltalk      :        0
-sv_bounce       :        1, sv
-sv_cheats       :        0, sv
-sv_clienttrace  :    3.500, sv
-sv_contact      :        0, sv
-sv_downloadurl  :        0
-sv_enableoldqueries :        0
-sv_failuretime  :    0.500
-sv_filetransfercompression :        1
-sv_filetransfermaxsize : 10485760
-sv_filterban    :        1
-sv_friction     :        4, sv
-sv_gravity      :      800, sv
-sv_instancedbaseline :        1
-sv_lan          :        0
-sv_lan_rate     :    20000
-sv_log_onefile  :        0
-sv_log_singleplayer :        0
-sv_logbans      :        0
-sv_logblocks    :        0, sv
-sv_logrelay     :        0
-sv_logsecret    :        0
-sv_maxrate      :        0, sv
-sv_maxspeed     :     4000, sv
-sv_maxunlag     :    0.500
-sv_maxupdaterate :       30
-sv_maxvelocity  :     2000
-sv_minrate      :        0, sv
-sv_minupdaterate :       10
-sv_newunit      :        0
-sv_outofdatetime :     1800
-sv_password     :        0, sv
-sv_proxies      :        1, sv
-sv_rcon_banpenalty :        0
-sv_rcon_maxfailures :       10
-sv_rcon_minfailures :        5
-sv_rcon_minfailuretime :       30
-sv_rollangle    :        2
-sv_rollspeed    :      200
-sv_send_logos   :        1
-sv_send_resources :        1
-sv_skycolor_b   :       15
-sv_skycolor_g   :       15
-sv_skycolor_r   :       35
-sv_skyname      :        0
-sv_skyvec_x     :   -0.707
-sv_skyvec_y     :    0.707
-sv_skyvec_z     :        0
-sv_spectatormaxspeed :      500
-sv_stats        :        1
-sv_stepsize     :       18, sv
-sv_stopspeed    :      100, sv
-sv_structurelimit :      300, sv
-sv_timeout      :       60
-sv_unlag        :        1
-sv_unlagpush    :        0
-sv_unlagsamples :        1
-sv_uploadmax    :    0.500, sv
-sv_uploadmaxcount :       10, sv
-sv_use_steam_networking :        0
-sv_version      :  112.200
-sv_visiblemaxplayers :       -1
-sv_voiceenable  :        1, a, sv
-sv_wateraccelerate :       10, sv
-sv_wateramp     :        0
-sv_waterfriction :        1, sv
-sv_zmax         :    10000
-sys_ticrate     :      100
-ui_cmd_on_connect :        0
-violence_ablood :        1, a
-violence_agibs  :        0, a
-violence_hblood :        1, a
-violence_hgibs  :        0, a
-voice_inputfromfile :        0
-voice_recordtofile :        0
-voice_serverdebug :        0
---------------
-183 Total CVars
-CvarList ? for syntax
-
-==> /data/log/script/nsserver-script.log <==
-Oct 20 21:41:29.632 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 21:41:29.635 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 20 21:41:49.737 nsserver: CORE: PASS: Using cached IP as public IP address
-
-==> /data/log/console/nsserver-console.log <==
-cvarlist
-
-==> /data/log/script/nsserver-script.log <==
-Oct 20 21:41:50.796 nsserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/nsserver-console.log <==
-CVar List
---------------
-_sv_override_scientist_mdl :        0
-bannedcfgfile   :        0
-clientport      :    27005
-clockwindow     :    0.500
-console         :        0, a
-coop            :        0, sv
-deathmatch      :        1, sv
-decalfrequency  :       30, sv
-developer       :        0
-disconcfgfile   :        0
-displaysoundlist :        0
-edgefriction    :        2, sv
-fakelag         :        0
-fakeloss        :        0
-fps_max         :      100, a
-fps_override    :        0, a
-host_framerate  :        0
-host_killtime   :        0
-host_limitlocal :        0
-host_profile    :        0
-host_speeds     :        0
-HostMap         :        0
-hostname        :        0
-hostport        :    27015
-hpk_maxsize     :        4, a
-ip              :        0
-ip_clientport   :        0
-ip_hostport     :        0
-logsdir         :        0
-lservercfgfile  :        0
-mapchangecfgfile :        0
-mapcyclefile    :        0
-max_queries_sec :        3, sv
-max_queries_sec_global :       30, sv
-max_queries_window :       60, sv
-motdfile        :        0
-mp_allowmonsters :        0, sv
-mp_allowspectators :        1, sv
-mp_autoconcede  :        4, sv
-mp_autocrosshair :        0, sv
-mp_blockscripts :        0, sv
-mp_chattime     :       10, sv
-mp_combattime   :       15, sv
-mp_consistency  :        0, sv
-mp_countdowntime :    0.200, sv
-mp_deathmatchmode :        0, sv
-mp_defaultteam  :        0
-mp_drawdamage   :        0, sv
-mp_eastereggchance :        5, sv
-mp_falldamage   :        1, sv
-mp_flashlight   :        1, sv
-mp_footsteps    :        1, sv
-mp_forcerespawn :        1, sv
-mp_fraglimit    :        0, sv
-mp_fragsleft    :        0, sv
-mp_friendlyfire :        0, sv
-mp_ironman      :        0, sv
-mp_ironmantime  :        2, sv
-mp_killdelay    :        3, sv
-mp_latejointime :    1.500, sv
-mp_limitteams   :        1
-mp_logdetail    :        0, sv
-mp_logecho      :        1
-mp_logfile      :        1, sv
-mp_mapvoteratio :    0.600, sv
-mp_minvotesneeded :        3, sv
-mp_serverops    :        0
-mp_team1damagepercent :      100, sv
-mp_team2damagepercent :      100, sv
-mp_team3damagepercent :      100, sv
-mp_team4damagepercent :      100, sv
-mp_teamlist     :        0, sv
-mp_teamoverride :        1
-mp_teamplay     :        0, sv
-mp_timeleft     :        0, sv
-mp_timelimit    :       60, sv
-mp_tournamentmode :        0, sv
-mp_uplink       :        1, sv
-mp_votecasttime :        2, sv
-mp_votedowntime :      180, sv
-mp_votepercentneeded :    0.400, sv
-mp_weaponstay   :    0.500, sv
-multicastport   :    27025
-net_address     :        0
-net_chokeloop   :        0
-net_drawslider  :        0
-net_graph       :        0, a
-net_graphpos    :        1, a
-net_graphwidth  :      150
-net_log         :        0
-net_scale       :        5, a
-net_showdrop    :        0
-net_showpackets :        0
-pausable        :        0, sv
-port            :    27015
-rcon_password   :        0
-servercfgfile   :        0
-skill           :        1
-suitvolume      :    0.250, a
-sv_accelerate   :       10, sv
-sv_aim          :        0, a
-sv_airaccelerate :       10, sv
-sv_allow_autoaim :        0, sv
-sv_allow_dlfile :        1
-sv_allow_shaders :        0, sv
-sv_allowdownload :        1
-sv_allowupload  :        1, sv
-sv_alltalk      :        0
-sv_bounce       :        1, sv
-sv_cheats       :        0, sv
-sv_clienttrace  :    3.500, sv
-sv_contact      :        0, sv
-sv_downloadurl  :        0
-sv_enableoldqueries :        0
-sv_failuretime  :    0.500
-sv_filetransfercompression :        1
-sv_filetransfermaxsize : 10485760
-sv_filterban    :        1
-sv_friction     :        4, sv
-sv_gravity      :      800, sv
-sv_instancedbaseline :        1
-sv_lan          :        0
-sv_lan_rate     :    20000
-sv_log_onefile  :        0
-sv_log_singleplayer :        0
-sv_logbans      :        0
-sv_logblocks    :        0, sv
-sv_logrelay     :        0
-sv_logsecret    :        0
-sv_maxrate      :        0, sv
-sv_maxspeed     :     4000, sv
-sv_maxunlag     :    0.500
-sv_maxupdaterate :       30
-sv_maxvelocity  :     2000
-sv_minrate      :        0, sv
-sv_minupdaterate :       10
-sv_newunit      :        0
-sv_outofdatetime :     1800
-sv_password     :        0, sv
-sv_proxies      :        1, sv
-sv_rcon_banpenalty :        0
-sv_rcon_maxfailures :       10
-sv_rcon_minfailures :        5
-sv_rcon_minfailuretime :       30
-sv_rollangle    :        2
-sv_rollspeed    :      200
-sv_send_logos   :        1
-sv_send_resources :        1
-sv_skycolor_b   :       15
-sv_skycolor_g   :       15
-sv_skycolor_r   :       35
-sv_skyname      :        0
-sv_skyvec_x     :   -0.707
-sv_skyvec_y     :    0.707
-sv_skyvec_z     :        0
-sv_spectatormaxspeed :      500
-sv_stats        :        1
-sv_stepsize     :       18, sv
-sv_stopspeed    :      100, sv
-sv_structurelimit :      300, sv
-sv_timeout      :       60
-sv_unlag        :        1
-sv_unlagpush    :        0
-sv_unlagsamples :        1
-sv_uploadmax    :    0.500, sv
-sv_uploadmaxcount :       10, sv
-sv_use_steam_networking :        0
-sv_version      :  112.200
-sv_visiblemaxplayers :       -1
-sv_voiceenable  :        1, a, sv
-sv_wateraccelerate :       10, sv
-sv_wateramp     :        0
-sv_waterfriction :        1, sv
-sv_zmax         :    10000
-sys_ticrate     :      100
-ui_cmd_on_connect :        0
-violence_ablood :        1, a
-violence_agibs  :        0, a
-violence_hblood :        1, a
-violence_hgibs  :        0, a
-voice_inputfromfile :        0
-voice_recordtofile :        0
-voice_serverdebug :        0
---------------
-183 Total CVars
-CvarList ? for syntax
-
-==> /data/log/script/nsserver-script.log <==
-Oct 20 21:41:50.807 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 20 21:41:50.810 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:12:49.777 nsserver: SEND: PASS: Command "cvarlist" sent to console
+Oct 25 04:12:49.791 nsserver: SEND: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:12:49.796 nsserver: SEND: PASS: core_exit.sh exiting with code: 0
+Oct 25 04:12:50.328 nsserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 25 04:12:52.702 nsserver: MONITOR: PASS: Using cached IP as public IP address
+Oct 25 04:12:54.333 nsserver: MONITOR: INFO: Checking session: CHECKING
+Oct 25 04:12:54.555 nsserver: MONITOR: PASS: Checking session: OK
+Oct 25 04:12:56.172 nsserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Oct 25 04:12:56.668 nsserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Oct 25 04:12:56.673 nsserver: MONITOR: INFO: Server name: LinuxGSM
+Oct 25 04:12:56.677 nsserver: MONITOR: INFO: Players: 0/16
+Oct 25 04:12:56.682 nsserver: MONITOR: INFO: Map: ns_hera
+Oct 25 04:12:56.697 nsserver: MONITOR: INFO: LinuxGSM version: v26.4.0
+Oct 25 04:12:56.701 nsserver: MONITOR: PASS: core_exit.sh exiting with code: 0
