@@ -274,13 +274,13 @@ ent_teleport                             : cmd      :                  : Telepor
 ent_text                                 : cmd      :                  : Displays text debugging information about the given entity(ies) on top of the entity (See Overlay Text)  Arguments:    {entity_
 ent_text_allow_script                    : 0        : , "sv", "cheat"  :
 ent_viewoffset                           : cmd      :                  : Displays the eye position for the given entity(ies) in red.  Arguments:    {entity_name} / {class_name} / no argument picks wha
-
-==> /data/log/script/l4d2server-script.log <==
-Oct 20 21:27:14.274 l4d2server: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/l4d2server-console.log <==
 exec                                     : cmd      :                  : Execute script file.
 exit                                     : cmd      :                  : Exit the engine.
+
+==> /data/log/script/l4d2server-script.log <==
+Oct 25 04:04:21.324 l4d2server: MONITOR: PASS: Querying port: gamedig: 172.17.0.2:27015 : 1 : OK
+
+==> /data/log/console/l4d2server-console.log <==
 explode                                  : cmd      :                  : Kills the player with explosive damage
 explodevector                            : cmd      :                  : Kills a player applying an explosive force. Usage: explodevector <player> <x value> <y value> <z value>
 fade_crosshair                           : cmd      :                  : Fades the prop being looked at
@@ -543,11 +543,6 @@ music_dynamic_calm_decay                 : 15       : , "sv", "cheat"  :
 music_dynamic_CI_sight_decay             : 8        : , "sv", "cheat"  :
 music_dynamic_damage_decay               : 10       : , "sv", "cheat"  :
 music_dynamic_damage_duck_damage_max     : 1        : , "sv", "cheat"  :
-
-==> /data/log/script/l4d2server-script.log <==
-Oct 20 21:27:14.295 l4d2server: SEND: INFO: LinuxGSM version: v26.4.0
-
-==> /data/log/console/l4d2server-console.log <==
 music_dynamic_damage_duck_damage_min     : 0        : , "sv", "cheat"  :
 music_dynamic_damage_duck_max            : 0        : , "sv", "cheat"  :
 music_dynamic_damage_duck_min            : 0        : , "sv", "cheat"  :
@@ -556,6 +551,11 @@ music_dynamic_debug                      : 0        : , "sv", "cheat"  : Draw pa
 music_dynamic_dodamage_decay             : 4        : , "sv", "cheat"  :
 music_dynamic_dodamage_increment         : 0        : , "sv", "cheat"  :
 music_dynamic_gunfire_decay              : 1        : , "sv", "cheat"  :
+
+==> /data/log/script/l4d2server-script.log <==
+Oct 25 04:04:21.330 l4d2server: MONITOR: INFO: Server name: LinuxGSM
+
+==> /data/log/console/l4d2server-console.log <==
 music_dynamic_gunfire_increment          : 0        : , "sv", "cheat"  :
 music_dynamic_gunfireslow_decay          : 3        : , "sv", "cheat"  :
 music_dynamic_gunfireslow_increment      : 0        : , "sv", "cheat"  :
@@ -637,11 +637,6 @@ nav_corner_raise                         : cmd      :                  : Raise t
 nav_corner_select                        : cmd      :                  : Select a corner of the currently marked Area. Use multiple times to access all four corners.
 nav_create_area_at_feet                  : 0        : , "sv", "cheat"  : Anchor nav_begin_area Z to editing player's feet
 nav_create_place_on_ground               : 0        : , "sv", "cheat"  : If true, nav areas will be placed flush with the ground when created by hand.
-
-==> /data/log/script/l4d2server-script.log <==
-Oct 20 21:27:14.302 l4d2server: SEND: PASS: core_exit.sh exiting with code: 0
-
-==> /data/log/console/l4d2server-console.log <==
 nav_crouch                               : cmd      :                  : Toggles the 'must crouch in this area' flag used by the AI system.
 nav_debug_blocked                        : 0        : , "sv", "cheat"  :
 nav_debug_finale_area                    : 0        : , "sv", "cheat"  : Show extents of finale area and selected finale center
@@ -775,6 +770,11 @@ nav_trouble_test_area                    : 0        : , "sv", "cheat"  : If nonz
 nav_trouble_test_debug_duration          : 10       : , "sv", "cheat"  :
 nav_trouble_walkable_backtrace           : 0        : , "sv", "cheat"  :
 nav_unmark                               : cmd      :                  : Clears the marked Area or Ladder.
+==> /data/log/script/l4d2server-script.log <==
+Oct 25 04:04:21.336 l4d2server: MONITOR: INFO: Players: 0/4
+
+==> /data/log/console/l4d2server-console.log <==
+
 nav_update_blocked                       : cmd      :                  : Updates the blocked/unblocked status for every nav area.
 nav_update_lighting                      : cmd      :                  : Recomputes lighting values
 nav_update_visibility_on_edit            : 0        : , "sv", "cheat"  : If nonzero editing the mesh will incrementally recompue visibility
@@ -1033,6 +1033,11 @@ sb_crouch                                : 0        : , "sv", "cheat"  : Forces 
 sb_debug_apoproach_wait_time             : 5        : , "sv", "cheat"  : How long a SurvivorBot waits once it reaches its debug move-to spot
 sb_debug_buddy                           : 0        : , "sv", "cheat"  :
 sb_debug_locomotion                      : 0        : , "sv", "cheat"  :
+==> /data/log/script/l4d2server-script.log <==
+Oct 25 04:04:21.341 l4d2server: MONITOR: INFO: Map: c5m1_waterfront
+
+==> /data/log/console/l4d2server-console.log <==
+
 sb_debug_retreat                         : 0        : , "sv", "cheat"  :
 sb_debug_team_avoidance                  : 0        : , "sv", "cheat"  :
 sb_dont_bash                             : 0        : , "sv", "cheat"  : Force SurvivorBots to not bash
@@ -1980,6 +1985,11 @@ z_stomp_always                           : 0        : , "sv", "cheat"  : Force m
 z_stumble_max_curve_accel                : 5        : , "sv", "cheat"  : Rate of turn increase per second
 z_stumble_max_curve_rate                 : 10       : , "sv", "cheat"  : Maximum degrees/sec turning while stumbling forward
 z_tank_attack_interval                   : 1        : , "sv", "cheat"  :
+
+==> /data/log/script/l4d2server-script.log <==
+Oct 25 04:04:21.360 l4d2server: MONITOR: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/l4d2server-console.log <==
 z_tank_autoshotgun_dmg_scale             : 0        : , "sv", "cheat"  : percent damage taken by the tank from the autoshotgun
 z_tank_damage_slow_max_range             : 400      : , "sv", "cheat"  : Range at which Tank is slowed by gunfire
 z_tank_damage_slow_min_range             : 200      : , "sv", "cheat"  : Range at which Tank is slowed by gunfire
