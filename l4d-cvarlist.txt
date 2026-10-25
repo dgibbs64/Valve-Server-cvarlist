@@ -42,6 +42,11 @@ ch_createjeep                            : cmd      :                  : Spawn j
 changelevel                              : cmd      :                  : Change server to the specified map
 changelevel2                             : cmd      :                  : Transition to the specified map in single player
 changelevel_inhibit                      : 0        : , "sv", "cheat"  :
+
+==> /data/log/script/l4dserver-script.log <==
+Oct 25 04:03:10.783 l4dserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/l4dserver-console.log <==
 changelevel_pause_interval               : 8        : , "sv", "cheat"  :
 chet_debug_idle                          : 0        : , "a", "sv"      : If set one, many debug prints to help track down the TLK_IDLE issue. Set two for super verbose info
 cl_clock_correction                      : 1        : , "cheat"        : Enable/disable clock correction on the client.
@@ -961,7 +966,12 @@ setpos                                   : cmd      :                  : Move pl
 setpos_exact                             : cmd      :                  : Move player to an exact specified origin (must have sv_cheats).
 setpos_player                            : cmd      :                  : Move specified player to specified origin (must have sv_cheats).
 shake                                    : cmd      :                  : Shake the screen.
-shout_going_to_die_interval              : 20       : , "sv", "cheat"  :
+shout_going_to_di
+==> /data/log/script/l4dserver-script.log <==
+Oct 25 04:03:10.801 l4dserver: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/l4dserver-console.log <==
+e_interval              : 20       : , "sv", "cheat"  :
 shout_make_way_interval                  : 2        : , "sv", "cheat"  :
 shout_max_warn_range                     : 2000     : , "sv", "cheat"  :
 shout_min_special_warn_interval          : 5        : , "sv", "cheat"  :
@@ -1350,6 +1360,11 @@ vprof_playback_stop                      : cmd      :                  : Stop pl
 vprof_record_start                       : cmd      :                  : Start recording vprof data for playback later.
 vprof_record_stop                        : cmd      :                  : Stop recording vprof data
 vprof_reset                              : cmd      :                  : Reset the stats in VProf profiler
+
+==> /data/log/script/l4dserver-script.log <==
+Oct 25 04:03:10.805 l4dserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/l4dserver-console.log <==
 vprof_reset_peaks                        : cmd      :                  : Reset just the peak time in VProf profiler
 vprof_vtune_group                        : cmd      :                  : enable vtune for a particular vprof group ('disable' to disable)
 vs_max_team_switches                     : 1        : , "sv", "cheat"  :
