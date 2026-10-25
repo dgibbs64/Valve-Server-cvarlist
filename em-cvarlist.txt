@@ -110,6 +110,11 @@ ai_use_visibility_cache                  : 1        : , "sv"           :
 ai_vehicle_avoidance                     : 1        : , "sv", "cheat"  :
 ainet_generate_report                    : cmd      :                  : Generate a report to the console.
 ainet_generate_report_only               : cmd      :                  : Generate a report to the console.
+
+==> /data/log/script/emserver-script.log <==
+Oct 25 03:50:29.752 emserver: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/emserver-console.log <==
 air_density                              : cmd      :                  : Changes the density of air for drag computations.
 alias                                    : cmd      :                  : Alias a command.
 anim_3wayblend                           : 1        : , "sv", "rep"    : Toggle the 3-way animation blending code.
@@ -370,6 +375,11 @@ emp_unit_order                           : cmd      :                  :
 emp_unit_order_list                      : cmd      :                  :
 emp_unstuck                              : cmd      :                  :
 emp_v_skid_damping                       : 1        : , "sv", "cheat"  : Used to dampen the skidSpeed reported by the source-engine
+
+==> /data/log/script/emserver-script.log <==
+Oct 25 03:50:29.758 emserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/emserver-console.log <==
 emp_v_skid_debug                         : 0        : , "sv", "cheat"  : Used to enable/disable skid debugging
 emp_v_skid_high_factor                   : 0        : , "sv", "cheat"  : (Set to between 0.0 and 1.0) Determines the percentage of skid-speed over total-speed where the 'skid_highfriction' sound is played
 emp_v_skid_low_factor                    : 0        : , "sv", "cheat"  : (Set to between 0.0 and 1.0) Determines the percentage of skid-speed over total-speed where the 'skid_lowfriction' sound is played
