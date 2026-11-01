@@ -1,5 +1,10 @@
 cvar list
 --------------
+
+==> /data/log/script/cs2server-script.log <==
+Nov 01 04:41:45.606 cs2server: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/cs2server-console.log <==
 _record                                                                          : cmd              : cheat, norecord, release         : Record a demo incrementally.
 adsp_debug                                                                       : 0                : a                                :
 ai_debug_dyninteractions                                                         : 0                : sv, cheat                        : Debug the NPC dynamic interaction system.
@@ -1006,11 +1011,6 @@ nav_smooth_spring_factor_speed                                                  
 nav_smooth_spring_forward_dist_base                                              : 50               : sv, cheat                        :
 nav_smooth_spring_forward_dist_time_limit                                        : 1                : sv, cheat                        :
 nav_smooth_spring_max_dist                                                       : 36               : sv, cheat                        :
-
-==> /data/log/script/cs2server-script.log <==
-Oct 25 03:37:50.153 cs2server: SEND: INFO: LinuxGSM version: v26.4.0
-
-==> /data/log/console/cs2server-console.log <==
 nav_smooth_spring_tension_max_override                                           : -1               : sv, cheat                        :
 nav_smooth_spring_timestep_factor_accel                                          : 100              : sv, cheat                        :
 nav_smooth_spring_timestep_factor_speed                                          : 100              : sv, cheat                        :
@@ -1310,11 +1310,6 @@ script_debug                                                                    
 script_dump_all                                                                  : cmd              : sv, cheat                        : Dump the state of the VM to the console
 script_find                                                                      : cmd              : sv, cheat                        : Find a key in the VM
 script_help                                                                      : cmd              : sv, cheat                        : Output help for script functions
-
-==> /data/log/script/cs2server-script.log <==
-Oct 25 03:37:50.158 cs2server: SEND: PASS: core_exit.sh exiting with code: 0
-
-==> /data/log/console/cs2server-console.log <==
 script_reload                                                                    : cmd              : sv, cheat                        : Reload scripts
 script_reload_code                                                               : cmd              : sv, cheat                        : Execute a vscript file, replacing existing functions with the functions in the run script
 script_reload_entity_code                                                        : cmd              : sv, cheat                        : Execute all of this entity's VScripts, replacing existing functions with the functions in the run scripts
