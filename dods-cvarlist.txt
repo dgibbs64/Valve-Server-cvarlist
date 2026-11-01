@@ -1,5 +1,10 @@
 cvar list
 --------------
+
+==> /data/log/script/dodsserver-script.log <==
+Nov 01 04:45:14.608 dodsserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/dodsserver-console.log <==
 _resetgamestats                          : cmd      :                  : Erases current game stats and writes out a blank stats file
 _restart                                 : cmd      :                  : Shutdown and restart the engine.
 achievement_debug                        : 0        : , "sv", "cheat", "rep" : Turn on achievement debug msgs.
