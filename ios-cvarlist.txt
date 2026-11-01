@@ -8,6 +8,11 @@ ai_auto_contact_solver                   : 1        : , "sv"           :
 ai_block_damage                          : 0        : , "sv"           :
 ai_clear_bad_links                       : cmd      :                  : Clears bits set on nav links indicating link is unusable
 ai_debug_assault                         : 0        : , "sv"           :
+
+==> /data/log/script/iosserver-script.log <==
+Nov 01 05:14:56.807 iosserver: SEND: INFO: LinuxGSM version: v26.4.0
+
+==> /data/log/console/iosserver-console.log <==
 ai_debug_avoidancebounds                 : 0        : , "sv"           :
 ai_debug_directnavprobe                  : 0        : , "sv"           :
 ai_debug_doors                           : 0        : , "sv"           :
@@ -466,6 +471,11 @@ mat_specular                             : 1        :                  : Enable/
 mat_spew_on_texture_size                 : 0        :                  : Print warnings about vtf content that isn't of the expected size
 mat_texture_reload_frame_swap_workaround : 0        :                  : Workaround certain GL drivers holding unnecessary amounts of data when loading many materials by forcing synthetic frame swaps
 mat_texture_tracking                     : 0        :                  :
+
+==> /data/log/script/iosserver-script.log <==
+Nov 01 05:14:56.812 iosserver: SEND: PASS: core_exit.sh exiting with code: 0
+
+==> /data/log/console/iosserver-console.log <==
 mat_tonemap_algorithm                    : 1        : , "cheat"        : 0 = Original Algorithm 1 = New Algorithm
 mat_tonemapping_occlusion_use_stencil    : 0        :                  :
 mat_trilinear                            : 0        :                  :
