@@ -53,7 +53,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1185, sv
+mp_timeleft     :     1075, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        1, sv
 multicastport   :    27025
@@ -411,9 +411,9 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:34:56.847 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 25 03:34:56.851 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 25 03:35:16.977 dmcserver: CORE: PASS: Using cached IP as public IP address
+Nov 01 04:33:25.780 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:33:25.784 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:33:45.924 dmcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dmcserver-console.log <==
 cvarlist
@@ -472,7 +472,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1163, sv
+mp_timeleft     :     1054, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        1, sv
 multicastport   :    27025
@@ -830,10 +830,10 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:35:18.797 dmcserver: SEND: PASS: Command "cvarlist" sent to console
-Oct 25 03:35:18.931 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 25 03:35:18.971 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 25 03:35:38.224 dmcserver: CORE: PASS: Using cached IP as public IP address
+Nov 01 04:33:47.603 dmcserver: SEND: PASS: Command "cvarlist" sent to console
+Nov 01 04:33:47.756 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:33:47.799 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:34:07.216 dmcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dmcserver-console.log <==
 cvarlist
@@ -892,7 +892,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1142, sv
+mp_timeleft     :     1032, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        1, sv
 multicastport   :    27025
@@ -936,11 +936,6 @@ sk_battery1     :       15
 sk_battery2     :       15
 sk_battery3     :       10
 sk_bigmomma_dmg_blast1 :      100
-
-==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:35:39.326 dmcserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/dmcserver-console.log <==
 sk_bigmomma_dmg_blast2 :      120
 sk_bigmomma_dmg_blast3 :      160
 sk_bigmomma_dmg_slash1 :       50
@@ -1255,26 +1250,22 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:35:39.341 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 25 03:35:39.345 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 25 03:35:43.938 dmcserver: CORE: PASS: Using cached IP as public IP address
-Oct 25 03:35:43.969 dmcserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 25 03:35:46.216 dmcserver: MONITOR: PASS: Using cached IP as public IP address
-Oct 25 03:35:47.846 dmcserver: MONITOR: INFO: Checking session: CHECKING
-Oct 25 03:35:48.673 dmcserver: MONITOR: PASS: Checking session: OK
-Oct 25 03:35:49.684 dmcserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
-
-==> /data/log/console/dmcserver-console.log <==
-[S_API FAIL] Tried to access Steam interface SteamNetworkingUtils004 before SteamAPI_Init succeeded.
-
-==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:35:50.164 dmcserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
-Oct 25 03:35:50.168 dmcserver: MONITOR: INFO: Server name: LinuxGSM
-Oct 25 03:35:50.173 dmcserver: MONITOR: INFO: Players: 0/16
-Oct 25 03:35:50.177 dmcserver: MONITOR: INFO: Map: dcdm5
-Oct 25 03:35:50.190 dmcserver: MONITOR: INFO: LinuxGSM version: v26.4.0
-Oct 25 03:35:50.194 dmcserver: MONITOR: PASS: core_exit.sh exiting with code: 0
-Oct 25 03:35:59.473 dmcserver: CORE: PASS: Using cached IP as public IP address
+Nov 01 04:34:08.355 dmcserver: SEND: PASS: Command "cvarlist" sent to console
+Nov 01 04:34:08.369 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:34:08.374 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:34:20.159 dmcserver: CORE: PASS: Using cached IP as public IP address
+Nov 01 04:34:21.630 dmcserver: MONITOR: PASS: Using cached IP as public IP address
+Nov 01 04:34:23.282 dmcserver: MONITOR: PASS: Using cached IP as public IP address
+Nov 01 04:34:24.913 dmcserver: MONITOR: INFO: Checking session: CHECKING
+Nov 01 04:34:25.137 dmcserver: MONITOR: PASS: Checking session: OK
+Nov 01 04:34:26.755 dmcserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Nov 01 04:34:27.253 dmcserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Nov 01 04:34:27.258 dmcserver: MONITOR: INFO: Server name: LinuxGSM
+Nov 01 04:34:27.262 dmcserver: MONITOR: INFO: Players: 0/16
+Nov 01 04:34:27.266 dmcserver: MONITOR: INFO: Map: dcdm5
+Nov 01 04:34:27.280 dmcserver: MONITOR: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:34:27.285 dmcserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:34:28.512 dmcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dmcserver-console.log <==
 cvarlist
@@ -1333,7 +1324,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1121, sv
+mp_timeleft     :     1011, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        1, sv
 multicastport   :    27025
@@ -1386,6 +1377,11 @@ sk_bigmomma_health_factor1 :        1
 sk_bigmomma_health_factor2 :    1.500
 sk_bigmomma_health_factor3 :        2
 sk_bigmomma_radius_blast1 :      250
+
+==> /data/log/script/dmcserver-script.log <==
+Nov 01 04:34:29.648 dmcserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/dmcserver-console.log <==
 sk_bigmomma_radius_blast2 :      250
 sk_bigmomma_radius_blast3 :      275
 sk_bullsquid_dmg_bite1 :       15
@@ -1445,11 +1441,6 @@ sk_hgrunt_gspeed3 :      800
 sk_hgrunt_health1 :       50
 sk_hgrunt_health2 :       50
 sk_hgrunt_health3 :       80
-
-==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:36:00.579 dmcserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/dmcserver-console.log <==
 sk_hgrunt_kick1 :        5
 sk_hgrunt_kick2 :       10
 sk_hgrunt_kick3 :       10
@@ -1696,9 +1687,9 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:36:00.595 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 25 03:36:00.599 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
-Oct 25 03:36:20.725 dmcserver: CORE: PASS: Using cached IP as public IP address
+Nov 01 04:34:29.664 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:34:29.668 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:34:49.805 dmcserver: CORE: PASS: Using cached IP as public IP address
 
 ==> /data/log/console/dmcserver-console.log <==
 cvarlist
@@ -1733,6 +1724,11 @@ ip              :        0
 ip_clientport   :        0
 ip_hostport     :        0
 logsdir         :        0
+
+==> /data/log/script/dmcserver-script.log <==
+Nov 01 04:34:50.936 dmcserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/dmcserver-console.log <==
 lservercfgfile  :        0
 mapchangecfgfile :        0
 mapcyclefile    :        0
@@ -1757,7 +1753,7 @@ mp_logfile      :        1, sv
 mp_teamlist     :        0, sv
 mp_teamoverride :        1
 mp_teamplay     :        0, sv
-mp_timeleft     :     1100, sv
+mp_timeleft     :      990, sv
 mp_timelimit    :       20, sv
 mp_weaponstay   :        1, sv
 multicastport   :    27025
@@ -1970,11 +1966,6 @@ sk_plr_egon_narrow2 :        6
 sk_plr_egon_narrow3 :        6
 sk_plr_egon_wide1 :       14
 sk_plr_egon_wide2 :       14
-
-==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:36:21.853 dmcserver: SEND: PASS: Command "cvarlist" sent to console
-
-==> /data/log/console/dmcserver-console.log <==
 sk_plr_egon_wide3 :       14
 sk_plr_gauss1   :       20
 sk_plr_gauss2   :       20
@@ -2120,5 +2111,5 @@ voice_serverdebug :        0
 CvarList ? for syntax
 
 ==> /data/log/script/dmcserver-script.log <==
-Oct 25 03:36:21.869 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
-Oct 25 03:36:21.873 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:34:50.951 dmcserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:34:50.955 dmcserver: SEND: PASS: core_exit.sh exiting with code: 0
