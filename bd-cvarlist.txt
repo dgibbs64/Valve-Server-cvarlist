@@ -446,7 +446,19 @@ voice_serverdebug :        0
 --------------
 443 Total CVars
 CvarList ? for syntax
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:11:23.322 bdserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:11:23.326 bdserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:11:43.438 bdserver: CORE: PASS: Using cached IP as public IP address
+
+==> /data/log/console/bdserver-console.log <==
 cvarlist
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:11:44.492 bdserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/bdserver-console.log <==
 CVar List
 --------------
 allow_spectators :        1, sv
@@ -895,7 +907,19 @@ voice_serverdebug :        0
 --------------
 443 Total CVars
 CvarList ? for syntax
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:11:44.505 bdserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:11:44.508 bdserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:12:04.621 bdserver: CORE: PASS: Using cached IP as public IP address
+
+==> /data/log/console/bdserver-console.log <==
 cvarlist
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:12:05.679 bdserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/bdserver-console.log <==
 CVar List
 --------------
 allow_spectators :        1, sv
@@ -1344,7 +1368,31 @@ voice_serverdebug :        0
 --------------
 443 Total CVars
 CvarList ? for syntax
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:12:05.691 bdserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:12:05.695 bdserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:12:16.918 bdserver: CORE: PASS: Using cached IP as public IP address
+Nov 01 04:12:17.768 bdserver: MONITOR: PASS: Using cached IP as public IP address
+Nov 01 04:12:20.127 bdserver: MONITOR: PASS: Using cached IP as public IP address
+Nov 01 04:12:21.754 bdserver: MONITOR: INFO: Checking session: CHECKING
+Nov 01 04:12:21.973 bdserver: MONITOR: PASS: Checking session: OK
+Nov 01 04:12:23.588 bdserver: MONITOR: INFO: Querying port: gamedig: 127.0.0.1:27015 : 1 : QUERYING
+Nov 01 04:12:24.695 bdserver: MONITOR: PASS: Querying port: gamedig: 127.0.0.1:27015 : 1 : OK
+Nov 01 04:12:24.107 bdserver: MONITOR: INFO: Server name: LinuxGSM
+Nov 01 04:12:24.144 bdserver: MONITOR: INFO: Players: 0/3
+Nov 01 04:12:24.179 bdserver: MONITOR: INFO: Map: pve_tomb
+Nov 01 04:12:24.292 bdserver: MONITOR: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:12:24.327 bdserver: MONITOR: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:12:25.809 bdserver: CORE: PASS: Using cached IP as public IP address
+
+==> /data/log/console/bdserver-console.log <==
 cvarlist
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:12:26.862 bdserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/bdserver-console.log <==
 CVar List
 --------------
 allow_spectators :        1, sv
@@ -1793,7 +1841,19 @@ voice_serverdebug :        0
 --------------
 443 Total CVars
 CvarList ? for syntax
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:12:26.875 bdserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:12:26.878 bdserver: SEND: PASS: core_exit.sh exiting with code: 0
+Nov 01 04:12:46.992 bdserver: CORE: PASS: Using cached IP as public IP address
+
+==> /data/log/console/bdserver-console.log <==
 cvarlist
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:12:48.503 bdserver: SEND: PASS: Command "cvarlist" sent to console
+
+==> /data/log/console/bdserver-console.log <==
 CVar List
 --------------
 allow_spectators :        1, sv
@@ -2242,3 +2302,7 @@ voice_serverdebug :        0
 --------------
 443 Total CVars
 CvarList ? for syntax
+
+==> /data/log/script/bdserver-script.log <==
+Nov 01 04:12:48.628 bdserver: SEND: INFO: LinuxGSM version: v26.4.0
+Nov 01 04:12:48.661 bdserver: SEND: PASS: core_exit.sh exiting with code: 0
